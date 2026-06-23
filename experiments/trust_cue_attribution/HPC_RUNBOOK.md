@@ -705,7 +705,7 @@ Latest Sonnet/Opus lambda sweep:
 - Inputs: existing Sonnet 4.6 and Opus 4.8 pilot72 episode JSONL files
 - Lambda values: `0.2`, `0.5`, `0.8`
 - No new LLM/API calls
-- Break-even lambda for Opus vs Sonnet net/gene: approximately `0.234`
+- Break-even lambda for Opus vs Sonnet net/gene: approximately `0.234` (pilot72 estimate; the frozen full run gives ≈`0.223`)
 - Output summary: `experiments/trust_cue_attribution/hpc_outputs/phase0_smoke/lambda_sweep_summary_sonnet4_6_vs_opus4_8.json`
 - Interpretation: Opus wins only when verification is very cheap; Sonnet wins once assay cost is non-trivial.
 

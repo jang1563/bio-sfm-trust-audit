@@ -35,6 +35,10 @@ It is the evaluation substrate behind the technical report **"When does an LLM
 trust a specialist model? A cost-aware trust-routing audit — and why calibrated
 reliability interfaces are not a free win"** ([repo](https://github.com/jang1563/bio-sfm-trust-audit)).
 
+> The report's LLM trust-routing pilot scores a balanced **40-target subset
+> (20 monomer + 20 complex)** of these 80 targets; the full 80 are used for the
+> offline calibration gate.
+
 ## What's in it
 
 80 targets released **2026-06-17**, i.e. **after Boltz-2's 2023-06 training
@@ -78,8 +82,11 @@ recent targets): this is a known low-stakes property of the substrate.
 ## Quick start
 
 ```python
+# On the Hub once published (replace <your-namespace> with the actual owner):
 from datasets import load_dataset
 ds = load_dataset("<your-namespace>/phase2-protein-structure-trust-benchmark", split="test")
+# Until then, the data ships in the GitHub repo — read it directly:
+#   import json; ds = [json.loads(l) for l in open("dist/hf_dataset/data/phase2_targets.jsonl")]
 print(ds[0])
 # e.g. correctness vs a confidence threshold:
 import numpy as np
@@ -103,7 +110,7 @@ for thr in (80, 85, 90):
 ## Citation
 
 See `CITATION.cff` in the [repo](https://github.com/jang1563/bio-sfm-trust-audit).
-Archived report + data (Zenodo DOI): _add after deposit_.
+Archived report + data: Zenodo DOI pending deposit.
 
 ## Related work
 

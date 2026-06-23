@@ -24,7 +24,8 @@ optional `microtype`/`titlesec` are guarded with `\IfFileExists`.
 
 ## Publish (visible + referenceable, without arXiv)
 
-Repo is private, so use the manual route (keeps the repo private):
+The repo is public — either connect GitHub↔Zenodo and publish the `v1.0.0` release
+to mint a DOI, or use the manual upload route below:
 
 1. **Zenodo (DOI for the report + data).** Upload `zenodo_deposit.zip` (or its
    contents) to a new Zenodo deposit. `../.zenodo.json` and `../CITATION.cff`

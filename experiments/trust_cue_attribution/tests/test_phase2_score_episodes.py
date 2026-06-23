@@ -31,6 +31,17 @@ class ActionTests(unittest.TestCase):
         self.assertEqual(episode_action(ep("t", "no_signal", None)), "defer")
         self.assertEqual(episode_action({"actions": {}, "parse_error": "x"}), "defer")
 
+    def test_key_mismatch_recovered_not_silently_deferred(self):
+        # model keyed its lone action by the real target_id instead of literal "target"
+        e = {"packet_id": "good::no_signal", "cue_condition": "no_signal",
+             "actions": {"good": {"action": "trust_sfm"}}}
+        self.assertEqual(episode_action(e), "trust_sfm")  # recovered, not silent defer
+        res = score_episodes([e], records(), lam=0.5, correct_lddt=0.9)
+        self.assertEqual(res["key_mismatches"], 1)
+        # a properly-keyed episode does not count as a mismatch
+        ok = score_episodes([ep("good", "no_signal", "trust_sfm")], records(), lam=0.5, correct_lddt=0.9)
+        self.assertEqual(ok["key_mismatches"], 0)
+
 
 class OutcomeTests(unittest.TestCase):
     def test_trust_matches_target(self):

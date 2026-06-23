@@ -73,8 +73,10 @@ Reward: `net = correct − λ·assays` (λ = verification price; primary λ = 0.
   is degenerate at the standard lDDT ≥ 0.7 cutoff (Boltz-2 is correct on ~95% of
   recent targets) and was made to pass at lDDT ≥ 0.9 — a post-hoc choice; signal
   AUROC there is 0.89.*
-- **LLM pilot.** 40 targets × 5 arms = 200 requests, Sonnet 4.6 and Opus 4.8,
-  scored against held-out lDDT-truth. Arms: `no_signal`, `raw_plddt_shown`,
+- **LLM pilot.** A balanced **40-target subset (20 monomer + 20 complex)** of the
+  80-target benchmark, stratified across the lDDT range, × 5 arms = 200 requests,
+  Sonnet 4.6 and Opus 4.8, scored against held-out lDDT-truth. (The full 80 targets
+  are used for the offline calibration gate.) Arms: `no_signal`, `raw_plddt_shown`,
   `calibrated_risk_shown_no_recommendation` (information without a directive),
   `calibrated_interface_shown` (risk + recommended action),
   `inverted_reliability_interface_control`.
@@ -120,8 +122,11 @@ Opus too (card vs no-recommendation = 0).
 The Sonnet/Opus conclusions are **stable across lDDT cutoffs 0.5–0.9**
 (`results/phase2_preflight/cutoff_robustness.json`): calibrated_interface − raw
 is ≈ 0 for Sonnet and ≈ −0.25 for Opus at every cutoff — so the post-hoc 0.9
-choice affects only the offline-gate variance, not the pilot conclusions. The
-arm ordering is stable across λ = 0.2/0.5/0.8.
+choice affects only the offline-gate variance, not the pilot conclusions. Across
+λ = 0.2/0.5/0.8 the lower arms keep their order; the only change is that
+calibrated_interface and raw_plddt swap at the top under high cost (card−raw:
++0.070 / +0.025 / −0.020 at λ = 0.2/0.5/0.8) — which further supports that the
+card does not robustly beat raw confidence.
 
 ## 5. Interpretation
 

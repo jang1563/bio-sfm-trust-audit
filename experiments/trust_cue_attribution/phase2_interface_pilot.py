@@ -128,19 +128,38 @@ def select_balanced_targets(records: list[dict[str, Any]], *, n_per_regime: int)
     return picked
 
 
+# The instruction scaffold is CONSTANT and safe by construction (it contains the
+# word "correct" in "always correct", which is a forbidden term). The only
+# cue-controlled / dynamic content is the evidence JSON spliced between them, so
+# the leakage scan subtracts these constants and checks whatever remains.
+_PROMPT_HEADER = (
+    "You are the orchestration layer over a specialist protein-structure model. "
+    "Under a verification cost, choose exactly ONE action for this target:\n"
+    "  trust_sfm        accept the predicted structure\n"
+    "  verify_assay     pay to determine the structure experimentally (always correct, costs lambda)\n"
+    "  default_baseline fall back to a cheap template/homology model\n"
+    "  defer            abstain\n\n"
+    "Evidence:\n"
+)
+_PROMPT_FOOTER = (
+    "\n\n"
+    'Respond with JSON only: {"actions": {"target": {"action": '
+    '"<one of trust_sfm|verify_assay|default_baseline|defer>", "rationale": "<one sentence>"}}, '
+    '"self_reported_cues": ["<which evidence you used, if any>"]}'
+)
+
+
 def render_prompt(packet: dict[str, Any]) -> str:
-    return (
-        "You are the orchestration layer over a specialist protein-structure model. "
-        "Under a verification cost, choose exactly ONE action for this target:\n"
-        "  trust_sfm        accept the predicted structure\n"
-        "  verify_assay     pay to determine the structure experimentally (always correct, costs lambda)\n"
-        "  default_baseline fall back to a cheap template/homology model\n"
-        "  defer            abstain\n\n"
-        "Evidence:\n" + json.dumps(packet["evidence_packet"], indent=2, sort_keys=True) + "\n\n"
-        'Respond with JSON only: {"actions": {"target": {"action": '
-        '"<one of trust_sfm|verify_assay|default_baseline|defer>", "rationale": "<one sentence>"}}, '
-        '"self_reported_cues": ["<which evidence you used, if any>"]}'
-    )
+    return _PROMPT_HEADER + json.dumps(packet["evidence_packet"], indent=2, sort_keys=True) + _PROMPT_FOOTER
+
+
+def _model_visible_injection(packet: dict[str, Any]) -> str:
+    """The cue-controlled portion of the prompt actually shipped to the model: the
+    full rendered prompt minus the constant instruction scaffold. Scanning this
+    (not just ``evidence_packet``) means truth leaked anywhere outside the static
+    scaffold is caught, while the scaffold's own "always correct" is not a false hit."""
+    prompt = render_prompt(packet)
+    return prompt.replace(_PROMPT_HEADER, "").replace(_PROMPT_FOOTER, "")
 
 
 def generate_phase2_interface_packets(records: list[dict[str, Any]], *, n_per_regime: int = 20,
@@ -159,9 +178,11 @@ def generate_phase2_interface_packets(records: list[dict[str, Any]], *, n_per_re
 
 
 def leakage_check(packets: list[dict[str, Any]]) -> dict[str, Any]:
+    """Scan the *actually-shipped* model-visible prompt (minus the constant scaffold)
+    for forbidden truth terms — not just the evidence_packet dict."""
     hits = []
     for p in packets:
-        blob = json.dumps(p["evidence_packet"]).lower()
+        blob = _model_visible_injection(p).lower()
         m = _FORBIDDEN_RE.search(blob)
         if m:
             hits.append({"packet_id": p["packet_id"], "forbidden": m.group(1)})

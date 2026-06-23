@@ -75,6 +75,19 @@ class GenerationTests(unittest.TestCase):
         packets[0]["evidence_packet"]["lddt"] = 0.83  # inject leak
         self.assertFalse(leakage_check(packets)["passed"])
 
+    def test_leakage_check_scans_rendered_prompt_not_just_packet(self):
+        from phase2_interface_pilot import render_prompt
+        packets = generate_phase2_interface_packets(records(24), n_per_regime=2)
+        # the shipped prompt DOES contain the forbidden word "correct" (in the static
+        # "always correct" menu) -- the guard must scan the rendered prompt yet not
+        # false-positive on the constant scaffold.
+        self.assertIn("always correct", render_prompt(packets[0]))
+        self.assertTrue(leakage_check(packets)["passed"])
+        # a truth value injected into the evidence still shows up in the rendered
+        # prompt and must be caught.
+        packets[0]["evidence_packet"]["truth"] = {"quality": 0.91}
+        self.assertFalse(leakage_check(packets)["passed"])
+
 
 if __name__ == "__main__":
     unittest.main()

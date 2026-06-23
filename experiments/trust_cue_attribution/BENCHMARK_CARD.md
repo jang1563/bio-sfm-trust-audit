@@ -2,6 +2,11 @@
 
 Date: 2026-06-18
 
+> **Note.** This card documents the **Phase 0** GEARS/perturbation dry-run substrate
+> (historical). The project's flagship result is **Phase 2 — protein structure
+> (Boltz-2 / pLDDT)**; see [`../../REPORT.md`](../../REPORT.md) and the Phase 2
+> [dataset card](../../dist/hf_dataset/README.md).
+
 Project title: **What Does The Reasoning Layer Trust?**
 
 ## Purpose
@@ -314,7 +319,7 @@ Stratified Opus 4.8 pilot at `lambda = 0.5`:
 Lambda sweep:
 
 - Opus wins only when verification is very cheap.
-- Micro-primary break-even lambda for Opus versus Sonnet net/gene is approximately 0.223.
+- Micro-primary break-even lambda for Opus versus Sonnet net/gene is approximately 0.223 (frozen full run; the earlier pilot72 estimate was ≈0.234).
 - Above that, Sonnet's lower assay use gives better net reward.
 
 ## Current Scientific Read

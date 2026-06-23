@@ -26,13 +26,27 @@ DEFAULT_CORRECT_LDDT = 0.9
 DEFAULT_LAMBDA = 0.5
 
 
+def _resolve_action_entry(ep: dict[str, Any]) -> tuple[Optional[dict[str, Any]], bool]:
+    """Return ``(action_entry, key_mismatch)``. The prompt asks the model to key its
+    single action by the literal ``"target"``; tolerate a model that instead keys the
+    lone action by the real ``target_id`` (or any single key) and flag the deviation,
+    so a whole arm cannot silently collapse to all-``defer`` on a key-naming quirk."""
+    act = ep.get("actions")
+    if not isinstance(act, dict) or not act:
+        return None, False
+    entry = act.get("target")
+    if isinstance(entry, dict) and isinstance(entry.get("action"), str):
+        return entry, False
+    if len(act) == 1:
+        (only,) = act.values()
+        if isinstance(only, dict) and isinstance(only.get("action"), str):
+            return only, True
+    return None, False
+
+
 def episode_action(ep: dict[str, Any]) -> str:
-    act = ep.get("actions", {})
-    if isinstance(act, dict):
-        tgt = act.get("target")
-        if isinstance(tgt, dict) and isinstance(tgt.get("action"), str):
-            return tgt["action"]
-    return "defer"  # missing / parse_error / provider_error -> defer (visible non-answer)
+    entry, _ = _resolve_action_entry(ep)
+    return entry["action"] if entry is not None else "defer"  # missing/parse/provider error -> defer
 
 
 def outcome(action: str, target_correct: bool, template_correct: bool, lam: float) -> tuple[int, int]:
@@ -80,6 +94,7 @@ def score_episodes(episodes: list[dict[str, Any]], records: list[dict[str, Any]]
     by_arm: dict[str, list[dict[str, Any]]] = defaultdict(list)
     by_arm_regime: dict[tuple[str, str], list[dict[str, Any]]] = defaultdict(list)
     action_by_target_arm: dict[tuple[str, str], dict[str, Any]] = {}
+    key_mismatches = 0
     for ep in episodes:
         pid = ep.get("packet_id", "")
         target_id = pid.split("::")[0]
@@ -87,7 +102,9 @@ def score_episodes(episodes: list[dict[str, Any]], records: list[dict[str, Any]]
         t = truth.get(target_id)
         if t is None:
             continue
-        action = episode_action(ep)
+        entry, mism = _resolve_action_entry(ep)
+        key_mismatches += 1 if mism else 0
+        action = entry["action"] if entry is not None else "defer"
         c, a = outcome(action, t["target_correct"], t["template_correct"], lam)
         row = {"target_id": target_id, "arm": arm, "action": action, "correct": c,
                "assays": a, "target_correct": t["target_correct"], "regime": t["regime"]}
@@ -131,6 +148,7 @@ def score_episodes(episodes: list[dict[str, Any]], records: list[dict[str, Any]]
         "n_episodes": len(episodes),
         "parse_errors": sum(1 for e in episodes if "parse_error" in e),
         "provider_errors": sum(1 for e in episodes if "provider_error" in e),
+        "key_mismatches": key_mismatches,
         "per_arm": per_arm,
         "per_arm_by_regime": per_arm_regime,
         "paired_cue_effects_vs_no_signal": paired,
@@ -154,7 +172,8 @@ def main() -> None:
         fh.write("\n")
     print(json.dumps({"per_arm_net": {a: result["per_arm"][a].get("net_reward_per_target") for a in ARMS},
                       "paired": {a: v.get("delta_net_per_target") for a, v in result["paired_cue_effects_vs_no_signal"].items()},
-                      "parse_errors": result["parse_errors"], "provider_errors": result["provider_errors"]},
+                      "parse_errors": result["parse_errors"], "provider_errors": result["provider_errors"],
+                      "key_mismatches": result["key_mismatches"]},
                      indent=2, sort_keys=True))
 
 
