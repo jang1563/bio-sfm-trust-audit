@@ -1,0 +1,9 @@
+{
+  "what": "Re-scored the v1 Phase-2 LLM routing episodes (same model decisions) with DockQ-validated COMPLEX truth (monomers unchanged at CA-lDDT>=0.9) to test whether the headline contrasts depend on the flawed all-chain CA-lDDT.",
+  "lambda": 0.5, "monomer_cutoff_lddt": 0.9,
+  "interface_minus_raw_plddt": {
+    "Sonnet 4.6": {"orig_caLDDT": 0.025, "dockq_0.23": 0.000, "dockq_0.49": 0.024},
+    "Opus 4.8":   {"orig_caLDDT": -0.226, "dockq_0.23": -0.275, "dockq_0.49": -0.251}
+  },
+  "conclusion": "The headline survives the metric correction: interface - raw is ~0 for Sonnet and robustly negative (harmful) for Opus under both the original CA-lDDT and DockQ-corrected complex truth. The CA-lDDT flaw corrected the complex CALIBRATION story (ipTM is well-calibrated; the 0.16 gap was an artifact) but did NOT overturn the routing finding (which concerns reliability-interface packaging and model-dependence)."
+}

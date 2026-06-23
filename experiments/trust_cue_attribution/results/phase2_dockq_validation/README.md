@@ -36,6 +36,22 @@ DockQ spread: median 0.45, min 0.013, max 0.951; **33/40 "acceptable" (≥0.23),
    with DockQ (this run is a down-payment) and use **ipTM**, not pLDDT, as the complex
    reliability signal.
 
-This does not by itself change the headline trust-routing finding (which is about
-*reliability-interface packaging*, not the substrate), but it corrects the complex-regime
-calibration story and supplies the validated metric the pre-registration requires.
+## Does the headline survive the metric fix? (re-scoring v1 routing)
+
+We re-scored the **v1 LLM routing episodes** (same model decisions, 40 targets × 5 arms,
+Sonnet + Opus) with **DockQ-corrected complex truth** (monomers unchanged at CA-lDDT ≥ 0.9),
+λ = 0.5. Artifacts: [`rescore_summary.json`](rescore_summary.json), runner
+[`rescore_with_dockq.py`](rescore_with_dockq.py).
+
+| `interface − raw_plddt` | orig CA-lDDT | DockQ ≥ 0.23 | DockQ ≥ 0.49 |
+|---|---:|---:|---:|
+| **Sonnet 4.6** | +0.025 | +0.000 | +0.024 |
+| **Opus 4.8** | −0.226 | −0.275 | −0.251 |
+
+**The headline is robust to the metric correction.** `interface − raw` stays ≈ 0 for
+Sonnet and robustly negative (harmful) for Opus under both the original and the
+DockQ-corrected complex truth. So the CA-lDDT flaw corrected the complex *calibration*
+story (ipTM is well-calibrated; the 0.16 gap was an artifact) but did **not** overturn the
+routing finding, which is about reliability-interface *packaging* and model-dependence —
+not the substrate's truth metric. This corrects the complex-regime calibration story and
+supplies the validated metric the pre-registration requires.
