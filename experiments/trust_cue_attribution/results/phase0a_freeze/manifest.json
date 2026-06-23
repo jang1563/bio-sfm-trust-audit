@@ -1,0 +1,189 @@
+{
+  "counts": {
+    "cue_packets_full": 749,
+    "opus_4_8_episodes": 72,
+    "panels_additive": 45,
+    "panels_full": 107,
+    "requests_full": 749,
+    "requests_pilot72_main": 72,
+    "sonnet_4_6_episodes": 72
+  },
+  "cue_conditions": [
+    "additive_disagreement_shown",
+    "anonymized_genes",
+    "confidence_shown",
+    "misleading_reliability_card",
+    "model_name_shown",
+    "no_cue"
+  ],
+  "git_commit": "56ac29ced67337636ef0408081dc64cf0bd6bbbe",
+  "git_commit_role": "HEAD at freeze generation; final artifact commit may differ because commit hashes cannot self-reference generated files",
+  "input_dir": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke",
+  "lambda_values": [
+    0.2,
+    0.5,
+    0.8
+  ],
+  "models": [
+    "claude-sonnet-4-6",
+    "claude-opus-4-8"
+  ],
+  "output_dir": "experiments/trust_cue_attribution/results/phase0a_freeze",
+  "phase": "phase0a",
+  "scorer_settings": {
+    "defer_penalty": 0.0,
+    "macro_panel_prefix": "macro_panel_*",
+    "primary_aggregate": "micro_gene_weighted",
+    "raw_assay_stats_shown": "positive_control_excluded_from_main_pilot"
+  },
+  "source_artifacts": {
+    "baselines_additive": {
+      "bytes": 6456,
+      "json_type": "dict",
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke/baselines_additive.json",
+      "sha256": "424413da71bc34d7ced57cc354917c418a20044f7d9d3d82cf0328d5c6cd353f",
+      "top_level_keys": [
+        "0.2",
+        "0.5",
+        "0.8"
+      ]
+    },
+    "baselines_full": {
+      "bytes": 6501,
+      "json_type": "dict",
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke/baselines_full.json",
+      "sha256": "de8533fb8978c409c69279f6f1274aac8ad896d63c37012bf1533a0ccda958ae",
+      "top_level_keys": [
+        "0.2",
+        "0.5",
+        "0.8"
+      ]
+    },
+    "cue_packets_full": {
+      "bytes": 4708666,
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke/cue_packets_full.jsonl",
+      "records": 749,
+      "sha256": "bdf35bc923596255f80d5bf01540566e3896efc5d012220befaf9a08feb2748e"
+    },
+    "cue_router_eval": {
+      "bytes": 40306,
+      "json_type": "dict",
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke/llm_sonnet4_6_vs_opus4_8_pilot72_router_eval.json",
+      "sha256": "217d5c5abf1ea0b4fd70e5bb2cb66c9f62b8c1b7e65a06eb70593450e4242f2f",
+      "top_level_keys": [
+        "feature_field",
+        "group_field",
+        "models",
+        "n_input_trajectories",
+        "n_matched_packets",
+        "policies"
+      ]
+    },
+    "feature_signature_router_eval": {
+      "bytes": 40452,
+      "json_type": "dict",
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke/llm_sonnet4_6_vs_opus4_8_pilot72_feature_signature_router_eval.json",
+      "sha256": "1c2e3753cbf7fb627c0fafde479df111c589f5c36172825dcab62dacdbbbdecc",
+      "top_level_keys": [
+        "feature_field",
+        "group_field",
+        "models",
+        "n_input_trajectories",
+        "n_matched_packets",
+        "policies"
+      ]
+    },
+    "feature_summary": {
+      "bytes": 1901,
+      "json_type": "dict",
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke/llm_sonnet4_6_vs_opus4_8_pilot72_feature_summary.json",
+      "sha256": "e78fa7f179998bf880a51137a0744ab939a9124bcb15718d418e1d64f956d014",
+      "top_level_keys": [
+        "cue_counts",
+        "model_counts",
+        "n_rows",
+        "n_signatures",
+        "top_signatures"
+      ]
+    },
+    "opus_4_8_episodes": {
+      "bytes": 591493,
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke/llm_claude-opus-4-8_pilot72_main_episodes.jsonl",
+      "records": 72,
+      "sha256": "7fc9b5d6cd5f099462201d93978dac81f455cf65834f598c5134aa6b55c6a3a3"
+    },
+    "opus_4_8_trajectories": {
+      "bytes": 623298,
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke/llm_claude-opus-4-8_pilot72_main_trajectories.jsonl",
+      "records": 72,
+      "sha256": "00e4c40165010acaf884adfd6240c6d54f3281a5acc7a70aa8bed49c2add7891"
+    },
+    "panels_additive": {
+      "bytes": 798928,
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke/panels_additive.jsonl",
+      "records": 45,
+      "sha256": "f6fbb1044e9553215a2cc3ce9614a2d3377eec865c34c2c8e5686b38e2562c9f"
+    },
+    "panels_full": {
+      "bytes": 1945769,
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke/panels_full.jsonl",
+      "records": 107,
+      "sha256": "b22a2190b4cbdf077f0e54ab017983988fb0e5c6d3cbb26f7a8247829c2b0998"
+    },
+    "preference_summary": {
+      "bytes": 2215,
+      "json_type": "dict",
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke/llm_sonnet4_6_vs_opus4_8_pilot72_preference_summary.json",
+      "sha256": "60bf7429940500f7745c6f941e32ff23087ece9893f6ffb5cf0a75183ef9053e",
+      "top_level_keys": [
+        "by_cue_condition",
+        "chosen_models",
+        "max_reward_delta",
+        "mean_reward_delta",
+        "n_pairs",
+        "n_ties",
+        "rejected_models"
+      ]
+    },
+    "requests_full": {
+      "bytes": 5348439,
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke/requests_full.jsonl",
+      "records": 749,
+      "sha256": "fe8e13ccb2e0dd27d2e29cd36c428b384f012b78b4d8b7a0f823389b6fdbb164"
+    },
+    "requests_pilot72_main": {
+      "bytes": 463652,
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke/requests_pilot72_main.jsonl",
+      "records": 72,
+      "sha256": "578c330b62e44b370830c3fcf66505f60f74b9c70fd43a28465c951c800015d0"
+    },
+    "requests_pilot72_main_manifest": {
+      "bytes": 4155,
+      "json_type": "dict",
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke/requests_pilot72_main_manifest.json",
+      "sha256": "8ea9f43fde3c426b7deb8099c1362764607cf911de36929d038f8fe667989395",
+      "top_level_keys": [
+        "cue_conditions",
+        "n_panels",
+        "n_requests",
+        "panels"
+      ]
+    },
+    "sonnet_4_6_episodes": {
+      "bytes": 785675,
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke/llm_claude-sonnet-4-6_pilot72_main_episodes.jsonl",
+      "records": 72,
+      "sha256": "b628736ead4f2673b7dcd12533c8e85172d2139807d31b2287ed6650dca8dff8"
+    },
+    "sonnet_4_6_trajectories": {
+      "bytes": 717687,
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke/llm_claude-sonnet-4-6_pilot72_main_trajectories.jsonl",
+      "records": 72,
+      "sha256": "349f461af49a495c0aaa1935a1b0f1d1ef2a0f5a410d0b6c4322b47f9884c3bb"
+    }
+  },
+  "tracked_outputs": [
+    "manifest.json",
+    "summary.json"
+  ]
+}

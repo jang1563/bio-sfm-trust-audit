@@ -1,0 +1,18 @@
+# bio-sfm-trust-audit — Python dependencies
+# Tested with Python 3.9, numpy 1.26.4, pandas 2.3.3. The 163-test suite
+# (experiments/trust_cue_attribution/tests/) runs on the core + analysis deps.
+# The LLM runner uses only the standard library (urllib) for HTTP.
+
+# --- Core harness (panels, cues, scoring, baselines, episodes) ---
+numpy
+pandas
+
+# --- Analysis / calibration (isotonic, stats, inventory) ---
+scipy
+
+# --- Phase 1: single-cell scFoundation cue (h5ad I/O + env probe) ---
+anndata
+torch        # only for the scFoundation environment probe / inference
+
+# --- Phase 2: protein structure (CA-lDDT truth from mmCIF/PDB) ---
+gemmi

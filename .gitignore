@@ -1,0 +1,63 @@
+# OS / editor
+.DS_Store
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.token
+.api_keys
+api_keys
+secrets/
+
+# Local and HPC outputs
+experiments/**/hpc_outputs/
+experiments/**/outputs/
+experiments/**/tmp/
+experiments/**/cache/
+*.log
+*.out
+*.err
+
+# Large/generated data artifacts
+*.jsonl
+*.parquet
+*.h5
+*.h5ad
+*.loom
+*.rds
+*.pkl
+*.pickle
+*.pt
+*.pth
+*.safetensors
+*.npz
+
+# Keep source docs and small JSON configs trackable by default.
+!*.json
+
+# dist: commit the PDFs + build inputs; ignore build scratch + the derived deposit bundle
+dist/_*.md
+dist/*.txt
+dist/REPORT_page*.png
+dist/zenodo_deposit/
+dist/zenodo_deposit.zip
+# but DO track the small public HF benchmark data file (overrides *.jsonl above)
+!dist/hf_dataset/data/phase2_targets.jsonl

@@ -1,0 +1,479 @@
+{
+  "claim_boundary": "Exploratory panel-level signal-validity diagnostic only; no full Phase 1A, true-SFM trust, or biological interpretation claim.",
+  "correlations": {
+    "additive_coverage_rate": {
+      "centroid_distance_to_control": {
+        "n": 12,
+        "pearson": 0.29175,
+        "spearman": 0.269309
+      },
+      "centroid_l2_norm": {
+        "n": 12,
+        "pearson": -0.175329,
+        "spearman": -0.171379
+      },
+      "mean_cell_distance_to_control": {
+        "n": 12,
+        "pearson": 0.299692,
+        "spearman": 0.220344
+      },
+      "mean_cell_l2_norm": {
+        "n": 12,
+        "pearson": 0.229938,
+        "spearman": 0.073448
+      },
+      "std_cell_distance_to_control": {
+        "n": 12,
+        "pearson": 0.148421,
+        "spearman": 0.122413
+      },
+      "std_cell_l2_norm": {
+        "n": 12,
+        "pearson": -0.053272,
+        "spearman": -0.122413
+      }
+    },
+    "additive_disagreement_rate": {
+      "centroid_distance_to_control": {
+        "n": 12,
+        "pearson": 0.099378,
+        "spearman": -0.202797
+      },
+      "centroid_l2_norm": {
+        "n": 12,
+        "pearson": 0.196131,
+        "spearman": 0.27972
+      },
+      "mean_cell_distance_to_control": {
+        "n": 12,
+        "pearson": -0.002667,
+        "spearman": -0.314685
+      },
+      "mean_cell_l2_norm": {
+        "n": 12,
+        "pearson": 0.037687,
+        "spearman": -0.300699
+      },
+      "std_cell_distance_to_control": {
+        "n": 12,
+        "pearson": -0.099111,
+        "spearman": -0.125874
+      },
+      "std_cell_l2_norm": {
+        "n": 12,
+        "pearson": -0.170643,
+        "spearman": -0.111888
+      }
+    },
+    "high_risk_rate": {
+      "centroid_distance_to_control": {
+        "n": 12,
+        "pearson": 0.436543,
+        "spearman": 0.41958
+      },
+      "centroid_l2_norm": {
+        "n": 12,
+        "pearson": -0.243616,
+        "spearman": -0.370629
+      },
+      "mean_cell_distance_to_control": {
+        "n": 12,
+        "pearson": 0.451003,
+        "spearman": 0.468531
+      },
+      "mean_cell_l2_norm": {
+        "n": 12,
+        "pearson": 0.398952,
+        "spearman": 0.34965
+      },
+      "std_cell_distance_to_control": {
+        "n": 12,
+        "pearson": 0.233007,
+        "spearman": 0.356643
+      },
+      "std_cell_l2_norm": {
+        "n": 12,
+        "pearson": -0.040792,
+        "spearman": 0.083916
+      }
+    },
+    "mean_reliability_score": {
+      "centroid_distance_to_control": {
+        "n": 12,
+        "pearson": 0.423428,
+        "spearman": 0.370629
+      },
+      "centroid_l2_norm": {
+        "n": 12,
+        "pearson": -0.240192,
+        "spearman": -0.06993
+      },
+      "mean_cell_distance_to_control": {
+        "n": 12,
+        "pearson": 0.417648,
+        "spearman": 0.216783
+      },
+      "mean_cell_l2_norm": {
+        "n": 12,
+        "pearson": 0.390507,
+        "spearman": 0.223776
+      },
+      "std_cell_distance_to_control": {
+        "n": 12,
+        "pearson": 0.229075,
+        "spearman": 0.097902
+      },
+      "std_cell_l2_norm": {
+        "n": 12,
+        "pearson": -0.070079,
+        "spearman": -0.13986
+      }
+    },
+    "wrong_rate": {
+      "centroid_distance_to_control": {
+        "n": 12,
+        "pearson": -0.302961,
+        "spearman": -0.259651
+      },
+      "centroid_l2_norm": {
+        "n": 12,
+        "pearson": 0.411774,
+        "spearman": 0.343862
+      },
+      "mean_cell_distance_to_control": {
+        "n": 12,
+        "pearson": -0.400459,
+        "spearman": -0.414038
+      },
+      "mean_cell_l2_norm": {
+        "n": 12,
+        "pearson": -0.442857,
+        "spearman": -0.357897
+      },
+      "std_cell_distance_to_control": {
+        "n": 12,
+        "pearson": -0.505314,
+        "spearman": -0.382458
+      },
+      "std_cell_l2_norm": {
+        "n": 12,
+        "pearson": -0.108816,
+        "spearman": -0.084211
+      }
+    }
+  },
+  "decision": {
+    "next_actions": [
+      "do not run a larger Phase 1A LLM matrix solely on this coarse panel card",
+      "build a gene-level or task-aligned internal-signal cue",
+      "keep the shuffled-signal placebo control in the next pilot"
+    ],
+    "reason": "primary_signal_points_opposite_expected_direction",
+    "scale_decision": "redesign_before_scaling",
+    "short_read": "The strongest primary signal is associated with lower wrongness, so it should not be used as a naive high-risk cue.",
+    "wrong_rate_primary_signal": {
+      "abs_correlation": 0.505314,
+      "correlation": -0.505314,
+      "method": "pearson",
+      "n_panels": 12,
+      "signal_field": "std_cell_distance_to_control"
+    }
+  },
+  "interpretation": {
+    "method_note": "Correlations use the 12 selected Phase 1A pilot panels, so they are route-selection diagnostics rather than calibrated biology.",
+    "next_design_step": "If the current signal is weak or ambiguous, replace the coarse panel card with gene-level or task-aligned SFM evidence before running a larger LLM matrix.",
+    "short_read": "The strongest primary signal is associated with lower wrongness, so it should not be used as a naive high-risk cue."
+  },
+  "panel_rows": [
+    {
+      "additive_coverage_rate": 0.0,
+      "additive_disagreement_rate": 0.434783,
+      "centroid_distance_to_control": 9.247352,
+      "centroid_l2_norm": 60.025013,
+      "high_risk_rate": 0.434783,
+      "mean_cell_distance_to_control": 15.145231,
+      "mean_cell_l2_norm": 61.429699,
+      "mean_reliability_score": 0.606012,
+      "panel_id": "ATL1",
+      "std_cell_distance_to_control": 5.173491,
+      "std_cell_l2_norm": 0.153891,
+      "wrong_rate": 0.26087,
+      "wrong_rate_bin": "low"
+    },
+    {
+      "additive_coverage_rate": 0.0,
+      "additive_disagreement_rate": 0.633333,
+      "centroid_distance_to_control": 14.276588,
+      "centroid_l2_norm": 58.720196,
+      "high_risk_rate": 0.633333,
+      "mean_cell_distance_to_control": 21.956909,
+      "mean_cell_l2_norm": 61.721695,
+      "mean_reliability_score": 1.295041,
+      "panel_id": "CEBPB",
+      "std_cell_distance_to_control": 9.127438,
+      "std_cell_l2_norm": 0.29809,
+      "wrong_rate": 0.333333,
+      "wrong_rate_bin": "mid"
+    },
+    {
+      "additive_coverage_rate": 1.0,
+      "additive_disagreement_rate": 0.344828,
+      "centroid_distance_to_control": 10.961359,
+      "centroid_l2_norm": 59.963833,
+      "high_risk_rate": 0.793103,
+      "mean_cell_distance_to_control": 17.31489,
+      "mean_cell_l2_norm": 61.582718,
+      "mean_reliability_score": 0.81716,
+      "panel_id": "CEBPB+MAPK1",
+      "std_cell_distance_to_control": 4.142085,
+      "std_cell_l2_norm": 0.201584,
+      "wrong_rate": 0.275862,
+      "wrong_rate_bin": "mid"
+    },
+    {
+      "additive_coverage_rate": 1.0,
+      "additive_disagreement_rate": 0.233333,
+      "centroid_distance_to_control": 11.246949,
+      "centroid_l2_norm": 57.987926,
+      "high_risk_rate": 0.6,
+      "mean_cell_distance_to_control": 20.860912,
+      "mean_cell_l2_norm": 61.663002,
+      "mean_reliability_score": 0.610075,
+      "panel_id": "DUSP9+IGDCC3",
+      "std_cell_distance_to_control": 11.456057,
+      "std_cell_l2_norm": 0.445351,
+      "wrong_rate": 0.233333,
+      "wrong_rate_bin": "low"
+    },
+    {
+      "additive_coverage_rate": 1.0,
+      "additive_disagreement_rate": 0.423077,
+      "centroid_distance_to_control": 19.547754,
+      "centroid_l2_norm": 59.30978,
+      "high_risk_rate": 0.653846,
+      "mean_cell_distance_to_control": 24.901272,
+      "mean_cell_l2_norm": 61.941772,
+      "mean_reliability_score": 0.715516,
+      "panel_id": "FEV+ISL2",
+      "std_cell_distance_to_control": 9.013767,
+      "std_cell_l2_norm": 0.271635,
+      "wrong_rate": 0.269231,
+      "wrong_rate_bin": "mid"
+    },
+    {
+      "additive_coverage_rate": 1.0,
+      "additive_disagreement_rate": 0.304348,
+      "centroid_distance_to_control": 7.659141,
+      "centroid_l2_norm": 59.553082,
+      "high_risk_rate": 0.565217,
+      "mean_cell_distance_to_control": 15.938991,
+      "mean_cell_l2_norm": 61.44754,
+      "mean_reliability_score": 0.640583,
+      "panel_id": "FOXA1+FOXF1",
+      "std_cell_distance_to_control": 5.819915,
+      "std_cell_l2_norm": 0.171471,
+      "wrong_rate": 0.26087,
+      "wrong_rate_bin": "low"
+    },
+    {
+      "additive_coverage_rate": 0.0,
+      "additive_disagreement_rate": 0.466667,
+      "centroid_distance_to_control": 6.820813,
+      "centroid_l2_norm": 59.808132,
+      "high_risk_rate": 0.466667,
+      "mean_cell_distance_to_control": 14.385094,
+      "mean_cell_l2_norm": 61.460171,
+      "mean_reliability_score": 0.701999,
+      "panel_id": "HOXB9",
+      "std_cell_distance_to_control": 6.326069,
+      "std_cell_l2_norm": 0.294348,
+      "wrong_rate": 0.266667,
+      "wrong_rate_bin": "low"
+    },
+    {
+      "additive_coverage_rate": 1.0,
+      "additive_disagreement_rate": 0.48,
+      "centroid_distance_to_control": 4.896389,
+      "centroid_l2_norm": 59.368366,
+      "high_risk_rate": 0.76,
+      "mean_cell_distance_to_control": 14.754328,
+      "mean_cell_l2_norm": 61.409321,
+      "mean_reliability_score": 0.706957,
+      "panel_id": "IGDCC3+MAPK1",
+      "std_cell_distance_to_control": 7.274909,
+      "std_cell_l2_norm": 0.371936,
+      "wrong_rate": 0.36,
+      "wrong_rate_bin": "high"
+    },
+    {
+      "additive_coverage_rate": 1.0,
+      "additive_disagreement_rate": 0.44,
+      "centroid_distance_to_control": 9.139687,
+      "centroid_l2_norm": 60.334641,
+      "high_risk_rate": 0.56,
+      "mean_cell_distance_to_control": 14.118299,
+      "mean_cell_l2_norm": 61.359798,
+      "mean_reliability_score": 0.719082,
+      "panel_id": "MAP2K3+SLC38A2",
+      "std_cell_distance_to_control": 2.997757,
+      "std_cell_l2_norm": 0.151581,
+      "wrong_rate": 0.48,
+      "wrong_rate_bin": "high"
+    },
+    {
+      "additive_coverage_rate": 0.0,
+      "additive_disagreement_rate": 0.391304,
+      "centroid_distance_to_control": 8.120387,
+      "centroid_l2_norm": 60.027481,
+      "high_risk_rate": 0.391304,
+      "mean_cell_distance_to_control": 15.017241,
+      "mean_cell_l2_norm": 61.438919,
+      "mean_reliability_score": 0.519521,
+      "panel_id": "PTPN1",
+      "std_cell_distance_to_control": 3.452104,
+      "std_cell_l2_norm": 0.227252,
+      "wrong_rate": 0.434783,
+      "wrong_rate_bin": "high"
+    },
+    {
+      "additive_coverage_rate": 1.0,
+      "additive_disagreement_rate": 0.285714,
+      "centroid_distance_to_control": 14.456422,
+      "centroid_l2_norm": 59.049309,
+      "high_risk_rate": 0.714286,
+      "mean_cell_distance_to_control": 21.380688,
+      "mean_cell_l2_norm": 61.645348,
+      "mean_reliability_score": 0.663869,
+      "panel_id": "SAMD1+UBASH3B",
+      "std_cell_distance_to_control": 8.077531,
+      "std_cell_l2_norm": 0.253322,
+      "wrong_rate": 0.333333,
+      "wrong_rate_bin": "mid"
+    },
+    {
+      "additive_coverage_rate": 0.0,
+      "additive_disagreement_rate": 0.3,
+      "centroid_distance_to_control": 5.014781,
+      "centroid_l2_norm": 59.367023,
+      "high_risk_rate": 0.3,
+      "mean_cell_distance_to_control": 15.101004,
+      "mean_cell_l2_norm": 61.464523,
+      "mean_reliability_score": 0.471085,
+      "panel_id": "SLC4A1",
+      "std_cell_distance_to_control": 7.121855,
+      "std_cell_l2_norm": 0.410761,
+      "wrong_rate": 0.4,
+      "wrong_rate_bin": "high"
+    }
+  ],
+  "phase": "phase1a",
+  "primary_question": "Do coarse scFoundation panel embedding distance summaries align with GEARS wrongness strongly enough to justify scaling this cue?",
+  "scope": {
+    "matched_panels": 12,
+    "panel_signals": 12,
+    "primary_signal_fields": [
+      "centroid_distance_to_control",
+      "mean_cell_distance_to_control",
+      "std_cell_distance_to_control"
+    ],
+    "selected_panels": 12,
+    "signal_fields": [
+      "centroid_distance_to_control",
+      "mean_cell_distance_to_control",
+      "std_cell_distance_to_control",
+      "centroid_l2_norm",
+      "mean_cell_l2_norm",
+      "std_cell_l2_norm"
+    ],
+    "target_fields": [
+      "wrong_rate",
+      "additive_disagreement_rate",
+      "high_risk_rate",
+      "mean_reliability_score",
+      "additive_coverage_rate"
+    ]
+  },
+  "status": "signal_validity_ready",
+  "strongest_by_target": {
+    "additive_coverage_rate": {
+      "strongest_any_signal": {
+        "abs_correlation": 0.299692,
+        "correlation": 0.299692,
+        "method": "pearson",
+        "n": 12,
+        "signal_field": "mean_cell_distance_to_control"
+      },
+      "strongest_primary_signal": {
+        "abs_correlation": 0.299692,
+        "correlation": 0.299692,
+        "method": "pearson",
+        "n": 12,
+        "signal_field": "mean_cell_distance_to_control"
+      }
+    },
+    "additive_disagreement_rate": {
+      "strongest_any_signal": {
+        "abs_correlation": 0.314685,
+        "correlation": -0.314685,
+        "method": "spearman",
+        "n": 12,
+        "signal_field": "mean_cell_distance_to_control"
+      },
+      "strongest_primary_signal": {
+        "abs_correlation": 0.314685,
+        "correlation": -0.314685,
+        "method": "spearman",
+        "n": 12,
+        "signal_field": "mean_cell_distance_to_control"
+      }
+    },
+    "high_risk_rate": {
+      "strongest_any_signal": {
+        "abs_correlation": 0.468531,
+        "correlation": 0.468531,
+        "method": "spearman",
+        "n": 12,
+        "signal_field": "mean_cell_distance_to_control"
+      },
+      "strongest_primary_signal": {
+        "abs_correlation": 0.468531,
+        "correlation": 0.468531,
+        "method": "spearman",
+        "n": 12,
+        "signal_field": "mean_cell_distance_to_control"
+      }
+    },
+    "mean_reliability_score": {
+      "strongest_any_signal": {
+        "abs_correlation": 0.423428,
+        "correlation": 0.423428,
+        "method": "pearson",
+        "n": 12,
+        "signal_field": "centroid_distance_to_control"
+      },
+      "strongest_primary_signal": {
+        "abs_correlation": 0.423428,
+        "correlation": 0.423428,
+        "method": "pearson",
+        "n": 12,
+        "signal_field": "centroid_distance_to_control"
+      }
+    },
+    "wrong_rate": {
+      "strongest_any_signal": {
+        "abs_correlation": 0.505314,
+        "correlation": -0.505314,
+        "method": "pearson",
+        "n": 12,
+        "signal_field": "std_cell_distance_to_control"
+      },
+      "strongest_primary_signal": {
+        "abs_correlation": 0.505314,
+        "correlation": -0.505314,
+        "method": "pearson",
+        "n": 12,
+        "signal_field": "std_cell_distance_to_control"
+      }
+    }
+  }
+}

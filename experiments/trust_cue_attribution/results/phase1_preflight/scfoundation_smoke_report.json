@@ -1,0 +1,107 @@
+{
+  "adapter": "ScFoundationAdapter",
+  "claim_boundary": "tiny scFoundation inference smoke only; no LLM trust or scientific interpretation claim",
+  "command": [
+    "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/envs/scfoundation-smoke-py39/bin/python",
+    "get_embedding.py",
+    "--task_name",
+    "phase1_smoke",
+    "--input_type",
+    "singlecell",
+    "--output_type",
+    "cell",
+    "--pool_type",
+    "all",
+    "--tgthighres",
+    "t4",
+    "--data_path",
+    "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/phase1_scfoundation_smoke/phase1_smoke_first_3_cells.h5ad",
+    "--save_path",
+    "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/phase1_scfoundation_smoke",
+    "--pre_normalized",
+    "F",
+    "--version",
+    "ce"
+  ],
+  "embedding_summary": {
+    "dtype": "float32",
+    "finite_fraction": 1.0,
+    "l2_norm": 104.05496215820312,
+    "mean": 0.06949714571237564,
+    "path": "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/phase1_scfoundation_smoke/phase1_smoke_01B-resolution_singlecell_cell_embedding_t4_resolution.npy",
+    "sha256": "e85d63b288d121fd681e3017a2d0f0b7650cf9ca5d1227423de30414d536c520",
+    "shape": [
+      3,
+      3072
+    ],
+    "std": 1.08167564868927
+  },
+  "inputs": {
+    "input_data": "/scratch/USER/Perturb_seq/virtual_cell/2026_03_18_cfgA/data/fram2_val.h5ad",
+    "model_dir": "/scratch/USER/huggingface/benchmark/scFoundation/model",
+    "n_cells": 3,
+    "pre_normalized": "F",
+    "scfoundation_dir": "/scratch/USER/huggingface/benchmark/scFoundation",
+    "tgthighres": "t4",
+    "tiny_h5ad": "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/phase1_scfoundation_smoke/phase1_smoke_first_3_cells.h5ad"
+  },
+  "next_actions": [
+    "Convert the compact embedding summary into standardized Phase 1 internal-signal evidence packets.",
+    "Do not expose held-out truth, reward, or correctness fields in model-visible packets."
+  ],
+  "outputs": {
+    "embedding_path": "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/phase1_scfoundation_smoke/phase1_smoke_01B-resolution_singlecell_cell_embedding_t4_resolution.npy",
+    "report_out": "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/phase1_preflight/scfoundation_smoke_report.json"
+  },
+  "phase": "phase1",
+  "process": {
+    "returncode": 0,
+    "stderr_tail": [
+      "",
+      "  0%|          | 0/3 [00:00<?, ?it/s]",
+      " 33%|\u2588\u2588\u2588\u258e      | 1/3 [00:11<00:22, 11.37s/it]",
+      "100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 3/3 [00:11<00:00,  3.81s/it]"
+    ],
+    "stdout_tail": [
+      "covert gene feature into 19264",
+      "(3, 19264)",
+      "{'mask_gene_name': False, 'gene_num': 19266, 'seq_len': 19266, 'encoder': {'hidden_dim': 768, 'depth': 12, 'heads': 12, 'dim_head': 64, 'seq_len': 19266, 'module_type': 'transformer', 'norm_first': False}, 'decoder': {'hidden_dim': 512, 'depth': 6, 'heads': 8, 'dim_head': 64, 'module_type': 'performer', 'seq_len': 19266, 'norm_first': False}, 'n_class': 104, 'pad_token_id': 103, 'mask_token_id': 102, 'bin_num': 100, 'bin_alpha': 1.0, 'rawcount': True, 'model': 'mae_autobin', 'test_valid_train_idx_dict': '/nfs_beijing/minsheng/data/os10000w-new/global_shuffle/meta.csv.train_set_idx_dict.pt', 'valid_data_path': '/nfs_beijing/minsheng/data/valid_count_10w.npz', 'num_tokens': 13, 'train_data_path': None, 'isPanA': False, 'isPlanA1': False, 'max_files_to_load': 5, 'bin_type': 'auto_bin', 'value_mask_prob': 0.3, 'zero_mask_prob': 0.03, 'replace_prob': 0.8, 'random_token_prob': 0.1, 'mask_ignore_token_ids': [0], 'decoder_add_zero': True, 'mae_encoder_max_seq_len': 15000, 'isPlanA': False, 'mask_prob': 0.3, 'model_type': 'mae_autobin', 'pos_embed': False, 'device': 'cuda'}",
+      "save at /scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/phase1_scfoundation_smoke/phase1_smoke_01B-resolution_singlecell_cell_embedding_t4_resolution.npy",
+      "(3, 3072)"
+    ]
+  },
+  "python": {
+    "executable": "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/envs/scfoundation-smoke-py39/bin/python",
+    "version": "3.9.23"
+  },
+  "status": "ready_for_internal_signal_summary_adapter",
+  "subset": {
+    "obs_names_sample": [
+      "cell_2",
+      "cell_9",
+      "cell_28"
+    ],
+    "source_shape": [
+      19464,
+      834
+    ],
+    "subset_shape": [
+      3,
+      834
+    ],
+    "var_names_sample": [
+      "ABL1",
+      "ABO",
+      "ABR",
+      "ABRACL",
+      "ABT1",
+      "ACBD3",
+      "ACP5",
+      "ACSM3",
+      "ACY1",
+      "ADRM1",
+      "AFF3",
+      "AFTPH"
+    ]
+  }
+}

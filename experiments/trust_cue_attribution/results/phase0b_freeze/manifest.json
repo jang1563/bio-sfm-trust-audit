@@ -1,0 +1,230 @@
+{
+  "biological_panel_count": 107,
+  "counts": {
+    "cue_packets_full": 749,
+    "panels_additive": 45,
+    "panels_full": 107,
+    "requests_full_nonleakage": 642,
+    "sonnet_4_6_phase0b_episodes": 642,
+    "sonnet_4_6_phase0b_trajectories": 642
+  },
+  "cue_conditions": [
+    "additive_disagreement_shown",
+    "anonymized_genes",
+    "confidence_shown",
+    "misleading_reliability_card",
+    "model_name_shown",
+    "no_cue"
+  ],
+  "cue_counts": {
+    "additive_disagreement_shown": 107,
+    "anonymized_genes": 107,
+    "confidence_shown": 107,
+    "misleading_reliability_card": 107,
+    "model_name_shown": 107,
+    "no_cue": 107
+  },
+  "git_commit": "329f658c5f3264746af6f8664bce15a3fa29a03a",
+  "git_commit_role": "HEAD at freeze generation; final artifact commit may differ because commit hashes cannot self-reference generated files",
+  "input_dir": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke",
+  "lambda_values": [
+    0.2,
+    0.5,
+    0.8
+  ],
+  "models": [
+    "claude-sonnet-4-6"
+  ],
+  "output_dir": "experiments/trust_cue_attribution/results/phase0b_freeze",
+  "phase": "phase0b",
+  "scorer_settings": {
+    "defer_penalty": 0.0,
+    "macro_panel_prefix": "macro_panel_*",
+    "primary_aggregate": "micro_gene_weighted",
+    "raw_assay_stats_shown": "excluded_from_phase0b_full_nonleakage_run"
+  },
+  "source_artifacts": {
+    "baselines_additive": {
+      "bytes": 6456,
+      "json_type": "dict",
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke/baselines_additive.json",
+      "sha256": "424413da71bc34d7ced57cc354917c418a20044f7d9d3d82cf0328d5c6cd353f",
+      "top_level_keys": [
+        "0.2",
+        "0.5",
+        "0.8"
+      ]
+    },
+    "baselines_full": {
+      "bytes": 6501,
+      "json_type": "dict",
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke/baselines_full.json",
+      "sha256": "de8533fb8978c409c69279f6f1274aac8ad896d63c37012bf1533a0ccda958ae",
+      "top_level_keys": [
+        "0.2",
+        "0.5",
+        "0.8"
+      ]
+    },
+    "cue_packets_full": {
+      "bytes": 4708666,
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke/cue_packets_full.jsonl",
+      "records": 749,
+      "sha256": "bdf35bc923596255f80d5bf01540566e3896efc5d012220befaf9a08feb2748e"
+    },
+    "panels_additive": {
+      "bytes": 798928,
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke/panels_additive.jsonl",
+      "records": 45,
+      "sha256": "f6fbb1044e9553215a2cc3ce9614a2d3377eec865c34c2c8e5686b38e2562c9f"
+    },
+    "panels_full": {
+      "bytes": 1945769,
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke/panels_full.jsonl",
+      "records": 107,
+      "sha256": "b22a2190b4cbdf077f0e54ab017983988fb0e5c6d3cbb26f7a8247829c2b0998"
+    },
+    "requests_full_nonleakage": {
+      "bytes": 4011976,
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke/requests_full_nonleakage.jsonl",
+      "records": 642,
+      "sha256": "f47e73d292a9da041fee340683e2cc4e5b058876dadd2dded61a76fa5a91d365"
+    },
+    "sonnet_4_6_phase0b_analysis": {
+      "bytes": 10913,
+      "json_type": "dict",
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke/llm_claude-sonnet-4-6_phase0b_main_analysis.json",
+      "sha256": "5ae3fd9ba95c0283e880c291267ba173c895ec704860119d0af4e4495ff5e60b",
+      "top_level_keys": [
+        "additive_disagreement_shown",
+        "anonymized_genes",
+        "confidence_shown",
+        "misleading_reliability_card",
+        "model_name_shown",
+        "no_cue"
+      ]
+    },
+    "sonnet_4_6_phase0b_cue_attribution": {
+      "bytes": 10104,
+      "json_type": "dict",
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke/llm_claude-sonnet-4-6_phase0b_main_cue_attribution.json",
+      "sha256": "3d59c70b25ab7a28b81567788acc3f48d2ee1ab0becbd75265e1c4535b3ca09f",
+      "top_level_keys": [
+        "baseline_cue",
+        "models",
+        "n_by_cue",
+        "n_rows",
+        "smoothing"
+      ]
+    },
+    "sonnet_4_6_phase0b_episodes": {
+      "bytes": 6836207,
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke/llm_claude-sonnet-4-6_phase0b_main_episodes.jsonl",
+      "records": 642,
+      "sha256": "68b0ab74abf62a7c84bd956beaff37689d70806b03886fc034fca53e6e598d26"
+    },
+    "sonnet_4_6_phase0b_explanation_faithfulness": {
+      "bytes": 8847,
+      "json_type": "dict",
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke/llm_claude-sonnet-4-6_phase0b_main_explanation_faithfulness.json",
+      "sha256": "2e1a43cb3b1a9ab3375fb0b9441022ef7456698555edf975ae6c197fecea74f1",
+      "top_level_keys": [
+        "baseline_cue",
+        "cue_summaries",
+        "n_episodes",
+        "n_rows",
+        "target_actions"
+      ]
+    },
+    "sonnet_4_6_phase0b_paired_effects_lambda_0.2": {
+      "bytes": 3562,
+      "json_type": "dict",
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke/llm_claude-sonnet-4-6_phase0b_main_paired_effects_lambda_0.2.json",
+      "sha256": "06ce2d4962cdb8be7d169c432c9b11875fc301505c9473577a3cf9a7f531b6bd",
+      "top_level_keys": [
+        "additive_disagreement_shown",
+        "anonymized_genes",
+        "confidence_shown",
+        "misleading_reliability_card",
+        "model_name_shown"
+      ]
+    },
+    "sonnet_4_6_phase0b_paired_effects_lambda_0.5": {
+      "bytes": 3563,
+      "json_type": "dict",
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke/llm_claude-sonnet-4-6_phase0b_main_paired_effects_lambda_0.5.json",
+      "sha256": "d94a67ad9554454d3ba0dc9cbeefd2a24f952114471cac66e4d2e4ef57e903ed",
+      "top_level_keys": [
+        "additive_disagreement_shown",
+        "anonymized_genes",
+        "confidence_shown",
+        "misleading_reliability_card",
+        "model_name_shown"
+      ]
+    },
+    "sonnet_4_6_phase0b_paired_effects_lambda_0.8": {
+      "bytes": 3562,
+      "json_type": "dict",
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke/llm_claude-sonnet-4-6_phase0b_main_paired_effects_lambda_0.8.json",
+      "sha256": "9d0d1224afa409daf1edceb01587d4479dd19e157b78e114329ba122ba0f5175",
+      "top_level_keys": [
+        "additive_disagreement_shown",
+        "anonymized_genes",
+        "confidence_shown",
+        "misleading_reliability_card",
+        "model_name_shown"
+      ]
+    },
+    "sonnet_4_6_phase0b_scores_lambda_0.2": {
+      "bytes": 716430,
+      "json_type": "dict",
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke/llm_claude-sonnet-4-6_phase0b_main_scores_lambda_0.2.json",
+      "sha256": "9e523755ff5b70468e27f8f040c54591d8af5ac99c9de90450b058070e84cadf",
+      "top_level_keys": [
+        "rows",
+        "summary"
+      ]
+    },
+    "sonnet_4_6_phase0b_scores_lambda_0.5": {
+      "bytes": 715618,
+      "json_type": "dict",
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke/llm_claude-sonnet-4-6_phase0b_main_scores_lambda_0.5.json",
+      "sha256": "7d70284e539b573336df73b813c08aa576b0f81821df6fbf112d4aad410e0771",
+      "top_level_keys": [
+        "rows",
+        "summary"
+      ]
+    },
+    "sonnet_4_6_phase0b_scores_lambda_0.8": {
+      "bytes": 716684,
+      "json_type": "dict",
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke/llm_claude-sonnet-4-6_phase0b_main_scores_lambda_0.8.json",
+      "sha256": "af8a32f7a36a84610010429ae3c2bb66ca2db0ed99a6dbfe2c2fcfcbe2d7d7f0",
+      "top_level_keys": [
+        "rows",
+        "summary"
+      ]
+    },
+    "sonnet_4_6_phase0b_trajectories": {
+      "bytes": 6254459,
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke/llm_claude-sonnet-4-6_phase0b_main_trajectories.jsonl",
+      "records": 642,
+      "sha256": "38f7301911865354eba5060a25dab444e0850deb1c1752d87aff41c5ac883672"
+    },
+    "sonnet_4_6_phase0b_trajectory_summary": {
+      "bytes": 17861,
+      "json_type": "dict",
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke/llm_claude-sonnet-4-6_phase0b_main_trajectory_summary.json",
+      "sha256": "fb1f79239b022de16dbb702c81939f8e41c63973804e3b11f1d155b2428d16be",
+      "top_level_keys": [
+        "by_cue_condition",
+        "by_model",
+        "overall"
+      ]
+    }
+  },
+  "tracked_outputs": [
+    "manifest.json",
+    "summary.json"
+  ]
+}

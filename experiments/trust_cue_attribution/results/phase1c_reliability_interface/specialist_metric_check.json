@@ -1,0 +1,274 @@
+{
+  "analysis": "phase1c_specialist_metric_check",
+  "caveat": "Pearson/Spearman vs raw_log2FC is a relative GEARS-vs-additive comparison on a shared target; raw_log2FC partly underlies the binary truth, so absolute values are not independent skill estimates.",
+  "claim_boundary": "Offline graded re-score of GEARS vs additive baseline on hidden truth; no LLM calls, no leakage, no biological claim. Tests whether the 'GEARS approx additive' finding is metric/threshold sensitive.",
+  "continuous_truth_field": "raw.raw_log2FC",
+  "effect_call_threshold_abs_log2fc": 0.25,
+  "n_panels": 107,
+  "reward_respecification_lambda_0.5": {
+    "full_107": {
+      "additive_threshold": {
+        "fixed_0.25_accuracy": 0.675549,
+        "global_best_in_sample_accuracy": 0.67771,
+        "global_best_threshold": 0.23,
+        "lopo_accuracy": 0.675549,
+        "lopo_median_threshold": 0.23
+      },
+      "gears_minus_additive_net_lopo": 0.018005,
+      "gears_threshold": {
+        "fixed_0.25_accuracy": 0.686352,
+        "global_best_in_sample_accuracy": 0.693554,
+        "global_best_threshold": 0.22,
+        "lopo_accuracy": 0.693554,
+        "lopo_median_threshold": 0.22
+      },
+      "n_edges": 2777,
+      "net_reward_per_gene_lambda_0.5": {
+        "always_additive_fixed_0.25": 0.675549,
+        "always_additive_lopo": 0.675549,
+        "oracle_verify_fixed_0.25": 0.843176,
+        "oracle_verify_lopo": 0.846777,
+        "trust_all_sfm_fixed_0.25": 0.686352,
+        "trust_all_sfm_lopo": 0.693554,
+        "verify_all": 0.5
+      },
+      "trust_all_lopo_minus_fixed": 0.007202
+    },
+    "observed_additive_baseline": {
+      "additive_threshold": {
+        "fixed_0.25_accuracy": 0.8181,
+        "global_best_in_sample_accuracy": 0.823477,
+        "global_best_threshold": 0.23,
+        "lopo_accuracy": 0.8181,
+        "lopo_median_threshold": 0.23
+      },
+      "gears_minus_additive_net_lopo": -0.105734,
+      "gears_threshold": {
+        "fixed_0.25_accuracy": 0.676523,
+        "global_best_in_sample_accuracy": 0.729391,
+        "global_best_threshold": 0.09,
+        "lopo_accuracy": 0.712366,
+        "lopo_median_threshold": 0.09
+      },
+      "n_edges": 1116,
+      "net_reward_per_gene_lambda_0.5": {
+        "always_additive_fixed_0.25": 0.8181,
+        "always_additive_lopo": 0.8181,
+        "oracle_verify_fixed_0.25": 0.838262,
+        "oracle_verify_lopo": 0.856183,
+        "trust_all_sfm_fixed_0.25": 0.676523,
+        "trust_all_sfm_lopo": 0.712366,
+        "verify_all": 0.5
+      },
+      "trust_all_lopo_minus_fixed": 0.035843
+    },
+    "phase1c_12": {
+      "additive_threshold": {
+        "fixed_0.25_accuracy": 0.666667,
+        "global_best_in_sample_accuracy": 0.679365,
+        "global_best_threshold": 0.17,
+        "lopo_accuracy": 0.634921,
+        "lopo_median_threshold": 0.17
+      },
+      "gears_minus_additive_net_lopo": 0.092063,
+      "gears_threshold": {
+        "fixed_0.25_accuracy": 0.67619,
+        "global_best_in_sample_accuracy": 0.746032,
+        "global_best_threshold": 0.13,
+        "lopo_accuracy": 0.726984,
+        "lopo_median_threshold": 0.13
+      },
+      "n_edges": 315,
+      "net_reward_per_gene_lambda_0.5": {
+        "always_additive_fixed_0.25": 0.666667,
+        "always_additive_lopo": 0.634921,
+        "oracle_verify_fixed_0.25": 0.838095,
+        "oracle_verify_lopo": 0.863492,
+        "trust_all_sfm_fixed_0.25": 0.67619,
+        "trust_all_sfm_lopo": 0.726984,
+        "verify_all": 0.5
+      },
+      "trust_all_lopo_minus_fixed": 0.050794
+    }
+  },
+  "slices": {
+    "combo_panels": {
+      "additive": {
+        "auroc_abs_vs_effect": 0.62553,
+        "binary_call_accuracy": 0.8181,
+        "n_continuous": 1100,
+        "pearson_vs_measured_log2fc": 0.924917,
+        "spearman_vs_measured_log2fc": 0.918747,
+        "sweep_best_accuracy": 0.827061,
+        "sweep_best_threshold": 0.2256
+      },
+      "gears": {
+        "auroc_abs_vs_effect": 0.629246,
+        "binary_call_accuracy": 0.676523,
+        "n_continuous": 1113,
+        "pearson_vs_measured_log2fc": 0.61482,
+        "spearman_vs_measured_log2fc": 0.617486,
+        "sweep_best_accuracy": 0.732079,
+        "sweep_best_threshold": 0.0984
+      },
+      "gears_minus_additive": {
+        "auroc": 0.003716,
+        "binary_call_accuracy": -0.141577,
+        "pearson": -0.310097
+      },
+      "n_edges": 1116,
+      "n_effect": 750,
+      "n_no_effect": 366
+    },
+    "combo_unseen_regimes": {
+      "additive": {
+        "auroc_abs_vs_effect": 0.620745,
+        "binary_call_accuracy": 0.796905,
+        "n_continuous": 506,
+        "pearson_vs_measured_log2fc": 0.919536,
+        "spearman_vs_measured_log2fc": 0.911724,
+        "sweep_best_accuracy": 0.802708,
+        "sweep_best_threshold": 0.2415
+      },
+      "gears": {
+        "auroc_abs_vs_effect": 0.753691,
+        "binary_call_accuracy": 0.659574,
+        "n_continuous": 517,
+        "pearson_vs_measured_log2fc": 0.510171,
+        "spearman_vs_measured_log2fc": 0.547224,
+        "sweep_best_accuracy": 0.727273,
+        "sweep_best_threshold": 0.0993
+      },
+      "gears_minus_additive": {
+        "auroc": 0.132946,
+        "binary_call_accuracy": -0.137331,
+        "pearson": -0.409365
+      },
+      "n_edges": 517,
+      "n_effect": 345,
+      "n_no_effect": 172
+    },
+    "full_107": {
+      "additive": {
+        "auroc_abs_vs_effect": 0.575086,
+        "binary_call_accuracy": 0.675549,
+        "n_continuous": 2761,
+        "pearson_vs_measured_log2fc": 0.675001,
+        "spearman_vs_measured_log2fc": 0.594882,
+        "sweep_best_accuracy": 0.67915,
+        "sweep_best_threshold": 0.2256
+      },
+      "gears": {
+        "auroc_abs_vs_effect": 0.553017,
+        "binary_call_accuracy": 0.686352,
+        "n_continuous": 2770,
+        "pearson_vs_measured_log2fc": 0.589895,
+        "spearman_vs_measured_log2fc": 0.568896,
+        "sweep_best_accuracy": 0.694634,
+        "sweep_best_threshold": 0.2158
+      },
+      "gears_minus_additive": {
+        "auroc": -0.022069,
+        "binary_call_accuracy": 0.010803,
+        "pearson": -0.085106
+      },
+      "n_edges": 2777,
+      "n_effect": 1448,
+      "n_no_effect": 1329
+    },
+    "observed_additive_baseline": {
+      "additive": {
+        "auroc_abs_vs_effect": 0.62553,
+        "binary_call_accuracy": 0.8181,
+        "n_continuous": 1100,
+        "pearson_vs_measured_log2fc": 0.924917,
+        "spearman_vs_measured_log2fc": 0.918747,
+        "sweep_best_accuracy": 0.827061,
+        "sweep_best_threshold": 0.2256
+      },
+      "gears": {
+        "auroc_abs_vs_effect": 0.629246,
+        "binary_call_accuracy": 0.676523,
+        "n_continuous": 1113,
+        "pearson_vs_measured_log2fc": 0.61482,
+        "spearman_vs_measured_log2fc": 0.617486,
+        "sweep_best_accuracy": 0.732079,
+        "sweep_best_threshold": 0.0984
+      },
+      "gears_minus_additive": {
+        "auroc": 0.003716,
+        "binary_call_accuracy": -0.141577,
+        "pearson": -0.310097
+      },
+      "n_edges": 1116,
+      "n_effect": 750,
+      "n_no_effect": 366
+    },
+    "phase1c_12": {
+      "additive": {
+        "auroc_abs_vs_effect": 0.661721,
+        "binary_call_accuracy": 0.666667,
+        "n_continuous": 313,
+        "pearson_vs_measured_log2fc": 0.779584,
+        "spearman_vs_measured_log2fc": 0.706426,
+        "sweep_best_accuracy": 0.68254,
+        "sweep_best_threshold": 0.1691
+      },
+      "gears": {
+        "auroc_abs_vs_effect": 0.781885,
+        "binary_call_accuracy": 0.67619,
+        "n_continuous": 315,
+        "pearson_vs_measured_log2fc": 0.566949,
+        "spearman_vs_measured_log2fc": 0.582669,
+        "sweep_best_accuracy": 0.752381,
+        "sweep_best_threshold": 0.1244
+      },
+      "gears_minus_additive": {
+        "auroc": 0.120164,
+        "binary_call_accuracy": 0.009523,
+        "pearson": -0.212635
+      },
+      "n_edges": 315,
+      "n_effect": 204,
+      "n_no_effect": 111
+    },
+    "single_unseen_regime": {
+      "additive": {
+        "auroc_abs_vs_effect": 0.5,
+        "binary_call_accuracy": 0.535792,
+        "n_continuous": 461,
+        "pearson_vs_measured_log2fc": null,
+        "spearman_vs_measured_log2fc": null,
+        "sweep_best_accuracy": 0.535792,
+        "sweep_best_threshold": 0.25
+      },
+      "gears": {
+        "auroc_abs_vs_effect": 0.70644,
+        "binary_call_accuracy": 0.672451,
+        "n_continuous": 461,
+        "pearson_vs_measured_log2fc": 0.487287,
+        "spearman_vs_measured_log2fc": 0.485959,
+        "sweep_best_accuracy": 0.685466,
+        "sweep_best_threshold": 0.219
+      },
+      "gears_minus_additive": {
+        "auroc": 0.20644,
+        "binary_call_accuracy": 0.136659,
+        "pearson": null
+      },
+      "n_edges": 461,
+      "n_effect": 214,
+      "n_no_effect": 247
+    }
+  },
+  "verdict": {
+    "full_107_gears_minus_additive_auroc": -0.022069,
+    "notes": [
+      "On the fair additive (combo) slice GEARS-minus-additive AUROC = +0.004: GEARS still does not beat the additive baseline even threshold-free, so the published 'deep-model approx additive' critique holds in the combinatorial regime.",
+      "But on the phase1c_12 surface (used for ALL Phase 1C conclusions) GEARS-minus-additive AUROC = +0.120: GEARS carries clear graded ranking signal that the binary 0.25 call hides, so 'GEARS approx additive' on this surface is partly a binary-thresholding artifact (the Miller caveat applies) and the binary net-reward metric understates GEARS."
+    ],
+    "observed_additive_gears_minus_additive_auroc": 0.003716,
+    "phase1c_12_gears_minus_additive_auroc": 0.120164,
+    "short": "Regime-dependent. The straw-man verdict is earned in the fair additive/combo regime (matches the literature), but NOT on the project's own phase1c_12 surface, where GEARS has a real graded advantage masked by the binary call. Action: report threshold-free metrics, and treat the binary effect/no-effect reward as a known understatement of GEARS."
+  }
+}

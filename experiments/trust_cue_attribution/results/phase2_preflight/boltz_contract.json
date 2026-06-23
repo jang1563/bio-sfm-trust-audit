@@ -1,0 +1,52 @@
+{
+  "claim_boundary": "interface preflight only; tests LLM routing over a validated calibrated structure-confidence signal (pLDDT/PAE). No claim that Boltz/AlphaFold internals are interpreted, that pLDDT is calibrated for all complex classes, or of general SFM trust generalization",
+  "compute_target": "cayuga_or_expanse",
+  "evidence_fields": [
+    "predicted_structure_summary",
+    "mean_plddt and per-region plddt buckets",
+    "pae / pTM / ipTM interface and global confidence",
+    "regime (monomer | complex)",
+    "model_card",
+    "baseline_signal (template/homology model)",
+    "reliability_interface (calibrated risk card)"
+  ],
+  "hidden_fields": [
+    "held-out experimental structure and lDDT/DockQ truth",
+    "correctness flags",
+    "reward and score fields",
+    "whether the target predates the model training cutoff"
+  ],
+  "internal_signal_fields": [
+    "per_residue_plddt_distribution",
+    "interface_pae_summary",
+    "ptm_iptm_global_confidence",
+    "calibrated_wrong_risk_from_heldout_calibration_set"
+  ],
+  "name": "BoltzStructureAdapter",
+  "phase": "phase2",
+  "preflight_checks": [
+    "runs_on_cayuga_or_expanse_gpu",
+    "uses_only_post_training_cutoff_targets_to_prevent_memorization_leakage",
+    "maps structure confidence into existing action enum trust_verify_default_defer",
+    "offline_calibration_gate_passes_before_any_llm_call",
+    "calibration_gate_checks_plddt_risk_auroc_regime_gap_and_deterministic_policy_vs_controls",
+    "supports cue arms no_signal raw_plddt_shown calibrated_risk_shown_no_recommendation calibrated_interface_shown inverted_reliability_interface_control",
+    "n_targets_prespecified_by_power_argument_not_default_small",
+    "held_out_truth_and_training_membership_hidden_from_evidence_packets"
+  ],
+  "required_inputs": [
+    "query protein or complex sequences (FASTA)",
+    "post-training-cutoff held-out targets with experimental structures (CAMEO / recent PDB)",
+    "cheap baseline structure (best template/homology model by sequence identity)",
+    "held-out experimental truth (monomer lDDT/TM-score, complex DockQ) kept outside evidence packets"
+  ],
+  "specialist_model": "Boltz-1/Boltz-2 (AlphaFold3-class structure predictor)",
+  "standardized_outputs": [
+    "phase2_panels.jsonl",
+    "phase2_cue_packets.jsonl",
+    "phase2_reliability_cards.jsonl",
+    "phase2_requests.jsonl"
+  ],
+  "status": "preflight_contract",
+  "task_family": "protein_structure_prediction_with_calibrated_confidence"
+}

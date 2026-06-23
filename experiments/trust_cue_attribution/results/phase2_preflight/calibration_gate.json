@@ -1,0 +1,53 @@
+{
+  "checks": {
+    "policy_beats_best_control": false,
+    "policy_beats_default_template": true,
+    "policy_beats_trust_all": false,
+    "power_sufficient": true,
+    "real_vs_shuffled_gap_large": false,
+    "signal_validity_auroc_ok": false
+  },
+  "claim_boundary": "Offline deterministic gate over a calibrated structure-confidence signal; no LLM calls, no leakage, no claim of faithful internal interpretation or general SFM generalization.",
+  "decision": "do_not_run_signal_not_calibrated",
+  "interpretation": {
+    "short_read": "The confidence-derived risk does not predict structure wrongness above threshold. The substrate assumption failed; do not spend on a pilot."
+  },
+  "lambda": 0.5,
+  "margins": {
+    "real_minus_shuffled": 0.0,
+    "vs_best_control": 0.0,
+    "vs_default_template": 0.95,
+    "vs_trust_all": 0.0
+  },
+  "net_reward_per_target": {
+    "default_template": 0.0,
+    "inverted_risk_control": 0.5,
+    "oracle": 0.975,
+    "real_risk_policy": 0.95,
+    "shuffled_risk_control": 0.95,
+    "trust_all": 0.95,
+    "verify_all": 0.5
+  },
+  "phase": "phase2",
+  "regime_calibration": {
+    "complex": {
+      "n": 40,
+      "pearson_plddt_vs_quality": 0.161733
+    },
+    "monomer": {
+      "n": 40,
+      "pearson_plddt_vs_quality": 0.891386
+    },
+    "monomer_minus_complex": 0.729653
+  },
+  "scope": {
+    "n_complex": 40,
+    "n_monomer": 40,
+    "n_targets": 80
+  },
+  "signal_validity": {
+    "threshold": 0.7,
+    "wrong_risk_auroc": 0.598684
+  },
+  "status": "calibration_gate_ready"
+}

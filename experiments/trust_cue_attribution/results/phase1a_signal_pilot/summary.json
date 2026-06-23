@@ -1,0 +1,185 @@
+{
+  "artifacts": {
+    "episodes_jsonl": {
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase1a_signal_pilot/llm_claude-sonnet-4-6_phase1a_signal_pilot_episodes.jsonl",
+      "sha256": "6d4c85424724ba38811de3bcde3c196283322e4b28351a5f80842c63820d4d16",
+      "tracked": false
+    },
+    "phase1a_packets_jsonl": {
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase1a_signal_pilot/phase1a_signal_packets.jsonl",
+      "sha256": "958ebb97f0f20b3310c9651d9640542ea87c7029f70734ff5fead61c55367bb9",
+      "tracked": false
+    },
+    "requests_jsonl": {
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase1a_signal_pilot/requests_phase1a_signal_pilot_sonnet.jsonl",
+      "sha256": "2f100eeead71d1bb659055ed3c480cf7b9c3a1f592fcaaccd175ce6393bdcb1c",
+      "tracked": false
+    }
+  },
+  "baseline_comparison_lambda_0.5": {
+    "always_additive": {
+      "accuracy": 0.666667,
+      "assays_per_gene": 0.0,
+      "default_baseline_rate": 1.0,
+      "net_reward_per_gene": 0.666667,
+      "trust_error_rate": 0.0
+    },
+    "oracle_verify": {
+      "accuracy": 1.0,
+      "assays_per_gene": 0.32381,
+      "default_baseline_rate": 0.0,
+      "net_reward_per_gene": 0.838095,
+      "trust_error_rate": 0.0
+    },
+    "signal_gated_verify": {
+      "accuracy": 0.752381,
+      "assays_per_gene": 0.203175,
+      "default_baseline_rate": 0.796825,
+      "net_reward_per_gene": 0.650794,
+      "trust_error_rate": 0.0
+    },
+    "trust_all_sfm": {
+      "accuracy": 0.67619,
+      "assays_per_gene": 0.0,
+      "default_baseline_rate": 0.0,
+      "net_reward_per_gene": 0.67619,
+      "trust_error_rate": 0.32381
+    },
+    "verify_all": {
+      "accuracy": 1.0,
+      "assays_per_gene": 1.0,
+      "default_baseline_rate": 0.0,
+      "net_reward_per_gene": 0.5,
+      "trust_error_rate": 0.0
+    }
+  },
+  "claim_boundary": "Small 36-request method-validation pilot only; no claim that Claude faithfully interprets scFoundation internals.",
+  "cue_metrics_lambda_0.5": {
+    "no_internal_signal": {
+      "accuracy": 0.787302,
+      "assays_per_gene": 0.253968,
+      "default_baseline_rate": 0.063492,
+      "episodes": 12,
+      "genes": 315,
+      "net_reward_per_gene": 0.660317,
+      "trust_error_rate": 0.206349,
+      "verify_rate": 0.253968
+    },
+    "scfoundation_internal_signal_shown": {
+      "accuracy": 0.793651,
+      "assays_per_gene": 0.228571,
+      "default_baseline_rate": 0.085714,
+      "episodes": 12,
+      "genes": 315,
+      "net_reward_per_gene": 0.679365,
+      "trust_error_rate": 0.190476,
+      "verify_rate": 0.228571
+    },
+    "shuffled_internal_signal_shown": {
+      "accuracy": 0.790476,
+      "assays_per_gene": 0.228571,
+      "default_baseline_rate": 0.120635,
+      "episodes": 12,
+      "genes": 315,
+      "net_reward_per_gene": 0.67619,
+      "trust_error_rate": 0.165079,
+      "verify_rate": 0.228571
+    }
+  },
+  "data_guardrail": "Uses public Norman 2019 Perturb-seq panel-matched signal summaries; local/unpublished FRAM2 is not benchmark-facing.",
+  "interpretation": {
+    "honest_read": "Real panel-specific signal and shuffled placebo both slightly improve net reward versus no signal; placebo is close enough that this supports cue-sensitivity, not faithful internal-signal interpretation.",
+    "next_gate": "Run no larger Phase 1A matrix until this pilot is reviewed and the internal-signal cue design is sharpened.",
+    "placebo_internal_signal_delta_net_vs_no_signal": 0.015873,
+    "real_internal_signal_delta_net_vs_no_signal": 0.019048
+  },
+  "job": {
+    "cayuga_job_id": "3044233",
+    "episodes_written": 36,
+    "expected_episodes": 36,
+    "parse_errors": 0,
+    "provider_errors": 0,
+    "slurm_note": "Episodes and score JSON were written; final sbatch summary heredoc failed with node temp-space error.",
+    "slurm_state": "FAILED_after_outputs_written"
+  },
+  "lambda_sweep": {
+    "0.2": {
+      "accuracy": 0.790476,
+      "assays_per_gene": 0.237037,
+      "default_baseline_rate": 0.089947,
+      "defer_rate": 0.0,
+      "net_reward_per_gene": 0.743069,
+      "trust_error_rate": 0.187302,
+      "verify_precision": 0.330357,
+      "verify_recall": 0.24183
+    },
+    "0.5": {
+      "accuracy": 0.790476,
+      "assays_per_gene": 0.237037,
+      "default_baseline_rate": 0.089947,
+      "defer_rate": 0.0,
+      "net_reward_per_gene": 0.671958,
+      "trust_error_rate": 0.187302,
+      "verify_precision": 0.330357,
+      "verify_recall": 0.24183
+    },
+    "0.8": {
+      "accuracy": 0.790476,
+      "assays_per_gene": 0.237037,
+      "default_baseline_rate": 0.089947,
+      "defer_rate": 0.0,
+      "net_reward_per_gene": 0.600847,
+      "trust_error_rate": 0.187302,
+      "verify_precision": 0.330357,
+      "verify_recall": 0.24183
+    }
+  },
+  "paired_effects_vs_no_internal_signal_lambda_0.5": {
+    "scfoundation_internal_signal_shown": {
+      "action_changed_rate": 0.146032,
+      "action_shifts": {
+        "default_baseline->trust_sfm": 9,
+        "trust_sfm->default_baseline": 9,
+        "trust_sfm->verify_assay": 10,
+        "verify_assay->default_baseline": 7,
+        "verify_assay->trust_sfm": 11
+      },
+      "delta_assay": -0.025397,
+      "delta_correct": 0.006349,
+      "delta_net": 0.019048,
+      "delta_trust_error": -0.015873,
+      "delta_verify_wrong": -0.003175,
+      "n_pairs": 315.0
+    },
+    "shuffled_internal_signal_shown": {
+      "action_changed_rate": 0.184127,
+      "action_shifts": {
+        "default_baseline->trust_sfm": 7,
+        "trust_sfm->default_baseline": 25,
+        "trust_sfm->verify_assay": 9,
+        "verify_assay->trust_sfm": 17
+      },
+      "delta_assay": -0.025397,
+      "delta_correct": 0.003175,
+      "delta_net": 0.015873,
+      "delta_trust_error": -0.04127,
+      "delta_verify_wrong": 0.0,
+      "n_pairs": 315.0
+    }
+  },
+  "phase": "phase1a",
+  "scope": {
+    "cue_conditions": [
+      "no_internal_signal",
+      "scfoundation_internal_signal_shown",
+      "shuffled_internal_signal_shown"
+    ],
+    "episodes": 36,
+    "genes_per_cue": 315,
+    "model": "claude-sonnet-4-6",
+    "panels": 12,
+    "provider": "anthropic_messages",
+    "total_gene_decisions": 945
+  },
+  "status": "signal_pilot_scored"
+}

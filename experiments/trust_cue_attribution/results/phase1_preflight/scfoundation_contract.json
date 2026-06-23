@@ -1,0 +1,52 @@
+{
+  "claim_boundary": "interface preflight only until one full Phase 1 run is scored; no claim that the LLM uses true SFM internals faithfully",
+  "compute_target": "cayuga_or_expanse",
+  "evidence_fields": [
+    "sfm_call or state/effect prediction",
+    "sfm_effect_score or confidence proxy",
+    "model_card",
+    "baseline_signal",
+    "reliability_signal",
+    "internal_signal_summary"
+  ],
+  "hidden_fields": [
+    "held-out truth labels",
+    "post-treatment measured DE statistics unless positive-control cue",
+    "correctness flags",
+    "reward and score fields",
+    "manual interpretation labels not available to the LLM"
+  ],
+  "internal_signal_fields": [
+    "embedding_norm_or_distance_summary",
+    "nearest_neighbor_label_distribution",
+    "layer_summary_if_available",
+    "ood_or_uncertainty_proxy_if_available",
+    "representation_delta_between_control_and_perturbed_state_if_available"
+  ],
+  "name": "ScFoundationAdapter",
+  "phase": "phase1",
+  "preflight_checks": [
+    "runs_on_cayuga_or_expanse_without_local_large_memory_use",
+    "maps model outputs into existing action enum",
+    "produces at least one internal_signal_summary field",
+    "keeps held-out labels out of evidence packets",
+    "supports at least no_cue, model_name_shown, confidence_shown, baseline_disagreement_shown, and misleading_internal_signal_card",
+    "can be scored by the existing scorer or declares an explicit score adapter"
+  ],
+  "required_inputs": [
+    "single-cell expression matrix or perturbation cell-state dataset",
+    "gene vocabulary mapping compatible with the SFM tokenizer",
+    "cell or perturbation metadata",
+    "held-out evaluation labels kept outside evidence packets",
+    "cheap baseline signal such as no-change, observed-additive, or nearest-neighbor baseline"
+  ],
+  "specialist_model": "scFoundation or scFoundation-compatible single-cell SFM",
+  "standardized_outputs": [
+    "phase1_panels.jsonl",
+    "phase1_cue_packets.jsonl",
+    "phase1_internal_signal_summaries.jsonl",
+    "phase1_requests.jsonl"
+  ],
+  "status": "preflight_contract",
+  "task_family": "single_cell_state_or_perturbation_evidence"
+}

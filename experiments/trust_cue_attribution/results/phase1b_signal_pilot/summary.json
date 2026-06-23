@@ -1,0 +1,389 @@
+{
+  "by_cue_condition_lambda_0.5": {
+    "no_internal_signal": {
+      "accuracy": 0.7904761904761904,
+      "assays_per_gene": 0.2634920634920635,
+      "default_baseline_rate": 0.050793650793650794,
+      "defer_rate": 0.0,
+      "n_genes": 315,
+      "n_trajectories": 12,
+      "net_reward_per_gene_lambda_0.5": 0.6587301587301587,
+      "trust_error_rate": 0.20317460317460317,
+      "verify_precision": 0.3493975903614458,
+      "verify_recall": 0.28431372549019607
+    },
+    "random_same_gene_neighbor_signal_shown": {
+      "accuracy": 0.7523809523809524,
+      "assays_per_gene": 0.2571428571428571,
+      "default_baseline_rate": 0.20952380952380953,
+      "defer_rate": 0.015873015873015872,
+      "n_genes": 315,
+      "n_trajectories": 12,
+      "net_reward_per_gene_lambda_0.5": 0.6238095238095238,
+      "trust_error_rate": 0.1523809523809524,
+      "verify_precision": 0.2222222222222222,
+      "verify_recall": 0.17647058823529413
+    },
+    "scfoundation_edge_neighbor_signal_shown": {
+      "accuracy": 0.7619047619047619,
+      "assays_per_gene": 0.28253968253968254,
+      "default_baseline_rate": 0.18412698412698414,
+      "defer_rate": 0.009523809523809525,
+      "n_genes": 315,
+      "n_trajectories": 12,
+      "net_reward_per_gene_lambda_0.5": 0.6206349206349207,
+      "trust_error_rate": 0.1523809523809524,
+      "verify_precision": 0.25842696629213485,
+      "verify_recall": 0.22549019607843138
+    },
+    "shuffled_readout_gene_neighbor_signal_shown": {
+      "accuracy": 0.765079365079365,
+      "assays_per_gene": 0.2698412698412698,
+      "default_baseline_rate": 0.32063492063492066,
+      "defer_rate": 0.009523809523809525,
+      "n_genes": 315,
+      "n_trajectories": 12,
+      "net_reward_per_gene_lambda_0.5": 0.6301587301587301,
+      "trust_error_rate": 0.11746031746031746,
+      "verify_precision": 0.27058823529411763,
+      "verify_recall": 0.22549019607843138
+    }
+  },
+  "claim_boundary": "Small Phase 1B LLM pilot only. This tests whether Claude behavior changes under leakage-safe scFoundation-derived edge-neighbor evidence and controls; it does not prove faithful use of true SFM internals or support biological interpretation claims.",
+  "cue_attribution_highlights": {
+    "default_baseline": {
+      "baseline_rate": 0.050793650793650794,
+      "odds_ratio_vs_no_internal_signal": {
+        "random_same_gene_neighbor_signal_shown": 4.83797898827959,
+        "scfoundation_edge_neighbor_signal_shown": 4.123742277140335,
+        "shuffled_readout_gene_neighbor_signal_shown": 8.589178498269405
+      },
+      "rate_delta_vs_no_internal_signal": {
+        "random_same_gene_neighbor_signal_shown": 0.15873015873015872,
+        "scfoundation_edge_neighbor_signal_shown": 0.13333333333333336,
+        "shuffled_readout_gene_neighbor_signal_shown": 0.2698412698412699
+      }
+    },
+    "trust_sfm": {
+      "baseline_rate": 0.6857142857142857,
+      "odds_ratio_vs_no_internal_signal": {
+        "random_same_gene_neighbor_signal_shown": 0.49273463824631814,
+        "scfoundation_edge_neighbor_signal_shown": 0.5053900393607145,
+        "shuffled_readout_gene_neighbor_signal_shown": 0.3067937382317635
+      },
+      "rate_delta_vs_no_internal_signal": {
+        "random_same_gene_neighbor_signal_shown": -0.1682539682539682,
+        "scfoundation_edge_neighbor_signal_shown": -0.16190476190476188,
+        "shuffled_readout_gene_neighbor_signal_shown": -0.2857142857142857
+      }
+    },
+    "verify_assay": {
+      "baseline_rate": 0.2634920634920635,
+      "odds_ratio_vs_no_internal_signal": {
+        "random_same_gene_neighbor_signal_shown": 0.9677234018104515,
+        "scfoundation_edge_neighbor_signal_shown": 1.100249831462902,
+        "shuffled_readout_gene_neighbor_signal_shown": 1.032836712691753
+      },
+      "rate_delta_vs_no_internal_signal": {
+        "random_same_gene_neighbor_signal_shown": -0.006349206349206382,
+        "scfoundation_edge_neighbor_signal_shown": 0.019047619047619035,
+        "shuffled_readout_gene_neighbor_signal_shown": 0.006349206349206327
+      }
+    }
+  },
+  "explanation_faithfulness_highlights": {
+    "no_internal_signal": {
+      "behavior": {
+        "dominant_action": null,
+        "max_abs_action_rate_delta": 0.0,
+        "max_abs_log_odds_delta": 0.0
+      },
+      "n_episodes": 12,
+      "n_genes": 315,
+      "rationale_episode_rates": {
+        "baseline": 0.5833333333333334,
+        "confidence": 0.8333333333333334,
+        "effect_size": 1.0,
+        "reliability": 0.08333333333333333
+      },
+      "self_reported_episode_rates": {
+        "baseline": 1.0,
+        "confidence": 0.8333333333333334,
+        "effect_size": 0.16666666666666666,
+        "model_identity": 0.8333333333333334
+      }
+    },
+    "random_same_gene_neighbor_signal_shown": {
+      "behavior": {
+        "dominant_action": "trust_sfm",
+        "max_abs_action_rate_delta": 0.1682539682539682,
+        "max_abs_log_odds_delta": 0.7077845089881556
+      },
+      "n_episodes": 12,
+      "n_genes": 315,
+      "rationale_episode_rates": {
+        "baseline": 1.0,
+        "confidence": 1.0,
+        "effect_size": 1.0,
+        "reliability": 0.16666666666666666
+      },
+      "self_reported_episode_rates": {
+        "baseline": 1.0,
+        "confidence": 0.8333333333333334,
+        "model_identity": 0.8333333333333334
+      }
+    },
+    "scfoundation_edge_neighbor_signal_shown": {
+      "behavior": {
+        "dominant_action": "trust_sfm",
+        "max_abs_action_rate_delta": 0.16190476190476188,
+        "max_abs_log_odds_delta": 0.6824247926498103
+      },
+      "n_episodes": 12,
+      "n_genes": 315,
+      "rationale_episode_rates": {
+        "baseline": 1.0,
+        "confidence": 1.0,
+        "effect_size": 1.0,
+        "reliability": 0.16666666666666666
+      },
+      "self_reported_episode_rates": {
+        "baseline": 1.0,
+        "confidence": 0.9166666666666666,
+        "model_identity": 0.9166666666666666
+      }
+    },
+    "shuffled_readout_gene_neighbor_signal_shown": {
+      "behavior": {
+        "dominant_action": "trust_sfm",
+        "max_abs_action_rate_delta": 0.2857142857142857,
+        "max_abs_log_odds_delta": 1.1815796196329034
+      },
+      "n_episodes": 12,
+      "n_genes": 315,
+      "rationale_episode_rates": {
+        "baseline": 1.0,
+        "confidence": 1.0,
+        "effect_size": 1.0,
+        "reliability": 0.3333333333333333
+      },
+      "self_reported_episode_rates": {
+        "baseline": 1.0,
+        "confidence": 1.0,
+        "model_identity": 1.0
+      }
+    }
+  },
+  "job": {
+    "cluster": "cayuga",
+    "completion_marker": "TRUST_CUE_PHASE1B_LLM_PILOT_OK",
+    "elapsed": "00:25:18",
+    "exit_code": "0:0",
+    "job_id": "3045288",
+    "node": "c0022",
+    "partition": "scu-cpu",
+    "qos": "normal",
+    "scheduler": "slurm",
+    "state": "COMPLETED"
+  },
+  "lambda_sweep": {
+    "0.2": {
+      "accuracy": 0.7674603174603175,
+      "assays_per_gene": 0.26825396825396824,
+      "default_baseline_rate": 0.19126984126984126,
+      "defer_rate": 0.00873015873015873,
+      "n_genes": 1260,
+      "n_panels": 48,
+      "net_reward": 899.4,
+      "net_reward_per_gene": 0.7138095238095238,
+      "trust_error_rate": 0.15634920634920635,
+      "verify_precision": 0.27514792899408286,
+      "verify_recall": 0.22794117647058823
+    },
+    "0.5": {
+      "accuracy": 0.7674603174603175,
+      "assays_per_gene": 0.26825396825396824,
+      "default_baseline_rate": 0.19126984126984126,
+      "defer_rate": 0.00873015873015873,
+      "n_genes": 1260,
+      "n_panels": 48,
+      "net_reward": 798.0,
+      "net_reward_per_gene": 0.6333333333333333,
+      "trust_error_rate": 0.15634920634920635,
+      "verify_precision": 0.27514792899408286,
+      "verify_recall": 0.22794117647058823
+    },
+    "0.8": {
+      "accuracy": 0.7674603174603175,
+      "assays_per_gene": 0.26825396825396824,
+      "default_baseline_rate": 0.19126984126984126,
+      "defer_rate": 0.00873015873015873,
+      "n_genes": 1260,
+      "n_panels": 48,
+      "net_reward": 696.6,
+      "net_reward_per_gene": 0.5528571428571428,
+      "trust_error_rate": 0.15634920634920635,
+      "verify_precision": 0.27514792899408286,
+      "verify_recall": 0.22794117647058823
+    }
+  },
+  "model": "claude-sonnet-4-6",
+  "paired_effects": {
+    "0.2": {
+      "random_same_gene_neighbor_signal_shown": {
+        "action_changed_rate": 0.45714285714285713,
+        "delta_assay": -0.006349206349206349,
+        "delta_correct": -0.0380952380952381,
+        "delta_net": -0.036825396825396824,
+        "delta_trust_error": -0.050793650793650794,
+        "delta_verify_wrong": -0.03492063492063492,
+        "n_pairs": 315
+      },
+      "scfoundation_edge_neighbor_signal_shown": {
+        "action_changed_rate": 0.44761904761904764,
+        "delta_assay": 0.01904761904761905,
+        "delta_correct": -0.02857142857142857,
+        "delta_net": -0.03238095238095238,
+        "delta_trust_error": -0.050793650793650794,
+        "delta_verify_wrong": -0.01904761904761905,
+        "n_pairs": 315
+      },
+      "shuffled_readout_gene_neighbor_signal_shown": {
+        "action_changed_rate": 0.6063492063492063,
+        "delta_assay": 0.006349206349206349,
+        "delta_correct": -0.025396825396825397,
+        "delta_net": -0.02666666666666667,
+        "delta_trust_error": -0.08571428571428572,
+        "delta_verify_wrong": -0.01904761904761905,
+        "n_pairs": 315
+      }
+    },
+    "0.5": {
+      "random_same_gene_neighbor_signal_shown": {
+        "action_changed_rate": 0.45714285714285713,
+        "delta_assay": -0.006349206349206349,
+        "delta_correct": -0.0380952380952381,
+        "delta_net": -0.03492063492063492,
+        "delta_trust_error": -0.050793650793650794,
+        "delta_verify_wrong": -0.03492063492063492,
+        "n_pairs": 315
+      },
+      "scfoundation_edge_neighbor_signal_shown": {
+        "action_changed_rate": 0.44761904761904764,
+        "delta_assay": 0.01904761904761905,
+        "delta_correct": -0.02857142857142857,
+        "delta_net": -0.0380952380952381,
+        "delta_trust_error": -0.050793650793650794,
+        "delta_verify_wrong": -0.01904761904761905,
+        "n_pairs": 315
+      },
+      "shuffled_readout_gene_neighbor_signal_shown": {
+        "action_changed_rate": 0.6063492063492063,
+        "delta_assay": 0.006349206349206349,
+        "delta_correct": -0.025396825396825397,
+        "delta_net": -0.02857142857142857,
+        "delta_trust_error": -0.08571428571428572,
+        "delta_verify_wrong": -0.01904761904761905,
+        "n_pairs": 315
+      }
+    },
+    "0.8": {
+      "random_same_gene_neighbor_signal_shown": {
+        "action_changed_rate": 0.45714285714285713,
+        "delta_assay": -0.006349206349206349,
+        "delta_correct": -0.0380952380952381,
+        "delta_net": -0.03301587301587302,
+        "delta_trust_error": -0.050793650793650794,
+        "delta_verify_wrong": -0.03492063492063492,
+        "n_pairs": 315
+      },
+      "scfoundation_edge_neighbor_signal_shown": {
+        "action_changed_rate": 0.44761904761904764,
+        "delta_assay": 0.01904761904761905,
+        "delta_correct": -0.02857142857142857,
+        "delta_net": -0.04380952380952381,
+        "delta_trust_error": -0.050793650793650794,
+        "delta_verify_wrong": -0.01904761904761905,
+        "n_pairs": 315
+      },
+      "shuffled_readout_gene_neighbor_signal_shown": {
+        "action_changed_rate": 0.6063492063492063,
+        "delta_assay": 0.006349206349206349,
+        "delta_correct": -0.025396825396825397,
+        "delta_net": -0.030476190476190476,
+        "delta_trust_error": -0.08571428571428572,
+        "delta_verify_wrong": -0.01904761904761905,
+        "n_pairs": 315
+      }
+    }
+  },
+  "phase": "phase1b_signal_pilot",
+  "primary_read": "The scFoundation edge-neighbor cue changed many actions and reduced trust errors, but at lambda=0.5 it reduced net reward versus no internal signal. The shuffled/readout placebo also moved behavior strongly, so the correct conclusion is cue sensitivity without calibrated internal-signal use.",
+  "scope": {
+    "cue_conditions": [
+      "no_internal_signal",
+      "scfoundation_edge_neighbor_signal_shown",
+      "random_same_gene_neighbor_signal_shown",
+      "shuffled_readout_gene_neighbor_signal_shown"
+    ],
+    "episodes": 48,
+    "gene_decisions_total": 1260,
+    "genes_per_condition": 315,
+    "panels": 12,
+    "parse_errors": 0,
+    "provider_errors": 0
+  },
+  "source_artifacts": {
+    "llm_claude-sonnet-4-6_phase1b_signal_pilot_analysis.json": {
+      "line_count": null,
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase1b_signal_pilot/llm_claude-sonnet-4-6_phase1b_signal_pilot_analysis.json",
+      "sha256": "2adcfd85e3bd2ac52cf2ec8dbf0fd98b513dc46060cddf601bf648ad027eac17"
+    },
+    "llm_claude-sonnet-4-6_phase1b_signal_pilot_cue_attribution.json": {
+      "line_count": null,
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase1b_signal_pilot/llm_claude-sonnet-4-6_phase1b_signal_pilot_cue_attribution.json",
+      "sha256": "b2fa854438c3402edbb7465148f17c43afb931cafa3e25f89287117cf5ba2a12"
+    },
+    "llm_claude-sonnet-4-6_phase1b_signal_pilot_episodes.jsonl": {
+      "line_count": 48,
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase1b_signal_pilot/llm_claude-sonnet-4-6_phase1b_signal_pilot_episodes.jsonl",
+      "sha256": "28a6b1aef605ae588ead0318fc4f33c9934f865b3d249c56e707570ab162b334"
+    },
+    "llm_claude-sonnet-4-6_phase1b_signal_pilot_explanation_faithfulness.json": {
+      "line_count": null,
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase1b_signal_pilot/llm_claude-sonnet-4-6_phase1b_signal_pilot_explanation_faithfulness.json",
+      "sha256": "ec8bb8ba6e2bcde9f231a32bda068ae6637a2c1513ae5e580c132c3a448369dd"
+    },
+    "llm_claude-sonnet-4-6_phase1b_signal_pilot_paired_effects_lambda_0.5.json": {
+      "line_count": null,
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase1b_signal_pilot/llm_claude-sonnet-4-6_phase1b_signal_pilot_paired_effects_lambda_0.5.json",
+      "sha256": "a7235feec77d7f03957cc1b757bd8b9542cb1a397617c4104bb1783c6e1e79bf"
+    },
+    "llm_claude-sonnet-4-6_phase1b_signal_pilot_scores_lambda_0.5.json": {
+      "line_count": null,
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase1b_signal_pilot/llm_claude-sonnet-4-6_phase1b_signal_pilot_scores_lambda_0.5.json",
+      "sha256": "dc8b094cfab95305c9abcc2536260e64d45e00167902741e2b0df6748cdd3623"
+    },
+    "llm_claude-sonnet-4-6_phase1b_signal_pilot_trajectories.jsonl": {
+      "line_count": 48,
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase1b_signal_pilot/llm_claude-sonnet-4-6_phase1b_signal_pilot_trajectories.jsonl",
+      "sha256": "a5ab2ce19c7963c8f591aabe26a7be160ee42fe2ee97e24f5cd1553b1a919e2f"
+    },
+    "llm_claude-sonnet-4-6_phase1b_signal_pilot_trajectory_summary.json": {
+      "line_count": null,
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase1b_signal_pilot/llm_claude-sonnet-4-6_phase1b_signal_pilot_trajectory_summary.json",
+      "sha256": "e5841c3d5b94ab944967d77b50157048fa35ebbf89d241695c883be4d16211e0"
+    },
+    "phase1b_signal_packets.jsonl": {
+      "line_count": 48,
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase1b_signal_pilot/phase1b_signal_packets.jsonl",
+      "sha256": "13086d7241836798cae56cce0d6c6e3561e5c8aed5fa98064dfac322ef901d01"
+    },
+    "requests_phase1b_signal_pilot.jsonl": {
+      "line_count": 48,
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase1b_signal_pilot/requests_phase1b_signal_pilot.jsonl",
+      "sha256": "8a9a914c41065dcfc000e141221b3613d897ddf581b246cb6d093edf29ae46a1"
+    }
+  },
+  "status": "completed_small_llm_pilot"
+}

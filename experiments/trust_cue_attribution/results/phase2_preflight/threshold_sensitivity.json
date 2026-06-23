@@ -1,0 +1,71 @@
+{
+  "analysis": "phase2_threshold_sensitivity",
+  "cutoff_sweep": [
+    {
+      "complex_auroc": 0.4792,
+      "complex_wrong": 4,
+      "decision": "do_not_run_signal_not_calibrated",
+      "lddt_cutoff": 0.7,
+      "monomer_auroc": null,
+      "monomer_wrong": 0,
+      "oracle": 0.975,
+      "pooled_wrong_risk_auroc": 0.598684,
+      "real": 0.95,
+      "real_minus_shuffled": 0.0,
+      "trust_all": 0.95
+    },
+    {
+      "complex_auroc": 0.7148,
+      "complex_wrong": 8,
+      "decision": "redesign_policy_before_pilot",
+      "lddt_cutoff": 0.8,
+      "monomer_auroc": 1.0,
+      "monomer_wrong": 2,
+      "oracle": 0.9375,
+      "pooled_wrong_risk_auroc": 0.821429,
+      "real": 0.875,
+      "real_minus_shuffled": 0.0,
+      "trust_all": 0.875
+    },
+    {
+      "complex_auroc": 0.8221,
+      "complex_wrong": 21,
+      "decision": "redesign_policy_before_pilot",
+      "lddt_cutoff": 0.9,
+      "monomer_auroc": 0.8831,
+      "monomer_wrong": 7,
+      "oracle": 0.825,
+      "pooled_wrong_risk_auroc": 0.890797,
+      "real": 0.65,
+      "real_minus_shuffled": 0.0,
+      "trust_all": 0.65
+    }
+  ],
+  "lambda": 0.5,
+  "lddt_distribution": {
+    "complex": {
+      "max": 0.987,
+      "median": 0.897,
+      "min": 0.192,
+      "n": 40
+    },
+    "monomer": {
+      "max": 0.999,
+      "median": 0.97,
+      "min": 0.775,
+      "n": 40
+    }
+  },
+  "note": "pLDDT->lDDT calibration is threshold-independent and strong for monomers, weak for complexes; binary gate at lDDT>=0.7 is degenerate because Boltz-2 is correct on ~95% of recent targets.",
+  "regime_calibration_pearson_plddt_vs_lddt": {
+    "complex": {
+      "n": 40,
+      "pearson_plddt_vs_quality": 0.161733
+    },
+    "monomer": {
+      "n": 40,
+      "pearson_plddt_vs_quality": 0.891386
+    },
+    "monomer_minus_complex": 0.729653
+  }
+}

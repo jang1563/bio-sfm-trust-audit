@@ -1,0 +1,232 @@
+{
+  "acceptance_gates_before_llm_spend": [
+    {
+      "gate": "leakage_check",
+      "requirement": "model-visible edge signal contains no truth, correctness, reward, or target raw assay stats"
+    },
+    {
+      "gate": "within_panel_variation",
+      "requirement": "edge signal varies across readout genes within most selected panels"
+    },
+    {
+      "gate": "edge_signal_validity",
+      "requirement": "edge-level signal beats the panel-card AUROC directionally before LLM spend"
+    },
+    {
+      "gate": "placebo_control",
+      "requirement": "include shuffled readout-gene signal with matched style and missing truth labels"
+    },
+    {
+      "gate": "claim_boundary",
+      "requirement": "report as method-development until a scored LLM pilot separates real signal from placebo"
+    }
+  ],
+  "candidate_signal_routes": [
+    {
+      "evidence_unit": "(perturbation, readout_gene)",
+      "hidden_for_scoring_only": [
+        "target edge correctness",
+        "held-out truth labels",
+        "target edge measured assay stats",
+        "reward"
+      ],
+      "main_risk": "Nearest neighbors may encode experimental similarity without being calibrated reliability evidence.",
+      "model_dependency": "scFoundation panel/cell embeddings plus same-readout-gene neighbor retrieval",
+      "model_visible_fields": [
+        "neighbor_count",
+        "same_readout_gene_neighbor_count",
+        "neighbor_embedding_distance_summary",
+        "neighbor_sfm_call_agreement_rate",
+        "neighbor_baseline_disagreement_rate",
+        "calibration_status"
+      ],
+      "name": "scfoundation_neighbor_edge_support",
+      "status": "recommended_for_hpc_prototype",
+      "why_it_matches_the_task": "It varies by readout gene within a panel, so it can support edge-level verify/trust decisions."
+    },
+    {
+      "evidence_unit": "(perturbation, readout_gene)",
+      "hidden_for_scoring_only": [
+        "measured readout gene DE label",
+        "reward"
+      ],
+      "main_risk": "The current official smoke path only proved embeddings, not gene prediction output.",
+      "model_dependency": "scFoundation must expose a gene-level prediction or reconstruction path",
+      "model_visible_fields": [
+        "predicted_readout_gene_delta",
+        "prediction_uncertainty_proxy",
+        "gene_in_vocabulary",
+        "calibration_status"
+      ],
+      "name": "masked_readout_gene_prediction_delta",
+      "status": "blocked_until_model_output_probe",
+      "why_it_matches_the_task": "It is directly aligned to the readout gene."
+    },
+    {
+      "evidence_unit": "(perturbation, readout_gene)",
+      "hidden_for_scoring_only": [
+        "held-out truth labels",
+        "reward"
+      ],
+      "main_risk": "Attribution can be unstable and easy for the LLM to overinterpret.",
+      "model_dependency": "checkpoint instrumentation for readout-gene token attribution",
+      "model_visible_fields": [
+        "readout_gene_attribution_rank",
+        "readout_gene_attribution_score",
+        "layer_or_head_summary_if_available",
+        "calibration_status"
+      ],
+      "name": "gene_token_attribution_or_gradient",
+      "status": "research_probe_needed",
+      "why_it_matches_the_task": "It can test whether inside-model features align with a specific gene decision."
+    },
+    {
+      "evidence_unit": "(perturbation, readout_gene)",
+      "hidden_for_scoring_only": [
+        "held-out truth labels",
+        "reward"
+      ],
+      "main_risk": "It is not clean evidence that the LLM used SFM internals faithfully.",
+      "model_dependency": "current panel signal plus existing baseline disagreement",
+      "model_visible_fields": [
+        "panel_internal_signal_summary",
+        "edge_baseline_disagreement",
+        "calibration_status"
+      ],
+      "name": "panel_signal_plus_edge_baseline_fusion",
+      "status": "diagnostic_control_only",
+      "why_it_matches_the_task": "It tests whether edge-level formatting alone improves routing."
+    }
+  ],
+  "claim_boundary": "Design gate only; no new LLM call, no full Phase 1B result, and no claim that scFoundation internals are used faithfully.",
+  "edge_reuse_feasibility": {
+    "coverage": {
+      "edges_with_at_least_10_other_panels_same_gene": {
+        "count": 302,
+        "denominator": 315,
+        "fraction": 0.95873
+      },
+      "edges_with_at_least_1_other_panels_same_gene": {
+        "count": 314,
+        "denominator": 315,
+        "fraction": 0.996825
+      },
+      "edges_with_at_least_20_other_panels_same_gene": {
+        "count": 256,
+        "denominator": 315,
+        "fraction": 0.812698
+      },
+      "edges_with_at_least_3_other_panels_same_gene": {
+        "count": 310,
+        "denominator": 315,
+        "fraction": 0.984127
+      },
+      "edges_with_at_least_5_other_panels_same_gene": {
+        "count": 308,
+        "denominator": 315,
+        "fraction": 0.977778
+      }
+    },
+    "other_panel_same_gene_counts": {
+      "max": 93,
+      "median": 58,
+      "min": 0
+    },
+    "rationale": "Neighbor-style edge signals are feasible when the same readout gene appears in other perturbation panels, allowing gene-specific support without using the target edge's hidden correctness label.",
+    "selected_edges": 315,
+    "selected_unique_readout_genes": 77,
+    "top_selected_readout_genes": [
+      {
+        "gene": "SET",
+        "selected_edge_count": 12
+      },
+      {
+        "gene": "TMSB4X",
+        "selected_edge_count": 12
+      },
+      {
+        "gene": "TSC22D1",
+        "selected_edge_count": 12
+      },
+      {
+        "gene": "KLF1",
+        "selected_edge_count": 11
+      },
+      {
+        "gene": "MAPK1",
+        "selected_edge_count": 10
+      },
+      {
+        "gene": "CELF2",
+        "selected_edge_count": 9
+      },
+      {
+        "gene": "CKS1B",
+        "selected_edge_count": 9
+      },
+      {
+        "gene": "HOXB9",
+        "selected_edge_count": 9
+      },
+      {
+        "gene": "MAP7D1",
+        "selected_edge_count": 9
+      },
+      {
+        "gene": "NCL",
+        "selected_edge_count": 9
+      }
+    ]
+  },
+  "next_phase1b_pilot": {
+    "cue_conditions": [
+      "no_internal_signal",
+      "scfoundation_edge_neighbor_signal_shown",
+      "shuffled_readout_gene_signal_shown",
+      "panel_signal_card_control"
+    ],
+    "llm_gate": "run only after leakage checks and edge-signal validity diagnostics pass",
+    "phase": "phase1b_small_pilot",
+    "primary_pre_llm_metric": "edge-level AUROC for GEARS wrongness versus current panel-card AUROC",
+    "scope": "reuse the 12 Phase 1A selected panels first"
+  },
+  "phase": "phase1b",
+  "proposed_model_visible_schema": {
+    "evidence_packet.genes[].edge_internal_signal_summary": {
+      "calibration_status": "unverified_proxy_not_calibrated",
+      "limitations": [
+        "not_a_calibrated_uncertainty",
+        "does_not_contain_hidden_labels",
+        "neighbor_similarity_may_not_equal_error_risk"
+      ],
+      "neighbor_baseline_disagreement_rate": "float",
+      "neighbor_count": "int",
+      "neighbor_embedding_distance": {
+        "max": "float",
+        "mean": "float",
+        "min": "float"
+      },
+      "neighbor_sfm_call_agreement_rate": "float",
+      "readout_gene_display": "model-visible gene label",
+      "same_readout_gene_neighbor_count": "int",
+      "signal_scope": "readout_gene_specific",
+      "source": "scFoundation_neighbor_edge_support"
+    }
+  },
+  "recommended_route": {
+    "coverage_at_10_other_panels_same_gene": 0.95873,
+    "decision": "recommended_for_hpc_prototype",
+    "reason": "The same readout gene usually appears in many other panels, so a nearest-neighbor, readout-gene-specific cue is feasible without using the target edge's hidden truth.",
+    "route": "scfoundation_neighbor_edge_support",
+    "why_not_masked_prediction_first": "The current scFoundation smoke path verified embeddings only; a gene-prediction path must be probed separately."
+  },
+  "scope": {
+    "full_panels": 107,
+    "full_unique_readout_genes": 97,
+    "selected_edges": 315,
+    "selected_panels": 12,
+    "selected_unique_readout_genes": 77
+  },
+  "status": "edge_signal_design_ready",
+  "why_this_exists": "Phase 1A showed that panel-level scFoundation cards are too coarse for edge-level verify/trust decisions."
+}

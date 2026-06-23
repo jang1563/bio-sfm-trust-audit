@@ -1,0 +1,39 @@
+{
+  "calibration": "leave_one_out_isotonic_raw_risk_to_p_wrong",
+  "checks": {
+    "policy_beats_best_control": true,
+    "policy_beats_trust_all": true,
+    "power_sufficient": true,
+    "real_vs_shuffled_gap_large": true,
+    "signal_validity_auroc_ok": true
+  },
+  "claim_boundary": "Offline gate with LOO isotonic risk->P(wrong) calibration; no LLM calls.",
+  "correct_lddt_cutoff": 0.9,
+  "decision": "eligible_for_phase2_interface_pilot",
+  "lambda": 0.5,
+  "margins": {
+    "oracle_headroom": 0.175,
+    "real_minus_shuffled": 0.1375,
+    "vs_best_control": 0.1375,
+    "vs_trust_all": 0.0625
+  },
+  "net_reward_per_target": {
+    "calibrated_inverted_control": 0.43125,
+    "calibrated_real_policy": 0.7125,
+    "calibrated_shuffled_control": 0.575,
+    "oracle": 0.825,
+    "trust_all": 0.65
+  },
+  "phase": "phase2",
+  "scope": {
+    "n_complex": 40,
+    "n_monomer": 40,
+    "n_targets": 80,
+    "n_wrong": 28
+  },
+  "signal_validity": {
+    "threshold": 0.7,
+    "wrong_risk_auroc": 0.890797
+  },
+  "status": "calibrated_gate_ready"
+}

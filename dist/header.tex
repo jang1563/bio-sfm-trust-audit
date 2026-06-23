@@ -1,0 +1,6 @@
+% Dependency-light premium tweaks; guarded so missing packages never break the build.
+\IfFileExists{microtype.sty}{\usepackage{microtype}}{}
+\IfFileExists{titlesec.sty}{%
+  \usepackage{titlesec}%
+  \titlespacing*{\section}{0pt}{1.6ex plus 1ex minus .2ex}{1.0ex plus .2ex}%
+}{}

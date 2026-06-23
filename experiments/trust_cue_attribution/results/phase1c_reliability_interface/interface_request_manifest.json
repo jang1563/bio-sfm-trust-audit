@@ -1,0 +1,73 @@
+{
+  "claim_boundary": "Request-generation checkpoint only; no new Claude call, no LLM routing result, no true-SFM faithfulness claim, and no biological claim.",
+  "cue_conditions": [
+    "no_internal_signal",
+    "edge_neighbor_signal_shown",
+    "calibrated_reliability_interface_shown",
+    "inverted_reliability_interface_control"
+  ],
+  "cue_counts": {
+    "calibrated_reliability_interface_shown": 12,
+    "edge_neighbor_signal_shown": 12,
+    "inverted_reliability_interface_control": 12,
+    "no_internal_signal": 12
+  },
+  "gene_count_max": 30,
+  "gene_count_min": 21,
+  "model_visible_leakage_check": {
+    "forbidden_key_hits": [],
+    "forbidden_keys": [
+      "correct",
+      "fm_correct",
+      "n_cntrl",
+      "n_trt",
+      "raw",
+      "raw_log2FC",
+      "raw_q",
+      "raw_se",
+      "real_call",
+      "real_label",
+      "reward",
+      "scoring_key",
+      "truth"
+    ],
+    "passed": true
+  },
+  "n_packets": 48,
+  "n_panels": 12,
+  "n_requests": 48,
+  "next_step": "Run a small Sonnet-only Phase 1C interface pilot, then score paired cue effects against no_internal_signal. Do not scale to a large matrix unless the calibrated interface improves reward and the inverted control does not dominate behavior.",
+  "packet_out": "experiments/trust_cue_attribution/hpc_outputs/phase1c_interface_pilot/phase1c_interface_packets.jsonl",
+  "panel_ids": [
+    "ATL1",
+    "CEBPB",
+    "CEBPB+MAPK1",
+    "DUSP9+IGDCC3",
+    "FEV+ISL2",
+    "FOXA1+FOXF1",
+    "HOXB9",
+    "IGDCC3+MAPK1",
+    "MAP2K3+SLC38A2",
+    "PTPN1",
+    "SAMD1+UBASH3B",
+    "SLC4A1"
+  ],
+  "phase": "phase1c",
+  "pilot_design": {
+    "expected_request_count": 48,
+    "negative_control": "inverted_reliability_interface_control",
+    "primary_comparison": "calibrated_reliability_interface_shown vs no_internal_signal and edge_neighbor_signal_shown"
+  },
+  "request_out": "experiments/trust_cue_attribution/hpc_outputs/phase1c_interface_pilot/requests_phase1c_interface.jsonl",
+  "source_artifacts": {
+    "neighbor_report": {
+      "path": "experiments/trust_cue_attribution/results/phase1b_edge_neighbor/neighbor_signal_report.json",
+      "sha256": "435658afe587330357afa08032e41baade8b6ff59893d858bf66da1d355b996a"
+    },
+    "offline_gate": {
+      "path": "experiments/trust_cue_attribution/results/phase1c_reliability_interface/offline_gate.json",
+      "sha256": "bfed362fd5f0389310002d503193a8db6ab81a34e6afe8bb537c8ca0f252ddb4"
+    }
+  },
+  "status": "interface_request_pilot_ready"
+}

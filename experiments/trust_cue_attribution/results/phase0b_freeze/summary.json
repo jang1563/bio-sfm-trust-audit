@@ -1,0 +1,1611 @@
+{
+  "baseline_comparison": {
+    "break_even_lambda": {
+      "always_additive": 0.535679052943,
+      "oracle_verify": 1.728604118993,
+      "random_verify_at_budget": 0.081246806336,
+      "signal_gated_verify": -0.02875399361,
+      "trust_all_sfm": 0.476487997369,
+      "verify_all": 0.277292416122
+    },
+    "delta_net_reward_per_gene": {
+      "0.2": {
+        "always_additive": 0.061265154243,
+        "oracle_verify": -0.200456127716,
+        "random_verify_at_budget": 0.013947905414,
+        "signal_gated_verify": 0.004297203217,
+        "trust_all_sfm": 0.050462129396,
+        "verify_all": -0.063185691994
+      },
+      "0.5": {
+        "always_additive": 0.006511823311,
+        "oracle_verify": -0.161115112231,
+        "random_verify_at_budget": 0.049183771456,
+        "signal_gated_verify": 0.009932781179,
+        "trust_all_sfm": -0.004291201536,
+        "verify_all": 0.182060977074
+      },
+      "0.8": {
+        "always_additive": -0.048241507622,
+        "oracle_verify": -0.121774096747,
+        "random_verify_at_budget": 0.084419637498,
+        "signal_gated_verify": 0.015568359141,
+        "trust_all_sfm": -0.059044532469,
+        "verify_all": 0.427307646141
+      }
+    },
+    "metric_basis": "micro_gene_weighted"
+  },
+  "baselines": {
+    "additive_coverage": {
+      "0.2": {
+        "always_additive": {
+          "accuracy": 0.811827956989,
+          "assays_per_gene": 0.0,
+          "coverage_rate": 1.0,
+          "default_baseline_rate": 1.0,
+          "default_error_rate": 0.188172043011,
+          "default_no_change_rate": 0.0,
+          "default_observed_additive_rate": 1.0,
+          "defer_rate": 0.0,
+          "n_genes": 1116,
+          "n_panels": 45,
+          "net_reward_per_gene": 0.811827956989,
+          "sfm_wrong_rate": 0.323476702509,
+          "trust_error_rate": 0.0,
+          "verify_precision": 0.0,
+          "verify_recall": 0.0
+        },
+        "oracle_verify": {
+          "accuracy": 1.0,
+          "assays_per_gene": 0.323476702509,
+          "coverage_rate": 1.0,
+          "default_baseline_rate": 0.0,
+          "default_error_rate": 0.0,
+          "default_no_change_rate": 0.0,
+          "default_observed_additive_rate": 0.0,
+          "defer_rate": 0.0,
+          "n_genes": 1116,
+          "n_panels": 45,
+          "net_reward_per_gene": 0.935304659498,
+          "sfm_wrong_rate": 0.323476702509,
+          "trust_error_rate": 0.0,
+          "verify_precision": 1.0,
+          "verify_recall": 1.0
+        },
+        "random_verify_at_budget": {
+          "accuracy": 0.767025089606,
+          "assays_per_gene": 0.299283154122,
+          "coverage_rate": 1.0,
+          "default_baseline_rate": 0.0,
+          "default_error_rate": 0.0,
+          "default_no_change_rate": 0.0,
+          "default_observed_additive_rate": 0.0,
+          "defer_rate": 0.0,
+          "n_genes": 1116,
+          "n_panels": 45,
+          "net_reward_per_gene": 0.707168458781,
+          "sfm_wrong_rate": 0.323476702509,
+          "trust_error_rate": 0.232974910394,
+          "verify_precision": 0.302395209581,
+          "verify_recall": 0.279778393352
+        },
+        "signal_gated_verify": {
+          "accuracy": 0.847670250896,
+          "assays_per_gene": 0.202508960573,
+          "coverage_rate": 1.0,
+          "default_baseline_rate": 0.797491039427,
+          "default_error_rate": 0.152329749104,
+          "default_no_change_rate": 0.0,
+          "default_observed_additive_rate": 0.797491039427,
+          "defer_rate": 0.0,
+          "n_genes": 1116,
+          "n_panels": 45,
+          "net_reward_per_gene": 0.807168458781,
+          "sfm_wrong_rate": 0.323476702509,
+          "trust_error_rate": 0.0,
+          "verify_precision": 0.41592920354,
+          "verify_recall": 0.260387811634
+        },
+        "trust_all_sfm": {
+          "accuracy": 0.676523297491,
+          "assays_per_gene": 0.0,
+          "coverage_rate": 1.0,
+          "default_baseline_rate": 0.0,
+          "default_error_rate": 0.0,
+          "default_no_change_rate": 0.0,
+          "default_observed_additive_rate": 0.0,
+          "defer_rate": 0.0,
+          "n_genes": 1116,
+          "n_panels": 45,
+          "net_reward_per_gene": 0.676523297491,
+          "sfm_wrong_rate": 0.323476702509,
+          "trust_error_rate": 0.323476702509,
+          "verify_precision": 0.0,
+          "verify_recall": 0.0
+        },
+        "verify_all": {
+          "accuracy": 1.0,
+          "assays_per_gene": 1.0,
+          "coverage_rate": 1.0,
+          "default_baseline_rate": 0.0,
+          "default_error_rate": 0.0,
+          "default_no_change_rate": 0.0,
+          "default_observed_additive_rate": 0.0,
+          "defer_rate": 0.0,
+          "n_genes": 1116,
+          "n_panels": 45,
+          "net_reward_per_gene": 0.8,
+          "sfm_wrong_rate": 0.323476702509,
+          "trust_error_rate": 0.0,
+          "verify_precision": 0.323476702509,
+          "verify_recall": 1.0
+        }
+      },
+      "0.5": {
+        "always_additive": {
+          "accuracy": 0.811827956989,
+          "assays_per_gene": 0.0,
+          "coverage_rate": 1.0,
+          "default_baseline_rate": 1.0,
+          "default_error_rate": 0.188172043011,
+          "default_no_change_rate": 0.0,
+          "default_observed_additive_rate": 1.0,
+          "defer_rate": 0.0,
+          "n_genes": 1116,
+          "n_panels": 45,
+          "net_reward_per_gene": 0.811827956989,
+          "sfm_wrong_rate": 0.323476702509,
+          "trust_error_rate": 0.0,
+          "verify_precision": 0.0,
+          "verify_recall": 0.0
+        },
+        "oracle_verify": {
+          "accuracy": 1.0,
+          "assays_per_gene": 0.323476702509,
+          "coverage_rate": 1.0,
+          "default_baseline_rate": 0.0,
+          "default_error_rate": 0.0,
+          "default_no_change_rate": 0.0,
+          "default_observed_additive_rate": 0.0,
+          "defer_rate": 0.0,
+          "n_genes": 1116,
+          "n_panels": 45,
+          "net_reward_per_gene": 0.838261648746,
+          "sfm_wrong_rate": 0.323476702509,
+          "trust_error_rate": 0.0,
+          "verify_precision": 1.0,
+          "verify_recall": 1.0
+        },
+        "random_verify_at_budget": {
+          "accuracy": 0.767025089606,
+          "assays_per_gene": 0.299283154122,
+          "coverage_rate": 1.0,
+          "default_baseline_rate": 0.0,
+          "default_error_rate": 0.0,
+          "default_no_change_rate": 0.0,
+          "default_observed_additive_rate": 0.0,
+          "defer_rate": 0.0,
+          "n_genes": 1116,
+          "n_panels": 45,
+          "net_reward_per_gene": 0.617383512545,
+          "sfm_wrong_rate": 0.323476702509,
+          "trust_error_rate": 0.232974910394,
+          "verify_precision": 0.302395209581,
+          "verify_recall": 0.279778393352
+        },
+        "signal_gated_verify": {
+          "accuracy": 0.847670250896,
+          "assays_per_gene": 0.202508960573,
+          "coverage_rate": 1.0,
+          "default_baseline_rate": 0.797491039427,
+          "default_error_rate": 0.152329749104,
+          "default_no_change_rate": 0.0,
+          "default_observed_additive_rate": 0.797491039427,
+          "defer_rate": 0.0,
+          "n_genes": 1116,
+          "n_panels": 45,
+          "net_reward_per_gene": 0.746415770609,
+          "sfm_wrong_rate": 0.323476702509,
+          "trust_error_rate": 0.0,
+          "verify_precision": 0.41592920354,
+          "verify_recall": 0.260387811634
+        },
+        "trust_all_sfm": {
+          "accuracy": 0.676523297491,
+          "assays_per_gene": 0.0,
+          "coverage_rate": 1.0,
+          "default_baseline_rate": 0.0,
+          "default_error_rate": 0.0,
+          "default_no_change_rate": 0.0,
+          "default_observed_additive_rate": 0.0,
+          "defer_rate": 0.0,
+          "n_genes": 1116,
+          "n_panels": 45,
+          "net_reward_per_gene": 0.676523297491,
+          "sfm_wrong_rate": 0.323476702509,
+          "trust_error_rate": 0.323476702509,
+          "verify_precision": 0.0,
+          "verify_recall": 0.0
+        },
+        "verify_all": {
+          "accuracy": 1.0,
+          "assays_per_gene": 1.0,
+          "coverage_rate": 1.0,
+          "default_baseline_rate": 0.0,
+          "default_error_rate": 0.0,
+          "default_no_change_rate": 0.0,
+          "default_observed_additive_rate": 0.0,
+          "defer_rate": 0.0,
+          "n_genes": 1116,
+          "n_panels": 45,
+          "net_reward_per_gene": 0.5,
+          "sfm_wrong_rate": 0.323476702509,
+          "trust_error_rate": 0.0,
+          "verify_precision": 0.323476702509,
+          "verify_recall": 1.0
+        }
+      },
+      "0.8": {
+        "always_additive": {
+          "accuracy": 0.811827956989,
+          "assays_per_gene": 0.0,
+          "coverage_rate": 1.0,
+          "default_baseline_rate": 1.0,
+          "default_error_rate": 0.188172043011,
+          "default_no_change_rate": 0.0,
+          "default_observed_additive_rate": 1.0,
+          "defer_rate": 0.0,
+          "n_genes": 1116,
+          "n_panels": 45,
+          "net_reward_per_gene": 0.811827956989,
+          "sfm_wrong_rate": 0.323476702509,
+          "trust_error_rate": 0.0,
+          "verify_precision": 0.0,
+          "verify_recall": 0.0
+        },
+        "oracle_verify": {
+          "accuracy": 1.0,
+          "assays_per_gene": 0.323476702509,
+          "coverage_rate": 1.0,
+          "default_baseline_rate": 0.0,
+          "default_error_rate": 0.0,
+          "default_no_change_rate": 0.0,
+          "default_observed_additive_rate": 0.0,
+          "defer_rate": 0.0,
+          "n_genes": 1116,
+          "n_panels": 45,
+          "net_reward_per_gene": 0.741218637993,
+          "sfm_wrong_rate": 0.323476702509,
+          "trust_error_rate": 0.0,
+          "verify_precision": 1.0,
+          "verify_recall": 1.0
+        },
+        "random_verify_at_budget": {
+          "accuracy": 0.767025089606,
+          "assays_per_gene": 0.299283154122,
+          "coverage_rate": 1.0,
+          "default_baseline_rate": 0.0,
+          "default_error_rate": 0.0,
+          "default_no_change_rate": 0.0,
+          "default_observed_additive_rate": 0.0,
+          "defer_rate": 0.0,
+          "n_genes": 1116,
+          "n_panels": 45,
+          "net_reward_per_gene": 0.527598566308,
+          "sfm_wrong_rate": 0.323476702509,
+          "trust_error_rate": 0.232974910394,
+          "verify_precision": 0.302395209581,
+          "verify_recall": 0.279778393352
+        },
+        "signal_gated_verify": {
+          "accuracy": 0.847670250896,
+          "assays_per_gene": 0.202508960573,
+          "coverage_rate": 1.0,
+          "default_baseline_rate": 0.797491039427,
+          "default_error_rate": 0.152329749104,
+          "default_no_change_rate": 0.0,
+          "default_observed_additive_rate": 0.797491039427,
+          "defer_rate": 0.0,
+          "n_genes": 1116,
+          "n_panels": 45,
+          "net_reward_per_gene": 0.685663082437,
+          "sfm_wrong_rate": 0.323476702509,
+          "trust_error_rate": 0.0,
+          "verify_precision": 0.41592920354,
+          "verify_recall": 0.260387811634
+        },
+        "trust_all_sfm": {
+          "accuracy": 0.676523297491,
+          "assays_per_gene": 0.0,
+          "coverage_rate": 1.0,
+          "default_baseline_rate": 0.0,
+          "default_error_rate": 0.0,
+          "default_no_change_rate": 0.0,
+          "default_observed_additive_rate": 0.0,
+          "defer_rate": 0.0,
+          "n_genes": 1116,
+          "n_panels": 45,
+          "net_reward_per_gene": 0.676523297491,
+          "sfm_wrong_rate": 0.323476702509,
+          "trust_error_rate": 0.323476702509,
+          "verify_precision": 0.0,
+          "verify_recall": 0.0
+        },
+        "verify_all": {
+          "accuracy": 1.0,
+          "assays_per_gene": 1.0,
+          "coverage_rate": 1.0,
+          "default_baseline_rate": 0.0,
+          "default_error_rate": 0.0,
+          "default_no_change_rate": 0.0,
+          "default_observed_additive_rate": 0.0,
+          "defer_rate": 0.0,
+          "n_genes": 1116,
+          "n_panels": 45,
+          "net_reward_per_gene": 0.2,
+          "sfm_wrong_rate": 0.323476702509,
+          "trust_error_rate": 0.0,
+          "verify_precision": 0.323476702509,
+          "verify_recall": 1.0
+        }
+      }
+    },
+    "full": {
+      "0.2": {
+        "always_additive": {
+          "accuracy": 0.675549153763,
+          "assays_per_gene": 0.0,
+          "coverage_rate": 1.0,
+          "default_baseline_rate": 1.0,
+          "default_error_rate": 0.324450846237,
+          "default_no_change_rate": 0.598127475693,
+          "default_observed_additive_rate": 0.401872524307,
+          "defer_rate": 0.0,
+          "n_genes": 2777,
+          "n_panels": 107,
+          "net_reward_per_gene": 0.675549153763,
+          "sfm_wrong_rate": 0.31364782139,
+          "trust_error_rate": 0.0,
+          "verify_precision": 0.0,
+          "verify_recall": 0.0
+        },
+        "oracle_verify": {
+          "accuracy": 1.0,
+          "assays_per_gene": 0.31364782139,
+          "coverage_rate": 1.0,
+          "default_baseline_rate": 0.0,
+          "default_error_rate": 0.0,
+          "default_no_change_rate": 0.0,
+          "default_observed_additive_rate": 0.0,
+          "defer_rate": 0.0,
+          "n_genes": 2777,
+          "n_panels": 107,
+          "net_reward_per_gene": 0.937270435722,
+          "sfm_wrong_rate": 0.31364782139,
+          "trust_error_rate": 0.0,
+          "verify_precision": 1.0,
+          "verify_recall": 1.0
+        },
+        "random_verify_at_budget": {
+          "accuracy": 0.782859200576,
+          "assays_per_gene": 0.299963989917,
+          "coverage_rate": 1.0,
+          "default_baseline_rate": 0.0,
+          "default_error_rate": 0.0,
+          "default_no_change_rate": 0.0,
+          "default_observed_additive_rate": 0.0,
+          "defer_rate": 0.0,
+          "n_genes": 2777,
+          "n_panels": 107,
+          "net_reward_per_gene": 0.722866402593,
+          "sfm_wrong_rate": 0.31364782139,
+          "trust_error_rate": 0.217140799424,
+          "verify_precision": 0.321728691477,
+          "verify_recall": 0.307692307692
+        },
+        "signal_gated_verify": {
+          "accuracy": 0.772776377386,
+          "assays_per_gene": 0.201296362982,
+          "coverage_rate": 1.0,
+          "default_baseline_rate": 0.798703637018,
+          "default_error_rate": 0.227223622614,
+          "default_no_change_rate": 0.478213899892,
+          "default_observed_additive_rate": 0.320489737126,
+          "defer_rate": 0.0,
+          "n_genes": 2777,
+          "n_panels": 107,
+          "net_reward_per_gene": 0.732517104789,
+          "sfm_wrong_rate": 0.31364782139,
+          "trust_error_rate": 0.0,
+          "verify_precision": 0.354203935599,
+          "verify_recall": 0.227324913892
+        },
+        "trust_all_sfm": {
+          "accuracy": 0.68635217861,
+          "assays_per_gene": 0.0,
+          "coverage_rate": 1.0,
+          "default_baseline_rate": 0.0,
+          "default_error_rate": 0.0,
+          "default_no_change_rate": 0.0,
+          "default_observed_additive_rate": 0.0,
+          "defer_rate": 0.0,
+          "n_genes": 2777,
+          "n_panels": 107,
+          "net_reward_per_gene": 0.68635217861,
+          "sfm_wrong_rate": 0.31364782139,
+          "trust_error_rate": 0.31364782139,
+          "verify_precision": 0.0,
+          "verify_recall": 0.0
+        },
+        "verify_all": {
+          "accuracy": 1.0,
+          "assays_per_gene": 1.0,
+          "coverage_rate": 1.0,
+          "default_baseline_rate": 0.0,
+          "default_error_rate": 0.0,
+          "default_no_change_rate": 0.0,
+          "default_observed_additive_rate": 0.0,
+          "defer_rate": 0.0,
+          "n_genes": 2777,
+          "n_panels": 107,
+          "net_reward_per_gene": 0.8,
+          "sfm_wrong_rate": 0.31364782139,
+          "trust_error_rate": 0.0,
+          "verify_precision": 0.31364782139,
+          "verify_recall": 1.0
+        }
+      },
+      "0.5": {
+        "always_additive": {
+          "accuracy": 0.675549153763,
+          "assays_per_gene": 0.0,
+          "coverage_rate": 1.0,
+          "default_baseline_rate": 1.0,
+          "default_error_rate": 0.324450846237,
+          "default_no_change_rate": 0.598127475693,
+          "default_observed_additive_rate": 0.401872524307,
+          "defer_rate": 0.0,
+          "n_genes": 2777,
+          "n_panels": 107,
+          "net_reward_per_gene": 0.675549153763,
+          "sfm_wrong_rate": 0.31364782139,
+          "trust_error_rate": 0.0,
+          "verify_precision": 0.0,
+          "verify_recall": 0.0
+        },
+        "oracle_verify": {
+          "accuracy": 1.0,
+          "assays_per_gene": 0.31364782139,
+          "coverage_rate": 1.0,
+          "default_baseline_rate": 0.0,
+          "default_error_rate": 0.0,
+          "default_no_change_rate": 0.0,
+          "default_observed_additive_rate": 0.0,
+          "defer_rate": 0.0,
+          "n_genes": 2777,
+          "n_panels": 107,
+          "net_reward_per_gene": 0.843176089305,
+          "sfm_wrong_rate": 0.31364782139,
+          "trust_error_rate": 0.0,
+          "verify_precision": 1.0,
+          "verify_recall": 1.0
+        },
+        "random_verify_at_budget": {
+          "accuracy": 0.782859200576,
+          "assays_per_gene": 0.299963989917,
+          "coverage_rate": 1.0,
+          "default_baseline_rate": 0.0,
+          "default_error_rate": 0.0,
+          "default_no_change_rate": 0.0,
+          "default_observed_additive_rate": 0.0,
+          "defer_rate": 0.0,
+          "n_genes": 2777,
+          "n_panels": 107,
+          "net_reward_per_gene": 0.632877205618,
+          "sfm_wrong_rate": 0.31364782139,
+          "trust_error_rate": 0.217140799424,
+          "verify_precision": 0.321728691477,
+          "verify_recall": 0.307692307692
+        },
+        "signal_gated_verify": {
+          "accuracy": 0.772776377386,
+          "assays_per_gene": 0.201296362982,
+          "coverage_rate": 1.0,
+          "default_baseline_rate": 0.798703637018,
+          "default_error_rate": 0.227223622614,
+          "default_no_change_rate": 0.478213899892,
+          "default_observed_additive_rate": 0.320489737126,
+          "defer_rate": 0.0,
+          "n_genes": 2777,
+          "n_panels": 107,
+          "net_reward_per_gene": 0.672128195895,
+          "sfm_wrong_rate": 0.31364782139,
+          "trust_error_rate": 0.0,
+          "verify_precision": 0.354203935599,
+          "verify_recall": 0.227324913892
+        },
+        "trust_all_sfm": {
+          "accuracy": 0.68635217861,
+          "assays_per_gene": 0.0,
+          "coverage_rate": 1.0,
+          "default_baseline_rate": 0.0,
+          "default_error_rate": 0.0,
+          "default_no_change_rate": 0.0,
+          "default_observed_additive_rate": 0.0,
+          "defer_rate": 0.0,
+          "n_genes": 2777,
+          "n_panels": 107,
+          "net_reward_per_gene": 0.68635217861,
+          "sfm_wrong_rate": 0.31364782139,
+          "trust_error_rate": 0.31364782139,
+          "verify_precision": 0.0,
+          "verify_recall": 0.0
+        },
+        "verify_all": {
+          "accuracy": 1.0,
+          "assays_per_gene": 1.0,
+          "coverage_rate": 1.0,
+          "default_baseline_rate": 0.0,
+          "default_error_rate": 0.0,
+          "default_no_change_rate": 0.0,
+          "default_observed_additive_rate": 0.0,
+          "defer_rate": 0.0,
+          "n_genes": 2777,
+          "n_panels": 107,
+          "net_reward_per_gene": 0.5,
+          "sfm_wrong_rate": 0.31364782139,
+          "trust_error_rate": 0.0,
+          "verify_precision": 0.31364782139,
+          "verify_recall": 1.0
+        }
+      },
+      "0.8": {
+        "always_additive": {
+          "accuracy": 0.675549153763,
+          "assays_per_gene": 0.0,
+          "coverage_rate": 1.0,
+          "default_baseline_rate": 1.0,
+          "default_error_rate": 0.324450846237,
+          "default_no_change_rate": 0.598127475693,
+          "default_observed_additive_rate": 0.401872524307,
+          "defer_rate": 0.0,
+          "n_genes": 2777,
+          "n_panels": 107,
+          "net_reward_per_gene": 0.675549153763,
+          "sfm_wrong_rate": 0.31364782139,
+          "trust_error_rate": 0.0,
+          "verify_precision": 0.0,
+          "verify_recall": 0.0
+        },
+        "oracle_verify": {
+          "accuracy": 1.0,
+          "assays_per_gene": 0.31364782139,
+          "coverage_rate": 1.0,
+          "default_baseline_rate": 0.0,
+          "default_error_rate": 0.0,
+          "default_no_change_rate": 0.0,
+          "default_observed_additive_rate": 0.0,
+          "defer_rate": 0.0,
+          "n_genes": 2777,
+          "n_panels": 107,
+          "net_reward_per_gene": 0.749081742888,
+          "sfm_wrong_rate": 0.31364782139,
+          "trust_error_rate": 0.0,
+          "verify_precision": 1.0,
+          "verify_recall": 1.0
+        },
+        "random_verify_at_budget": {
+          "accuracy": 0.782859200576,
+          "assays_per_gene": 0.299963989917,
+          "coverage_rate": 1.0,
+          "default_baseline_rate": 0.0,
+          "default_error_rate": 0.0,
+          "default_no_change_rate": 0.0,
+          "default_observed_additive_rate": 0.0,
+          "defer_rate": 0.0,
+          "n_genes": 2777,
+          "n_panels": 107,
+          "net_reward_per_gene": 0.542888008642,
+          "sfm_wrong_rate": 0.31364782139,
+          "trust_error_rate": 0.217140799424,
+          "verify_precision": 0.321728691477,
+          "verify_recall": 0.307692307692
+        },
+        "signal_gated_verify": {
+          "accuracy": 0.772776377386,
+          "assays_per_gene": 0.201296362982,
+          "coverage_rate": 1.0,
+          "default_baseline_rate": 0.798703637018,
+          "default_error_rate": 0.227223622614,
+          "default_no_change_rate": 0.478213899892,
+          "default_observed_additive_rate": 0.320489737126,
+          "defer_rate": 0.0,
+          "n_genes": 2777,
+          "n_panels": 107,
+          "net_reward_per_gene": 0.611739287,
+          "sfm_wrong_rate": 0.31364782139,
+          "trust_error_rate": 0.0,
+          "verify_precision": 0.354203935599,
+          "verify_recall": 0.227324913892
+        },
+        "trust_all_sfm": {
+          "accuracy": 0.68635217861,
+          "assays_per_gene": 0.0,
+          "coverage_rate": 1.0,
+          "default_baseline_rate": 0.0,
+          "default_error_rate": 0.0,
+          "default_no_change_rate": 0.0,
+          "default_observed_additive_rate": 0.0,
+          "defer_rate": 0.0,
+          "n_genes": 2777,
+          "n_panels": 107,
+          "net_reward_per_gene": 0.68635217861,
+          "sfm_wrong_rate": 0.31364782139,
+          "trust_error_rate": 0.31364782139,
+          "verify_precision": 0.0,
+          "verify_recall": 0.0
+        },
+        "verify_all": {
+          "accuracy": 1.0,
+          "assays_per_gene": 1.0,
+          "coverage_rate": 1.0,
+          "default_baseline_rate": 0.0,
+          "default_error_rate": 0.0,
+          "default_no_change_rate": 0.0,
+          "default_observed_additive_rate": 0.0,
+          "defer_rate": 0.0,
+          "n_genes": 2777,
+          "n_panels": 107,
+          "net_reward_per_gene": 0.2,
+          "sfm_wrong_rate": 0.31364782139,
+          "trust_error_rate": 0.0,
+          "verify_precision": 0.31364782139,
+          "verify_recall": 1.0
+        }
+      }
+    }
+  },
+  "biological_panel_count": 107,
+  "claim_boundary": "GEARS/Norman dry-run method-validation only; no true-SFM, internal-signal, or calibrated-orchestrator claim",
+  "claim_update": {
+    "best_current_claim": "In a full GEARS/Norman dry run, the LLM reasoning layer is strongly cue-sensitive and only weakly calibrated as a cost-aware orchestrator. Explicit reliability signals can improve routing, but reliability-looking cues can also mislead it; explanations often report unavailable evidence.",
+    "not_supported": [
+      "The LLM is a robust calibrated SFM orchestrator.",
+      "The result generalizes to true SFMs.",
+      "Confidence-like cues are calibrated uncertainty.",
+      "The learned/router layer is ready.",
+      "Internal SFM signals are being used faithfully."
+    ],
+    "supported": [
+      "Full non-leakage Sonnet routing is strongly cue-sensitive.",
+      "Additive-disagreement evidence improves routing relative to no_cue.",
+      "Misleading reliability framing changes behavior and hurts accuracy/net reward.",
+      "Self-reported explanations frequently mention unavailable evidence.",
+      "The oracle gap shows useful routing signal remains uncaptured."
+    ]
+  },
+  "counts": {
+    "cue_packets_full": 749,
+    "panels_additive": 45,
+    "panels_full": 107,
+    "requests_full_nonleakage": 642,
+    "sonnet_4_6_phase0b_episodes": 642,
+    "sonnet_4_6_phase0b_trajectories": 642
+  },
+  "cue_conditions": [
+    "additive_disagreement_shown",
+    "anonymized_genes",
+    "confidence_shown",
+    "misleading_reliability_card",
+    "model_name_shown",
+    "no_cue"
+  ],
+  "cue_counts": {
+    "additive_disagreement_shown": 107,
+    "anonymized_genes": 107,
+    "confidence_shown": 107,
+    "misleading_reliability_card": 107,
+    "model_name_shown": 107,
+    "no_cue": 107
+  },
+  "cue_level_highlights": {
+    "cue_ranked_by_net_reward_per_gene": [
+      {
+        "accuracy": 0.783939503061,
+        "assays_per_gene": 0.101188332733,
+        "cue_condition": "confidence_shown",
+        "default_baseline_rate": 0.638098667627,
+        "net_reward_per_gene": 0.733345336694,
+        "trust_error_rate": 0.04285199856
+      },
+      {
+        "accuracy": 0.817068779258,
+        "assays_per_gene": 0.243428159885,
+        "cue_condition": "additive_disagreement_shown",
+        "default_baseline_rate": 0.387468491178,
+        "net_reward_per_gene": 0.695354699316,
+        "trust_error_rate": 0.063377745769
+      },
+      {
+        "accuracy": 0.778898091466,
+        "assays_per_gene": 0.208498379546,
+        "cue_condition": "anonymized_genes",
+        "default_baseline_rate": 0.071660064818,
+        "net_reward_per_gene": 0.674648901692,
+        "trust_error_rate": 0.202736766295
+      },
+      {
+        "accuracy": 0.772056175729,
+        "assays_per_gene": 0.202016564638,
+        "cue_condition": "no_cue",
+        "default_baseline_rate": 0.05293482175,
+        "net_reward_per_gene": 0.67104789341,
+        "trust_error_rate": 0.212819589485
+      },
+      {
+        "accuracy": 0.764854159165,
+        "assays_per_gene": 0.200576161325,
+        "cue_condition": "model_name_shown",
+        "default_baseline_rate": 0.087864602089,
+        "net_reward_per_gene": 0.664566078502,
+        "trust_error_rate": 0.204537270436
+      },
+      {
+        "accuracy": 0.72308246309,
+        "assays_per_gene": 0.139359020526,
+        "cue_condition": "misleading_reliability_card",
+        "default_baseline_rate": 0.41339575081,
+        "net_reward_per_gene": 0.653402952827,
+        "trust_error_rate": 0.172128195895
+      }
+    ],
+    "lambda": 0.5,
+    "paired_effects_vs_no_cue": {
+      "additive_disagreement_shown": {
+        "action_changed_rate": 0.576881526828,
+        "delta_assay": 0.041411595247,
+        "delta_correct": 0.045012603529,
+        "delta_net": 0.024306805906,
+        "delta_trust_error": -0.149441843716,
+        "delta_verify_wrong": 0.04897371264,
+        "n_pairs": 2777
+      },
+      "anonymized_genes": {
+        "action_changed_rate": 0.185091825711,
+        "delta_assay": 0.006481814908,
+        "delta_correct": 0.006841915736,
+        "delta_net": 0.003601008282,
+        "delta_trust_error": -0.01008282319,
+        "delta_verify_wrong": 0.008642419878,
+        "n_pairs": 2777
+      },
+      "confidence_shown": {
+        "action_changed_rate": 0.697515304285,
+        "delta_assay": -0.100828231905,
+        "delta_correct": 0.011883327332,
+        "delta_net": 0.062297443284,
+        "delta_trust_error": -0.169967590925,
+        "delta_verify_wrong": -0.034209578682,
+        "n_pairs": 2777
+      },
+      "misleading_reliability_card": {
+        "action_changed_rate": 0.67626935542,
+        "delta_assay": -0.062657544112,
+        "delta_correct": -0.04897371264,
+        "delta_net": -0.017644940583,
+        "delta_trust_error": -0.04069139359,
+        "delta_verify_wrong": -0.04069139359,
+        "n_pairs": 2777
+      },
+      "model_name_shown": {
+        "action_changed_rate": 0.135758012243,
+        "delta_assay": -0.001440403313,
+        "delta_correct": -0.007202016565,
+        "delta_net": -0.006481814908,
+        "delta_trust_error": -0.008282319049,
+        "delta_verify_wrong": -0.004321209939,
+        "n_pairs": 2777
+      }
+    }
+  },
+  "episode_integrity": {
+    "action_counts": {
+      "default_baseline": 4586,
+      "defer": 42,
+      "trust_sfm": 8993,
+      "verify_assay": 3041
+    },
+    "cue_counts": {
+      "additive_disagreement_shown": 107,
+      "anonymized_genes": 107,
+      "confidence_shown": 107,
+      "misleading_reliability_card": 107,
+      "model_name_shown": 107,
+      "no_cue": 107
+    },
+    "episodes": 642,
+    "episodes_missing_actions": 0,
+    "gene_key_mismatch_episode_count": 1,
+    "gene_key_mismatch_examples": [
+      {
+        "cue_condition": "confidence_shown",
+        "extra_action_genes": [
+          "CDKN1B"
+        ],
+        "missing_expected_genes": [
+          "CDKN1C"
+        ],
+        "packet_id": "FOXF1+FOXL2::confidence_shown"
+      }
+    ],
+    "gene_key_mismatch_extra_action_gene_count": 1,
+    "gene_key_mismatch_missing_expected_gene_count": 1,
+    "parse_errors": 0,
+    "provider_errors": 0,
+    "total_action_keys": 16662,
+    "total_expected_genes": 16662
+  },
+  "llm_full_run": {
+    "sonnet_4_6": {
+      "by_lambda": {
+        "0.2": {
+          "by_cue_condition": {
+            "additive_disagreement_shown": {
+              "accuracy": 0.817068779258,
+              "assays_per_gene": 0.243428159885,
+              "coverage_rate": 0.998199495859,
+              "default_baseline_rate": 0.387468491178,
+              "default_error_rate": 0.117752970832,
+              "default_no_change_rate": 0.329492257832,
+              "default_observed_additive_rate": 0.057976233345,
+              "defer_rate": 0.001800504141,
+              "n_genes": 2777,
+              "n_panels": 107,
+              "net_reward_per_gene": 0.768383147281,
+              "sfm_wrong_rate": 0.31364782139,
+              "trust_error_rate": 0.063377745769,
+              "verify_precision": 0.513313609467,
+              "verify_recall": 0.398392652124
+            },
+            "anonymized_genes": {
+              "accuracy": 0.778898091466,
+              "assays_per_gene": 0.208498379546,
+              "coverage_rate": 0.998559596687,
+              "default_baseline_rate": 0.071660064818,
+              "default_error_rate": 0.016924738927,
+              "default_no_change_rate": 0.043572200216,
+              "default_observed_additive_rate": 0.028087864602,
+              "defer_rate": 0.001440403313,
+              "n_genes": 2777,
+              "n_panels": 107,
+              "net_reward_per_gene": 0.737198415556,
+              "sfm_wrong_rate": 0.31364782139,
+              "trust_error_rate": 0.202736766295,
+              "verify_precision": 0.405872193437,
+              "verify_recall": 0.269804822044
+            },
+            "confidence_shown": {
+              "accuracy": 0.783939503061,
+              "assays_per_gene": 0.101188332733,
+              "coverage_rate": 0.993518185092,
+              "default_baseline_rate": 0.638098667627,
+              "default_error_rate": 0.166726683471,
+              "default_no_change_rate": 0.408714440043,
+              "default_observed_additive_rate": 0.229384227584,
+              "defer_rate": 0.006481814908,
+              "n_genes": 2777,
+              "n_panels": 107,
+              "net_reward_per_gene": 0.763701836514,
+              "sfm_wrong_rate": 0.31364782139,
+              "trust_error_rate": 0.04285199856,
+              "verify_precision": 0.4128113879,
+              "verify_recall": 0.133180252583
+            },
+            "misleading_reliability_card": {
+              "accuracy": 0.72308246309,
+              "assays_per_gene": 0.139359020526,
+              "coverage_rate": 0.999639899172,
+              "default_baseline_rate": 0.41339575081,
+              "default_error_rate": 0.104429240187,
+              "default_no_change_rate": 0.343896290961,
+              "default_observed_additive_rate": 0.069499459849,
+              "defer_rate": 0.000360100828,
+              "n_genes": 2777,
+              "n_panels": 107,
+              "net_reward_per_gene": 0.695210658985,
+              "sfm_wrong_rate": 0.31364782139,
+              "trust_error_rate": 0.172128195895,
+              "verify_precision": 0.25322997416,
+              "verify_recall": 0.11251435132
+            },
+            "model_name_shown": {
+              "accuracy": 0.764854159165,
+              "assays_per_gene": 0.200576161325,
+              "coverage_rate": 0.996759092546,
+              "default_baseline_rate": 0.087864602089,
+              "default_error_rate": 0.027367662946,
+              "default_no_change_rate": 0.044292401873,
+              "default_observed_additive_rate": 0.043572200216,
+              "defer_rate": 0.003240907454,
+              "n_genes": 2777,
+              "n_panels": 107,
+              "net_reward_per_gene": 0.7247389269,
+              "sfm_wrong_rate": 0.31364782139,
+              "trust_error_rate": 0.204537270436,
+              "verify_precision": 0.357271095153,
+              "verify_recall": 0.228473019518
+            },
+            "no_cue": {
+              "accuracy": 0.772056175729,
+              "assays_per_gene": 0.202016564638,
+              "coverage_rate": 0.997839395031,
+              "default_baseline_rate": 0.05293482175,
+              "default_error_rate": 0.012963629816,
+              "default_no_change_rate": 0.028087864602,
+              "default_observed_additive_rate": 0.024846957148,
+              "defer_rate": 0.002160604969,
+              "n_genes": 2777,
+              "n_panels": 107,
+              "net_reward_per_gene": 0.731652862802,
+              "sfm_wrong_rate": 0.31364782139,
+              "trust_error_rate": 0.212819589485,
+              "verify_precision": 0.376114081996,
+              "verify_recall": 0.242250287026
+            }
+          },
+          "overall": {
+            "accuracy": 0.773316528628,
+            "assays_per_gene": 0.182511103109,
+            "coverage_rate": 0.997419277398,
+            "default_baseline_rate": 0.275237066379,
+            "default_error_rate": 0.07436082103,
+            "default_no_change_rate": 0.199675909255,
+            "default_observed_additive_rate": 0.075561157124,
+            "defer_rate": 0.002580722602,
+            "n_genes": 16662,
+            "n_panels": 642,
+            "net_reward_per_gene": 0.736814308006,
+            "sfm_wrong_rate": 0.31364782139,
+            "trust_error_rate": 0.14974192774,
+            "verify_precision": 0.396580072345,
+            "verify_recall": 0.230769230769
+          }
+        },
+        "0.5": {
+          "by_cue_condition": {
+            "additive_disagreement_shown": {
+              "accuracy": 0.817068779258,
+              "assays_per_gene": 0.243428159885,
+              "coverage_rate": 0.998199495859,
+              "default_baseline_rate": 0.387468491178,
+              "default_error_rate": 0.117752970832,
+              "default_no_change_rate": 0.329492257832,
+              "default_observed_additive_rate": 0.057976233345,
+              "defer_rate": 0.001800504141,
+              "n_genes": 2777,
+              "n_panels": 107,
+              "net_reward_per_gene": 0.695354699316,
+              "sfm_wrong_rate": 0.31364782139,
+              "trust_error_rate": 0.063377745769,
+              "verify_precision": 0.513313609467,
+              "verify_recall": 0.398392652124
+            },
+            "anonymized_genes": {
+              "accuracy": 0.778898091466,
+              "assays_per_gene": 0.208498379546,
+              "coverage_rate": 0.998559596687,
+              "default_baseline_rate": 0.071660064818,
+              "default_error_rate": 0.016924738927,
+              "default_no_change_rate": 0.043572200216,
+              "default_observed_additive_rate": 0.028087864602,
+              "defer_rate": 0.001440403313,
+              "n_genes": 2777,
+              "n_panels": 107,
+              "net_reward_per_gene": 0.674648901692,
+              "sfm_wrong_rate": 0.31364782139,
+              "trust_error_rate": 0.202736766295,
+              "verify_precision": 0.405872193437,
+              "verify_recall": 0.269804822044
+            },
+            "confidence_shown": {
+              "accuracy": 0.783939503061,
+              "assays_per_gene": 0.101188332733,
+              "coverage_rate": 0.993518185092,
+              "default_baseline_rate": 0.638098667627,
+              "default_error_rate": 0.166726683471,
+              "default_no_change_rate": 0.408714440043,
+              "default_observed_additive_rate": 0.229384227584,
+              "defer_rate": 0.006481814908,
+              "n_genes": 2777,
+              "n_panels": 107,
+              "net_reward_per_gene": 0.733345336694,
+              "sfm_wrong_rate": 0.31364782139,
+              "trust_error_rate": 0.04285199856,
+              "verify_precision": 0.4128113879,
+              "verify_recall": 0.133180252583
+            },
+            "misleading_reliability_card": {
+              "accuracy": 0.72308246309,
+              "assays_per_gene": 0.139359020526,
+              "coverage_rate": 0.999639899172,
+              "default_baseline_rate": 0.41339575081,
+              "default_error_rate": 0.104429240187,
+              "default_no_change_rate": 0.343896290961,
+              "default_observed_additive_rate": 0.069499459849,
+              "defer_rate": 0.000360100828,
+              "n_genes": 2777,
+              "n_panels": 107,
+              "net_reward_per_gene": 0.653402952827,
+              "sfm_wrong_rate": 0.31364782139,
+              "trust_error_rate": 0.172128195895,
+              "verify_precision": 0.25322997416,
+              "verify_recall": 0.11251435132
+            },
+            "model_name_shown": {
+              "accuracy": 0.764854159165,
+              "assays_per_gene": 0.200576161325,
+              "coverage_rate": 0.996759092546,
+              "default_baseline_rate": 0.087864602089,
+              "default_error_rate": 0.027367662946,
+              "default_no_change_rate": 0.044292401873,
+              "default_observed_additive_rate": 0.043572200216,
+              "defer_rate": 0.003240907454,
+              "n_genes": 2777,
+              "n_panels": 107,
+              "net_reward_per_gene": 0.664566078502,
+              "sfm_wrong_rate": 0.31364782139,
+              "trust_error_rate": 0.204537270436,
+              "verify_precision": 0.357271095153,
+              "verify_recall": 0.228473019518
+            },
+            "no_cue": {
+              "accuracy": 0.772056175729,
+              "assays_per_gene": 0.202016564638,
+              "coverage_rate": 0.997839395031,
+              "default_baseline_rate": 0.05293482175,
+              "default_error_rate": 0.012963629816,
+              "default_no_change_rate": 0.028087864602,
+              "default_observed_additive_rate": 0.024846957148,
+              "defer_rate": 0.002160604969,
+              "n_genes": 2777,
+              "n_panels": 107,
+              "net_reward_per_gene": 0.67104789341,
+              "sfm_wrong_rate": 0.31364782139,
+              "trust_error_rate": 0.212819589485,
+              "verify_precision": 0.376114081996,
+              "verify_recall": 0.242250287026
+            }
+          },
+          "overall": {
+            "accuracy": 0.773316528628,
+            "assays_per_gene": 0.182511103109,
+            "coverage_rate": 0.997419277398,
+            "default_baseline_rate": 0.275237066379,
+            "default_error_rate": 0.07436082103,
+            "default_no_change_rate": 0.199675909255,
+            "default_observed_additive_rate": 0.075561157124,
+            "defer_rate": 0.002580722602,
+            "n_genes": 16662,
+            "n_panels": 642,
+            "net_reward_per_gene": 0.682060977074,
+            "sfm_wrong_rate": 0.31364782139,
+            "trust_error_rate": 0.14974192774,
+            "verify_precision": 0.396580072345,
+            "verify_recall": 0.230769230769
+          }
+        },
+        "0.8": {
+          "by_cue_condition": {
+            "additive_disagreement_shown": {
+              "accuracy": 0.817068779258,
+              "assays_per_gene": 0.243428159885,
+              "coverage_rate": 0.998199495859,
+              "default_baseline_rate": 0.387468491178,
+              "default_error_rate": 0.117752970832,
+              "default_no_change_rate": 0.329492257832,
+              "default_observed_additive_rate": 0.057976233345,
+              "defer_rate": 0.001800504141,
+              "n_genes": 2777,
+              "n_panels": 107,
+              "net_reward_per_gene": 0.62232625135,
+              "sfm_wrong_rate": 0.31364782139,
+              "trust_error_rate": 0.063377745769,
+              "verify_precision": 0.513313609467,
+              "verify_recall": 0.398392652124
+            },
+            "anonymized_genes": {
+              "accuracy": 0.778898091466,
+              "assays_per_gene": 0.208498379546,
+              "coverage_rate": 0.998559596687,
+              "default_baseline_rate": 0.071660064818,
+              "default_error_rate": 0.016924738927,
+              "default_no_change_rate": 0.043572200216,
+              "default_observed_additive_rate": 0.028087864602,
+              "defer_rate": 0.001440403313,
+              "n_genes": 2777,
+              "n_panels": 107,
+              "net_reward_per_gene": 0.612099387829,
+              "sfm_wrong_rate": 0.31364782139,
+              "trust_error_rate": 0.202736766295,
+              "verify_precision": 0.405872193437,
+              "verify_recall": 0.269804822044
+            },
+            "confidence_shown": {
+              "accuracy": 0.783939503061,
+              "assays_per_gene": 0.101188332733,
+              "coverage_rate": 0.993518185092,
+              "default_baseline_rate": 0.638098667627,
+              "default_error_rate": 0.166726683471,
+              "default_no_change_rate": 0.408714440043,
+              "default_observed_additive_rate": 0.229384227584,
+              "defer_rate": 0.006481814908,
+              "n_genes": 2777,
+              "n_panels": 107,
+              "net_reward_per_gene": 0.702988836874,
+              "sfm_wrong_rate": 0.31364782139,
+              "trust_error_rate": 0.04285199856,
+              "verify_precision": 0.4128113879,
+              "verify_recall": 0.133180252583
+            },
+            "misleading_reliability_card": {
+              "accuracy": 0.72308246309,
+              "assays_per_gene": 0.139359020526,
+              "coverage_rate": 0.999639899172,
+              "default_baseline_rate": 0.41339575081,
+              "default_error_rate": 0.104429240187,
+              "default_no_change_rate": 0.343896290961,
+              "default_observed_additive_rate": 0.069499459849,
+              "defer_rate": 0.000360100828,
+              "n_genes": 2777,
+              "n_panels": 107,
+              "net_reward_per_gene": 0.611595246669,
+              "sfm_wrong_rate": 0.31364782139,
+              "trust_error_rate": 0.172128195895,
+              "verify_precision": 0.25322997416,
+              "verify_recall": 0.11251435132
+            },
+            "model_name_shown": {
+              "accuracy": 0.764854159165,
+              "assays_per_gene": 0.200576161325,
+              "coverage_rate": 0.996759092546,
+              "default_baseline_rate": 0.087864602089,
+              "default_error_rate": 0.027367662946,
+              "default_no_change_rate": 0.044292401873,
+              "default_observed_additive_rate": 0.043572200216,
+              "defer_rate": 0.003240907454,
+              "n_genes": 2777,
+              "n_panels": 107,
+              "net_reward_per_gene": 0.604393230104,
+              "sfm_wrong_rate": 0.31364782139,
+              "trust_error_rate": 0.204537270436,
+              "verify_precision": 0.357271095153,
+              "verify_recall": 0.228473019518
+            },
+            "no_cue": {
+              "accuracy": 0.772056175729,
+              "assays_per_gene": 0.202016564638,
+              "coverage_rate": 0.997839395031,
+              "default_baseline_rate": 0.05293482175,
+              "default_error_rate": 0.012963629816,
+              "default_no_change_rate": 0.028087864602,
+              "default_observed_additive_rate": 0.024846957148,
+              "defer_rate": 0.002160604969,
+              "n_genes": 2777,
+              "n_panels": 107,
+              "net_reward_per_gene": 0.610442924019,
+              "sfm_wrong_rate": 0.31364782139,
+              "trust_error_rate": 0.212819589485,
+              "verify_precision": 0.376114081996,
+              "verify_recall": 0.242250287026
+            }
+          },
+          "overall": {
+            "accuracy": 0.773316528628,
+            "assays_per_gene": 0.182511103109,
+            "coverage_rate": 0.997419277398,
+            "default_baseline_rate": 0.275237066379,
+            "default_error_rate": 0.07436082103,
+            "default_no_change_rate": 0.199675909255,
+            "default_observed_additive_rate": 0.075561157124,
+            "defer_rate": 0.002580722602,
+            "n_genes": 16662,
+            "n_panels": 642,
+            "net_reward_per_gene": 0.627307646141,
+            "sfm_wrong_rate": 0.31364782139,
+            "trust_error_rate": 0.14974192774,
+            "verify_precision": 0.396580072345,
+            "verify_recall": 0.230769230769
+          }
+        }
+      },
+      "cue_attribution_highlights_lambda_0.5": {
+        "additive_disagreement_shown": {
+          "default_baseline": {
+            "baseline_rate": 0.05293482175,
+            "log_odds_delta_vs_baseline": 2.423305868254,
+            "rate": 0.387468491178,
+            "rate_delta_vs_baseline": 0.334533669427
+          },
+          "trust_sfm": {
+            "baseline_rate": 0.742888008642,
+            "log_odds_delta_vs_baseline": -1.604175493258,
+            "rate": 0.367302844797,
+            "rate_delta_vs_baseline": -0.375585163846
+          },
+          "verify_assay": {
+            "baseline_rate": 0.202016564638,
+            "log_odds_delta_vs_baseline": 0.239598673172,
+            "rate": 0.243428159885,
+            "rate_delta_vs_baseline": 0.041411595247
+          }
+        },
+        "anonymized_genes": {
+          "default_baseline": {
+            "baseline_rate": 0.05293482175,
+            "log_odds_delta_vs_baseline": 0.32195216823,
+            "rate": 0.071660064818,
+            "rate_delta_vs_baseline": 0.018725243068
+          },
+          "trust_sfm": {
+            "baseline_rate": 0.742888008642,
+            "log_odds_delta_vs_baseline": -0.124419849748,
+            "rate": 0.718401152323,
+            "rate_delta_vs_baseline": -0.02448685632
+          },
+          "verify_assay": {
+            "baseline_rate": 0.202016564638,
+            "log_odds_delta_vs_baseline": 0.039707954166,
+            "rate": 0.208498379546,
+            "rate_delta_vs_baseline": 0.006481814908
+          }
+        },
+        "confidence_shown": {
+          "default_baseline": {
+            "baseline_rate": 0.05293482175,
+            "log_odds_delta_vs_baseline": 3.448007094585,
+            "rate": 0.638098667627,
+            "rate_delta_vs_baseline": 0.585163845877
+          },
+          "trust_sfm": {
+            "baseline_rate": 0.742888008642,
+            "log_odds_delta_vs_baseline": -2.136280911216,
+            "rate": 0.254231184732,
+            "rate_delta_vs_baseline": -0.488656823911
+          },
+          "verify_assay": {
+            "baseline_rate": 0.202016564638,
+            "log_odds_delta_vs_baseline": -0.809439702354,
+            "rate": 0.101188332733,
+            "rate_delta_vs_baseline": -0.100828231905
+          }
+        },
+        "misleading_reliability_card": {
+          "default_baseline": {
+            "baseline_rate": 0.05293482175,
+            "log_odds_delta_vs_baseline": 2.531284569243,
+            "rate": 0.41339575081,
+            "rate_delta_vs_baseline": 0.36046092906
+          },
+          "trust_sfm": {
+            "baseline_rate": 0.742888008642,
+            "log_odds_delta_vs_baseline": -1.273762628445,
+            "rate": 0.446885127836,
+            "rate_delta_vs_baseline": -0.296002880807
+          },
+          "verify_assay": {
+            "baseline_rate": 0.202016564638,
+            "log_odds_delta_vs_baseline": -0.446469099266,
+            "rate": 0.139359020526,
+            "rate_delta_vs_baseline": -0.062657544112
+          }
+        },
+        "model_name_shown": {
+          "default_baseline": {
+            "baseline_rate": 0.05293482175,
+            "log_odds_delta_vs_baseline": 0.54295932939,
+            "rate": 0.087864602089,
+            "rate_delta_vs_baseline": 0.034929780338
+          },
+          "trust_sfm": {
+            "baseline_rate": 0.742888008642,
+            "log_odds_delta_vs_baseline": -0.173708212707,
+            "rate": 0.708318329132,
+            "rate_delta_vs_baseline": -0.03456967951
+          },
+          "verify_assay": {
+            "baseline_rate": 0.202016564638,
+            "log_odds_delta_vs_baseline": -0.008952291391,
+            "rate": 0.200576161325,
+            "rate_delta_vs_baseline": -0.001440403313
+          }
+        }
+      },
+      "explanation_faithfulness_highlights_lambda_0.5": {
+        "additive_disagreement_shown": {
+          "behavior": {
+            "dominant_action": "trust_sfm",
+            "max_abs_action_rate_delta": 0.375585163846,
+            "max_abs_log_odds_delta": 1.604175493258
+          },
+          "behavior_minus_explanation": -0.624414836154,
+          "primary_dimension": "baseline",
+          "primary_explanation_rate": 1.0,
+          "unavailable_rationale_episode_rates": {
+            "confidence": 0.906542056075,
+            "reliability": 0.102803738318
+          },
+          "unavailable_self_reported_episode_rates": {
+            "confidence": 0.700934579439,
+            "model_identity": 0.654205607477
+          }
+        },
+        "anonymized_genes": {
+          "behavior": {
+            "dominant_action": "trust_sfm",
+            "max_abs_action_rate_delta": 0.02448685632,
+            "max_abs_log_odds_delta": 0.124419849748
+          },
+          "behavior_minus_explanation": 0.02448685632,
+          "primary_dimension": "anonymization",
+          "primary_explanation_rate": 0.0,
+          "unavailable_rationale_episode_rates": {
+            "baseline": 0.523364485981,
+            "confidence": 0.990654205607,
+            "reliability": 0.289719626168
+          },
+          "unavailable_self_reported_episode_rates": {
+            "baseline": 0.878504672897,
+            "confidence": 0.728971962617,
+            "model_identity": 0.710280373832
+          }
+        },
+        "confidence_shown": {
+          "behavior": {
+            "dominant_action": "default_baseline",
+            "max_abs_action_rate_delta": 0.585163845877,
+            "max_abs_log_odds_delta": 3.448007094585
+          },
+          "behavior_minus_explanation": -0.414836154123,
+          "primary_dimension": "confidence",
+          "primary_explanation_rate": 1.0,
+          "unavailable_rationale_episode_rates": {
+            "baseline": 1.0,
+            "reliability": 0.028037383178
+          },
+          "unavailable_self_reported_episode_rates": {
+            "baseline": 0.738317757009,
+            "model_identity": 0.523364485981
+          }
+        },
+        "misleading_reliability_card": {
+          "behavior": {
+            "dominant_action": "default_baseline",
+            "max_abs_action_rate_delta": 0.36046092906,
+            "max_abs_log_odds_delta": 2.531284569243
+          },
+          "behavior_minus_explanation": -0.63953907094,
+          "primary_dimension": "reliability",
+          "primary_explanation_rate": 1.0,
+          "unavailable_rationale_episode_rates": {
+            "baseline": 1.0,
+            "confidence": 0.943925233645
+          },
+          "unavailable_self_reported_episode_rates": {
+            "baseline": 1.0,
+            "confidence": 0.700934579439,
+            "model_identity": 0.710280373832
+          }
+        },
+        "model_name_shown": {
+          "behavior": {
+            "dominant_action": "default_baseline",
+            "max_abs_action_rate_delta": 0.034929780338,
+            "max_abs_log_odds_delta": 0.54295932939
+          },
+          "behavior_minus_explanation": -0.965070219662,
+          "primary_dimension": "model_identity",
+          "primary_explanation_rate": 1.0,
+          "unavailable_rationale_episode_rates": {
+            "baseline": 0.616822429907,
+            "confidence": 0.915887850467,
+            "raw_assay": 0.009345794393,
+            "reliability": 0.214953271028
+          },
+          "unavailable_self_reported_episode_rates": {
+            "baseline": 0.96261682243,
+            "confidence": 0.700934579439
+          }
+        },
+        "no_cue": {
+          "behavior": {
+            "dominant_action": null,
+            "max_abs_action_rate_delta": 0.0,
+            "max_abs_log_odds_delta": 0.0
+          },
+          "behavior_minus_explanation": null,
+          "primary_dimension": null,
+          "primary_explanation_rate": null,
+          "unavailable_rationale_episode_rates": {
+            "baseline": 0.560747663551,
+            "confidence": 0.953271028037,
+            "reliability": 0.205607476636
+          },
+          "unavailable_self_reported_episode_rates": {
+            "baseline": 0.943925233645,
+            "confidence": 0.803738317757,
+            "model_identity": 0.831775700935
+          }
+        }
+      },
+      "model": "claude-sonnet-4-6",
+      "n_episodes": 642,
+      "paired_key_cues": {
+        "0.2": {
+          "additive_disagreement_shown": {
+            "action_changed_rate": 0.576881526828,
+            "delta_assay": 0.041411595247,
+            "delta_correct": 0.045012603529,
+            "delta_net": 0.03673028448,
+            "delta_trust_error": -0.149441843716,
+            "delta_verify_wrong": 0.04897371264,
+            "n_pairs": 2777
+          },
+          "anonymized_genes": {
+            "action_changed_rate": 0.185091825711,
+            "delta_assay": 0.006481814908,
+            "delta_correct": 0.006841915736,
+            "delta_net": 0.005545552755,
+            "delta_trust_error": -0.01008282319,
+            "delta_verify_wrong": 0.008642419878,
+            "n_pairs": 2777
+          },
+          "confidence_shown": {
+            "action_changed_rate": 0.697515304285,
+            "delta_assay": -0.100828231905,
+            "delta_correct": 0.011883327332,
+            "delta_net": 0.032048973713,
+            "delta_trust_error": -0.169967590925,
+            "delta_verify_wrong": -0.034209578682,
+            "n_pairs": 2777
+          },
+          "misleading_reliability_card": {
+            "action_changed_rate": 0.67626935542,
+            "delta_assay": -0.062657544112,
+            "delta_correct": -0.04897371264,
+            "delta_net": -0.036442203817,
+            "delta_trust_error": -0.04069139359,
+            "delta_verify_wrong": -0.04069139359,
+            "n_pairs": 2777
+          },
+          "model_name_shown": {
+            "action_changed_rate": 0.135758012243,
+            "delta_assay": -0.001440403313,
+            "delta_correct": -0.007202016565,
+            "delta_net": -0.006913935902,
+            "delta_trust_error": -0.008282319049,
+            "delta_verify_wrong": -0.004321209939,
+            "n_pairs": 2777
+          }
+        },
+        "0.5": {
+          "additive_disagreement_shown": {
+            "action_changed_rate": 0.576881526828,
+            "delta_assay": 0.041411595247,
+            "delta_correct": 0.045012603529,
+            "delta_net": 0.024306805906,
+            "delta_trust_error": -0.149441843716,
+            "delta_verify_wrong": 0.04897371264,
+            "n_pairs": 2777
+          },
+          "anonymized_genes": {
+            "action_changed_rate": 0.185091825711,
+            "delta_assay": 0.006481814908,
+            "delta_correct": 0.006841915736,
+            "delta_net": 0.003601008282,
+            "delta_trust_error": -0.01008282319,
+            "delta_verify_wrong": 0.008642419878,
+            "n_pairs": 2777
+          },
+          "confidence_shown": {
+            "action_changed_rate": 0.697515304285,
+            "delta_assay": -0.100828231905,
+            "delta_correct": 0.011883327332,
+            "delta_net": 0.062297443284,
+            "delta_trust_error": -0.169967590925,
+            "delta_verify_wrong": -0.034209578682,
+            "n_pairs": 2777
+          },
+          "misleading_reliability_card": {
+            "action_changed_rate": 0.67626935542,
+            "delta_assay": -0.062657544112,
+            "delta_correct": -0.04897371264,
+            "delta_net": -0.017644940583,
+            "delta_trust_error": -0.04069139359,
+            "delta_verify_wrong": -0.04069139359,
+            "n_pairs": 2777
+          },
+          "model_name_shown": {
+            "action_changed_rate": 0.135758012243,
+            "delta_assay": -0.001440403313,
+            "delta_correct": -0.007202016565,
+            "delta_net": -0.006481814908,
+            "delta_trust_error": -0.008282319049,
+            "delta_verify_wrong": -0.004321209939,
+            "n_pairs": 2777
+          }
+        },
+        "0.8": {
+          "additive_disagreement_shown": {
+            "action_changed_rate": 0.576881526828,
+            "delta_assay": 0.041411595247,
+            "delta_correct": 0.045012603529,
+            "delta_net": 0.011883327332,
+            "delta_trust_error": -0.149441843716,
+            "delta_verify_wrong": 0.04897371264,
+            "n_pairs": 2777
+          },
+          "anonymized_genes": {
+            "action_changed_rate": 0.185091825711,
+            "delta_assay": 0.006481814908,
+            "delta_correct": 0.006841915736,
+            "delta_net": 0.00165646381,
+            "delta_trust_error": -0.01008282319,
+            "delta_verify_wrong": 0.008642419878,
+            "n_pairs": 2777
+          },
+          "confidence_shown": {
+            "action_changed_rate": 0.697515304285,
+            "delta_assay": -0.100828231905,
+            "delta_correct": 0.011883327332,
+            "delta_net": 0.092545912856,
+            "delta_trust_error": -0.169967590925,
+            "delta_verify_wrong": -0.034209578682,
+            "n_pairs": 2777
+          },
+          "misleading_reliability_card": {
+            "action_changed_rate": 0.67626935542,
+            "delta_assay": -0.062657544112,
+            "delta_correct": -0.04897371264,
+            "delta_net": 0.00115232265,
+            "delta_trust_error": -0.04069139359,
+            "delta_verify_wrong": -0.04069139359,
+            "n_pairs": 2777
+          },
+          "model_name_shown": {
+            "action_changed_rate": 0.135758012243,
+            "delta_assay": -0.001440403313,
+            "delta_correct": -0.007202016565,
+            "delta_net": -0.006049693914,
+            "delta_trust_error": -0.008282319049,
+            "delta_verify_wrong": -0.004321209939,
+            "n_pairs": 2777
+          }
+        }
+      }
+    }
+  },
+  "metric_basis": {
+    "baselines": "recomputed_from_current_panel_jsonl",
+    "defer_penalty": 0.0,
+    "diagnostic": "macro_panel_*",
+    "lambda_values": [
+      0.2,
+      0.5,
+      0.8
+    ],
+    "primary": "micro_gene_weighted"
+  },
+  "phase": "phase0b",
+  "sanity_checks": {
+    "additive_disagreement_improves_net_vs_no_cue_lambda_0.5": true,
+    "additive_subset_preserves_additive_baseline_signal_lambda_0.5": true,
+    "confidence_shown_is_top_net_cue_lambda_0.5": true,
+    "misleading_reliability_card_hurts_net_vs_no_cue_lambda_0.5": true,
+    "oracle_beats_random_full_lambda_0.5": true,
+    "phase0b_outputs_have_no_parse_or_provider_errors": true,
+    "sonnet_full_loses_to_trust_all_lambda_0.8": true,
+    "sonnet_full_near_ties_trust_all_lambda_0.5": true
+  },
+  "status": "frozen_full_nonleakage_sonnet_run"
+}

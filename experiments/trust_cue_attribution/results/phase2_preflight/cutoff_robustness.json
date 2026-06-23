@@ -1,0 +1,80 @@
+{
+  "analysis": "phase2_cutoff_robustness",
+  "cutoffs": [
+    0.5,
+    0.7,
+    0.8,
+    0.9
+  ],
+  "lambda": 0.5,
+  "models": {
+    "opus": {
+      "0.5": {
+        "base_correct_rate": 0.963,
+        "calibrated_interface": 0.5125,
+        "interface_minus_no_signal": 0.362,
+        "interface_minus_raw": -0.25,
+        "no_signal": 0.15,
+        "raw_plddt": 0.7625
+      },
+      "0.7": {
+        "base_correct_rate": 0.95,
+        "calibrated_interface": 0.5125,
+        "interface_minus_no_signal": 0.362,
+        "interface_minus_raw": -0.25,
+        "no_signal": 0.15,
+        "raw_plddt": 0.7625
+      },
+      "0.8": {
+        "base_correct_rate": 0.875,
+        "calibrated_interface": 0.5125,
+        "interface_minus_no_signal": 0.362,
+        "interface_minus_raw": -0.25,
+        "no_signal": 0.15,
+        "raw_plddt": 0.7625
+      },
+      "0.9": {
+        "base_correct_rate": 0.65,
+        "calibrated_interface": 0.4875,
+        "interface_minus_no_signal": 0.338,
+        "interface_minus_raw": -0.225,
+        "no_signal": 0.15,
+        "raw_plddt": 0.7125
+      }
+    },
+    "sonnet": {
+      "0.5": {
+        "base_correct_rate": 0.963,
+        "calibrated_interface": 0.7875,
+        "interface_minus_no_signal": 0.537,
+        "interface_minus_raw": 0.0,
+        "no_signal": 0.25,
+        "raw_plddt": 0.7875
+      },
+      "0.7": {
+        "base_correct_rate": 0.95,
+        "calibrated_interface": 0.7875,
+        "interface_minus_no_signal": 0.537,
+        "interface_minus_raw": 0.0,
+        "no_signal": 0.25,
+        "raw_plddt": 0.7875
+      },
+      "0.8": {
+        "base_correct_rate": 0.875,
+        "calibrated_interface": 0.7875,
+        "interface_minus_no_signal": 0.537,
+        "interface_minus_raw": 0.0,
+        "no_signal": 0.25,
+        "raw_plddt": 0.7875
+      },
+      "0.9": {
+        "base_correct_rate": 0.65,
+        "calibrated_interface": 0.7375,
+        "interface_minus_no_signal": 0.488,
+        "interface_minus_raw": 0.025,
+        "no_signal": 0.25,
+        "raw_plddt": 0.7125
+      }
+    }
+  }
+}

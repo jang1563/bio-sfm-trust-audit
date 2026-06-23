@@ -1,0 +1,207 @@
+{
+  "correct_lddt_cutoff": 0.9,
+  "lambda": 0.5,
+  "n_episodes": 200,
+  "paired_cue_effects_vs_no_signal": {
+    "calibrated_interface_shown": {
+      "action_changed_rate": 0.725,
+      "delta_accuracy": 0.425,
+      "delta_assays": -0.125,
+      "delta_net_per_target": 0.4875,
+      "n_pairs": 40
+    },
+    "calibrated_risk_shown_no_recommendation": {
+      "action_changed_rate": 0.725,
+      "delta_accuracy": 0.4,
+      "delta_assays": -0.15,
+      "delta_net_per_target": 0.475,
+      "n_pairs": 40
+    },
+    "inverted_reliability_interface_control": {
+      "action_changed_rate": 0.6,
+      "delta_accuracy": 0.275,
+      "delta_assays": 0.275,
+      "delta_net_per_target": 0.1375,
+      "n_pairs": 40
+    },
+    "raw_plddt_shown": {
+      "action_changed_rate": 0.775,
+      "delta_accuracy": 0.325,
+      "delta_assays": -0.275,
+      "delta_net_per_target": 0.4625,
+      "n_pairs": 40
+    }
+  },
+  "parse_errors": 0,
+  "per_arm": {
+    "calibrated_interface_shown": {
+      "accuracy": 0.925,
+      "assays_per_target": 0.375,
+      "default_rate": 0.0,
+      "defer_rate": 0.0,
+      "n": 40,
+      "net_reward_per_target": 0.7375,
+      "trust_error_rate": 0.075,
+      "trust_rate": 0.625,
+      "verify_rate": 0.375
+    },
+    "calibrated_risk_shown_no_recommendation": {
+      "accuracy": 0.9,
+      "assays_per_target": 0.35,
+      "default_rate": 0.025,
+      "defer_rate": 0.0,
+      "n": 40,
+      "net_reward_per_target": 0.725,
+      "trust_error_rate": 0.075,
+      "trust_rate": 0.625,
+      "verify_rate": 0.35
+    },
+    "inverted_reliability_interface_control": {
+      "accuracy": 0.775,
+      "assays_per_target": 0.775,
+      "default_rate": 0.0,
+      "defer_rate": 0.2,
+      "n": 40,
+      "net_reward_per_target": 0.3875,
+      "trust_error_rate": 0.025,
+      "trust_rate": 0.025,
+      "verify_rate": 0.775
+    },
+    "no_signal": {
+      "accuracy": 0.5,
+      "assays_per_target": 0.5,
+      "default_rate": 0.0,
+      "defer_rate": 0.5,
+      "n": 40,
+      "net_reward_per_target": 0.25,
+      "trust_error_rate": 0.0,
+      "trust_rate": 0.0,
+      "verify_rate": 0.5
+    },
+    "raw_plddt_shown": {
+      "accuracy": 0.825,
+      "assays_per_target": 0.225,
+      "default_rate": 0.075,
+      "defer_rate": 0.0,
+      "n": 40,
+      "net_reward_per_target": 0.7125,
+      "trust_error_rate": 0.1,
+      "trust_rate": 0.7,
+      "verify_rate": 0.225
+    }
+  },
+  "per_arm_by_regime": {
+    "calibrated_interface_shown::complex": {
+      "accuracy": 0.9,
+      "assays_per_target": 0.55,
+      "default_rate": 0.0,
+      "defer_rate": 0.0,
+      "n": 20,
+      "net_reward_per_target": 0.625,
+      "trust_error_rate": 0.1,
+      "trust_rate": 0.45,
+      "verify_rate": 0.55
+    },
+    "calibrated_interface_shown::monomer": {
+      "accuracy": 0.95,
+      "assays_per_target": 0.2,
+      "default_rate": 0.0,
+      "defer_rate": 0.0,
+      "n": 20,
+      "net_reward_per_target": 0.85,
+      "trust_error_rate": 0.05,
+      "trust_rate": 0.8,
+      "verify_rate": 0.2
+    },
+    "calibrated_risk_shown_no_recommendation::complex": {
+      "accuracy": 0.9,
+      "assays_per_target": 0.55,
+      "default_rate": 0.0,
+      "defer_rate": 0.0,
+      "n": 20,
+      "net_reward_per_target": 0.625,
+      "trust_error_rate": 0.1,
+      "trust_rate": 0.45,
+      "verify_rate": 0.55
+    },
+    "calibrated_risk_shown_no_recommendation::monomer": {
+      "accuracy": 0.9,
+      "assays_per_target": 0.15,
+      "default_rate": 0.05,
+      "defer_rate": 0.0,
+      "n": 20,
+      "net_reward_per_target": 0.825,
+      "trust_error_rate": 0.05,
+      "trust_rate": 0.8,
+      "verify_rate": 0.15
+    },
+    "inverted_reliability_interface_control::complex": {
+      "accuracy": 0.7,
+      "assays_per_target": 0.7,
+      "default_rate": 0.0,
+      "defer_rate": 0.3,
+      "n": 20,
+      "net_reward_per_target": 0.35,
+      "trust_error_rate": 0.0,
+      "trust_rate": 0.0,
+      "verify_rate": 0.7
+    },
+    "inverted_reliability_interface_control::monomer": {
+      "accuracy": 0.85,
+      "assays_per_target": 0.85,
+      "default_rate": 0.0,
+      "defer_rate": 0.1,
+      "n": 20,
+      "net_reward_per_target": 0.425,
+      "trust_error_rate": 0.05,
+      "trust_rate": 0.05,
+      "verify_rate": 0.85
+    },
+    "no_signal::complex": {
+      "accuracy": 1.0,
+      "assays_per_target": 1.0,
+      "default_rate": 0.0,
+      "defer_rate": 0.0,
+      "n": 20,
+      "net_reward_per_target": 0.5,
+      "trust_error_rate": 0.0,
+      "trust_rate": 0.0,
+      "verify_rate": 1.0
+    },
+    "no_signal::monomer": {
+      "accuracy": 0.0,
+      "assays_per_target": 0.0,
+      "default_rate": 0.0,
+      "defer_rate": 1.0,
+      "n": 20,
+      "net_reward_per_target": 0.0,
+      "trust_error_rate": 0.0,
+      "trust_rate": 0.0,
+      "verify_rate": 0.0
+    },
+    "raw_plddt_shown::complex": {
+      "accuracy": 0.85,
+      "assays_per_target": 0.45,
+      "default_rate": 0.0,
+      "defer_rate": 0.0,
+      "n": 20,
+      "net_reward_per_target": 0.625,
+      "trust_error_rate": 0.15,
+      "trust_rate": 0.55,
+      "verify_rate": 0.45
+    },
+    "raw_plddt_shown::monomer": {
+      "accuracy": 0.8,
+      "assays_per_target": 0.0,
+      "default_rate": 0.15,
+      "defer_rate": 0.0,
+      "n": 20,
+      "net_reward_per_target": 0.8,
+      "trust_error_rate": 0.05,
+      "trust_rate": 0.85,
+      "verify_rate": 0.0
+    }
+  },
+  "phase": "phase2",
+  "provider_errors": 0
+}

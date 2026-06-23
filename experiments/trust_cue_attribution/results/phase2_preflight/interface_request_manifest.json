@@ -1,0 +1,33 @@
+{
+  "claim_boundary": "Request-generation checkpoint only; no LLM call, no result.",
+  "cue_conditions": [
+    "no_signal",
+    "raw_plddt_shown",
+    "calibrated_risk_shown_no_recommendation",
+    "calibrated_interface_shown",
+    "inverted_reliability_interface_control"
+  ],
+  "cue_counts": {
+    "calibrated_interface_shown": 40,
+    "calibrated_risk_shown_no_recommendation": 40,
+    "inverted_reliability_interface_control": 40,
+    "no_signal": 40,
+    "raw_plddt_shown": 40
+  },
+  "model_visible_leakage_check": {
+    "hits": [],
+    "n_hits": 0,
+    "passed": true
+  },
+  "n_packets": 200,
+  "n_targets": 40,
+  "next_step": "Run Sonnet-only after explicit OK, then score paired cue effects vs no_signal.",
+  "phase": "phase2",
+  "pilot_design": {
+    "information_vs_compliance_control": "calibrated_risk_shown_no_recommendation",
+    "negative_control": "inverted_reliability_interface_control",
+    "primary_comparison": "calibrated_interface_shown vs no_signal and raw_plddt_shown"
+  },
+  "request_out": "experiments/trust_cue_attribution/hpc_outputs/phase2_interface_pilot/requests_phase2_interface.jsonl",
+  "status": "interface_request_pilot_ready"
+}

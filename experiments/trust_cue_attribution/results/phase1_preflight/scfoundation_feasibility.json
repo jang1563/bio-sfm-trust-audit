@@ -1,0 +1,202 @@
+{
+  "adapter": "ScFoundationAdapter",
+  "claim_boundary": "interface preflight only until one full Phase 1 run is scored; no claim that the LLM uses true SFM internals faithfully",
+  "compute_target": "cayuga_or_expanse",
+  "contract_preflight_checks": [
+    {
+      "check": "runs_on_cayuga_or_expanse_without_local_large_memory_use",
+      "ready": true
+    },
+    {
+      "check": "scfoundation_repo_available",
+      "ready": true
+    },
+    {
+      "check": "gene_vocabulary_mapping_available",
+      "ready": true
+    },
+    {
+      "check": "checkpoint_available",
+      "ready": true
+    },
+    {
+      "check": "phase1_input_data_available",
+      "ready": true
+    },
+    {
+      "check": "produces_at_least_one_internal_signal_summary_field",
+      "ready": true
+    },
+    {
+      "check": "hidden_fields_include_truth_and_reward_guards",
+      "ready": true
+    }
+  ],
+  "module_checks": [
+    {
+      "available": false,
+      "module": "numpy",
+      "required_for_probe": false
+    },
+    {
+      "available": false,
+      "module": "pandas",
+      "required_for_probe": false
+    },
+    {
+      "available": false,
+      "module": "scipy",
+      "required_for_probe": false
+    },
+    {
+      "available": true,
+      "module": "torch",
+      "required_for_probe": false
+    },
+    {
+      "available": false,
+      "module": "yaml",
+      "required_for_probe": false
+    },
+    {
+      "available": false,
+      "module": "tqdm",
+      "required_for_probe": false
+    },
+    {
+      "available": false,
+      "module": "anndata",
+      "required_for_probe": false
+    },
+    {
+      "available": false,
+      "module": "scanpy",
+      "required_for_probe": false
+    }
+  ],
+  "next_actions": [
+    "Run a Cayuga/Expanse adapter smoke job that produces phase1_panels.jsonl and phase1_cue_packets.jsonl.",
+    "Do not run full LLM calls until the adapter smoke output passes schema checks."
+  ],
+  "path_checks": [
+    {
+      "description": "local checkout or staged copy of biomap-research/scFoundation",
+      "exists": true,
+      "kind": "dir",
+      "label": "scfoundation_dir",
+      "matches_kind": true,
+      "path": "/scratch/USER/huggingface/benchmark/scFoundation",
+      "ready": true,
+      "required": true
+    },
+    {
+      "description": "official repository README",
+      "exists": true,
+      "kind": "file",
+      "label": "repo_readme",
+      "matches_kind": true,
+      "path": "/scratch/USER/huggingface/benchmark/scFoundation/README.md",
+      "ready": true,
+      "required": true
+    },
+    {
+      "description": "pretrained model and embedding inference instructions",
+      "exists": true,
+      "kind": "dir",
+      "label": "repo_model_dir",
+      "matches_kind": true,
+      "path": "/scratch/USER/huggingface/benchmark/scFoundation/model",
+      "ready": true,
+      "required": true
+    },
+    {
+      "description": "downstream perturbation code bridge",
+      "exists": true,
+      "kind": "dir",
+      "label": "repo_gears_dir",
+      "matches_kind": true,
+      "path": "/scratch/USER/huggingface/benchmark/scFoundation/GEARS",
+      "ready": true,
+      "required": false
+    },
+    {
+      "description": "GEARS command examples",
+      "exists": true,
+      "kind": "any",
+      "label": "repo_gears_run_sh",
+      "matches_kind": true,
+      "path": "/scratch/USER/huggingface/benchmark/scFoundation/GEARS/run_sh",
+      "ready": true,
+      "required": false
+    },
+    {
+      "description": "scFoundation gene vocabulary mapping",
+      "exists": true,
+      "kind": "file",
+      "label": "gene_index",
+      "matches_kind": true,
+      "path": "/scratch/USER/huggingface/benchmark/scFoundation/OS_scRNA_gene_index.19264.tsv",
+      "ready": true,
+      "required": true
+    },
+    {
+      "description": "pretrained checkpoint or staged model weight",
+      "exists": true,
+      "kind": "file",
+      "label": "checkpoint",
+      "matches_kind": true,
+      "path": "/scratch/USER/huggingface/benchmark/scFoundation/model/models/models.ckpt",
+      "ready": true,
+      "required": true
+    },
+    {
+      "description": "single-cell or perturbation dataset for adapter smoke run",
+      "exists": true,
+      "kind": "file",
+      "label": "phase1_input_data",
+      "matches_kind": true,
+      "path": "/scratch/USER/Perturb_seq/virtual_cell/2026_03_18_cfgA/data/fram2_val.h5ad",
+      "ready": true,
+      "required": true
+    },
+    {
+      "description": "destination for Phase 1 generated JSONL artifacts",
+      "exists": true,
+      "kind": "dir",
+      "label": "phase1_output_dir",
+      "matches_kind": true,
+      "path": "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/phase1_preflight/generated",
+      "ready": true,
+      "required": false
+    }
+  ],
+  "phase": "phase1",
+  "python": {
+    "executable": "/usr/bin/python3.12",
+    "platform": "Linux-4.18.0-553.124.1.el8_10.x86_64-x86_64-with-glibc2.28",
+    "version": "3.12.13"
+  },
+  "source_anchors": [
+    {
+      "accessed": "2026-06-18",
+      "label": "official_repo",
+      "notes": [
+        "Repository exposes model, GEARS, preprocessing, mapping, annotation, and downstream task folders.",
+        "README says pretrained weight and code instructions are in the model folder.",
+        "README says GEARS perturbation code commands are under GEARS/run_sh.",
+        "README notes old Biomap API platform was discontinued on 2024-04-30 and points users to aigp.biomap.com."
+      ],
+      "url": "https://github.com/biomap-research/scFoundation"
+    },
+    {
+      "accessed": "2026-06-18",
+      "label": "intermediate_layer_motivation",
+      "notes": [
+        "Recent layer-wise work motivates not defaulting blindly to final-layer embeddings.",
+        "Phase 1 should preserve layer or representation summaries when available."
+      ],
+      "url": "https://arxiv.org/abs/2604.14838"
+    }
+  ],
+  "status": "ready_for_hpc_smoke"
+}

@@ -1,0 +1,633 @@
+{
+  "adapter": "ScFoundationAdapter",
+  "claim_boundary": "Embedding-pool construction only; no LLM routing, true-SFM trust, or biological interpretation claim.",
+  "command": [
+    "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/envs/scfoundation-smoke-py39/bin/python",
+    "get_embedding.py",
+    "--task_name",
+    "phase1b_embedding_pool",
+    "--input_type",
+    "singlecell",
+    "--output_type",
+    "cell",
+    "--pool_type",
+    "all",
+    "--tgthighres",
+    "t4",
+    "--data_path",
+    "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/phase1b_edge_neighbor_preempt/phase1b_embedding_pool_subset.h5ad",
+    "--save_path",
+    "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/phase1b_edge_neighbor_preempt",
+    "--pre_normalized",
+    "F",
+    "--version",
+    "ce"
+  ],
+  "embedding_summary": {
+    "dtype": "float32",
+    "finite_fraction": 1.0,
+    "l2_norm": 2311.354736,
+    "mean": 0.198727,
+    "path": "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/phase1b_edge_neighbor_preempt/phase1b_embedding_pool_01B-resolution_singlecell_cell_embedding_t4_resolution.npy",
+    "sha256": "5a23ae1c0e31b379fe08da0c75c3cdbbf65c13600add5b9c10b6de66d303c9eb",
+    "shape": [
+      1412,
+      3072
+    ],
+    "std": 1.091888
+  },
+  "inputs": {
+    "control_label": "control",
+    "input_data": "/scratch/USER/nomos/data/norman_2019.h5ad",
+    "max_cells_per_panel": 12,
+    "max_control_cells": 128,
+    "model_dir": "/scratch/USER/huggingface/benchmark/scFoundation/model",
+    "panel_count": 107,
+    "perturbation_col": "perturbation_name",
+    "scfoundation_dir": "/scratch/USER/huggingface/benchmark/scFoundation",
+    "seed": 41,
+    "use_layer": "counts"
+  },
+  "next_actions": [
+    "Build edge-level neighbor signals for the 12-panel Phase 1A surface.",
+    "Run leakage, within-panel variation, and edge-level AUROC diagnostics before LLM spend."
+  ],
+  "outputs": {
+    "embedding_path": "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/phase1b_edge_neighbor_preempt/phase1b_embedding_pool_01B-resolution_singlecell_cell_embedding_t4_resolution.npy",
+    "pool_out": "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/phase1b_edge_neighbor_preempt/embedding_pool.json",
+    "report_out": "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/phase1b_edge_neighbor_preempt/embedding_pool_report.json",
+    "subset_h5ad": "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/phase1b_edge_neighbor_preempt/phase1b_embedding_pool_subset.h5ad"
+  },
+  "phase": "phase1b",
+  "pool_summary": {
+    "control_n_cells": 128,
+    "embedding_dim": 3072,
+    "matched_panel_count": 107,
+    "missing_panel_count": 0,
+    "panel_count": 107,
+    "pool_sha256": "5f0edb1410718f2ddd452dfafd4453fdc35f3cbe7980bde6d381e48b99426f77",
+    "status": "ready_for_phase1b_edge_neighbor_signals"
+  },
+  "process": {
+    "returncode": 0,
+    "stderr_tail": [
+      " 84%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 1182/1412 [01:02<00:10, 21.03it/s]",
+      " 84%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d | 1185/1412 [01:03<00:10, 22.17it/s]",
+      " 84%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d | 1188/1412 [01:03<00:10, 20.92it/s]",
+      " 84%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d | 1191/1412 [01:03<00:09, 22.92it/s]",
+      " 85%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d | 1194/1412 [01:03<00:10, 21.61it/s]",
+      " 85%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d | 1197/1412 [01:03<00:09, 22.34it/s]",
+      " 85%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d | 1200/1412 [01:03<00:09, 23.25it/s]",
+      " 85%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c | 1203/1412 [01:03<00:08, 24.32it/s]",
+      " 85%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c | 1206/1412 [01:04<00:08, 24.02it/s]",
+      " 86%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c | 1210/1412 [01:04<00:07, 26.30it/s]",
+      " 86%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c | 1213/1412 [01:04<00:07, 25.83it/s]",
+      " 86%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c | 1216/1412 [01:04<00:07, 26.11it/s]",
+      " 86%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 1219/1412 [01:04<00:08, 24.08it/s]",
+      " 87%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 1222/1412 [01:04<00:07, 23.90it/s]",
+      " 87%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 1225/1412 [01:04<00:07, 24.75it/s]",
+      " 87%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 1228/1412 [01:04<00:07, 24.22it/s]",
+      " 87%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 1232/1412 [01:05<00:07, 25.71it/s]",
+      " 87%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 1235/1412 [01:05<00:07, 23.37it/s]",
+      " 88%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 1238/1412 [01:05<00:07, 22.74it/s]",
+      " 88%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 1241/1412 [01:05<00:07, 23.35it/s]",
+      " 88%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 1244/1412 [01:05<00:06, 24.64it/s]",
+      " 88%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 1247/1412 [01:05<00:06, 24.12it/s]",
+      " 89%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 1250/1412 [01:05<00:07, 22.27it/s]",
+      " 89%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 1253/1412 [01:05<00:06, 22.84it/s]",
+      " 89%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589 | 1256/1412 [01:06<00:07, 21.64it/s]",
+      " 89%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589 | 1260/1412 [01:06<00:06, 23.90it/s]",
+      " 89%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589 | 1263/1412 [01:06<00:06, 22.86it/s]",
+      " 90%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589 | 1267/1412 [01:06<00:06, 24.05it/s]",
+      " 90%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589 | 1270/1412 [01:06<00:06, 21.87it/s]",
+      " 90%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 1273/1412 [01:06<00:06, 22.54it/s]",
+      " 90%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 1276/1412 [01:06<00:06, 21.97it/s]",
+      " 91%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 1279/1412 [01:07<00:05, 22.31it/s]",
+      " 91%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 1282/1412 [01:07<00:05, 24.10it/s]",
+      " 91%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 1285/1412 [01:07<00:05, 23.59it/s]",
+      " 91%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 1288/1412 [01:07<00:05, 21.14it/s]",
+      " 91%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 1291/1412 [01:07<00:05, 22.30it/s]",
+      " 92%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 1294/1412 [01:07<00:05, 20.71it/s]",
+      " 92%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 1297/1412 [01:07<00:05, 19.55it/s]",
+      " 92%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 1300/1412 [01:08<00:05, 19.57it/s]",
+      " 92%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 1303/1412 [01:08<00:05, 18.61it/s]",
+      " 92%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 1305/1412 [01:08<00:05, 17.95it/s]",
+      " 93%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 1308/1412 [01:08<00:05, 17.55it/s]",
+      " 93%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 1311/1412 [01:08<00:05, 18.37it/s]",
+      " 93%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 1313/1412 [01:08<00:05, 18.61it/s]",
+      " 93%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 1316/1412 [01:09<00:04, 19.55it/s]",
+      " 93%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 1318/1412 [01:09<00:04, 19.42it/s]",
+      " 93%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 1320/1412 [01:09<00:05, 16.93it/s]",
+      " 94%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 1322/1412 [01:09<00:05, 16.19it/s]",
+      " 94%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d| 1325/1412 [01:09<00:04, 18.08it/s]",
+      " 94%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d| 1327/1412 [01:09<00:04, 17.88it/s]",
+      " 94%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d| 1329/1412 [01:09<00:04, 18.01it/s]",
+      " 94%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d| 1332/1412 [01:09<00:04, 17.85it/s]",
+      " 94%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d| 1334/1412 [01:10<00:04, 17.96it/s]",
+      " 95%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d| 1337/1412 [01:10<00:04, 18.09it/s]",
+      " 95%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d| 1340/1412 [01:10<00:03, 20.45it/s]",
+      " 95%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c| 1344/1412 [01:10<00:02, 23.92it/s]",
+      " 95%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c| 1347/1412 [01:10<00:02, 23.55it/s]",
+      " 96%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c| 1350/1412 [01:10<00:02, 22.74it/s]",
+      " 96%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c| 1353/1412 [01:10<00:02, 22.60it/s]",
+      " 96%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c| 1356/1412 [01:11<00:02, 21.42it/s]",
+      " 96%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c| 1359/1412 [01:11<00:02, 22.10it/s]",
+      " 96%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 1362/1412 [01:11<00:02, 18.56it/s]",
+      " 97%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 1364/1412 [01:11<00:02, 18.81it/s]",
+      " 97%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 1366/1412 [01:11<00:02, 17.59it/s]",
+      " 97%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 1368/1412 [01:11<00:02, 18.07it/s]",
+      " 97%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 1371/1412 [01:11<00:01, 20.82it/s]",
+      " 97%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 1374/1412 [01:11<00:01, 22.69it/s]",
+      " 98%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a| 1377/1412 [01:12<00:01, 21.11it/s]",
+      " 98%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a| 1380/1412 [01:12<00:01, 22.21it/s]",
+      " 98%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a| 1383/1412 [01:12<00:01, 23.98it/s]",
+      " 98%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a| 1386/1412 [01:12<00:01, 24.47it/s]",
+      " 98%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a| 1389/1412 [01:12<00:00, 25.48it/s]",
+      " 99%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a| 1392/1412 [01:12<00:00, 23.45it/s]",
+      " 99%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589| 1395/1412 [01:12<00:00, 22.59it/s]",
+      " 99%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589| 1398/1412 [01:12<00:00, 23.03it/s]",
+      " 99%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589| 1401/1412 [01:13<00:00, 19.49it/s]",
+      " 99%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589| 1404/1412 [01:13<00:00, 20.62it/s]",
+      "100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589| 1407/1412 [01:13<00:00, 20.85it/s]",
+      "100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589| 1410/1412 [01:13<00:00, 20.71it/s]",
+      "100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1412/1412 [01:13<00:00, 19.17it/s]"
+    ],
+    "stdout_tail": [
+      "covert gene feature into 19264",
+      "(1412, 19264)",
+      "{'mask_gene_name': False, 'gene_num': 19266, 'seq_len': 19266, 'encoder': {'hidden_dim': 768, 'depth': 12, 'heads': 12, 'dim_head': 64, 'seq_len': 19266, 'module_type': 'transformer', 'norm_first': False}, 'decoder': {'hidden_dim': 512, 'depth': 6, 'heads': 8, 'dim_head': 64, 'module_type': 'performer', 'seq_len': 19266, 'norm_first': False}, 'n_class': 104, 'pad_token_id': 103, 'mask_token_id': 102, 'bin_num': 100, 'bin_alpha': 1.0, 'rawcount': True, 'model': 'mae_autobin', 'test_valid_train_idx_dict': '/nfs_beijing/minsheng/data/os10000w-new/global_shuffle/meta.csv.train_set_idx_dict.pt', 'valid_data_path': '/nfs_beijing/minsheng/data/valid_count_10w.npz', 'num_tokens': 13, 'train_data_path': None, 'isPanA': False, 'isPlanA1': False, 'max_files_to_load': 5, 'bin_type': 'auto_bin', 'value_mask_prob': 0.3, 'zero_mask_prob': 0.03, 'replace_prob': 0.8, 'random_token_prob': 0.1, 'mask_ignore_token_ids': [0], 'decoder_add_zero': True, 'mae_encoder_max_seq_len': 15000, 'isPlanA': False, 'mask_prob': 0.3, 'model_type': 'mae_autobin', 'pos_embed': False, 'device': 'cuda'}",
+      "save at /scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/phase1b_edge_neighbor_preempt/phase1b_embedding_pool_01B-resolution_singlecell_cell_embedding_t4_resolution.npy",
+      "(1412, 3072)"
+    ]
+  },
+  "python": {
+    "executable": "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/envs/scfoundation-smoke-py39/bin/python",
+    "version": "3.9.23"
+  },
+  "status": "ready_for_phase1b_edge_neighbor_signals",
+  "subset": {
+    "control_available_cells": 11835,
+    "control_selected_cells": 128,
+    "layer_used_as_X": "counts",
+    "matched_panel_count": 107,
+    "missing_panel_count": 0,
+    "missing_panels": [],
+    "obs_columns_added": [
+      "phase1b_signal_group",
+      "phase1b_panel_id"
+    ],
+    "panel_cell_counts": {
+      "AHR+KLF1": {
+        "available_cells": 481,
+        "selected_cells": 12
+      },
+      "ATL1": {
+        "available_cells": 379,
+        "selected_cells": 12
+      },
+      "BAK1": {
+        "available_cells": 1451,
+        "selected_cells": 12
+      },
+      "BPGM": {
+        "available_cells": 464,
+        "selected_cells": 12
+      },
+      "BPGM+SAMD1": {
+        "available_cells": 300,
+        "selected_cells": 12
+      },
+      "CBFA2T3": {
+        "available_cells": 657,
+        "selected_cells": 12
+      },
+      "CBL": {
+        "available_cells": 663,
+        "selected_cells": 12
+      },
+      "CBL+CNN1": {
+        "available_cells": 348,
+        "selected_cells": 12
+      },
+      "CBL+PTPN12": {
+        "available_cells": 333,
+        "selected_cells": 12
+      },
+      "CBL+PTPN9": {
+        "available_cells": 305,
+        "selected_cells": 12
+      },
+      "CBL+UBASH3B": {
+        "available_cells": 406,
+        "selected_cells": 12
+      },
+      "CDKN1A": {
+        "available_cells": 360,
+        "selected_cells": 12
+      },
+      "CDKN1C": {
+        "available_cells": 229,
+        "selected_cells": 12
+      },
+      "CEBPA": {
+        "available_cells": 458,
+        "selected_cells": 12
+      },
+      "CEBPB": {
+        "available_cells": 487,
+        "selected_cells": 12
+      },
+      "CEBPB+MAPK1": {
+        "available_cells": 412,
+        "selected_cells": 12
+      },
+      "CEBPB+OSR2": {
+        "available_cells": 211,
+        "selected_cells": 12
+      },
+      "CEBPB+PTPN12": {
+        "available_cells": 331,
+        "selected_cells": 12
+      },
+      "CEBPE": {
+        "available_cells": 1230,
+        "selected_cells": 12
+      },
+      "CEBPE+CNN1": {
+        "available_cells": 237,
+        "selected_cells": 12
+      },
+      "CEBPE+KLF1": {
+        "available_cells": 467,
+        "selected_cells": 12
+      },
+      "CEBPE+PTPN12": {
+        "available_cells": 414,
+        "selected_cells": 12
+      },
+      "CEBPE+RUNX1T1": {
+        "available_cells": 1215,
+        "selected_cells": 12
+      },
+      "CLDN6": {
+        "available_cells": 670,
+        "selected_cells": 12
+      },
+      "CNN1": {
+        "available_cells": 765,
+        "selected_cells": 12
+      },
+      "CNN1+MAPK1": {
+        "available_cells": 398,
+        "selected_cells": 12
+      },
+      "COL1A1": {
+        "available_cells": 328,
+        "selected_cells": 12
+      },
+      "COL2A1": {
+        "available_cells": 596,
+        "selected_cells": 12
+      },
+      "CSRNP1": {
+        "available_cells": 477,
+        "selected_cells": 12
+      },
+      "DLX2": {
+        "available_cells": 730,
+        "selected_cells": 12
+      },
+      "DUSP9": {
+        "available_cells": 729,
+        "selected_cells": 12
+      },
+      "DUSP9+ETS2": {
+        "available_cells": 786,
+        "selected_cells": 12
+      },
+      "DUSP9+IGDCC3": {
+        "available_cells": 382,
+        "selected_cells": 12
+      },
+      "DUSP9+KLF1": {
+        "available_cells": 366,
+        "selected_cells": 12
+      },
+      "DUSP9+MAPK1": {
+        "available_cells": 290,
+        "selected_cells": 12
+      },
+      "DUSP9+PRTG": {
+        "available_cells": 297,
+        "selected_cells": 12
+      },
+      "ELMSAN1": {
+        "available_cells": 935,
+        "selected_cells": 12
+      },
+      "ETS2": {
+        "available_cells": 1201,
+        "selected_cells": 12
+      },
+      "ETS2+IGDCC3": {
+        "available_cells": 441,
+        "selected_cells": 12
+      },
+      "ETS2+IKZF3": {
+        "available_cells": 444,
+        "selected_cells": 12
+      },
+      "ETS2+MAPK1": {
+        "available_cells": 459,
+        "selected_cells": 12
+      },
+      "ETS2+PRTG": {
+        "available_cells": 445,
+        "selected_cells": 12
+      },
+      "FEV": {
+        "available_cells": 703,
+        "selected_cells": 12
+      },
+      "FEV+ISL2": {
+        "available_cells": 284,
+        "selected_cells": 12
+      },
+      "FEV+MAP7D1": {
+        "available_cells": 277,
+        "selected_cells": 12
+      },
+      "FOSB": {
+        "available_cells": 630,
+        "selected_cells": 12
+      },
+      "FOSB+IKZF3": {
+        "available_cells": 247,
+        "selected_cells": 12
+      },
+      "FOSB+OSR2": {
+        "available_cells": 382,
+        "selected_cells": 12
+      },
+      "FOXA1": {
+        "available_cells": 850,
+        "selected_cells": 12
+      },
+      "FOXA1+FOXF1": {
+        "available_cells": 272,
+        "selected_cells": 12
+      },
+      "FOXA3": {
+        "available_cells": 493,
+        "selected_cells": 12
+      },
+      "FOXA3+FOXL2": {
+        "available_cells": 130,
+        "selected_cells": 12
+      },
+      "FOXA3+HOXB9": {
+        "available_cells": 329,
+        "selected_cells": 12
+      },
+      "FOXF1": {
+        "available_cells": 873,
+        "selected_cells": 12
+      },
+      "FOXF1+FOXL2": {
+        "available_cells": 192,
+        "selected_cells": 12
+      },
+      "FOXL2": {
+        "available_cells": 652,
+        "selected_cells": 12
+      },
+      "FOXL2+MEIS1": {
+        "available_cells": 193,
+        "selected_cells": 12
+      },
+      "FOXO4": {
+        "available_cells": 215,
+        "selected_cells": 12
+      },
+      "HOXB9": {
+        "available_cells": 701,
+        "selected_cells": 12
+      },
+      "HOXC13": {
+        "available_cells": 384,
+        "selected_cells": 12
+      },
+      "IGDCC3": {
+        "available_cells": 613,
+        "selected_cells": 12
+      },
+      "IGDCC3+MAPK1": {
+        "available_cells": 366,
+        "selected_cells": 12
+      },
+      "IGDCC3+PRTG": {
+        "available_cells": 140,
+        "selected_cells": 12
+      },
+      "IRF1": {
+        "available_cells": 427,
+        "selected_cells": 12
+      },
+      "JUN": {
+        "available_cells": 265,
+        "selected_cells": 12
+      },
+      "KIF2C": {
+        "available_cells": 634,
+        "selected_cells": 12
+      },
+      "KLF1": {
+        "available_cells": 1954,
+        "selected_cells": 12
+      },
+      "KLF1+TGFBR2": {
+        "available_cells": 337,
+        "selected_cells": 12
+      },
+      "LHX1": {
+        "available_cells": 375,
+        "selected_cells": 12
+      },
+      "MAP2K3": {
+        "available_cells": 578,
+        "selected_cells": 12
+      },
+      "MAP2K3+SLC38A2": {
+        "available_cells": 338,
+        "selected_cells": 12
+      },
+      "MAP7D1": {
+        "available_cells": 751,
+        "selected_cells": 12
+      },
+      "MAPK1": {
+        "available_cells": 763,
+        "selected_cells": 12
+      },
+      "MAPK1+PRTG": {
+        "available_cells": 499,
+        "selected_cells": 12
+      },
+      "MAPK1+TGFBR2": {
+        "available_cells": 496,
+        "selected_cells": 12
+      },
+      "MIDN": {
+        "available_cells": 298,
+        "selected_cells": 12
+      },
+      "NCL": {
+        "available_cells": 237,
+        "selected_cells": 12
+      },
+      "NIT1": {
+        "available_cells": 191,
+        "selected_cells": 12
+      },
+      "OSR2": {
+        "available_cells": 1002,
+        "selected_cells": 12
+      },
+      "POU3F2": {
+        "available_cells": 359,
+        "selected_cells": 12
+      },
+      "PRDM1": {
+        "available_cells": 296,
+        "selected_cells": 12
+      },
+      "PRTG": {
+        "available_cells": 684,
+        "selected_cells": 12
+      },
+      "PTPN1": {
+        "available_cells": 417,
+        "selected_cells": 12
+      },
+      "PTPN12": {
+        "available_cells": 445,
+        "selected_cells": 12
+      },
+      "PTPN12+PTPN9": {
+        "available_cells": 364,
+        "selected_cells": 12
+      },
+      "PTPN12+SNAI1": {
+        "available_cells": 283,
+        "selected_cells": 12
+      },
+      "PTPN12+UBASH3A": {
+        "available_cells": 311,
+        "selected_cells": 12
+      },
+      "PTPN9": {
+        "available_cells": 444,
+        "selected_cells": 12
+      },
+      "RREB1": {
+        "available_cells": 331,
+        "selected_cells": 12
+      },
+      "RUNX1T1": {
+        "available_cells": 777,
+        "selected_cells": 12
+      },
+      "S1PR2": {
+        "available_cells": 540,
+        "selected_cells": 12
+      },
+      "SAMD1": {
+        "available_cells": 496,
+        "selected_cells": 12
+      },
+      "SAMD1+TGFBR2": {
+        "available_cells": 72,
+        "selected_cells": 12
+      },
+      "SAMD1+UBASH3B": {
+        "available_cells": 240,
+        "selected_cells": 12
+      },
+      "SGK1": {
+        "available_cells": 481,
+        "selected_cells": 12
+      },
+      "SGK1+TBX2": {
+        "available_cells": 349,
+        "selected_cells": 12
+      },
+      "SGK1+TBX3": {
+        "available_cells": 299,
+        "selected_cells": 12
+      },
+      "SLC4A1": {
+        "available_cells": 998,
+        "selected_cells": 12
+      },
+      "SLC6A9": {
+        "available_cells": 557,
+        "selected_cells": 12
+      },
+      "SNAI1": {
+        "available_cells": 466,
+        "selected_cells": 12
+      },
+      "SPI1": {
+        "available_cells": 613,
+        "selected_cells": 12
+      },
+      "TBX2": {
+        "available_cells": 689,
+        "selected_cells": 12
+      },
+      "TMSB4X": {
+        "available_cells": 542,
+        "selected_cells": 12
+      },
+      "UBASH3A": {
+        "available_cells": 817,
+        "selected_cells": 12
+      },
+      "UBASH3B": {
+        "available_cells": 1201,
+        "selected_cells": 12
+      },
+      "ZBTB10": {
+        "available_cells": 160,
+        "selected_cells": 12
+      },
+      "ZNF318": {
+        "available_cells": 649,
+        "selected_cells": 12
+      }
+    },
+    "requested_panel_count": 107,
+    "source_shape": [
+      111255,
+      19018
+    ],
+    "subset_shape": [
+      1412,
+      19018
+    ],
+    "var_names_sample": [
+      "RP11-34P13.3",
+      "RP11-34P13.7",
+      "FO538757.2",
+      "AP006222.2",
+      "RP4-669L17.10",
+      "RP5-857K21.4",
+      "RP11-206L10.9",
+      "LINC00115",
+      "FAM41C",
+      "RP11-54O7.16",
+      "RP11-54O7.1",
+      "RP11-54O7.2"
+    ]
+  }
+}

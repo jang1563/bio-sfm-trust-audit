@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it using the metadata below."
+title: "bio-sfm-trust-audit: cost-aware LLM trust-routing over specialist scientific models"
+abstract: >-
+  An audit of how a general LLM routes trust over a fallible specialist scientific
+  model under verification cost (trust / verify / default / defer). Across a
+  perturbation dry-run, a single-cell foundation-model cue, and protein-structure
+  prediction (Boltz-2 / pLDDT), the robust finding is cautionary: the reasoning
+  layer is cue-sensitive; surfacing raw calibrated confidence is the robust lever;
+  packaging it as a calibrated reliability interface is not a free win and is
+  model-dependent (neutral for Sonnet, harmful for the more risk-averse Opus,
+  which over-verifies). See REPORT.md.
+type: software
+license:
+  - MIT
+  - CC-BY-4.0
+authors:
+  - given-names: JangKeun
+    family-names: Kim
+    affiliation: "Weill Cornell Medicine (Mason Lab)"
+repository-code: "https://github.com/jang1563/bio-sfm-trust-audit"
+keywords:
+  - LLM trust calibration
+  - cost-aware verification routing
+  - science foundation models
+  - AlphaFold / Boltz pLDDT
+  - selective prediction
+  - AI for science
+date-released: "2026-06-19"
+version: "phase2-report-v1"

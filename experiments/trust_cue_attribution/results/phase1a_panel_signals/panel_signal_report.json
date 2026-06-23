@@ -1,0 +1,561 @@
+{
+  "adapter": "ScFoundationAdapter",
+  "claim_boundary": "panel-specific scFoundation signal construction only; no LLM routing, true-SFM trust, or biological interpretation claim",
+  "command": [
+    "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/envs/scfoundation-smoke-py39/bin/python",
+    "get_embedding.py",
+    "--task_name",
+    "phase1a_panel_signal",
+    "--input_type",
+    "singlecell",
+    "--output_type",
+    "cell",
+    "--pool_type",
+    "all",
+    "--tgthighres",
+    "t4",
+    "--data_path",
+    "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/phase1a_panel_signals/phase1a_panel_signal_subset.h5ad",
+    "--save_path",
+    "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/phase1a_panel_signals",
+    "--pre_normalized",
+    "F",
+    "--version",
+    "ce"
+  ],
+  "embedding_summary": {
+    "dtype": "float32",
+    "finite_fraction": 1.0,
+    "l2_norm": 984.095459,
+    "mean": 0.19678,
+    "path": "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/phase1a_panel_signals/phase1a_panel_signal_01B-resolution_singlecell_cell_embedding_t4_resolution.npy",
+    "sha256": "7f694c601b0936aa01a1683cc7e90f51058d0e2ca7c30b759bfde66aa034af0e",
+    "shape": [
+      256,
+      3072
+    ],
+    "std": 1.092117
+  },
+  "inputs": {
+    "control_label": "control",
+    "input_data": "/scratch/USER/nomos/data/norman_2019.h5ad",
+    "max_cells_per_panel": 16,
+    "max_control_cells": 64,
+    "model_dir": "/scratch/USER/huggingface/benchmark/scFoundation/model",
+    "panel_ids": [
+      "IGDCC3+MAPK1",
+      "MAP2K3+SLC38A2",
+      "PTPN1",
+      "SLC4A1",
+      "ATL1",
+      "DUSP9+IGDCC3",
+      "FOXA1+FOXF1",
+      "HOXB9",
+      "CEBPB",
+      "CEBPB+MAPK1",
+      "FEV+ISL2",
+      "SAMD1+UBASH3B"
+    ],
+    "perturbation_col": "perturbation_name",
+    "phase1a_manifest": "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/results/phase1a_signal_pilot/manifest.json",
+    "scfoundation_dir": "/scratch/USER/huggingface/benchmark/scFoundation",
+    "seed": 37,
+    "use_layer": "counts"
+  },
+  "next_actions": [
+    "Regenerate Phase 1A packets using these per-panel internal_signal_summary values.",
+    "Run a small Sonnet-only pilot only after leakage checks pass."
+  ],
+  "outputs": {
+    "embedding_path": "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/phase1a_panel_signals/phase1a_panel_signal_01B-resolution_singlecell_cell_embedding_t4_resolution.npy",
+    "report_out": "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/phase1a_panel_signals/panel_signal_report.json",
+    "subset_h5ad": "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/phase1a_panel_signals/phase1a_panel_signal_subset.h5ad"
+  },
+  "panel_signals": {
+    "control_n_cells": 64,
+    "panel_count": 12,
+    "panels": {
+      "ATL1": {
+        "adapter": "ScFoundationAdapter",
+        "calibration_status": "unverified_proxy_not_calibrated",
+        "centroid_distance_to_control": 9.247352,
+        "centroid_l2_norm": 60.025013,
+        "control_mean_cell_l2_norm": 61.379547,
+        "control_reference_n_cells": 64,
+        "embedding_dim": 3072,
+        "finite_fraction": 1.0,
+        "limitations": [
+          "sampled_cells_only",
+          "not_a_calibrated_uncertainty",
+          "does_not_contain_hidden_labels"
+        ],
+        "mean_cell_distance_to_control": 15.145231,
+        "mean_cell_l2_norm": 61.429699,
+        "n_cells": 16,
+        "panel_id": "ATL1",
+        "signal_scope": "panel_matched_norman_cells",
+        "signal_type": "panel_specific_cell_embedding_summary",
+        "source": "scFoundation_panel_embedding_summary",
+        "status": "ready",
+        "std_cell_distance_to_control": 5.173491,
+        "std_cell_l2_norm": 0.153891
+      },
+      "CEBPB": {
+        "adapter": "ScFoundationAdapter",
+        "calibration_status": "unverified_proxy_not_calibrated",
+        "centroid_distance_to_control": 14.276588,
+        "centroid_l2_norm": 58.720196,
+        "control_mean_cell_l2_norm": 61.379547,
+        "control_reference_n_cells": 64,
+        "embedding_dim": 3072,
+        "finite_fraction": 1.0,
+        "limitations": [
+          "sampled_cells_only",
+          "not_a_calibrated_uncertainty",
+          "does_not_contain_hidden_labels"
+        ],
+        "mean_cell_distance_to_control": 21.956909,
+        "mean_cell_l2_norm": 61.721695,
+        "n_cells": 16,
+        "panel_id": "CEBPB",
+        "signal_scope": "panel_matched_norman_cells",
+        "signal_type": "panel_specific_cell_embedding_summary",
+        "source": "scFoundation_panel_embedding_summary",
+        "status": "ready",
+        "std_cell_distance_to_control": 9.127438,
+        "std_cell_l2_norm": 0.29809
+      },
+      "CEBPB+MAPK1": {
+        "adapter": "ScFoundationAdapter",
+        "calibration_status": "unverified_proxy_not_calibrated",
+        "centroid_distance_to_control": 10.961359,
+        "centroid_l2_norm": 59.963833,
+        "control_mean_cell_l2_norm": 61.379547,
+        "control_reference_n_cells": 64,
+        "embedding_dim": 3072,
+        "finite_fraction": 1.0,
+        "limitations": [
+          "sampled_cells_only",
+          "not_a_calibrated_uncertainty",
+          "does_not_contain_hidden_labels"
+        ],
+        "mean_cell_distance_to_control": 17.31489,
+        "mean_cell_l2_norm": 61.582718,
+        "n_cells": 16,
+        "panel_id": "CEBPB+MAPK1",
+        "signal_scope": "panel_matched_norman_cells",
+        "signal_type": "panel_specific_cell_embedding_summary",
+        "source": "scFoundation_panel_embedding_summary",
+        "status": "ready",
+        "std_cell_distance_to_control": 4.142085,
+        "std_cell_l2_norm": 0.201584
+      },
+      "DUSP9+IGDCC3": {
+        "adapter": "ScFoundationAdapter",
+        "calibration_status": "unverified_proxy_not_calibrated",
+        "centroid_distance_to_control": 11.246949,
+        "centroid_l2_norm": 57.987926,
+        "control_mean_cell_l2_norm": 61.379547,
+        "control_reference_n_cells": 64,
+        "embedding_dim": 3072,
+        "finite_fraction": 1.0,
+        "limitations": [
+          "sampled_cells_only",
+          "not_a_calibrated_uncertainty",
+          "does_not_contain_hidden_labels"
+        ],
+        "mean_cell_distance_to_control": 20.860912,
+        "mean_cell_l2_norm": 61.663002,
+        "n_cells": 16,
+        "panel_id": "DUSP9+IGDCC3",
+        "signal_scope": "panel_matched_norman_cells",
+        "signal_type": "panel_specific_cell_embedding_summary",
+        "source": "scFoundation_panel_embedding_summary",
+        "status": "ready",
+        "std_cell_distance_to_control": 11.456057,
+        "std_cell_l2_norm": 0.445351
+      },
+      "FEV+ISL2": {
+        "adapter": "ScFoundationAdapter",
+        "calibration_status": "unverified_proxy_not_calibrated",
+        "centroid_distance_to_control": 19.547754,
+        "centroid_l2_norm": 59.30978,
+        "control_mean_cell_l2_norm": 61.379547,
+        "control_reference_n_cells": 64,
+        "embedding_dim": 3072,
+        "finite_fraction": 1.0,
+        "limitations": [
+          "sampled_cells_only",
+          "not_a_calibrated_uncertainty",
+          "does_not_contain_hidden_labels"
+        ],
+        "mean_cell_distance_to_control": 24.901272,
+        "mean_cell_l2_norm": 61.941772,
+        "n_cells": 16,
+        "panel_id": "FEV+ISL2",
+        "signal_scope": "panel_matched_norman_cells",
+        "signal_type": "panel_specific_cell_embedding_summary",
+        "source": "scFoundation_panel_embedding_summary",
+        "status": "ready",
+        "std_cell_distance_to_control": 9.013767,
+        "std_cell_l2_norm": 0.271635
+      },
+      "FOXA1+FOXF1": {
+        "adapter": "ScFoundationAdapter",
+        "calibration_status": "unverified_proxy_not_calibrated",
+        "centroid_distance_to_control": 7.659141,
+        "centroid_l2_norm": 59.553082,
+        "control_mean_cell_l2_norm": 61.379547,
+        "control_reference_n_cells": 64,
+        "embedding_dim": 3072,
+        "finite_fraction": 1.0,
+        "limitations": [
+          "sampled_cells_only",
+          "not_a_calibrated_uncertainty",
+          "does_not_contain_hidden_labels"
+        ],
+        "mean_cell_distance_to_control": 15.938991,
+        "mean_cell_l2_norm": 61.44754,
+        "n_cells": 16,
+        "panel_id": "FOXA1+FOXF1",
+        "signal_scope": "panel_matched_norman_cells",
+        "signal_type": "panel_specific_cell_embedding_summary",
+        "source": "scFoundation_panel_embedding_summary",
+        "status": "ready",
+        "std_cell_distance_to_control": 5.819915,
+        "std_cell_l2_norm": 0.171471
+      },
+      "HOXB9": {
+        "adapter": "ScFoundationAdapter",
+        "calibration_status": "unverified_proxy_not_calibrated",
+        "centroid_distance_to_control": 6.820813,
+        "centroid_l2_norm": 59.808132,
+        "control_mean_cell_l2_norm": 61.379547,
+        "control_reference_n_cells": 64,
+        "embedding_dim": 3072,
+        "finite_fraction": 1.0,
+        "limitations": [
+          "sampled_cells_only",
+          "not_a_calibrated_uncertainty",
+          "does_not_contain_hidden_labels"
+        ],
+        "mean_cell_distance_to_control": 14.385094,
+        "mean_cell_l2_norm": 61.460171,
+        "n_cells": 16,
+        "panel_id": "HOXB9",
+        "signal_scope": "panel_matched_norman_cells",
+        "signal_type": "panel_specific_cell_embedding_summary",
+        "source": "scFoundation_panel_embedding_summary",
+        "status": "ready",
+        "std_cell_distance_to_control": 6.326069,
+        "std_cell_l2_norm": 0.294348
+      },
+      "IGDCC3+MAPK1": {
+        "adapter": "ScFoundationAdapter",
+        "calibration_status": "unverified_proxy_not_calibrated",
+        "centroid_distance_to_control": 4.896389,
+        "centroid_l2_norm": 59.368366,
+        "control_mean_cell_l2_norm": 61.379547,
+        "control_reference_n_cells": 64,
+        "embedding_dim": 3072,
+        "finite_fraction": 1.0,
+        "limitations": [
+          "sampled_cells_only",
+          "not_a_calibrated_uncertainty",
+          "does_not_contain_hidden_labels"
+        ],
+        "mean_cell_distance_to_control": 14.754328,
+        "mean_cell_l2_norm": 61.409321,
+        "n_cells": 16,
+        "panel_id": "IGDCC3+MAPK1",
+        "signal_scope": "panel_matched_norman_cells",
+        "signal_type": "panel_specific_cell_embedding_summary",
+        "source": "scFoundation_panel_embedding_summary",
+        "status": "ready",
+        "std_cell_distance_to_control": 7.274909,
+        "std_cell_l2_norm": 0.371936
+      },
+      "MAP2K3+SLC38A2": {
+        "adapter": "ScFoundationAdapter",
+        "calibration_status": "unverified_proxy_not_calibrated",
+        "centroid_distance_to_control": 9.139687,
+        "centroid_l2_norm": 60.334641,
+        "control_mean_cell_l2_norm": 61.379547,
+        "control_reference_n_cells": 64,
+        "embedding_dim": 3072,
+        "finite_fraction": 1.0,
+        "limitations": [
+          "sampled_cells_only",
+          "not_a_calibrated_uncertainty",
+          "does_not_contain_hidden_labels"
+        ],
+        "mean_cell_distance_to_control": 14.118299,
+        "mean_cell_l2_norm": 61.359798,
+        "n_cells": 16,
+        "panel_id": "MAP2K3+SLC38A2",
+        "signal_scope": "panel_matched_norman_cells",
+        "signal_type": "panel_specific_cell_embedding_summary",
+        "source": "scFoundation_panel_embedding_summary",
+        "status": "ready",
+        "std_cell_distance_to_control": 2.997757,
+        "std_cell_l2_norm": 0.151581
+      },
+      "PTPN1": {
+        "adapter": "ScFoundationAdapter",
+        "calibration_status": "unverified_proxy_not_calibrated",
+        "centroid_distance_to_control": 8.120387,
+        "centroid_l2_norm": 60.027481,
+        "control_mean_cell_l2_norm": 61.379547,
+        "control_reference_n_cells": 64,
+        "embedding_dim": 3072,
+        "finite_fraction": 1.0,
+        "limitations": [
+          "sampled_cells_only",
+          "not_a_calibrated_uncertainty",
+          "does_not_contain_hidden_labels"
+        ],
+        "mean_cell_distance_to_control": 15.017241,
+        "mean_cell_l2_norm": 61.438919,
+        "n_cells": 16,
+        "panel_id": "PTPN1",
+        "signal_scope": "panel_matched_norman_cells",
+        "signal_type": "panel_specific_cell_embedding_summary",
+        "source": "scFoundation_panel_embedding_summary",
+        "status": "ready",
+        "std_cell_distance_to_control": 3.452104,
+        "std_cell_l2_norm": 0.227252
+      },
+      "SAMD1+UBASH3B": {
+        "adapter": "ScFoundationAdapter",
+        "calibration_status": "unverified_proxy_not_calibrated",
+        "centroid_distance_to_control": 14.456422,
+        "centroid_l2_norm": 59.049309,
+        "control_mean_cell_l2_norm": 61.379547,
+        "control_reference_n_cells": 64,
+        "embedding_dim": 3072,
+        "finite_fraction": 1.0,
+        "limitations": [
+          "sampled_cells_only",
+          "not_a_calibrated_uncertainty",
+          "does_not_contain_hidden_labels"
+        ],
+        "mean_cell_distance_to_control": 21.380688,
+        "mean_cell_l2_norm": 61.645348,
+        "n_cells": 16,
+        "panel_id": "SAMD1+UBASH3B",
+        "signal_scope": "panel_matched_norman_cells",
+        "signal_type": "panel_specific_cell_embedding_summary",
+        "source": "scFoundation_panel_embedding_summary",
+        "status": "ready",
+        "std_cell_distance_to_control": 8.077531,
+        "std_cell_l2_norm": 0.253322
+      },
+      "SLC4A1": {
+        "adapter": "ScFoundationAdapter",
+        "calibration_status": "unverified_proxy_not_calibrated",
+        "centroid_distance_to_control": 5.014781,
+        "centroid_l2_norm": 59.367023,
+        "control_mean_cell_l2_norm": 61.379547,
+        "control_reference_n_cells": 64,
+        "embedding_dim": 3072,
+        "finite_fraction": 1.0,
+        "limitations": [
+          "sampled_cells_only",
+          "not_a_calibrated_uncertainty",
+          "does_not_contain_hidden_labels"
+        ],
+        "mean_cell_distance_to_control": 15.101004,
+        "mean_cell_l2_norm": 61.464523,
+        "n_cells": 16,
+        "panel_id": "SLC4A1",
+        "signal_scope": "panel_matched_norman_cells",
+        "signal_type": "panel_specific_cell_embedding_summary",
+        "source": "scFoundation_panel_embedding_summary",
+        "status": "ready",
+        "std_cell_distance_to_control": 7.121855,
+        "std_cell_l2_norm": 0.410761
+      }
+    },
+    "signal_type": "panel_specific_cell_embedding_summary"
+  },
+  "phase": "phase1a",
+  "process": {
+    "returncode": 0,
+    "stderr_tail": [
+      " 39%|\u2588\u2588\u2588\u2589      | 101/256 [00:15<00:15, 10.31it/s]",
+      " 40%|\u2588\u2588\u2588\u2588      | 103/256 [00:15<00:14, 10.36it/s]",
+      " 41%|\u2588\u2588\u2588\u2588      | 105/256 [00:15<00:14, 10.67it/s]",
+      " 42%|\u2588\u2588\u2588\u2588\u258f     | 107/256 [00:16<00:15,  9.78it/s]",
+      " 43%|\u2588\u2588\u2588\u2588\u258e     | 109/256 [00:16<00:14, 10.02it/s]",
+      " 43%|\u2588\u2588\u2588\u2588\u258e     | 111/256 [00:16<00:13, 11.05it/s]",
+      " 44%|\u2588\u2588\u2588\u2588\u258d     | 113/256 [00:16<00:13, 10.92it/s]",
+      " 45%|\u2588\u2588\u2588\u2588\u258d     | 115/256 [00:16<00:13, 10.52it/s]",
+      " 46%|\u2588\u2588\u2588\u2588\u258c     | 117/256 [00:17<00:14,  9.52it/s]",
+      " 46%|\u2588\u2588\u2588\u2588\u258b     | 119/256 [00:17<00:13, 10.52it/s]",
+      " 47%|\u2588\u2588\u2588\u2588\u258b     | 121/256 [00:17<00:13,  9.64it/s]",
+      " 48%|\u2588\u2588\u2588\u2588\u258a     | 123/256 [00:17<00:12, 10.48it/s]",
+      " 49%|\u2588\u2588\u2588\u2588\u2589     | 125/256 [00:17<00:11, 11.34it/s]",
+      " 50%|\u2588\u2588\u2588\u2588\u2589     | 127/256 [00:18<00:13,  9.82it/s]",
+      " 50%|\u2588\u2588\u2588\u2588\u2588     | 129/256 [00:18<00:12,  9.94it/s]",
+      " 51%|\u2588\u2588\u2588\u2588\u2588     | 131/256 [00:18<00:13,  9.21it/s]",
+      " 52%|\u2588\u2588\u2588\u2588\u2588\u258f    | 133/256 [00:18<00:11, 10.52it/s]",
+      " 53%|\u2588\u2588\u2588\u2588\u2588\u258e    | 135/256 [00:18<00:11, 10.86it/s]",
+      " 54%|\u2588\u2588\u2588\u2588\u2588\u258e    | 137/256 [00:19<00:10, 10.87it/s]",
+      " 54%|\u2588\u2588\u2588\u2588\u2588\u258d    | 139/256 [00:19<00:10, 11.33it/s]",
+      " 55%|\u2588\u2588\u2588\u2588\u2588\u258c    | 141/256 [00:19<00:11, 10.24it/s]",
+      " 56%|\u2588\u2588\u2588\u2588\u2588\u258c    | 143/256 [00:19<00:10, 10.99it/s]",
+      " 57%|\u2588\u2588\u2588\u2588\u2588\u258b    | 145/256 [00:19<00:09, 12.03it/s]",
+      " 57%|\u2588\u2588\u2588\u2588\u2588\u258b    | 147/256 [00:19<00:09, 11.63it/s]",
+      " 58%|\u2588\u2588\u2588\u2588\u2588\u258a    | 149/256 [00:20<00:09, 11.56it/s]",
+      " 59%|\u2588\u2588\u2588\u2588\u2588\u2589    | 151/256 [00:20<00:09, 10.77it/s]",
+      " 60%|\u2588\u2588\u2588\u2588\u2588\u2589    | 153/256 [00:20<00:09, 10.31it/s]",
+      " 61%|\u2588\u2588\u2588\u2588\u2588\u2588    | 155/256 [00:20<00:09, 11.01it/s]",
+      " 61%|\u2588\u2588\u2588\u2588\u2588\u2588\u258f   | 157/256 [00:20<00:08, 11.32it/s]",
+      " 62%|\u2588\u2588\u2588\u2588\u2588\u2588\u258f   | 159/256 [00:21<00:09, 10.55it/s]",
+      " 63%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 161/256 [00:21<00:09, 10.42it/s]",
+      " 64%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 163/256 [00:21<00:08, 10.62it/s]",
+      " 64%|\u2588\u2588\u2588\u2588\u2588\u2588\u258d   | 165/256 [00:21<00:08, 10.90it/s]",
+      " 65%|\u2588\u2588\u2588\u2588\u2588\u2588\u258c   | 167/256 [00:21<00:08, 11.12it/s]",
+      " 66%|\u2588\u2588\u2588\u2588\u2588\u2588\u258c   | 169/256 [00:21<00:08, 10.26it/s]",
+      " 67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 171/256 [00:22<00:08, 10.26it/s]",
+      " 68%|\u2588\u2588\u2588\u2588\u2588\u2588\u258a   | 173/256 [00:22<00:07, 10.48it/s]",
+      " 68%|\u2588\u2588\u2588\u2588\u2588\u2588\u258a   | 175/256 [00:22<00:07, 10.88it/s]",
+      " 69%|\u2588\u2588\u2588\u2588\u2588\u2588\u2589   | 177/256 [00:22<00:08,  9.69it/s]",
+      " 70%|\u2588\u2588\u2588\u2588\u2588\u2588\u2589   | 179/256 [00:22<00:07, 10.38it/s]",
+      " 71%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588   | 181/256 [00:23<00:06, 11.40it/s]",
+      " 71%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f  | 183/256 [00:23<00:06, 11.96it/s]",
+      " 72%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f  | 185/256 [00:23<00:06, 11.26it/s]",
+      " 73%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e  | 187/256 [00:23<00:06, 10.89it/s]",
+      " 74%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d  | 189/256 [00:23<00:06, 10.91it/s]",
+      " 75%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d  | 191/256 [00:23<00:05, 11.01it/s]",
+      " 75%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 193/256 [00:24<00:06,  9.96it/s]",
+      " 76%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 195/256 [00:24<00:06,  9.78it/s]",
+      " 77%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b  | 197/256 [00:24<00:05, 10.04it/s]",
+      " 78%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a  | 199/256 [00:24<00:05, 11.01it/s]",
+      " 79%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a  | 201/256 [00:25<00:05, 10.01it/s]",
+      " 79%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589  | 203/256 [00:25<00:04, 10.88it/s]",
+      " 80%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588  | 205/256 [00:25<00:05,  9.94it/s]",
+      " 81%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588  | 207/256 [00:25<00:04, 10.80it/s]",
+      " 82%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f | 209/256 [00:25<00:04, 10.86it/s]",
+      " 82%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f | 211/256 [00:25<00:04,  9.65it/s]",
+      " 83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 213/256 [00:26<00:03, 10.79it/s]",
+      " 84%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d | 215/256 [00:26<00:03, 11.66it/s]",
+      " 85%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d | 217/256 [00:26<00:03, 12.13it/s]",
+      " 86%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c | 219/256 [00:26<00:02, 12.70it/s]",
+      " 86%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 221/256 [00:26<00:02, 13.16it/s]",
+      " 87%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 223/256 [00:26<00:02, 11.14it/s]",
+      " 88%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 225/256 [00:27<00:02, 12.25it/s]",
+      " 89%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 227/256 [00:27<00:02, 10.82it/s]",
+      " 89%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589 | 229/256 [00:27<00:02, 10.56it/s]",
+      " 90%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 231/256 [00:27<00:02,  9.93it/s]",
+      " 91%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 233/256 [00:27<00:02, 10.97it/s]",
+      " 92%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 235/256 [00:28<00:01, 11.58it/s]",
+      " 93%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 237/256 [00:28<00:01, 10.61it/s]",
+      " 93%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 239/256 [00:28<00:01,  9.89it/s]",
+      " 94%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d| 241/256 [00:28<00:01, 10.04it/s]",
+      " 95%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d| 243/256 [00:28<00:01,  8.79it/s]",
+      " 95%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c| 244/256 [00:29<00:01,  8.82it/s]",
+      " 96%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c| 245/256 [00:29<00:01,  8.58it/s]",
+      " 96%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 247/256 [00:29<00:00, 10.38it/s]",
+      " 97%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 249/256 [00:29<00:00, 11.18it/s]",
+      " 98%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a| 252/256 [00:29<00:00, 12.48it/s]",
+      " 99%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589| 254/256 [00:29<00:00, 12.02it/s]",
+      "100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 256/256 [00:30<00:00, 12.47it/s]",
+      "100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 256/256 [00:30<00:00,  8.53it/s]"
+    ],
+    "stdout_tail": [
+      "covert gene feature into 19264",
+      "(256, 19264)",
+      "{'mask_gene_name': False, 'gene_num': 19266, 'seq_len': 19266, 'encoder': {'hidden_dim': 768, 'depth': 12, 'heads': 12, 'dim_head': 64, 'seq_len': 19266, 'module_type': 'transformer', 'norm_first': False}, 'decoder': {'hidden_dim': 512, 'depth': 6, 'heads': 8, 'dim_head': 64, 'module_type': 'performer', 'seq_len': 19266, 'norm_first': False}, 'n_class': 104, 'pad_token_id': 103, 'mask_token_id': 102, 'bin_num': 100, 'bin_alpha': 1.0, 'rawcount': True, 'model': 'mae_autobin', 'test_valid_train_idx_dict': '/nfs_beijing/minsheng/data/os10000w-new/global_shuffle/meta.csv.train_set_idx_dict.pt', 'valid_data_path': '/nfs_beijing/minsheng/data/valid_count_10w.npz', 'num_tokens': 13, 'train_data_path': None, 'isPanA': False, 'isPlanA1': False, 'max_files_to_load': 5, 'bin_type': 'auto_bin', 'value_mask_prob': 0.3, 'zero_mask_prob': 0.03, 'replace_prob': 0.8, 'random_token_prob': 0.1, 'mask_ignore_token_ids': [0], 'decoder_add_zero': True, 'mae_encoder_max_seq_len': 15000, 'isPlanA': False, 'mask_prob': 0.3, 'model_type': 'mae_autobin', 'pos_embed': False, 'device': 'cuda'}",
+      "save at /scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/phase1a_panel_signals/phase1a_panel_signal_01B-resolution_singlecell_cell_embedding_t4_resolution.npy",
+      "(256, 3072)"
+    ]
+  },
+  "python": {
+    "executable": "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/envs/scfoundation-smoke-py39/bin/python",
+    "version": "3.9.23"
+  },
+  "status": "ready_for_phase1a_panel_specific_signal_packets",
+  "subset": {
+    "control_available_cells": 11835,
+    "control_selected_cells": 64,
+    "layer_used_as_X": "counts",
+    "obs_columns_added": [
+      "phase1a_signal_group",
+      "phase1a_panel_id"
+    ],
+    "panel_cell_counts": {
+      "ATL1": {
+        "available_cells": 379,
+        "selected_cells": 16
+      },
+      "CEBPB": {
+        "available_cells": 487,
+        "selected_cells": 16
+      },
+      "CEBPB+MAPK1": {
+        "available_cells": 412,
+        "selected_cells": 16
+      },
+      "DUSP9+IGDCC3": {
+        "available_cells": 382,
+        "selected_cells": 16
+      },
+      "FEV+ISL2": {
+        "available_cells": 284,
+        "selected_cells": 16
+      },
+      "FOXA1+FOXF1": {
+        "available_cells": 272,
+        "selected_cells": 16
+      },
+      "HOXB9": {
+        "available_cells": 701,
+        "selected_cells": 16
+      },
+      "IGDCC3+MAPK1": {
+        "available_cells": 366,
+        "selected_cells": 16
+      },
+      "MAP2K3+SLC38A2": {
+        "available_cells": 338,
+        "selected_cells": 16
+      },
+      "PTPN1": {
+        "available_cells": 417,
+        "selected_cells": 16
+      },
+      "SAMD1+UBASH3B": {
+        "available_cells": 240,
+        "selected_cells": 16
+      },
+      "SLC4A1": {
+        "available_cells": 998,
+        "selected_cells": 16
+      }
+    },
+    "selected_panel_count": 12,
+    "source_shape": [
+      111255,
+      19018
+    ],
+    "subset_shape": [
+      256,
+      19018
+    ],
+    "var_names_sample": [
+      "RP11-34P13.3",
+      "RP11-34P13.7",
+      "FO538757.2",
+      "AP006222.2",
+      "RP4-669L17.10",
+      "RP5-857K21.4",
+      "RP11-206L10.9",
+      "LINC00115",
+      "FAM41C",
+      "RP11-54O7.16",
+      "RP11-54O7.1",
+      "RP11-54O7.2"
+    ]
+  }
+}

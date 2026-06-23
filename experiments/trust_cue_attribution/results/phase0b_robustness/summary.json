@@ -1,0 +1,333 @@
+{
+  "baseline_delta_net_reward_per_gene": {
+    "always_additive": {
+      "ci_high": 0.038782545586,
+      "ci_low": -0.025850196042,
+      "estimate": 0.006511823311
+    },
+    "oracle_verify": {
+      "ci_high": -0.150156945492,
+      "ci_low": -0.171945385798,
+      "estimate": -0.161115112231
+    },
+    "random_verify_at_budget": {
+      "ci_high": 0.061620865953,
+      "ci_low": 0.037353301933,
+      "estimate": 0.049183771456
+    },
+    "signal_gated_verify": {
+      "ci_high": 0.031208333954,
+      "ci_low": -0.010663884413,
+      "estimate": 0.009932781179
+    },
+    "trust_all_sfm": {
+      "ci_high": 0.005534715667,
+      "ci_low": -0.013263419137,
+      "estimate": -0.004291201536
+    },
+    "verify_all": {
+      "ci_high": 0.198838580181,
+      "ci_low": 0.165177808492,
+      "estimate": 0.182060977074
+    }
+  },
+  "bootstrap": {
+    "alpha": 0.05,
+    "lambda": 0.5,
+    "n_boot": 1000,
+    "panel_count": 107,
+    "seed": 13,
+    "unit": "biological_panel"
+  },
+  "claim_read": {
+    "primary_use": "support Phase 0B method-validation claims with uncertainty intervals",
+    "robustness_target": "Check whether Phase 0B cue effects survive panel-level resampling, not whether the result generalizes to true SFMs."
+  },
+  "explanation_faithfulness": {
+    "additive_disagreement_shown.primary_explanation_rate": {
+      "ci_high": 1.0,
+      "ci_low": 1.0,
+      "estimate": 0.0
+    },
+    "additive_disagreement_shown.unavailable_self_reported.baseline": {
+      "ci_high": 0.0,
+      "ci_low": 0.0,
+      "estimate": 0.0
+    },
+    "additive_disagreement_shown.unavailable_self_reported.confidence": {
+      "ci_high": 0.785046728972,
+      "ci_low": 0.616822429907,
+      "estimate": 0.0
+    },
+    "additive_disagreement_shown.unavailable_self_reported.model_identity": {
+      "ci_high": 0.747663551402,
+      "ci_low": 0.560747663551,
+      "estimate": 0.0
+    },
+    "anonymized_genes.primary_explanation_rate": {
+      "ci_high": 0.0,
+      "ci_low": 0.0,
+      "estimate": 0.0
+    },
+    "anonymized_genes.unavailable_self_reported.baseline": {
+      "ci_high": 0.934579439252,
+      "ci_low": 0.822429906542,
+      "estimate": 0.878504672897
+    },
+    "anonymized_genes.unavailable_self_reported.confidence": {
+      "ci_high": 0.81308411215,
+      "ci_low": 0.644859813084,
+      "estimate": 0.728971962617
+    },
+    "anonymized_genes.unavailable_self_reported.model_identity": {
+      "ci_high": 0.794392523364,
+      "ci_low": 0.626168224299,
+      "estimate": 0.710280373832
+    },
+    "confidence_shown.primary_explanation_rate": {
+      "ci_high": 1.0,
+      "ci_low": 1.0,
+      "estimate": 1.0
+    },
+    "confidence_shown.unavailable_self_reported.baseline": {
+      "ci_high": 0.81308411215,
+      "ci_low": 0.654205607477,
+      "estimate": 0.738317757009
+    },
+    "confidence_shown.unavailable_self_reported.confidence": {
+      "ci_high": 0.0,
+      "ci_low": 0.0,
+      "estimate": 0.0
+    },
+    "confidence_shown.unavailable_self_reported.model_identity": {
+      "ci_high": 0.616822429907,
+      "ci_low": 0.429906542056,
+      "estimate": 0.523364485981
+    },
+    "misleading_reliability_card.primary_explanation_rate": {
+      "ci_high": 1.0,
+      "ci_low": 1.0,
+      "estimate": 1.0
+    },
+    "misleading_reliability_card.unavailable_self_reported.baseline": {
+      "ci_high": 1.0,
+      "ci_low": 1.0,
+      "estimate": 1.0
+    },
+    "misleading_reliability_card.unavailable_self_reported.confidence": {
+      "ci_high": 0.794392523364,
+      "ci_low": 0.616822429907,
+      "estimate": 0.700934579439
+    },
+    "misleading_reliability_card.unavailable_self_reported.model_identity": {
+      "ci_high": 0.794392523364,
+      "ci_low": 0.626168224299,
+      "estimate": 0.710280373832
+    },
+    "model_name_shown.primary_explanation_rate": {
+      "ci_high": 1.0,
+      "ci_low": 1.0,
+      "estimate": 1.0
+    },
+    "model_name_shown.unavailable_self_reported.baseline": {
+      "ci_high": 0.990654205607,
+      "ci_low": 0.915887850467,
+      "estimate": 0.96261682243
+    },
+    "model_name_shown.unavailable_self_reported.confidence": {
+      "ci_high": 0.785046728972,
+      "ci_low": 0.607476635514,
+      "estimate": 0.700934579439
+    },
+    "model_name_shown.unavailable_self_reported.model_identity": {
+      "ci_high": 0.0,
+      "ci_low": 0.0,
+      "estimate": 0.0
+    },
+    "no_cue.unavailable_self_reported.baseline": {
+      "ci_high": 0.981308411215,
+      "ci_low": 0.897196261682,
+      "estimate": 0.943925233645
+    },
+    "no_cue.unavailable_self_reported.confidence": {
+      "ci_high": 0.878504672897,
+      "ci_low": 0.728971962617,
+      "estimate": 0.803738317757
+    },
+    "no_cue.unavailable_self_reported.model_identity": {
+      "ci_high": 0.906542056075,
+      "ci_low": 0.757009345794,
+      "estimate": 0.831775700935
+    }
+  },
+  "paired_cue_effects": {
+    "additive_disagreement_shown": {
+      "action_changed_rate": {
+        "ci_high": 0.620007115463,
+        "ci_low": 0.534476286125,
+        "estimate": 0.576881526828
+      },
+      "delta_assay": {
+        "ci_high": 0.066860656438,
+        "ci_low": 0.017239836596,
+        "estimate": 0.041411595247
+      },
+      "delta_correct": {
+        "ci_high": 0.065494056481,
+        "ci_low": 0.025958648444,
+        "estimate": 0.045012603529
+      },
+      "delta_net": {
+        "ci_high": 0.03697772974,
+        "ci_low": 0.01189922892,
+        "estimate": 0.024306805906
+      },
+      "delta_trust_error": {
+        "ci_high": -0.127235639714,
+        "ci_low": -0.171472323765,
+        "estimate": -0.149441843716
+      },
+      "delta_verify_wrong": {
+        "ci_high": 0.069257487356,
+        "ci_low": 0.029393990636,
+        "estimate": 0.04897371264
+      },
+      "n_pairs": 2777
+    },
+    "anonymized_genes": {
+      "action_changed_rate": {
+        "ci_high": 0.22386021634,
+        "ci_low": 0.151495275792,
+        "estimate": 0.185091825711
+      },
+      "delta_assay": {
+        "ci_high": 0.022478947246,
+        "ci_low": -0.008857247855,
+        "estimate": 0.006481814908
+      },
+      "delta_correct": {
+        "ci_high": 0.018418455797,
+        "ci_low": -0.00463664879,
+        "estimate": 0.006841915736
+      },
+      "delta_net": {
+        "ci_high": 0.013733657793,
+        "ci_low": -0.007174962239,
+        "estimate": 0.003601008282
+      },
+      "delta_trust_error": {
+        "ci_high": 0.001796186118,
+        "ci_low": -0.022827485247,
+        "estimate": -0.01008282319
+      },
+      "delta_verify_wrong": {
+        "ci_high": 0.019452433187,
+        "ci_low": -0.000725909163,
+        "estimate": 0.008642419878
+      },
+      "n_pairs": 2777
+    },
+    "confidence_shown": {
+      "action_changed_rate": {
+        "ci_high": 0.730043923448,
+        "ci_low": 0.662918711719,
+        "estimate": 0.697515304285
+      },
+      "delta_assay": {
+        "ci_high": -0.08312718591,
+        "ci_low": -0.117340361441,
+        "estimate": -0.100828231905
+      },
+      "delta_correct": {
+        "ci_high": 0.032697478314,
+        "ci_low": -0.008194049312,
+        "estimate": 0.011883327332
+      },
+      "delta_net": {
+        "ci_high": 0.080811435288,
+        "ci_low": 0.043156295435,
+        "estimate": 0.062297443284
+      },
+      "delta_trust_error": {
+        "ci_high": -0.145654832317,
+        "ci_low": -0.192539037713,
+        "estimate": -0.169967590925
+      },
+      "delta_verify_wrong": {
+        "ci_high": -0.023992502996,
+        "ci_low": -0.043371985297,
+        "estimate": -0.034209578682
+      },
+      "n_pairs": 2777
+    },
+    "misleading_reliability_card": {
+      "action_changed_rate": {
+        "ci_high": 0.714490225817,
+        "ci_low": 0.639010780011,
+        "estimate": 0.67626935542
+      },
+      "delta_assay": {
+        "ci_high": -0.035617271639,
+        "ci_low": -0.089464716664,
+        "estimate": -0.062657544112
+      },
+      "delta_correct": {
+        "ci_high": -0.034226869683,
+        "ci_low": -0.064367571034,
+        "estimate": -0.04897371264
+      },
+      "delta_net": {
+        "ci_high": -0.003972433892,
+        "ci_low": -0.032569573073,
+        "estimate": -0.017644940583
+      },
+      "delta_trust_error": {
+        "ci_high": -0.015933557364,
+        "ci_low": -0.067732723003,
+        "estimate": -0.04069139359
+      },
+      "delta_verify_wrong": {
+        "ci_high": -0.027886584031,
+        "ci_low": -0.053479643942,
+        "estimate": -0.04069139359
+      },
+      "n_pairs": 2777
+    },
+    "model_name_shown": {
+      "action_changed_rate": {
+        "ci_high": 0.170832196657,
+        "ci_low": 0.104313092871,
+        "estimate": 0.135758012243
+      },
+      "delta_assay": {
+        "ci_high": 0.010778199575,
+        "ci_low": -0.011905493155,
+        "estimate": -0.001440403313
+      },
+      "delta_correct": {
+        "ci_high": 0.0,
+        "ci_low": -0.015070880516,
+        "estimate": -0.007202016565
+      },
+      "delta_net": {
+        "ci_high": 0.000726477208,
+        "ci_low": -0.013938796216,
+        "estimate": -0.006481814908
+      },
+      "delta_trust_error": {
+        "ci_high": 0.0,
+        "ci_low": -0.017887016699,
+        "estimate": -0.008282319049
+      },
+      "delta_verify_wrong": {
+        "ci_high": 0.001015615153,
+        "ci_low": -0.009762629742,
+        "estimate": -0.004321209939
+      },
+      "n_pairs": 2777
+    }
+  },
+  "phase": "phase0c",
+  "source": "phase0b_full_nonleakage_sonnet",
+  "status": "panel_cluster_bootstrap_robustness_summary"
+}

@@ -1,0 +1,56 @@
+{
+  "claim_boundary": "Offline deterministic gate only; no new Claude calls, no true-SFM faithfulness claim, and no biological interpretation claim.",
+  "fixed_policy": {
+    "action_rule": "If risk >= action_threshold, choose default_baseline when the additive baseline disagrees with the specialist model, otherwise choose verify_assay. If risk < threshold, choose trust_sfm.",
+    "action_threshold": 0.5,
+    "combined_weights": {
+      "additive_disagreement_risk": 0.45,
+      "scfoundation_neighbor_disagreement_risk": 0.2,
+      "sfm_margin_risk": 0.35
+    },
+    "effect_call_threshold_abs_log2fc": 0.25,
+    "margin_window_abs_log2fc": 0.25,
+    "risk_features": {
+      "additive_disagreement_risk": "High when the additive baseline call disagrees with the specialist model and/or the log2FC gap is large.",
+      "scfoundation_neighbor_disagreement_risk": "Real Phase 1B edge-neighbor SFM-call disagreement rate.",
+      "sfm_margin_risk": "High when abs(sfm_log2fc) is close to the effect/no-effect call boundary; this is a specialist-output uncertainty proxy."
+    }
+  },
+  "goal": "Test whether converting specialist/SFM evidence into an explicit calibrated reliability interface can improve routing reward before spending on another LLM pilot.",
+  "model_visible_interface_schema": {
+    "reliability_interface": {
+      "calibration_status": "offline_gate_not_biology_calibrated",
+      "estimated_sfm_wrong_risk": "float in [0, 1]",
+      "evidence_basis": [
+        "sfm_log2fc_margin",
+        "additive_disagreement",
+        "scfoundation_neighbor_disagreement"
+      ],
+      "recommended_action": "trust_sfm | verify_assay | default_baseline",
+      "risk_bucket": "low | medium | high"
+    }
+  },
+  "next_step_if_passes": "Create a small Phase 1C LLM pilot only after this deterministic interface passes the offline gate.",
+  "offline_gate_criteria": [
+    "combined_real net_reward_per_gene at lambda 0.5 exceeds no_signal_llm",
+    "combined_real net_reward_per_gene at lambda 0.5 exceeds raw_edge_neighbor_llm",
+    "combined_real net_reward_per_gene at lambda 0.5 exceeds shuffled and random controls",
+    "combined_real is compared against margin-only, additive-only, and neighbor-only ablations"
+  ],
+  "phase": "phase1c",
+  "source_artifacts": {
+    "neighbor_report": {
+      "path": "experiments/trust_cue_attribution/results/phase1b_edge_neighbor/neighbor_signal_report.json",
+      "sha256": "435658afe587330357afa08032e41baade8b6ff59893d858bf66da1d355b996a"
+    },
+    "panels": {
+      "path": "experiments/trust_cue_attribution/hpc_outputs/phase0_smoke/panels_full.jsonl",
+      "sha256": "b22a2190b4cbdf077f0e54ab017983988fb0e5c6d3cbb26f7a8247829c2b0998"
+    },
+    "phase1b_summary": {
+      "path": "experiments/trust_cue_attribution/results/phase1b_signal_pilot/summary.json",
+      "sha256": "92413f6ab4e72e7f70b08907d325f456f98e8b4a062bcc03ee13639acf66152f"
+    }
+  },
+  "status": "design_ready"
+}

@@ -1,0 +1,356 @@
+{
+  "baseline_cue": "no_internal_signal",
+  "cue_metrics": {
+    "no_internal_signal": {
+      "accuracy": 0.787302,
+      "assays_per_gene": 0.253968,
+      "default_baseline_rate": 0.063492,
+      "genes": 315,
+      "net_reward_per_gene": 0.660317,
+      "trust_error_rate": 0.206349,
+      "verify_rate": 0.253968
+    },
+    "scfoundation_internal_signal_shown": {
+      "accuracy": 0.793651,
+      "assays_per_gene": 0.228571,
+      "default_baseline_rate": 0.085714,
+      "genes": 315,
+      "net_reward_per_gene": 0.679365,
+      "trust_error_rate": 0.190476,
+      "verify_rate": 0.228571
+    },
+    "shuffled_internal_signal_shown": {
+      "accuracy": 0.790476,
+      "assays_per_gene": 0.228571,
+      "default_baseline_rate": 0.120635,
+      "genes": 315,
+      "net_reward_per_gene": 0.67619,
+      "trust_error_rate": 0.165079,
+      "verify_rate": 0.228571
+    }
+  },
+  "interpretation": {
+    "next_design_step": "Sharpen the internal signal into decision-relevant evidence and add stronger irrelevant-signal controls before scaling.",
+    "short_read": "Real internal signal and shuffled placebo move routing in similar directions; treat this as cue-sensitivity evidence, not faithful scFoundation-internal interpretation evidence."
+  },
+  "lambda": 0.5,
+  "paired_effects_vs_baseline": {
+    "scfoundation_internal_signal_shown": {
+      "action_changed_rate": 0.146032,
+      "action_shifts": {
+        "default_baseline->trust_sfm": 9,
+        "trust_sfm->default_baseline": 9,
+        "trust_sfm->verify_assay": 10,
+        "verify_assay->default_baseline": 7,
+        "verify_assay->trust_sfm": 11
+      },
+      "delta_assay": -0.025397,
+      "delta_correct": 0.006349,
+      "delta_net": 0.019048,
+      "delta_trust_error": -0.015873,
+      "delta_verify_wrong": -0.003175,
+      "n_pairs": 315
+    },
+    "shuffled_internal_signal_shown": {
+      "action_changed_rate": 0.184127,
+      "action_shifts": {
+        "default_baseline->trust_sfm": 7,
+        "trust_sfm->default_baseline": 25,
+        "trust_sfm->verify_assay": 9,
+        "verify_assay->trust_sfm": 17
+      },
+      "delta_assay": -0.025397,
+      "delta_correct": 0.003175,
+      "delta_net": 0.015873,
+      "delta_trust_error": -0.04127,
+      "delta_verify_wrong": 0.0,
+      "n_pairs": 315
+    }
+  },
+  "panel_deltas": {
+    "ATL1": {
+      "scfoundation_internal_signal_shown": {
+        "action_changed_rate": 0.217391,
+        "delta_assay": -0.043478,
+        "delta_correct": 0.0,
+        "delta_net": 0.021739,
+        "n_pairs": 23
+      },
+      "shuffled_internal_signal_shown": {
+        "action_changed_rate": 0.043478,
+        "delta_assay": -0.043478,
+        "delta_correct": 0.0,
+        "delta_net": 0.021739,
+        "n_pairs": 23
+      }
+    },
+    "CEBPB": {
+      "scfoundation_internal_signal_shown": {
+        "action_changed_rate": 0.033333,
+        "delta_assay": 0.033333,
+        "delta_correct": 0.0,
+        "delta_net": -0.016667,
+        "n_pairs": 30
+      },
+      "shuffled_internal_signal_shown": {
+        "action_changed_rate": 0.5,
+        "delta_assay": 0.0,
+        "delta_correct": -0.033333,
+        "delta_net": -0.033333,
+        "n_pairs": 30
+      }
+    },
+    "CEBPB+MAPK1": {
+      "scfoundation_internal_signal_shown": {
+        "action_changed_rate": 0.0,
+        "delta_assay": 0.0,
+        "delta_correct": 0.0,
+        "delta_net": 0.0,
+        "n_pairs": 29
+      },
+      "shuffled_internal_signal_shown": {
+        "action_changed_rate": 0.068966,
+        "delta_assay": -0.068966,
+        "delta_correct": -0.034483,
+        "delta_net": 0.0,
+        "n_pairs": 29
+      }
+    },
+    "DUSP9+IGDCC3": {
+      "scfoundation_internal_signal_shown": {
+        "action_changed_rate": 0.366667,
+        "delta_assay": -0.066667,
+        "delta_correct": -0.1,
+        "delta_net": -0.066667,
+        "n_pairs": 30
+      },
+      "shuffled_internal_signal_shown": {
+        "action_changed_rate": 0.266667,
+        "delta_assay": -0.033333,
+        "delta_correct": -0.066667,
+        "delta_net": -0.05,
+        "n_pairs": 30
+      }
+    },
+    "FEV+ISL2": {
+      "scfoundation_internal_signal_shown": {
+        "action_changed_rate": 0.076923,
+        "delta_assay": -0.076923,
+        "delta_correct": 0.0,
+        "delta_net": 0.038462,
+        "n_pairs": 26
+      },
+      "shuffled_internal_signal_shown": {
+        "action_changed_rate": 0.115385,
+        "delta_assay": -0.115385,
+        "delta_correct": 0.0,
+        "delta_net": 0.057692,
+        "n_pairs": 26
+      }
+    },
+    "FOXA1+FOXF1": {
+      "scfoundation_internal_signal_shown": {
+        "action_changed_rate": 0.391304,
+        "delta_assay": -0.217391,
+        "delta_correct": 0.043478,
+        "delta_net": 0.152174,
+        "n_pairs": 23
+      },
+      "shuffled_internal_signal_shown": {
+        "action_changed_rate": 0.173913,
+        "delta_assay": 0.0,
+        "delta_correct": 0.043478,
+        "delta_net": 0.043478,
+        "n_pairs": 23
+      }
+    },
+    "HOXB9": {
+      "scfoundation_internal_signal_shown": {
+        "action_changed_rate": 0.033333,
+        "delta_assay": 0.033333,
+        "delta_correct": 0.0,
+        "delta_net": -0.016667,
+        "n_pairs": 30
+      },
+      "shuffled_internal_signal_shown": {
+        "action_changed_rate": 0.033333,
+        "delta_assay": 0.033333,
+        "delta_correct": 0.0,
+        "delta_net": -0.016667,
+        "n_pairs": 30
+      }
+    },
+    "IGDCC3+MAPK1": {
+      "scfoundation_internal_signal_shown": {
+        "action_changed_rate": 0.0,
+        "delta_assay": 0.0,
+        "delta_correct": 0.0,
+        "delta_net": 0.0,
+        "n_pairs": 25
+      },
+      "shuffled_internal_signal_shown": {
+        "action_changed_rate": 0.0,
+        "delta_assay": 0.0,
+        "delta_correct": 0.0,
+        "delta_net": 0.0,
+        "n_pairs": 25
+      }
+    },
+    "MAP2K3+SLC38A2": {
+      "scfoundation_internal_signal_shown": {
+        "action_changed_rate": 0.32,
+        "delta_assay": 0.08,
+        "delta_correct": 0.2,
+        "delta_net": 0.16,
+        "n_pairs": 25
+      },
+      "shuffled_internal_signal_shown": {
+        "action_changed_rate": 0.28,
+        "delta_assay": 0.12,
+        "delta_correct": 0.24,
+        "delta_net": 0.18,
+        "n_pairs": 25
+      }
+    },
+    "PTPN1": {
+      "scfoundation_internal_signal_shown": {
+        "action_changed_rate": 0.26087,
+        "delta_assay": -0.043478,
+        "delta_correct": -0.043478,
+        "delta_net": -0.021739,
+        "n_pairs": 23
+      },
+      "shuffled_internal_signal_shown": {
+        "action_changed_rate": 0.26087,
+        "delta_assay": -0.130435,
+        "delta_correct": -0.043478,
+        "delta_net": 0.021739,
+        "n_pairs": 23
+      }
+    },
+    "SAMD1+UBASH3B": {
+      "scfoundation_internal_signal_shown": {
+        "action_changed_rate": 0.047619,
+        "delta_assay": -0.047619,
+        "delta_correct": 0.0,
+        "delta_net": 0.02381,
+        "n_pairs": 21
+      },
+      "shuffled_internal_signal_shown": {
+        "action_changed_rate": 0.095238,
+        "delta_assay": -0.095238,
+        "delta_correct": -0.047619,
+        "delta_net": 0.0,
+        "n_pairs": 21
+      }
+    },
+    "SLC4A1": {
+      "scfoundation_internal_signal_shown": {
+        "action_changed_rate": 0.066667,
+        "delta_assay": 0.0,
+        "delta_correct": 0.0,
+        "delta_net": 0.0,
+        "n_pairs": 30
+      },
+      "shuffled_internal_signal_shown": {
+        "action_changed_rate": 0.3,
+        "delta_assay": 0.0,
+        "delta_correct": 0.0,
+        "delta_net": 0.0,
+        "n_pairs": 30
+      }
+    }
+  },
+  "phase": "phase1a",
+  "recommendation": {
+    "decision": "do_not_scale_yet",
+    "next_actions": [
+      "replace coarse panel-level distance card with more decision-relevant signal features",
+      "add a stronger irrelevant-signal control that preserves style but breaks panel linkage",
+      "rerun a small pilot before any full Phase 1A matrix"
+    ],
+    "reason": "placebo_effect_close_to_real_signal_effect"
+  },
+  "scope": {
+    "cue_conditions": [
+      "no_internal_signal",
+      "scfoundation_internal_signal_shown",
+      "shuffled_internal_signal_shown"
+    ],
+    "episodes": 36,
+    "gene_rows": 945,
+    "panels": 12
+  },
+  "signal_behavior_correlations": {
+    "scfoundation_internal_signal_shown": {
+      "action_changed_rate": {
+        "centroid_distance_to_control": -0.134046,
+        "centroid_l2_norm": -0.002008,
+        "mean_cell_distance_to_control": -0.183638,
+        "mean_cell_l2_norm": -0.279012,
+        "std_cell_distance_to_control": -0.134969
+      },
+      "delta_assay": {
+        "centroid_distance_to_control": -0.112166,
+        "centroid_l2_norm": 0.215345,
+        "mean_cell_distance_to_control": -0.206283,
+        "mean_cell_l2_norm": -0.167359,
+        "std_cell_distance_to_control": -0.192132
+      },
+      "delta_correct": {
+        "centroid_distance_to_control": -0.100173,
+        "centroid_l2_norm": 0.603688,
+        "mean_cell_distance_to_control": -0.348143,
+        "mean_cell_l2_norm": -0.377197,
+        "std_cell_distance_to_control": -0.575144
+      },
+      "delta_net": {
+        "centroid_distance_to_control": -0.040368,
+        "centroid_l2_norm": 0.498838,
+        "mean_cell_distance_to_control": -0.242128,
+        "mean_cell_l2_norm": -0.293482,
+        "std_cell_distance_to_control": -0.482481
+      }
+    },
+    "shuffled_internal_signal_shown": {
+      "action_changed_rate": {
+        "centroid_distance_to_control": 0.150418,
+        "centroid_l2_norm": -0.34609,
+        "mean_cell_distance_to_control": 0.233055,
+        "mean_cell_l2_norm": 0.164538,
+        "std_cell_distance_to_control": 0.193216
+      },
+      "delta_assay": {
+        "centroid_distance_to_control": -0.463765,
+        "centroid_l2_norm": 0.176622,
+        "mean_cell_distance_to_control": -0.489038,
+        "mean_cell_l2_norm": -0.520105,
+        "std_cell_distance_to_control": -0.185089
+      },
+      "delta_correct": {
+        "centroid_distance_to_control": -0.186698,
+        "centroid_l2_norm": 0.546773,
+        "mean_cell_distance_to_control": -0.409743,
+        "mean_cell_l2_norm": -0.431217,
+        "std_cell_distance_to_control": -0.522019
+      },
+      "delta_net": {
+        "centroid_distance_to_control": 0.021207,
+        "centroid_l2_norm": 0.635955,
+        "mean_cell_distance_to_control": -0.265853,
+        "mean_cell_l2_norm": -0.276573,
+        "std_cell_distance_to_control": -0.597437
+      }
+    }
+  },
+  "specificity": {
+    "placebo_action_changed_rate": 0.184127,
+    "placebo_delta_net": 0.015873,
+    "placebo_fraction_of_real_delta_net": 0.833333,
+    "real_action_changed_rate": 0.146032,
+    "real_delta_net": 0.019048,
+    "real_minus_placebo_action_changed_rate": -0.038095,
+    "real_minus_placebo_delta_net": 0.003175
+  },
+  "status": "review_ready"
+}

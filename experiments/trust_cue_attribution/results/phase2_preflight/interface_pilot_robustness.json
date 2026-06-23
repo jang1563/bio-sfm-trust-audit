@@ -1,0 +1,97 @@
+{
+  "analysis": "interface_pilot_robustness",
+  "bootstrap": {
+    "lambda": 0.5,
+    "n_boot": 1000,
+    "seed": 13,
+    "unit": "target"
+  },
+  "contrast_cis_lambda_0.5": {
+    "calibrated_interface_shown_vs_calibrated_risk_shown_no_recommendation": {
+      "ci95": [
+        0.0,
+        0.0375
+      ],
+      "ci_crosses_zero": true,
+      "delta_net_point": 0.0125,
+      "n_pairs": 40,
+      "robust_positive": false
+    },
+    "calibrated_interface_shown_vs_no_signal": {
+      "ci95": [
+        0.3375,
+        0.625
+      ],
+      "ci_crosses_zero": false,
+      "delta_net_point": 0.4875,
+      "n_pairs": 40,
+      "robust_positive": true
+    },
+    "calibrated_interface_shown_vs_raw_plddt_shown": {
+      "ci95": [
+        -0.0375,
+        0.0875
+      ],
+      "ci_crosses_zero": true,
+      "delta_net_point": 0.025,
+      "n_pairs": 40,
+      "robust_positive": false
+    },
+    "calibrated_risk_shown_no_recommendation_vs_no_signal": {
+      "ci95": [
+        0.325,
+        0.6125
+      ],
+      "ci_crosses_zero": false,
+      "delta_net_point": 0.475,
+      "n_pairs": 40,
+      "robust_positive": true
+    },
+    "inverted_reliability_interface_control_vs_no_signal": {
+      "ci95": [
+        0.025,
+        0.25
+      ],
+      "ci_crosses_zero": false,
+      "delta_net_point": 0.1375,
+      "n_pairs": 40,
+      "robust_positive": true
+    },
+    "raw_plddt_shown_vs_no_signal": {
+      "ci95": [
+        0.3,
+        0.6125
+      ],
+      "ci_crosses_zero": false,
+      "delta_net_point": 0.4625,
+      "n_pairs": 40,
+      "robust_positive": true
+    }
+  },
+  "correct_lddt_cutoff": 0.9,
+  "lambda_sweep_net_per_target": {
+    "0.2": {
+      "calibrated_interface_shown": 0.85,
+      "calibrated_risk_shown_no_recommendation": 0.83,
+      "inverted_reliability_interface_control": 0.62,
+      "no_signal": 0.4,
+      "raw_plddt_shown": 0.78
+    },
+    "0.5": {
+      "calibrated_interface_shown": 0.7375,
+      "calibrated_risk_shown_no_recommendation": 0.725,
+      "inverted_reliability_interface_control": 0.3875,
+      "no_signal": 0.25,
+      "raw_plddt_shown": 0.7125
+    },
+    "0.8": {
+      "calibrated_interface_shown": 0.625,
+      "calibrated_risk_shown_no_recommendation": 0.62,
+      "inverted_reliability_interface_control": 0.155,
+      "no_signal": 0.1,
+      "raw_plddt_shown": 0.645
+    }
+  },
+  "n_targets": 40,
+  "phase": "phase2"
+}

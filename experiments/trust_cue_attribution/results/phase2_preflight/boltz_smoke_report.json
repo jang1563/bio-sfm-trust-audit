@@ -1,0 +1,31 @@
+{
+  "phase": "phase2",
+  "status": "boltz_stack_validated_ready_for_target_curation",
+  "claim_boundary": "Tiny wiring smoke only (ubiquitin, 76aa monomer). Validates the Boltz-2 execution stack and the records parser; NOT a scientific result and NOT an LLM-trust result.",
+  "cayuga_job": "3046192",
+  "node": "g0003",
+  "gpu": "NVIDIA A40",
+  "boltz_version": "2.2.1",
+  "model": "boltz2",
+  "python": "3.12.13",
+  "torch": "2.12.1+cu130",
+  "cuda_available_on_node": true,
+  "msa_server": "https://api.colabfold.com",
+  "msa_server_reachable_from_compute_node": true,
+  "kernels": "disabled via --no_kernels (cuequivariance_torch not installed; avoids cu13 build risk; pure-torch fallback)",
+  "inference_seconds_approx": 18,
+  "smoke_target": {"id": "ubiquitin", "regime": "monomer", "length_aa": 76},
+  "confidence_json": {
+    "confidence_score": 0.933216,
+    "complex_plddt": 0.937534,
+    "complex_iplddt": 0.937534,
+    "ptm": 0.91594,
+    "iptm": 0.0,
+    "protein_iptm": 0.0
+  },
+  "plddt_scale": "0_to_1_confirmed; phase2_records.to_plddt_0_100 multiplies by 100 (0.9375 -> 93.75)",
+  "iptm_for_monomer": "0.0 emitted; phase2_records sets iptm=None for monomers",
+  "confidence_path_pattern": "<out_dir>/boltz_results_<stem>/predictions/<id>/confidence_<id>_model_0.json (matches phase2_records.find_confidence_json glob)",
+  "validated_predict_command": "boltz predict <targets>.fasta --out_dir <dir> --cache $BOLTZ_CACHE --use_msa_server --accelerator gpu --model boltz2 --no_kernels --override --output_format mmcif",
+  "next_gate": "leakage-safe post-cutoff target curation (user decision) + lDDT/DockQ truth + template baseline, then phase2-calibration-gate"
+}

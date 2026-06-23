@@ -1,0 +1,210 @@
+{
+  "claim_boundary": "Exploratory granularity diagnostic only; no full Phase 1A, true-SFM trust, or biological interpretation claim.",
+  "decision": {
+    "best_primary_panel_signal_auc": {
+      "auc": 0.467366,
+      "auc_direction_invariant": 0.532634,
+      "score_field": "centroid_distance_to_control"
+    },
+    "best_reference_edge_score_auc": {
+      "auc": 0.648785,
+      "auc_direction_invariant": 0.648785,
+      "score_field": "baseline_call_disagreement"
+    },
+    "mixed_panel_fraction": 1.0,
+    "next_actions": [
+      "do not scale the current panel-constant scFoundation cue",
+      "build readout-gene-specific or task-aligned internal evidence",
+      "compare that edge-level cue against baseline-disagreement and shuffled controls"
+    ],
+    "reason": "panel_constant_signal_weak_for_edge_wrongness",
+    "scale_decision": "edge_level_signal_required",
+    "short_read": "The selected panels mostly mix correct and wrong genes, while the panel-level scFoundation scores weakly predict edge wrongness."
+  },
+  "edge_level_auc": {
+    "baseline_abs_fm_minus_baseline": {
+      "auc_direction_invariant": 0.530684,
+      "auc_higher_score_means_more_wrong": 0.469316,
+      "n": 313
+    },
+    "baseline_call_disagreement": {
+      "auc_direction_invariant": 0.648785,
+      "auc_higher_score_means_more_wrong": 0.648785,
+      "n": 315
+    },
+    "centroid_distance_to_control": {
+      "auc_direction_invariant": 0.532634,
+      "auc_higher_score_means_more_wrong": 0.467366,
+      "n": 315
+    },
+    "centroid_l2_norm": {
+      "auc_direction_invariant": 0.54032,
+      "auc_higher_score_means_more_wrong": 0.54032,
+      "n": 315
+    },
+    "mean_cell_distance_to_control": {
+      "auc_direction_invariant": 0.549802,
+      "auc_higher_score_means_more_wrong": 0.450198,
+      "n": 315
+    },
+    "mean_cell_l2_norm": {
+      "auc_direction_invariant": 0.547823,
+      "auc_higher_score_means_more_wrong": 0.452177,
+      "n": 315
+    },
+    "panel_wrong_rate_hidden_oracle": {
+      "auc_direction_invariant": 0.593851,
+      "auc_higher_score_means_more_wrong": 0.593851,
+      "n": 315
+    },
+    "reliability_signal_score": {
+      "auc_direction_invariant": 0.53031,
+      "auc_higher_score_means_more_wrong": 0.53031,
+      "n": 313
+    },
+    "sfm_abs_log2fc": {
+      "auc_direction_invariant": 0.660407,
+      "auc_higher_score_means_more_wrong": 0.339593,
+      "n": 315
+    },
+    "std_cell_distance_to_control": {
+      "auc_direction_invariant": 0.543588,
+      "auc_higher_score_means_more_wrong": 0.456412,
+      "n": 315
+    },
+    "std_cell_l2_norm": {
+      "auc_direction_invariant": 0.516294,
+      "auc_higher_score_means_more_wrong": 0.483706,
+      "n": 315
+    }
+  },
+  "interpretation": {
+    "method_note": "Panel-constant scores give every gene in a perturbation the same risk value, so mixed panels expose a unit mismatch.",
+    "next_design_step": "Build the next scFoundation cue around readout-gene-specific or task-aligned evidence, not only perturbation-level distance.",
+    "short_read": "The selected panels mostly mix correct and wrong genes, while the panel-level scFoundation scores weakly predict edge wrongness."
+  },
+  "panel_mixture": {
+    "mixed_panel_count": 12,
+    "mixed_panel_fraction": 1.0,
+    "panel_count": 12,
+    "panels": [
+      {
+        "correct_edges": 17,
+        "edges": 23,
+        "mixed_correct_and_wrong": true,
+        "panel_id": "ATL1",
+        "wrong_edges": 6,
+        "wrong_rate": 0.26087
+      },
+      {
+        "correct_edges": 20,
+        "edges": 30,
+        "mixed_correct_and_wrong": true,
+        "panel_id": "CEBPB",
+        "wrong_edges": 10,
+        "wrong_rate": 0.333333
+      },
+      {
+        "correct_edges": 21,
+        "edges": 29,
+        "mixed_correct_and_wrong": true,
+        "panel_id": "CEBPB+MAPK1",
+        "wrong_edges": 8,
+        "wrong_rate": 0.275862
+      },
+      {
+        "correct_edges": 23,
+        "edges": 30,
+        "mixed_correct_and_wrong": true,
+        "panel_id": "DUSP9+IGDCC3",
+        "wrong_edges": 7,
+        "wrong_rate": 0.233333
+      },
+      {
+        "correct_edges": 19,
+        "edges": 26,
+        "mixed_correct_and_wrong": true,
+        "panel_id": "FEV+ISL2",
+        "wrong_edges": 7,
+        "wrong_rate": 0.269231
+      },
+      {
+        "correct_edges": 17,
+        "edges": 23,
+        "mixed_correct_and_wrong": true,
+        "panel_id": "FOXA1+FOXF1",
+        "wrong_edges": 6,
+        "wrong_rate": 0.26087
+      },
+      {
+        "correct_edges": 22,
+        "edges": 30,
+        "mixed_correct_and_wrong": true,
+        "panel_id": "HOXB9",
+        "wrong_edges": 8,
+        "wrong_rate": 0.266667
+      },
+      {
+        "correct_edges": 16,
+        "edges": 25,
+        "mixed_correct_and_wrong": true,
+        "panel_id": "IGDCC3+MAPK1",
+        "wrong_edges": 9,
+        "wrong_rate": 0.36
+      },
+      {
+        "correct_edges": 13,
+        "edges": 25,
+        "mixed_correct_and_wrong": true,
+        "panel_id": "MAP2K3+SLC38A2",
+        "wrong_edges": 12,
+        "wrong_rate": 0.48
+      },
+      {
+        "correct_edges": 13,
+        "edges": 23,
+        "mixed_correct_and_wrong": true,
+        "panel_id": "PTPN1",
+        "wrong_edges": 10,
+        "wrong_rate": 0.434783
+      },
+      {
+        "correct_edges": 14,
+        "edges": 21,
+        "mixed_correct_and_wrong": true,
+        "panel_id": "SAMD1+UBASH3B",
+        "wrong_edges": 7,
+        "wrong_rate": 0.333333
+      },
+      {
+        "correct_edges": 18,
+        "edges": 30,
+        "mixed_correct_and_wrong": true,
+        "panel_id": "SLC4A1",
+        "wrong_edges": 12,
+        "wrong_rate": 0.4
+      }
+    ]
+  },
+  "phase": "phase1a",
+  "primary_question": "Is a panel-level scFoundation signal granular enough for edge-level verify/trust decisions?",
+  "scope": {
+    "correct_edges": 213,
+    "edge_rows": 315,
+    "matched_panels": 12,
+    "primary_panel_signal_fields": [
+      "centroid_distance_to_control",
+      "mean_cell_distance_to_control",
+      "std_cell_distance_to_control"
+    ],
+    "reference_edge_score_fields": [
+      "reliability_signal_score",
+      "baseline_abs_fm_minus_baseline",
+      "baseline_call_disagreement",
+      "sfm_abs_log2fc"
+    ],
+    "selected_panels": 12,
+    "wrong_edges": 102
+  },
+  "status": "signal_granularity_ready"
+}

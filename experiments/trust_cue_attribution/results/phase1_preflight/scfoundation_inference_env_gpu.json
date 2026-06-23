@@ -1,0 +1,134 @@
+{
+  "adapter": "ScFoundationAdapter",
+  "claim_boundary": "inference environment probe only; no checkpoint load, embedding, or LLM trust claim",
+  "module_imports": [
+    {
+      "error": null,
+      "file": "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/envs/scfoundation-smoke-py39/lib/python3.9/site-packages/numpy/__init__.py",
+      "module": "numpy",
+      "ok": true,
+      "version": "1.26.4"
+    },
+    {
+      "error": null,
+      "file": "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/envs/scfoundation-smoke-py39/lib/python3.9/site-packages/pandas/__init__.py",
+      "module": "pandas",
+      "ok": true,
+      "version": "2.3.3"
+    },
+    {
+      "error": null,
+      "file": "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/envs/scfoundation-smoke-py39/lib/python3.9/site-packages/scipy/__init__.py",
+      "module": "scipy",
+      "ok": true,
+      "version": "1.13.1"
+    },
+    {
+      "error": null,
+      "file": "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/envs/scfoundation-smoke-py39/lib/python3.9/site-packages/torch/__init__.py",
+      "module": "torch",
+      "ok": true,
+      "version": "2.8.0"
+    },
+    {
+      "error": null,
+      "file": "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/envs/scfoundation-smoke-py39/lib/python3.9/site-packages/einops/__init__.py",
+      "module": "einops",
+      "ok": true,
+      "version": "0.8.2"
+    },
+    {
+      "error": null,
+      "file": "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/envs/scfoundation-smoke-py39/lib/python3.9/site-packages/scanpy/__init__.py",
+      "module": "scanpy",
+      "ok": true,
+      "version": "1.10.3"
+    },
+    {
+      "error": null,
+      "file": "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/envs/scfoundation-smoke-py39/lib/python3.9/site-packages/anndata/__init__.py",
+      "module": "anndata",
+      "ok": true,
+      "version": "0.10.9"
+    },
+    {
+      "error": null,
+      "file": "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/envs/scfoundation-smoke-py39/lib/python3.9/site-packages/h5py/__init__.py",
+      "module": "h5py",
+      "ok": true,
+      "version": "3.14.0"
+    },
+    {
+      "error": null,
+      "file": "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/envs/scfoundation-smoke-py39/lib/python3.9/site-packages/local_attention/__init__.py",
+      "module": "local_attention",
+      "ok": true,
+      "version": "1.11.2"
+    }
+  ],
+  "next_actions": [
+    "Run a tiny scFoundation embedding smoke on one to five cells.",
+    "Write compact internal-signal summaries only; keep large embeddings under hpc_outputs."
+  ],
+  "nvidia_smi": {
+    "available": true,
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "GPU 0: NVIDIA A100 80GB PCIe (UUID: GPU-96774527-bded-6faa-6e5c-62e321431059)"
+  },
+  "paths": {
+    "checkpoint": {
+      "exists": true,
+      "kind": "file",
+      "matches_kind": true,
+      "path": "/scratch/USER/huggingface/benchmark/scFoundation/model/models/models.ckpt"
+    },
+    "get_embedding_py": {
+      "exists": true,
+      "kind": "file",
+      "matches_kind": true,
+      "path": "/scratch/USER/huggingface/benchmark/scFoundation/model/get_embedding.py"
+    },
+    "load_py": {
+      "exists": true,
+      "kind": "file",
+      "matches_kind": true,
+      "path": "/scratch/USER/huggingface/benchmark/scFoundation/model/load.py"
+    },
+    "model_dir": {
+      "exists": true,
+      "kind": "dir",
+      "matches_kind": true,
+      "path": "/scratch/USER/huggingface/benchmark/scFoundation/model"
+    },
+    "scfoundation_dir": {
+      "exists": true,
+      "kind": "dir",
+      "matches_kind": true,
+      "path": "/scratch/USER/huggingface/benchmark/scFoundation"
+    }
+  },
+  "phase": "phase1",
+  "python": {
+    "executable": "/scratch/USER/LLM_SFM_interpretability/experiments/trust_cue_attribution/hpc_outputs/envs/scfoundation-smoke-py39/bin/python",
+    "platform": "Linux-4.18.0-553.124.1.el8_10.x86_64-x86_64-with-glibc2.28",
+    "version": "3.9.23"
+  },
+  "require_cuda": true,
+  "scfoundation_import": {
+    "enabled": true,
+    "error": null,
+    "ok": true
+  },
+  "status": "ready_for_inference_smoke",
+  "torch": {
+    "cuda_available": true,
+    "cuda_device_count": 1,
+    "cuda_device_names": [
+      "NVIDIA A100 80GB PCIe"
+    ],
+    "cuda_version": "12.8",
+    "import_ok": true,
+    "version": "2.8.0+cu128"
+  }
+}

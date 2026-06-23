@@ -1,0 +1,133 @@
+{
+  "adapter": "ScFoundationAdapter",
+  "claim_boundary": "input compatibility inventory only; no scFoundation inference or LLM trust claim",
+  "gene_overlap": {
+    "extra_input_gene_count": 40,
+    "input_gene_count": 834,
+    "missing_vocabulary_gene_count": 18470,
+    "overlap_count": 794,
+    "overlap_fraction_of_input": 0.9520383693045563,
+    "vocabulary_coverage_fraction": 0.04121677740863788,
+    "vocabulary_gene_count": 19264
+  },
+  "gene_vocabulary": {
+    "gene_count": 19264,
+    "sample": [
+      "A1BG",
+      "A1CF",
+      "A2M",
+      "A2ML1",
+      "A3GALT2",
+      "A4GALT",
+      "A4GNT",
+      "AAAS",
+      "AACS",
+      "AADAC",
+      "AADACL2",
+      "AADACL3"
+    ]
+  },
+  "h5ad": {
+    "anndata_error": "missing_anndata",
+    "format": "h5ad",
+    "gene_names_sample": [
+      "ABL1",
+      "ABO",
+      "ABR",
+      "ABRACL",
+      "ABT1",
+      "ACBD3",
+      "ACP5",
+      "ACSM3",
+      "ACY1",
+      "ADRM1",
+      "AFF3",
+      "AFTPH"
+    ],
+    "n_obs": 19464,
+    "n_vars": 834,
+    "obs_columns": [],
+    "obs_names_sample": [],
+    "readable": true,
+    "reader": "h5dump",
+    "var_columns": [
+      "_index"
+    ],
+    "x_is_sparse": null
+  },
+  "module_checks": [
+    {
+      "available": false,
+      "module": "numpy",
+      "required_for_scFoundation_inference": true
+    },
+    {
+      "available": false,
+      "module": "pandas",
+      "required_for_scFoundation_inference": true
+    },
+    {
+      "available": false,
+      "module": "scipy",
+      "required_for_scFoundation_inference": true
+    },
+    {
+      "available": false,
+      "module": "torch",
+      "required_for_scFoundation_inference": true
+    },
+    {
+      "available": false,
+      "module": "einops",
+      "required_for_scFoundation_inference": true
+    },
+    {
+      "available": false,
+      "module": "scanpy",
+      "required_for_scFoundation_inference": true
+    },
+    {
+      "available": false,
+      "module": "local_attention",
+      "required_for_scFoundation_inference": true
+    },
+    {
+      "available": true,
+      "module": "h5dump",
+      "required_for_scFoundation_inference": false
+    }
+  ],
+  "next_actions": [
+    "Run a minimal scFoundation adapter smoke job that writes internal-signal summaries for a tiny input subset.",
+    "Use this HVG/subset input for wiring only; use a fuller gene-space input before scientific interpretation.",
+    "Keep hidden truth, reward, and scorer fields out of model-visible cue packets.",
+    "Before full inference, install or select an environment with: numpy, pandas, scipy, torch, einops, scanpy, local_attention."
+  ],
+  "paths": {
+    "gene_index": {
+      "exists": true,
+      "kind": "file",
+      "matches_kind": true,
+      "path": "/scratch/USER/huggingface/benchmark/scFoundation/OS_scRNA_gene_index.19264.tsv"
+    },
+    "input_data": {
+      "exists": true,
+      "kind": "file",
+      "matches_kind": true,
+      "path": "/scratch/USER/Perturb_seq/virtual_cell/2026_03_18_cfgA/data/fram2_val.h5ad"
+    }
+  },
+  "phase": "phase1",
+  "python": {
+    "executable": "/usr/bin/python3.12",
+    "platform": "Linux-4.18.0-553.124.1.el8_10.x86_64-x86_64-with-glibc2.28",
+    "version": "3.12.13"
+  },
+  "quality_warnings": [
+    "low_fraction_of_scfoundation_vocabulary_observed_input_is_likely_hvg_or_subset"
+  ],
+  "status": "ready_for_adapter_smoke",
+  "thresholds": {
+    "min_overlap": 500
+  }
+}
