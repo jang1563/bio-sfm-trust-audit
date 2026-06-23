@@ -1,0 +1,18 @@
+{
+  "what": "Validation of the v1 home-grown all-chain CA-lDDT (complex truth) against gold-standard DockQ, on the 40 v1 complex targets. Boltz-2 predictions vs RCSB references, DockQ v2 (bioconda) automatic chain mapping.",
+  "n_complexes": 40,
+  "pearson_plddt_vs_dockq": 0.4351,
+  "pearson_iptm_vs_dockq": 0.7747,
+  "pearson_caLDDTv1_vs_dockq": 0.3032,
+  "pearson_plddt_vs_caLDDTv1": 0.1617,
+  "dockq_median": 0.45,
+  "dockq_min": 0.013,
+  "dockq_max": 0.951,
+  "dockq_acceptable_ge_0.23": 33,
+  "dockq_medium_ge_0.49": 18,
+  "interpretation": [
+    "The report's complex 'calibration collapse' (pLDDT vs CA-lDDT = 0.16) is largely a CA-lDDT metric artifact: pLDDT vs gold-standard DockQ = 0.44, and the home-grown CA-lDDT agrees with DockQ at only 0.30 (it is intra-chain-dominated, as flagged in adversarial review).",
+    "The specialist DOES emit a well-calibrated interface confidence: ipTM vs DockQ = 0.77. The v1 report under-sold complex calibration by using pLDDT as the cue and CA-lDDT as truth.",
+    "Implication for the redo: score complexes with DockQ (done here) and use ipTM (not pLDDT) as the complex reliability signal."
+  ]
+}
