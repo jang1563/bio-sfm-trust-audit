@@ -1,0 +1,172 @@
+{
+  "targets": [
+    {
+      "target_id": "9v4l",
+      "pdb_id": "9V4L",
+      "regime": "monomer",
+      "n_protein_chains": 1,
+      "total_len": 68,
+      "max_precutoff_identity": 0.0
+    },
+    {
+      "target_id": "10xd",
+      "pdb_id": "10XD",
+      "regime": "monomer",
+      "n_protein_chains": 1,
+      "total_len": 93,
+      "max_precutoff_identity": 0.0
+    },
+    {
+      "target_id": "9vgj",
+      "pdb_id": "9VGJ",
+      "regime": "monomer",
+      "n_protein_chains": 1,
+      "total_len": 123,
+      "max_precutoff_identity": 0.0
+    },
+    {
+      "target_id": "9v3a",
+      "pdb_id": "9V3A",
+      "regime": "monomer",
+      "n_protein_chains": 1,
+      "total_len": 123,
+      "max_precutoff_identity": 0.0
+    },
+    {
+      "target_id": "9wex",
+      "pdb_id": "9WEX",
+      "regime": "monomer",
+      "n_protein_chains": 1,
+      "total_len": 132,
+      "max_precutoff_identity": 0.0
+    },
+    {
+      "target_id": "9z71",
+      "pdb_id": "9Z71",
+      "regime": "monomer",
+      "n_protein_chains": 1,
+      "total_len": 184,
+      "max_precutoff_identity": 0.0
+    },
+    {
+      "target_id": "23vl",
+      "pdb_id": "23VL",
+      "regime": "monomer",
+      "n_protein_chains": 1,
+      "total_len": 317,
+      "max_precutoff_identity": 0.0
+    },
+    {
+      "target_id": "9tp5",
+      "pdb_id": "9TP5",
+      "regime": "monomer",
+      "n_protein_chains": 1,
+      "total_len": 359,
+      "max_precutoff_identity": 0.0
+    },
+    {
+      "target_id": "28wn",
+      "pdb_id": "28WN",
+      "regime": "monomer",
+      "n_protein_chains": 1,
+      "total_len": 362,
+      "max_precutoff_identity": 0.0
+    },
+    {
+      "target_id": "9p2u",
+      "pdb_id": "9P2U",
+      "regime": "monomer",
+      "n_protein_chains": 1,
+      "total_len": 420,
+      "max_precutoff_identity": 0.0
+    },
+    {
+      "target_id": "21nq",
+      "pdb_id": "21NQ",
+      "regime": "monomer",
+      "n_protein_chains": 1,
+      "total_len": 429,
+      "max_precutoff_identity": 0.0
+    },
+    {
+      "target_id": "9vex",
+      "pdb_id": "9VEX",
+      "regime": "monomer",
+      "n_protein_chains": 1,
+      "total_len": 431,
+      "max_precutoff_identity": 0.0
+    },
+    {
+      "target_id": "9rmd",
+      "pdb_id": "9RMD",
+      "regime": "monomer",
+      "n_protein_chains": 1,
+      "total_len": 447,
+      "max_precutoff_identity": 0.0
+    },
+    {
+      "target_id": "22hh",
+      "pdb_id": "22HH",
+      "regime": "monomer",
+      "n_protein_chains": 1,
+      "total_len": 474,
+      "max_precutoff_identity": 0.0
+    },
+    {
+      "target_id": "9qvv",
+      "pdb_id": "9QVV",
+      "regime": "monomer",
+      "n_protein_chains": 1,
+      "total_len": 503,
+      "max_precutoff_identity": 0.0
+    },
+    {
+      "target_id": "9x28",
+      "pdb_id": "9X28",
+      "regime": "monomer",
+      "n_protein_chains": 1,
+      "total_len": 1740,
+      "max_precutoff_identity": 0.0
+    },
+    {
+      "target_id": "9x8z",
+      "pdb_id": "9X8Z",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 134,
+      "max_precutoff_identity": 0.0
+    },
+    {
+      "target_id": "9vzc",
+      "pdb_id": "9VZC",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 218,
+      "max_precutoff_identity": 0.0
+    },
+    {
+      "target_id": "9zdm",
+      "pdb_id": "9ZDM",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 230,
+      "max_precutoff_identity": 0.0
+    },
+    {
+      "target_id": "9wpl",
+      "pdb_id": "9WPL",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 468,
+      "max_precutoff_identity": 0.0
+    },
+    {
+      "target_id": "9vll",
+      "pdb_id": "9VLL",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 747,
+      "max_precutoff_identity": 0.0
+    }
+  ]
+}

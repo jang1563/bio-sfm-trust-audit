@@ -1,0 +1,14 @@
+{
+  "candidate_pool": 452,
+  "leaky_ge30pct_precutoff": 416,
+  "clean_lowhomology": 36,
+  "final_nonredundant": 21,
+  "final_by_regime": {
+    "monomer": 16,
+    "complex": 5
+  },
+  "released_after": "2025-07-01",
+  "id_threshold_pct": 30,
+  "qcov_threshold": 0.5,
+  "note": "452 recent post-cutoff (>=2025-07-01) RCSB candidates -> 416/452 (92%) have a >=30%-identity pre-cutoff PDB homolog at >=50% coverage (leaky) -> 36 clean -> 21 after intra-set 30%-identity declustering. Genuinely novel recent structures are rare; the leakage-controlled confirmatory set is necessarily small."
+}
