@@ -1,16 +1,25 @@
 # Phase 2 Pre-Registration: Calibrated Reliability Interface vs Raw Confidence
 
-Date: 2026-06-19
+Date: 2026-06-19 (revised 2026-06-23 — leakage controls, multiplicity correction, and
+honest cutoff/CA-lDDT framing added before deposit; not yet registered on OSF)
 Status: PRE-REGISTRATION for the robust redo. The exploratory Phase-2-v1 run
 (80 targets, Sonnet+Opus, RESULTS.md "Phase 2") is treated as pilot/exploratory;
 its offline-gate PASS was engineered post-hoc and its calibration was fit
 in-distribution. This document fixes the analysis BEFORE the confirmatory run so
 the result is not a garden-of-forking-paths.
 
-What v1 already established (and what carries in): the LLM routing findings are
-cutoff-robust (lDDT 0.5-0.9; see `results/phase2_preflight/cutoff_robustness.json`)
--- so the post-hoc 0.9 cutoff is not driving the pilot conclusions, only the
-offline gate's variance.
+What v1 established, stated honestly: the v1 LLM routing contrasts look invariant
+to the lDDT cutoff (0.5-0.9; `results/phase2_preflight/cutoff_robustness.json`),
+but that invariance is largely a SATURATED-LABEL artifact -- at lDDT<=0.8 almost
+every v1 target is "correct" (base rate ~95%), so re-scoring the same fixed actions
+against relabeled truth barely moves (interface-raw is exactly 0.0 for Sonnet and
+-0.25 for Opus at every cutoff). It is therefore NOT independent evidence that the
+0.9 cutoff is harmless. The honest reading is the opposite: at the standard
+lDDT>=0.7 cutoff the offline gate returns AUROC ~0.60 -- the same near-noise verdict
+that retired the Phase 1 single-cell arm -- and v1's gate PASS exists only because
+the cutoff was moved to 0.9 post-hoc AND the calibration was refit in-distribution.
+The confirmatory redo removes BOTH crutches (pre-set 0.7 cutoff, held-out
+calibration) and instead earns routing stakes from a genuinely lower base rate.
 
 ## Question (unchanged North Star)
 
@@ -38,9 +47,12 @@ hunting for a positive.
   harder targets (e.g., recent CASP-hard / low-homology / larger complexes) so
   the specialist is wrong often enough; pre-specify N per regime by a power
   calculation for the H2 effect size, not a default.
-- Correctness metric: lDDT VALIDATED against OpenStructure (monomers) + DockQ
-  (complexes), not the home-grown CA-lDDT. Cutoff PRE-SET (lDDT>=0.7, the
-  standard "modelable" threshold) with a full sensitivity sweep reported.
+- Correctness metric: lDDT VALIDATED against OpenStructure (monomers) + **DockQ /
+  interface-lDDT (complexes)**, not the home-grown CA-lDDT. (v1's "all-chain CA-lDDT"
+  for complexes is intra-chain-dominated -- most sub-15A CA pairs are within a chain,
+  so it mostly re-measured per-chain fold quality, not docking; DockQ is the correct
+  interface axis and replaces it.) Cutoff PRE-SET (lDDT>=0.7, the standard "modelable"
+  threshold; DockQ>=0.23 "acceptable" for complexes) with a full sensitivity sweep reported.
 - Calibration: fit risk->P(wrong) on a HELD-OUT split (train calibration on a
   disjoint target set; never in-distribution LOO over the evaluated set).
 - Arms (>=6): no_signal, raw_plddt_shown, calibrated_risk_shown_no_recommendation,
@@ -55,13 +67,40 @@ hunting for a positive.
   template/homology baseline for default_baseline (revive that action), not the
   current default-False placeholder.
 
+## Leakage controls (pre-specified)
+
+A post-cutoff release date is necessary but NOT sufficient; v1 controlled leakage
+by date alone. The confirmatory run pre-registers three additional, reported controls:
+
+- Training-cutoff date: use Boltz-2's ACTUAL structural-data cutoff, not the most
+  generous quotable date. The curation code itself notes structural/complex data
+  flowed in "through early 2025" (`phase2_curate_pdb.py`), so targets are curated
+  with `released_after = 2025-07-01` (not 2023-06), and the exact date + source is
+  reported on every public card. No "2023-06 leakage-safe" framing.
+- Sequence-identity dedup: for every target chain, compute max sequence identity to
+  any pre-cutoff PDB chain (MMseqs2 / `phmmer`); PRE-EXCLUDE any target with >30%
+  identity to a pre-cutoff chain (near-duplicate / re-determination / point-mutant /
+  alternate crystal form), and report the threshold and the excluded count. A
+  structural-redundancy check (Foldseek TM-score vs pre-cutoff PDB) is reported as
+  a secondary filter.
+- MSA-depth as a reported covariate: Boltz-2 is MSA-conditioned, so a post-cutoff
+  target whose family has pre-cutoff homologs still gets a deep MSA and a justified
+  high pLDDT -- a leakage channel the date cannot close. Log Neff / MSA depth per
+  target; the primary analysis covaries/stratifies on MSA depth, and a low-MSA
+  (shallow-alignment) subgroup is reported separately as the hardest, least-leaky slice.
+
 ## Analysis plan (pre-set)
 
 - Primary contrast: calibrated_interface_shown vs raw_plddt_shown, per model,
   target-bootstrap 95% CI (seed 13, 1000 draws). Decision: SUPPORT only if the
   CI excludes 0 in the positive direction; otherwise report the null / negative.
+- Multiplicity: H2 (interface vs raw) is the SINGLE confirmatory primary; everything
+  else is secondary/exploratory. Across the registered secondary family
+  (arms x models x lambda x cutoff) report Holm-Bonferroni-adjusted intervals, and
+  flag any unregistered comparison as exploratory. The headline rests on the primary
+  only.
 - Secondary: each arm vs no_signal; A4 (card vs no_recommendation); inverted vs
-  calibrated; monomer/complex split; lambda sweep.
+  calibrated; monomer/complex split; lambda sweep; MSA-depth subgroup.
 - Disentangle the regime LABEL from the risk VALUE (regress verify on risk
   within regime) so "regime-appropriate caution" is not a label artifact.
 
@@ -78,5 +117,7 @@ hunting for a positive.
 
 - Do not re-pick the cutoff or calibration after seeing results.
 - Do not add modalities/SFMs before this confirmatory run is scored.
-- Report the template-baseline and lDDT-validation status explicitly; no claim
-  rests on the home-grown metric.
+- Freeze and report the leakage-exclusion list (sequence-identity / structural /
+  date filters) and the per-target MSA-depth covariate BEFORE scoring any LLM arm.
+- Report the template-baseline and lDDT/DockQ-validation status explicitly; no claim
+  rests on the home-grown CA-lDDT.
