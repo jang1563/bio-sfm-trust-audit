@@ -1,6 +1,6 @@
 # Trust-Cue Attribution For LLM x SFM Systems
 
-This experiment is the first implementation of the LLM x SFM grounded-orchestrator plan.
+This experiment instruments the *trust decision* a general LLM makes when it reads a specialist biological model's output.
 
 The goal is not to benchmark one biological model in isolation. The goal is to measure which evidence cues make an LLM choose:
 
@@ -8,6 +8,12 @@ The goal is not to benchmark one biological model in isolation. The goal is to m
 - `verify_assay`
 - `default_baseline`
 - `defer`
+
+> **Data availability.** The full test suite (`pytest`, 163 passing) runs with no
+> external data, and the Phase 2 protein benchmark is bundled (`../../dist/hf_dataset/`).
+> The Phase 0/1 perturbation inputs referenced below come from the author's other
+> repositories and are **not redistributed here**; the tracked `results/` JSON
+> artifacts summarize and hash those runs.
 
 ## Phase 0
 

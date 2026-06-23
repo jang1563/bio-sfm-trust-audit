@@ -26,6 +26,19 @@ cue, and protein-structure prediction (Boltz-2 / pLDDT):
 Presentation alone is insufficient; enforcement (tools / MCP constraints / post-training) is the
 natural next lever. Full write-up: **[`REPORT.md`](REPORT.md)** (PDF: [`dist/REPORT.pdf`](dist/REPORT.pdf)).
 
+## Quickstart
+
+```bash
+pip install -r requirements.txt
+pytest experiments/trust_cue_attribution/tests/   # 163 passing, runs in seconds
+```
+
+The test suite needs **no external data**. The **Phase 2 protein benchmark is
+bundled** ([`dist/hf_dataset/`](dist/hf_dataset/)); the Phase 0/1 perturbation
+inputs come from the author's other repositories and are not redistributed here —
+the tracked [`results/`](experiments/trust_cue_attribution/results/) JSON artifacts
+summarize those runs.
+
 ## Repository layout
 
 | Path | What |
