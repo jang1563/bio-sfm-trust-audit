@@ -187,6 +187,31 @@ partly forced; (e) n = 40, single primary λ, single MSA source, one run per
 model, default-False template baseline. A pre-registered confirmatory redo
 addressing all of these is specified in `PHASE2_PREREGISTRATION.md`.
 
+## 7b. Post-publication validation (2026-06-23, on-cluster)
+
+Three follow-up checks on Cayuga directly test the limitations above against
+gold-standard tools (artifacts under `results/phase2_{ost,dockq,leakage}_*`):
+
+- **Monomer truth — confirmed.** OpenStructure all-atom lDDT vs the home-grown CA-lDDT
+  on the 40 monomers: Pearson **0.99**; pLDDT→OST-lDDT = **0.894**, confirming the
+  headline 0.89 monomer calibration against the gold standard.
+- **Complex truth — corrected.** The all-chain CA-lDDT is intra-chain-dominated, so the
+  reported pLDDT→complex "calibration collapse" (0.16) was largely a **metric artifact**.
+  Against gold-standard **DockQ** (40 complexes): pLDDT→DockQ = **0.44**, and the proper
+  interface confidence **ipTM→DockQ = 0.77** — the specialist *is* well-calibrated on
+  complexes; route on ipTM, not pLDDT. Re-scoring the v1 episodes with DockQ truth leaves
+  the headline intact (interface−raw ≈ 0 for Sonnet, ≈ −0.25 for Opus).
+- **Leakage — the "leakage-safe" claim does not hold.** An MMseqs2 search of all 80
+  targets vs the full PDB, date-filtered via RCSB, finds that **~70% (56/80 at a 2024
+  cutoff) have a ≥90%-identical pre-cutoff homolog**. Release-date curation did not prevent
+  training leakage; the ~95% base rate is partly memorization. The pre-registered redo's
+  homolog dedup is therefore empirically required, and the substrate must be re-curated
+  for genuinely low-homology folds.
+
+Net: the routing **headline survives**, the monomer metric holds, the complex-calibration
+story is corrected, and the substrate's leakage is the principal reason to execute the
+confirmatory redo rather than lean on v1.
+
 ## 8. Reproducibility
 
 All code, tests (163 passing), and compact result artifacts are in the repo under
