@@ -1,0 +1,109 @@
+{
+  "targets": [
+    {
+      "target_id": "9wwa",
+      "pdb_id": "9WWA",
+      "regime": "complex",
+      "n_protein_chains": 4,
+      "total_len": 1420
+    },
+    {
+      "target_id": "9zll",
+      "pdb_id": "9ZLL",
+      "regime": "complex",
+      "n_protein_chains": 3,
+      "total_len": 858
+    },
+    {
+      "target_id": "9x8z",
+      "pdb_id": "9X8Z",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 134
+    },
+    {
+      "target_id": "9vzc",
+      "pdb_id": "9VZC",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 218
+    },
+    {
+      "target_id": "9zdm",
+      "pdb_id": "9ZDM",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 230
+    },
+    {
+      "target_id": "9st8",
+      "pdb_id": "9ST8",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 328
+    },
+    {
+      "target_id": "9z7o",
+      "pdb_id": "9Z7O",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 337
+    },
+    {
+      "target_id": "9wpl",
+      "pdb_id": "9WPL",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 468
+    },
+    {
+      "target_id": "9st4",
+      "pdb_id": "9ST4",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 626
+    },
+    {
+      "target_id": "9qs0",
+      "pdb_id": "9QS0",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 641
+    },
+    {
+      "target_id": "9vll",
+      "pdb_id": "9VLL",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 747
+    },
+    {
+      "target_id": "30yz",
+      "pdb_id": "30YZ",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 920
+    },
+    {
+      "target_id": "9wh1",
+      "pdb_id": "9WH1",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 1381
+    },
+    {
+      "target_id": "9rvy",
+      "pdb_id": "9RVY",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 1794
+    },
+    {
+      "target_id": "9rch",
+      "pdb_id": "9RCH",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 1995
+    }
+  ]
+}

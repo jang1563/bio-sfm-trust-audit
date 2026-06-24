@@ -1,0 +1,18 @@
+{
+  "candidate_pool": 787,
+  "leakage_clean": 28,
+  "final_nonredundant": 15,
+  "released_after": "2025-07-01",
+  "max_resolution": 3.5,
+  "chains": "2-8 hetero",
+  "chain_counts": {
+    "4": 1,
+    "3": 1,
+    "2": 13
+  },
+  "size_range": [
+    134,
+    1995
+  ],
+  "note": "787 recent post-cutoff hetero-complex candidates -> 28 leakage-clean (96% leaky) -> 15 non-redundant. Larger/multi-chain assemblies retained to span docking difficulty. Boltz-2 prediction + DockQ truth next; expect a real failure distribution (unlike monomers)."
+}

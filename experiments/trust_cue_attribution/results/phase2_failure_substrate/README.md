@@ -42,9 +42,16 @@ viable specialist-failure substrate the monomer route lacked:
 3. **Leakage-controllable** — the MMseqs2 + RCSB-date pipeline
    ([`../phase2_redo_curation/`](../phase2_redo_curation/)) applies directly to complexes.
 
-## Next (to make it a powered routing experiment)
+## Powered routing experiment — in progress
 
-Curate a larger **leakage-controlled complex** set (target n ≈ 30–40 with a ~50% DockQ
-base rate — bias toward harder interfaces: antibody–antigen, transient/weak, many-chain),
-Boltz-2 predict, DockQ truth, then the trust-routing pilot with ipTM as the calibrated cue.
-This is the redo pipeline restricted to complexes and selected for difficulty.
+The redo pipeline restricted to complexes ([`curate_complexes_big.py`](curate_complexes_big.py)
++ [`select_cx.py`](select_cx.py)): 787 recent post-cutoff hetero-complex candidates →
+**28 leakage-clean (96% leaky)** → **15 non-redundant** hard complexes (2–4 chains, up to
+1995 residues; [`hard_complex_targets.json`](hard_complex_targets.json),
+[`hard_complex_curation_summary.json`](hard_complex_curation_summary.json)). Larger/multi-chain
+assemblies retained to span docking difficulty.
+
+**Status:** Boltz-2 prediction running on Cayuga; DockQ truth + the ipTM-cued trust-routing
+pilot (3 models × seeds) follow. Unlike the monomer redo (saturated), this set is expected to
+show a real DockQ failure distribution — the first substrate in this project with genuine,
+leakage-controlled, signal-predictable routing stakes.
