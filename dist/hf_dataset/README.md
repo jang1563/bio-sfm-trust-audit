@@ -2,7 +2,7 @@
 license: cc-by-4.0
 language:
 - en
-pretty_name: Phase-2 Protein-Structure Trust Benchmark (Boltz-2 / pLDDT)
+pretty_name: Protein-Structure Trust Benchmark (Boltz-2 / pLDDT)
 tags:
 - biology
 - protein-structure
@@ -23,7 +23,7 @@ configs:
     path: data/phase2_targets.jsonl
 ---
 
-# Phase-2 Protein-Structure Trust Benchmark (Boltz-2 / pLDDT)
+# Protein-Structure Trust Benchmark (Boltz-2 / pLDDT)
 
 A small, leakage-safe benchmark for studying **confidence-calibrated trust routing**
 over a protein-structure predictor: given a specialist model's *confidence*
