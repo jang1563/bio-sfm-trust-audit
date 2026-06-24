@@ -1,0 +1,142 @@
+[
+  {
+    "target_id": "9wwa",
+    "regime": "complex",
+    "mean_plddt": 81.7982,
+    "iptm": 0.1671,
+    "truth": {
+      "quality": 0.082,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9zll",
+    "regime": "complex",
+    "mean_plddt": 87.179,
+    "iptm": 0.8535,
+    "truth": {
+      "quality": 0.795,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9x8z",
+    "regime": "complex",
+    "mean_plddt": 89.2364,
+    "iptm": 0.8431,
+    "truth": {
+      "quality": 0.895,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9vzc",
+    "regime": "complex",
+    "mean_plddt": 91.382,
+    "iptm": 0.9229,
+    "truth": {
+      "quality": 0.881,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9zdm",
+    "regime": "complex",
+    "mean_plddt": 95.8519,
+    "iptm": 0.9627,
+    "truth": {
+      "quality": 0.888,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9st8",
+    "regime": "complex",
+    "mean_plddt": 84.6059,
+    "iptm": 0.8946,
+    "truth": {
+      "quality": 0.379,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9z7o",
+    "regime": "complex",
+    "mean_plddt": 91.0939,
+    "iptm": 0.9391,
+    "truth": {
+      "quality": 0.785,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9wpl",
+    "regime": "complex",
+    "mean_plddt": 79.6504,
+    "iptm": 0.7949,
+    "truth": {
+      "quality": 0.84,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9st4",
+    "regime": "complex",
+    "mean_plddt": 82.9134,
+    "iptm": 0.9016,
+    "truth": {
+      "quality": 0.4,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9qs0",
+    "regime": "complex",
+    "mean_plddt": 79.3579,
+    "iptm": 0.6109,
+    "truth": {
+      "quality": 0.242,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9vll",
+    "regime": "complex",
+    "mean_plddt": 91.3382,
+    "iptm": 0.9336,
+    "truth": {
+      "quality": 0.82,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "30yz",
+    "regime": "complex",
+    "mean_plddt": 79.6355,
+    "iptm": 0.3814,
+    "truth": {
+      "quality": 0.247,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9rvy",
+    "regime": "complex",
+    "mean_plddt": 55.0815,
+    "iptm": 0.1951,
+    "truth": {
+      "quality": 0.006,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9rch",
+    "regime": "complex",
+    "mean_plddt": 26.4391,
+    "iptm": 0.2009,
+    "truth": {
+      "quality": 0.005,
+      "metric": "dockq"
+    }
+  }
+]

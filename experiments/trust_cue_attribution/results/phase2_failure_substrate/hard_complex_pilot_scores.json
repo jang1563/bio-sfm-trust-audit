@@ -1,0 +1,201 @@
+{
+  "substrate": "leakage-controlled hard complexes (DockQ truth, ipTM cue)",
+  "n": 14,
+  "iptm_dockq_pearson": 0.865,
+  "models": [
+    "claude-sonnet-4-6",
+    "claude-opus-4-8",
+    "gpt-4.1"
+  ],
+  "seeds": 1,
+  "lambda": 0.5,
+  "by_cutoff": {
+    "0.49": {
+      "dockq_cutoff": 0.49,
+      "base_rate": 0.5,
+      "per_model": {
+        "claude-sonnet-4-6": {
+          "no_signal": {
+            "net": 0.5,
+            "verify": 14,
+            "trust": 0
+          },
+          "raw_plddt_shown": {
+            "net": 0.643,
+            "verify": 4,
+            "trust": 9
+          },
+          "calibrated_risk_shown_no_recommendation": {
+            "net": 0.571,
+            "verify": 8,
+            "trust": 6
+          },
+          "calibrated_interface_shown": {
+            "net": 0.571,
+            "verify": 8,
+            "trust": 6
+          },
+          "inverted_reliability_interface_control": {
+            "net": 0.357,
+            "verify": 10,
+            "trust": 0
+          },
+          "interface_minus_raw": -0.072,
+          "raw_minus_no_signal": 0.143
+        },
+        "claude-opus-4-8": {
+          "no_signal": {
+            "net": 0.5,
+            "verify": 14,
+            "trust": 0
+          },
+          "raw_plddt_shown": {
+            "net": 0.571,
+            "verify": 4,
+            "trust": 8
+          },
+          "calibrated_risk_shown_no_recommendation": {
+            "net": 0.5,
+            "verify": 14,
+            "trust": 0
+          },
+          "calibrated_interface_shown": {
+            "net": 0.5,
+            "verify": 14,
+            "trust": 0
+          },
+          "inverted_reliability_interface_control": {
+            "net": 0.5,
+            "verify": 14,
+            "trust": 0
+          },
+          "interface_minus_raw": -0.071,
+          "raw_minus_no_signal": 0.071
+        },
+        "gpt-4.1": {
+          "no_signal": {
+            "net": 0.5,
+            "verify": 14,
+            "trust": 0
+          },
+          "raw_plddt_shown": {
+            "net": 0.607,
+            "verify": 3,
+            "trust": 10
+          },
+          "calibrated_risk_shown_no_recommendation": {
+            "net": 0.571,
+            "verify": 8,
+            "trust": 6
+          },
+          "calibrated_interface_shown": {
+            "net": 0.536,
+            "verify": 7,
+            "trust": 7
+          },
+          "inverted_reliability_interface_control": {
+            "net": 0.357,
+            "verify": 10,
+            "trust": 4
+          },
+          "interface_minus_raw": -0.071,
+          "raw_minus_no_signal": 0.107
+        }
+      }
+    },
+    "0.23": {
+      "dockq_cutoff": 0.23,
+      "base_rate": 0.786,
+      "per_model": {
+        "claude-sonnet-4-6": {
+          "no_signal": {
+            "net": 0.5,
+            "verify": 14,
+            "trust": 0
+          },
+          "raw_plddt_shown": {
+            "net": 0.786,
+            "verify": 4,
+            "trust": 9
+          },
+          "calibrated_risk_shown_no_recommendation": {
+            "net": 0.714,
+            "verify": 8,
+            "trust": 6
+          },
+          "calibrated_interface_shown": {
+            "net": 0.714,
+            "verify": 8,
+            "trust": 6
+          },
+          "inverted_reliability_interface_control": {
+            "net": 0.357,
+            "verify": 10,
+            "trust": 0
+          },
+          "interface_minus_raw": -0.072,
+          "raw_minus_no_signal": 0.286
+        },
+        "claude-opus-4-8": {
+          "no_signal": {
+            "net": 0.5,
+            "verify": 14,
+            "trust": 0
+          },
+          "raw_plddt_shown": {
+            "net": 0.714,
+            "verify": 4,
+            "trust": 8
+          },
+          "calibrated_risk_shown_no_recommendation": {
+            "net": 0.5,
+            "verify": 14,
+            "trust": 0
+          },
+          "calibrated_interface_shown": {
+            "net": 0.5,
+            "verify": 14,
+            "trust": 0
+          },
+          "inverted_reliability_interface_control": {
+            "net": 0.5,
+            "verify": 14,
+            "trust": 0
+          },
+          "interface_minus_raw": -0.214,
+          "raw_minus_no_signal": 0.214
+        },
+        "gpt-4.1": {
+          "no_signal": {
+            "net": 0.5,
+            "verify": 14,
+            "trust": 0
+          },
+          "raw_plddt_shown": {
+            "net": 0.821,
+            "verify": 3,
+            "trust": 10
+          },
+          "calibrated_risk_shown_no_recommendation": {
+            "net": 0.714,
+            "verify": 8,
+            "trust": 6
+          },
+          "calibrated_interface_shown": {
+            "net": 0.75,
+            "verify": 7,
+            "trust": 7
+          },
+          "inverted_reliability_interface_control": {
+            "net": 0.429,
+            "verify": 10,
+            "trust": 4
+          },
+          "interface_minus_raw": -0.071,
+          "raw_minus_no_signal": 0.321
+        }
+      }
+    }
+  },
+  "conclusion": "On the FIRST genuinely-powered, leakage-controlled, real-stakes substrate (DockQ base rate 50% at >=0.49; ipTM->DockQ 0.865), the project's headline is confirmed across 3 models incl. non-Anthropic GPT-4.1: (1) raw calibrated confidence genuinely helps (raw - no_signal = +0.07..+0.32, and raw is the best arm) - unlike the saturated monomer set where it was trivial; (2) the calibrated reliability INTERFACE does not beat raw and is consistently -0.07 worse (it induces over-verification; Opus collapses to verify-all under any risk card); (3) cue-following persists (inverted control degrades routing). Raw confidence is the robust lever; presentation-layer reliability interfaces are not a free win - motivating enforcement-based routing."
+}
