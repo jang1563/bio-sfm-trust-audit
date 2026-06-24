@@ -212,6 +212,17 @@ Net: the routing **headline survives**, the monomer metric holds, the complex-ca
 story is corrected, and the substrate's leakage is the principal reason to execute the
 confirmatory redo rather than lean on v1.
 
+**Redo update (executed).** A genuinely leakage-controlled set was then curated
+(MMseqs2 vs full PDB + RCSB dates: **92% of recent post-cutoff depositions carry a ≥30%
+pre-cutoff homolog**; 21 non-redundant low-homology targets survive) and predicted with
+Boltz-2. It is **100%/100% correct at the pre-registered cutoffs** (monomer lDDT ≥ 0.7,
+complex DockQ ≥ 0.23). So Boltz-2 succeeds on recent novel folds too: the **low-stakes
+problem is intrinsic to recent high-resolution structures, not an artifact of leakage**
+(the redo separates the two confounds). By the project's own NO-GO discipline the routing
+pilot is **not run** on a 100%-base-rate substrate — a real routing substrate needs
+specialist *failure* cases (harder modalities), motivating the enforcement-layer pivot.
+See `results/phase2_redo_curation/`.
+
 ## 8. Reproducibility
 
 All code, tests (163 passing), and compact result artifacts are in the repo under
