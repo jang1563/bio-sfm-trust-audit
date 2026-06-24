@@ -1,0 +1,25 @@
+{
+  "n": 21,
+  "n_monomer": 16,
+  "n_complex": 5,
+  "monomer_baserate_OST_lddt": {
+    "0.7": "16/16",
+    "0.8": "15/16",
+    "0.85": "12/16",
+    "0.9": "5/16"
+  },
+  "complex_baserate_DockQ": {
+    "0.23": "5/5",
+    "0.49": "5/5",
+    "0.8": "5/5"
+  },
+  "monomer_lddt_range": [
+    0.775,
+    0.915
+  ],
+  "complex_dockq_range": [
+    0.8,
+    0.895
+  ],
+  "conclusion": "At the pre-registered cutoffs (monomer lDDT>=0.7, complex DockQ>=0.23) the leakage-controlled 21-target set is 100%/100% correct -> Boltz-2 succeeds on recent novel-fold structures too -> NO routing headroom. Stakes appear only for monomers at lDDT>=0.9 (5/16), the post-hoc cutoff v1 was criticized for. The low-stakes problem is INTRINSIC to recent high-resolution structures, independent of leakage. Running the >=3-model x >=3-seed LLM routing pilot on a 100%-base-rate substrate would repeat v1's error (trust-all already optimal); by the project's own NO-GO discipline the routing pilot is not run here."
+}

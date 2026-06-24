@@ -1,0 +1,233 @@
+[
+  {
+    "target_id": "9v4l",
+    "regime": "monomer",
+    "mean_plddt": 93.7282,
+    "iptm": null,
+    "truth": {
+      "quality": 0.85,
+      "metric": "ost_lddt"
+    },
+    "template_baseline_correct": false
+  },
+  {
+    "target_id": "10xd",
+    "regime": "monomer",
+    "mean_plddt": 88.3903,
+    "iptm": null,
+    "truth": {
+      "quality": 0.836,
+      "metric": "ost_lddt"
+    },
+    "template_baseline_correct": false
+  },
+  {
+    "target_id": "9vgj",
+    "regime": "monomer",
+    "mean_plddt": 86.0725,
+    "iptm": null,
+    "truth": {
+      "quality": 0.821,
+      "metric": "ost_lddt"
+    },
+    "template_baseline_correct": false
+  },
+  {
+    "target_id": "9v3a",
+    "regime": "monomer",
+    "mean_plddt": 93.1372,
+    "iptm": null,
+    "truth": {
+      "quality": 0.872,
+      "metric": "ost_lddt"
+    },
+    "template_baseline_correct": false
+  },
+  {
+    "target_id": "9wex",
+    "regime": "monomer",
+    "mean_plddt": 80.3943,
+    "iptm": null,
+    "truth": {
+      "quality": 0.903,
+      "metric": "ost_lddt"
+    },
+    "template_baseline_correct": false
+  },
+  {
+    "target_id": "9z71",
+    "regime": "monomer",
+    "mean_plddt": 93.2283,
+    "iptm": null,
+    "truth": {
+      "quality": 0.867,
+      "metric": "ost_lddt"
+    },
+    "template_baseline_correct": false
+  },
+  {
+    "target_id": "23vl",
+    "regime": "monomer",
+    "mean_plddt": 87.0767,
+    "iptm": null,
+    "truth": {
+      "quality": 0.815,
+      "metric": "ost_lddt"
+    },
+    "template_baseline_correct": false
+  },
+  {
+    "target_id": "9tp5",
+    "regime": "monomer",
+    "mean_plddt": 88.7316,
+    "iptm": null,
+    "truth": {
+      "quality": 0.902,
+      "metric": "ost_lddt"
+    },
+    "template_baseline_correct": false
+  },
+  {
+    "target_id": "28wn",
+    "regime": "monomer",
+    "mean_plddt": 90.9307,
+    "iptm": null,
+    "truth": {
+      "quality": 0.888,
+      "metric": "ost_lddt"
+    },
+    "template_baseline_correct": false
+  },
+  {
+    "target_id": "9p2u",
+    "regime": "monomer",
+    "mean_plddt": 90.0401,
+    "iptm": null,
+    "truth": {
+      "quality": 0.894,
+      "metric": "ost_lddt"
+    },
+    "template_baseline_correct": false
+  },
+  {
+    "target_id": "21nq",
+    "regime": "monomer",
+    "mean_plddt": 87.6566,
+    "iptm": null,
+    "truth": {
+      "quality": 0.9,
+      "metric": "ost_lddt"
+    },
+    "template_baseline_correct": false
+  },
+  {
+    "target_id": "9vex",
+    "regime": "monomer",
+    "mean_plddt": 94.558,
+    "iptm": null,
+    "truth": {
+      "quality": 0.915,
+      "metric": "ost_lddt"
+    },
+    "template_baseline_correct": false
+  },
+  {
+    "target_id": "9rmd",
+    "regime": "monomer",
+    "mean_plddt": 83.2328,
+    "iptm": null,
+    "truth": {
+      "quality": 0.866,
+      "metric": "ost_lddt"
+    },
+    "template_baseline_correct": false
+  },
+  {
+    "target_id": "22hh",
+    "regime": "monomer",
+    "mean_plddt": 87.8656,
+    "iptm": null,
+    "truth": {
+      "quality": 0.902,
+      "metric": "ost_lddt"
+    },
+    "template_baseline_correct": false
+  },
+  {
+    "target_id": "9qvv",
+    "regime": "monomer",
+    "mean_plddt": 86.2502,
+    "iptm": null,
+    "truth": {
+      "quality": 0.886,
+      "metric": "ost_lddt"
+    },
+    "template_baseline_correct": false
+  },
+  {
+    "target_id": "9x28",
+    "regime": "monomer",
+    "mean_plddt": 81.7883,
+    "iptm": null,
+    "truth": {
+      "quality": 0.775,
+      "metric": "ost_lddt"
+    },
+    "template_baseline_correct": false
+  },
+  {
+    "target_id": "9x8z",
+    "regime": "complex",
+    "mean_plddt": 89.0528,
+    "iptm": 0.8169,
+    "truth": {
+      "quality": 0.895,
+      "metric": "dockq"
+    },
+    "template_baseline_correct": false
+  },
+  {
+    "target_id": "9vzc",
+    "regime": "complex",
+    "mean_plddt": 92.4088,
+    "iptm": 0.9258,
+    "truth": {
+      "quality": 0.871,
+      "metric": "dockq"
+    },
+    "template_baseline_correct": false
+  },
+  {
+    "target_id": "9zdm",
+    "regime": "complex",
+    "mean_plddt": 96.0979,
+    "iptm": 0.9622,
+    "truth": {
+      "quality": 0.868,
+      "metric": "dockq"
+    },
+    "template_baseline_correct": false
+  },
+  {
+    "target_id": "9wpl",
+    "regime": "complex",
+    "mean_plddt": 79.0817,
+    "iptm": 0.7988,
+    "truth": {
+      "quality": 0.837,
+      "metric": "dockq"
+    },
+    "template_baseline_correct": false
+  },
+  {
+    "target_id": "9vll",
+    "regime": "complex",
+    "mean_plddt": 90.8247,
+    "iptm": 0.9308,
+    "truth": {
+      "quality": 0.8,
+      "metric": "dockq"
+    },
+    "template_baseline_correct": false
+  }
+]
