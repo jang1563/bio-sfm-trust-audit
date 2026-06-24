@@ -13,6 +13,38 @@ provenance); **3 seeds** (Sonnet & GPT-4.1 temperature draws 0.5/0.8/1.0; Opus s
 rejects `temperature`); **λ-sweep** 0.2/0.5/0.8; **Holm-Bonferroni** over the secondary family,
 with **H2 (interface vs raw) as the single confirmatory primary**.
 
+## ⭐ Powered re-run (N = 57) — the definitive result
+
+The pilot was then re-run on the **expanded N = 57** leakage-controlled hard-complex set
+(53% base rate at DockQ ≥ 0.49; ipTM→DockQ 0.84; same held-out/6-arm/3-seed/λ-sweep/Holm
+design; **0/2394 errors**). Artifacts: [`confirmatory_powered_scores.json`](confirmatory_powered_scores.json),
+[`run_confirmatory_powered.py`](run_confirmatory_powered.py), [`expanded_base_rate.json`](expanded_base_rate.json).
+The extra power moved the conclusion **from "directionally consistent" to statistically established**:
+
+| contrast | λ = 0.5 (primary) | λ = 0.8 |
+|---|---|---|
+| **H1: raw − no_signal** | **+0.13…+0.17, p ≤ .007 — SIG (all 3)** | **+0.31…+0.37, p ≈ 0 — SIG (all 3)** |
+| **H2: interface − raw** | **−0.09 / −0.06 / −0.12** (Sonnet p=.029, Opus p=.016 **SIG**; GPT ns) | **−0.23 / −0.25 / −0.30, p ≈ 0 — SIG (all 3)** |
+
+- **H1 confirmed (registered SUPPORT):** raw calibrated confidence **significantly helps** routing
+  over no-signal at meaningful verification cost, across all three models — the project's first
+  solidly significant routing result.
+- **H2 confirmed *and sharpened* (registered null/negative):** the calibrated reliability *interface*
+  does not merely fail to beat raw — at λ ≥ 0.5 it is **significantly worse** (it over-verifies, paying
+  cost), even under **held-out** calibration. λ-dependent: ~neutral at low cost, significantly harmful
+  at higher cost.
+- Holm-Bonferroni: **22/36** secondary contrasts significant.
+
+**This is the headline, now statistically established across 3 models (incl. non-Anthropic):** raw
+calibrated confidence is the robust lever; the presentation-layer reliability interface is not a free
+win and actively hurts at real verification cost → enforcement-based routing is the motivated next lever.
+
+---
+
+### Initial run (N = 14) — same design, underpowered
+
+Kept for the record (the smaller set the powered run supersedes):
+
 ## Results (paired target-bootstrap 95% CI, seed-aggregated)
 
 **Primary — H2: calibrated_interface − raw_plddt (registered as a likely NULL):**

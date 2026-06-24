@@ -256,6 +256,17 @@ override the numbers (competing-cue ≈ raw). The interface effect is λ-depende
 low cost, hurts at high cost via over-verification). Presentation-layer interfaces add nothing over
 the raw calibrated number — **enforcement-based routing remains the motivated next lever.**
 
+**Powered confirmatory (N = 57, the definitive run).** Re-running the same pre-registered design on
+the expanded leakage-controlled set (53% DockQ base rate; ipTM→DockQ 0.84; 0/2394 errors) makes the
+result **statistically established** across all three models: **H1 — raw confidence significantly
+helps over no_signal** at λ ≥ 0.5 (+0.13…+0.17, p ≤ .007 at λ = 0.5; +0.31…+0.37, p ≈ 0 at λ = 0.8;
+the project's first solidly significant routing result); **H2 — the calibrated reliability interface
+is significantly *worse* than raw** at meaningful cost (λ = 0.5: Sonnet −0.094 p = .029, Opus −0.123
+p = .016; λ = 0.8: −0.23…−0.30, p ≈ 0 for all three), even under held-out calibration. So the headline
+holds with statistical force: **raw calibrated confidence is the robust lever; the presentation-layer
+reliability interface is not a free win and actively hurts at real verification cost** — motivating
+enforcement-based routing. See `results/phase2_confirmatory/`.
+
 ## 8. Reproducibility
 
 All code, tests (163 passing), and compact result artifacts are in the repo under
