@@ -228,6 +228,17 @@ free) vs **+0.05** only once stakes are manufactured (lDDT ≥ 0.9) — fresh, l
 cross-model evidence that **reinforces the headline** (raw confidence is the robust lever;
 the reliability interface is not a free win). See `results/phase2_redo_curation/`.
 
+**Specialist-failure substrate (the headline's first real test).** Leakage memorises a chain's
+*fold* but not its *docking*, so protein-**complex interface** prediction fails even when chains
+are leakage-clean. A leakage-controlled set of 14 hard complexes (DockQ truth, ipTM cue) finally
+carries stakes — **DockQ base rate 50% at ≥ 0.49, ipTM→DockQ 0.865**. The ipTM-cued 5-arm pilot
+(Sonnet 4.6, Opus 4.8, GPT-4.1) **confirms the headline where it can finally be tested**: raw
+confidence *genuinely* helps (raw − no_signal = +0.07…+0.14, raw is the best arm — not the trivial
+"any cue beats deferral" of the saturated set), yet the calibrated reliability *interface* is
+consistently **−0.07** worse than raw across all three models and induces over-verification (Opus
+→ verify-all). Raw calibrated confidence is the robust lever; presentation-layer interfaces are
+not a free win even with strong signal and real stakes. See `results/phase2_failure_substrate/`.
+
 ## 8. Reproducibility
 
 All code, tests (163 passing), and compact result artifacts are in the repo under
