@@ -1,0 +1,572 @@
+[
+  {
+    "target_id": "9h9v",
+    "regime": "complex",
+    "mean_plddt": 81.8615,
+    "iptm": 0.259,
+    "truth": {
+      "quality": 0.11,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9wwa",
+    "regime": "complex",
+    "mean_plddt": 81.7982,
+    "iptm": 0.1671,
+    "truth": {
+      "quality": 0.082,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9m3i",
+    "regime": "complex",
+    "mean_plddt": 80.447,
+    "iptm": 0.8125,
+    "truth": {
+      "quality": 0.284,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9vnd",
+    "regime": "complex",
+    "mean_plddt": 60.2789,
+    "iptm": 0.5359,
+    "truth": {
+      "quality": 0.408,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9zll",
+    "regime": "complex",
+    "mean_plddt": 87.179,
+    "iptm": 0.8535,
+    "truth": {
+      "quality": 0.795,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9ums",
+    "regime": "complex",
+    "mean_plddt": 67.7042,
+    "iptm": 0.5083,
+    "truth": {
+      "quality": 0.485,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9w9h",
+    "regime": "complex",
+    "mean_plddt": 82.9988,
+    "iptm": 0.7013,
+    "truth": {
+      "quality": 0.596,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9ibu",
+    "regime": "complex",
+    "mean_plddt": 98.8392,
+    "iptm": 0.7784,
+    "truth": {
+      "quality": 0.925,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9x8z",
+    "regime": "complex",
+    "mean_plddt": 89.2364,
+    "iptm": 0.8431,
+    "truth": {
+      "quality": 0.895,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9jm7",
+    "regime": "complex",
+    "mean_plddt": 94.1779,
+    "iptm": 0.8274,
+    "truth": {
+      "quality": 0.927,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9jm8",
+    "regime": "complex",
+    "mean_plddt": 92.8951,
+    "iptm": 0.9023,
+    "truth": {
+      "quality": 0.752,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9g7u",
+    "regime": "complex",
+    "mean_plddt": 93.0062,
+    "iptm": 0.8353,
+    "truth": {
+      "quality": 0.87,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9sf2",
+    "regime": "complex",
+    "mean_plddt": 89.9613,
+    "iptm": 0.9423,
+    "truth": {
+      "quality": 0.628,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9vzc",
+    "regime": "complex",
+    "mean_plddt": 91.382,
+    "iptm": 0.9229,
+    "truth": {
+      "quality": 0.881,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9lp2",
+    "regime": "complex",
+    "mean_plddt": 96.5615,
+    "iptm": 0.9292,
+    "truth": {
+      "quality": 0.946,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9zdm",
+    "regime": "complex",
+    "mean_plddt": 95.8519,
+    "iptm": 0.9627,
+    "truth": {
+      "quality": 0.888,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9e7a",
+    "regime": "complex",
+    "mean_plddt": 90.76,
+    "iptm": 0.4831,
+    "truth": {
+      "quality": 0.073,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9vnj",
+    "regime": "complex",
+    "mean_plddt": 79.4783,
+    "iptm": 0.711,
+    "truth": {
+      "quality": 0.845,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9k7u",
+    "regime": "complex",
+    "mean_plddt": 79.0273,
+    "iptm": 0.479,
+    "truth": {
+      "quality": 0.112,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9lgh",
+    "regime": "complex",
+    "mean_plddt": 86.5204,
+    "iptm": 0.8568,
+    "truth": {
+      "quality": 0.479,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9u9h",
+    "regime": "complex",
+    "mean_plddt": 57.3476,
+    "iptm": 0.284,
+    "truth": {
+      "quality": 0.028,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9mno",
+    "regime": "complex",
+    "mean_plddt": 83.0508,
+    "iptm": 0.808,
+    "truth": {
+      "quality": 0.597,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9j9w",
+    "regime": "complex",
+    "mean_plddt": 93.5962,
+    "iptm": 0.9499,
+    "truth": {
+      "quality": 0.813,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9k1u",
+    "regime": "complex",
+    "mean_plddt": 84.5798,
+    "iptm": 0.9582,
+    "truth": {
+      "quality": 0.784,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9st8",
+    "regime": "complex",
+    "mean_plddt": 84.6059,
+    "iptm": 0.8946,
+    "truth": {
+      "quality": 0.379,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9z7o",
+    "regime": "complex",
+    "mean_plddt": 91.0939,
+    "iptm": 0.9391,
+    "truth": {
+      "quality": 0.785,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9jdd",
+    "regime": "complex",
+    "mean_plddt": 65.599,
+    "iptm": 0.1839,
+    "truth": {
+      "quality": 0.008,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "8jsu",
+    "regime": "complex",
+    "mean_plddt": 86.1149,
+    "iptm": 0.7388,
+    "truth": {
+      "quality": 0.532,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9rgl",
+    "regime": "complex",
+    "mean_plddt": 73.4263,
+    "iptm": 0.2151,
+    "truth": {
+      "quality": 0.049,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9wpl",
+    "regime": "complex",
+    "mean_plddt": 79.6504,
+    "iptm": 0.7949,
+    "truth": {
+      "quality": 0.84,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9i25",
+    "regime": "complex",
+    "mean_plddt": 85.7962,
+    "iptm": 0.9214,
+    "truth": {
+      "quality": 0.78,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9x2m",
+    "regime": "complex",
+    "mean_plddt": 77.937,
+    "iptm": 0.8625,
+    "truth": {
+      "quality": 0.468,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9jdi",
+    "regime": "complex",
+    "mean_plddt": 75.0905,
+    "iptm": 0.5176,
+    "truth": {
+      "quality": 0.018,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9erq",
+    "regime": "complex",
+    "mean_plddt": 96.0044,
+    "iptm": 0.9433,
+    "truth": {
+      "quality": 0.834,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9eae",
+    "regime": "complex",
+    "mean_plddt": 89.9204,
+    "iptm": 0.8506,
+    "truth": {
+      "quality": 0.601,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9e03",
+    "regime": "complex",
+    "mean_plddt": 66.9435,
+    "iptm": 0.3913,
+    "truth": {
+      "quality": 0.454,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9st4",
+    "regime": "complex",
+    "mean_plddt": 82.9134,
+    "iptm": 0.9016,
+    "truth": {
+      "quality": 0.4,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9qs0",
+    "regime": "complex",
+    "mean_plddt": 79.3579,
+    "iptm": 0.6109,
+    "truth": {
+      "quality": 0.242,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9s6c",
+    "regime": "complex",
+    "mean_plddt": 91.2308,
+    "iptm": 0.2006,
+    "truth": {
+      "quality": 0.011,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9lfq",
+    "regime": "complex",
+    "mean_plddt": 91.9641,
+    "iptm": 0.9593,
+    "truth": {
+      "quality": 0.962,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9vll",
+    "regime": "complex",
+    "mean_plddt": 91.3382,
+    "iptm": 0.9336,
+    "truth": {
+      "quality": 0.82,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9g87",
+    "regime": "complex",
+    "mean_plddt": 93.5465,
+    "iptm": 0.9191,
+    "truth": {
+      "quality": 0.902,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9wno",
+    "regime": "complex",
+    "mean_plddt": 83.7075,
+    "iptm": 0.8996,
+    "truth": {
+      "quality": 0.63,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9h5r",
+    "regime": "complex",
+    "mean_plddt": 84.0654,
+    "iptm": 0.8538,
+    "truth": {
+      "quality": 0.544,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9kqg",
+    "regime": "complex",
+    "mean_plddt": 88.5226,
+    "iptm": 0.8546,
+    "truth": {
+      "quality": 0.822,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9sxc",
+    "regime": "complex",
+    "mean_plddt": 77.3633,
+    "iptm": 0.7983,
+    "truth": {
+      "quality": 0.258,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "30yz",
+    "regime": "complex",
+    "mean_plddt": 79.6355,
+    "iptm": 0.3814,
+    "truth": {
+      "quality": 0.247,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9gjb",
+    "regime": "complex",
+    "mean_plddt": 72.4778,
+    "iptm": 0.6931,
+    "truth": {
+      "quality": 0.223,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9d9u",
+    "regime": "complex",
+    "mean_plddt": 92.1481,
+    "iptm": 0.9225,
+    "truth": {
+      "quality": 0.756,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9vyh",
+    "regime": "complex",
+    "mean_plddt": 44.4981,
+    "iptm": 0.1785,
+    "truth": {
+      "quality": 0.034,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9bes",
+    "regime": "complex",
+    "mean_plddt": 87.6153,
+    "iptm": 0.1819,
+    "truth": {
+      "quality": 0.005,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "8zwc",
+    "regime": "complex",
+    "mean_plddt": 76.5843,
+    "iptm": 0.8357,
+    "truth": {
+      "quality": 0.789,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9r8g",
+    "regime": "complex",
+    "mean_plddt": 76.1425,
+    "iptm": 0.8428,
+    "truth": {
+      "quality": 0.419,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9q8z",
+    "regime": "complex",
+    "mean_plddt": 83.3574,
+    "iptm": 0.8794,
+    "truth": {
+      "quality": 0.767,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9rvy",
+    "regime": "complex",
+    "mean_plddt": 55.0815,
+    "iptm": 0.1951,
+    "truth": {
+      "quality": 0.006,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "10ft",
+    "regime": "complex",
+    "mean_plddt": 80.6931,
+    "iptm": 0.5443,
+    "truth": {
+      "quality": 0.114,
+      "metric": "dockq"
+    }
+  },
+  {
+    "target_id": "9rch",
+    "regime": "complex",
+    "mean_plddt": 26.4391,
+    "iptm": 0.2009,
+    "truth": {
+      "quality": 0.005,
+      "metric": "dockq"
+    }
+  }
+]
