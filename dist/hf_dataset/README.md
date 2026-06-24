@@ -84,7 +84,7 @@ recent targets): this is a known low-stakes property of the substrate.
 ```python
 # On the Hub:
 from datasets import load_dataset
-ds = load_dataset("jang1563/phase2-protein-structure-trust-benchmark", split="test")
+ds = load_dataset("jang1563/protein-structure-trust-benchmark", split="test")
 # Or read it directly from the GitHub repo:
 #   import json; ds = [json.loads(l) for l in open("dist/hf_dataset/data/phase2_targets.jsonl")]
 print(ds[0])
