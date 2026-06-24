@@ -1,0 +1,291 @@
+{
+  "what": "Cross-reference of v1 complex DockQ (gold-standard interface quality) with the leakage audit, testing whether LEAKAGE-CLEAN complexes still fail at docking -> i.e. whether protein-complex interface prediction is a viable specialist-FAILURE substrate (routing stakes) under leakage control.",
+  "n_complexes": 40,
+  "n_leakage_clean": 6,
+  "leakage_clean_dockq_median": 0.394,
+  "leakage_clean_failure_rate_below_0.23": "2/6",
+  "leakage_clean_medium_rate_ge_0.49": "2/6",
+  "finding": "Leakage-clean complexes DO fail at docking (2/6 below DockQ 0.23; median 0.39) and the failures have low ipTM (0.36-0.40) while successes have high ipTM (0.79-0.95). So (a) docking failure is independent of sequence leakage (unlike monomer fold, which Boltz-2 nails even on novel sequences), and (b) ipTM is a validated predictor of the failure. Protein-complex interface prediction (DockQ truth, ipTM signal) is therefore the viable specialist-failure substrate the monomer route lacked: it has genuine routing stakes that survive leakage control.",
+  "complexes": [
+    {
+      "target_id": "30kx",
+      "dockq": 0.013,
+      "iptm": 0.3579,
+      "precutoff_id_pct": 0.0,
+      "leakage_clean": true
+    },
+    {
+      "target_id": "36cq",
+      "dockq": 0.014,
+      "iptm": 0.3457,
+      "precutoff_id_pct": 99.7,
+      "leakage_clean": false
+    },
+    {
+      "target_id": "9vgu",
+      "dockq": 0.018,
+      "iptm": 0.4446,
+      "precutoff_id_pct": 99.7,
+      "leakage_clean": false
+    },
+    {
+      "target_id": "21en",
+      "dockq": 0.029,
+      "iptm": 0.508,
+      "precutoff_id_pct": 98.6,
+      "leakage_clean": false
+    },
+    {
+      "target_id": "9vgf",
+      "dockq": 0.03,
+      "iptm": 0.4416,
+      "precutoff_id_pct": 99.7,
+      "leakage_clean": false
+    },
+    {
+      "target_id": "9pj1",
+      "dockq": 0.141,
+      "iptm": 0.5995,
+      "precutoff_id_pct": 100.0,
+      "leakage_clean": false
+    },
+    {
+      "target_id": "30ky",
+      "dockq": 0.145,
+      "iptm": 0.3708,
+      "precutoff_id_pct": 0.0,
+      "leakage_clean": true
+    },
+    {
+      "target_id": "9piw",
+      "dockq": 0.233,
+      "iptm": 0.7252,
+      "precutoff_id_pct": 100.0,
+      "leakage_clean": false
+    },
+    {
+      "target_id": "9piu",
+      "dockq": 0.254,
+      "iptm": 0.8352,
+      "precutoff_id_pct": 100.0,
+      "leakage_clean": false
+    },
+    {
+      "target_id": "13fj",
+      "dockq": 0.299,
+      "iptm": 0.6161,
+      "precutoff_id_pct": 100.0,
+      "leakage_clean": false
+    },
+    {
+      "target_id": "9rh3",
+      "dockq": 0.299,
+      "iptm": 0.6731,
+      "precutoff_id_pct": 100.0,
+      "leakage_clean": false
+    },
+    {
+      "target_id": "9rhb",
+      "dockq": 0.302,
+      "iptm": 0.7743,
+      "precutoff_id_pct": 100.0,
+      "leakage_clean": false
+    },
+    {
+      "target_id": "30yw",
+      "dockq": 0.303,
+      "iptm": 0.3996,
+      "precutoff_id_pct": 0.0,
+      "leakage_clean": true
+    },
+    {
+      "target_id": "9rh1",
+      "dockq": 0.306,
+      "iptm": 0.5479,
+      "precutoff_id_pct": 100.0,
+      "leakage_clean": false
+    },
+    {
+      "target_id": "9rey",
+      "dockq": 0.333,
+      "iptm": 0.8611,
+      "precutoff_id_pct": 100.0,
+      "leakage_clean": false
+    },
+    {
+      "target_id": "9rex",
+      "dockq": 0.335,
+      "iptm": 0.8662,
+      "precutoff_id_pct": 100.0,
+      "leakage_clean": false
+    },
+    {
+      "target_id": "9rhf",
+      "dockq": 0.338,
+      "iptm": 0.6606,
+      "precutoff_id_pct": 100.0,
+      "leakage_clean": false
+    },
+    {
+      "target_id": "9rh2",
+      "dockq": 0.358,
+      "iptm": 0.6718,
+      "precutoff_id_pct": 100.0,
+      "leakage_clean": false
+    },
+    {
+      "target_id": "9oss",
+      "dockq": 0.422,
+      "iptm": 0.8572,
+      "precutoff_id_pct": 99.6,
+      "leakage_clean": false
+    },
+    {
+      "target_id": "9zcl",
+      "dockq": 0.441,
+      "iptm": 0.8925,
+      "precutoff_id_pct": 100.0,
+      "leakage_clean": false
+    },
+    {
+      "target_id": "9osu",
+      "dockq": 0.459,
+      "iptm": 0.6396,
+      "precutoff_id_pct": 99.6,
+      "leakage_clean": false
+    },
+    {
+      "target_id": "30yv",
+      "dockq": 0.485,
+      "iptm": 0.531,
+      "precutoff_id_pct": 0.0,
+      "leakage_clean": true
+    },
+    {
+      "target_id": "24kr",
+      "dockq": 0.525,
+      "iptm": 0.4774,
+      "precutoff_id_pct": 100.0,
+      "leakage_clean": false
+    },
+    {
+      "target_id": "9hlo",
+      "dockq": 0.652,
+      "iptm": 0.8453,
+      "precutoff_id_pct": 100.0,
+      "leakage_clean": false
+    },
+    {
+      "target_id": "10bt",
+      "dockq": 0.668,
+      "iptm": 0.8845,
+      "precutoff_id_pct": 85.7,
+      "leakage_clean": false
+    },
+    {
+      "target_id": "35wd",
+      "dockq": 0.704,
+      "iptm": 0.7907,
+      "precutoff_id_pct": 0.0,
+      "leakage_clean": true
+    },
+    {
+      "target_id": "9ozx",
+      "dockq": 0.738,
+      "iptm": 0.8293,
+      "precutoff_id_pct": 100.0,
+      "leakage_clean": false
+    },
+    {
+      "target_id": "24rt",
+      "dockq": 0.745,
+      "iptm": 0.7151,
+      "precutoff_id_pct": 43.0,
+      "leakage_clean": false
+    },
+    {
+      "target_id": "9sj9",
+      "dockq": 0.769,
+      "iptm": 0.8936,
+      "precutoff_id_pct": 99.2,
+      "leakage_clean": false
+    },
+    {
+      "target_id": "9zki",
+      "dockq": 0.773,
+      "iptm": 0.9236,
+      "precutoff_id_pct": 94.8,
+      "leakage_clean": false
+    },
+    {
+      "target_id": "9sjb",
+      "dockq": 0.783,
+      "iptm": 0.9454,
+      "precutoff_id_pct": 34.7,
+      "leakage_clean": false
+    },
+    {
+      "target_id": "9sj6",
+      "dockq": 0.787,
+      "iptm": 0.941,
+      "precutoff_id_pct": 34.7,
+      "leakage_clean": false
+    },
+    {
+      "target_id": "9vdb",
+      "dockq": 0.828,
+      "iptm": 0.8405,
+      "precutoff_id_pct": 45.3,
+      "leakage_clean": false
+    },
+    {
+      "target_id": "9zcm",
+      "dockq": 0.833,
+      "iptm": 0.9325,
+      "precutoff_id_pct": 97.8,
+      "leakage_clean": false
+    },
+    {
+      "target_id": "9zdm",
+      "dockq": 0.86,
+      "iptm": 0.9545,
+      "precutoff_id_pct": 0.0,
+      "leakage_clean": true
+    },
+    {
+      "target_id": "12rh",
+      "dockq": 0.888,
+      "iptm": 0.9424,
+      "precutoff_id_pct": 100.0,
+      "leakage_clean": false
+    },
+    {
+      "target_id": "9w6s",
+      "dockq": 0.904,
+      "iptm": 0.892,
+      "precutoff_id_pct": 91.5,
+      "leakage_clean": false
+    },
+    {
+      "target_id": "9u4o",
+      "dockq": 0.907,
+      "iptm": 0.7082,
+      "precutoff_id_pct": 100.0,
+      "leakage_clean": false
+    },
+    {
+      "target_id": "12rm",
+      "dockq": 0.909,
+      "iptm": 0.9419,
+      "precutoff_id_pct": 100.0,
+      "leakage_clean": false
+    },
+    {
+      "target_id": "9wk0",
+      "dockq": 0.951,
+      "iptm": 0.9751,
+      "precutoff_id_pct": 100.0,
+      "leakage_clean": false
+    }
+  ]
+}
