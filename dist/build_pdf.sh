@@ -10,29 +10,32 @@ PANDOC_COMMON=(--pdf-engine=xelatex -H dist/header.tex
   -V geometry:margin=1in -V fontsize=11pt
   -V colorlinks=true -V linkcolor=blue -V urlcolor=blue)
 
-# --- REPORT.pdf : strip the markdown title block (-> dist/meta.yaml) and make the
-#     handful of math-symbol Unicode chars render in any font (xelatex + Latin Modern).
+# Sanitize the handful of math-symbol Unicode chars so they render in any font
+# (xelatex + Latin Modern), and strip REPORT's markdown title block (-> meta.yaml).
+# Applied to BOTH documents (the pre-registration also contains >=, etc.).
 python3 - <<'PY'
 import re
+# Relational ops (>=, <=, !=) -> ASCII: their math glyphs are missing in the bold
+# weight (headings, **bold** spans) and pandoc won't parse "$\geq$90" (closing $ before
+# a digit) as math. Arrows/approx/times/lambda render fine as math; Delta kept literal.
+SYM=[('→',r'$\rightarrow$'),('≈',r'$\approx$'),('×',r'$\times$'),('λ',r'$\lambda$'),
+     ('≥','>='),('≤','<='),('≠','!=')]
+def sanitize(text):
+    text=text.replace('`net = correct − λ·assays`','`net = correct - lambda*assays`')
+    text=text.replace('—','---').replace('–','--')                   # em/en dash -> ligatures
+    text=re.sub(r'−([0-9][0-9.]*)', r'$-\1$', text)                      # negative numbers wrapped
+    text=text.replace('−','-')                                            # binary minus -> hyphen (a bare $-$ mis-pairs with adjacent $..$)
+    for u,t in SYM: text=text.replace(u,t)
+    assert '−' not in text                                                # Delta (U+0394) kept literal
+    return text
 lines=open('REPORT.md',encoding='utf-8').read().splitlines(keepends=True)
 start=next(i for i,l in enumerate(lines) if l.startswith('## Abstract'))
-body=''.join(lines[start:])
-body=body.replace('`net = correct − λ·assays`', '`net = correct - lambda*assays`')
-body=body.replace('—','---').replace('–','--')          # em/en dash -> ligatures
-body=re.sub(r'−([0-9][0-9.]*)', r'$-\1$', body)              # negative numbers wrapped (pandoc: closing $ not before a digit)
-body=body.replace('−','$-$')                                  # remaining (binary) minus
-for u,tex in [('→',r'$\rightarrow$'),('≈',r'$\approx$'),('≥',r'$\geq$'),
-              ('≤',r'$\leq$'),('≠',r'$\neq$'),('×',r'$\times$'),('λ',r'$\lambda$')]:
-    body=body.replace(u,tex)                                      # Greek Delta (U+0394) kept literal (Latin Modern has it)
-assert '−' not in body
-open('dist/_report_body.md','w',encoding='utf-8').write(body)
+open('dist/_report_body.md','w',encoding='utf-8').write(sanitize(''.join(lines[start:])))
+open('dist/_prereg_body.md','w',encoding='utf-8').write(
+    sanitize(open('experiments/trust_cue_attribution/PHASE2_PREREGISTRATION.md',encoding='utf-8').read()))
 PY
 pandoc dist/meta.yaml dist/_report_body.md -o dist/REPORT.pdf "${PANDOC_COMMON[@]}"
 echo "built dist/REPORT.pdf"
-
-# --- PHASE2_PREREGISTRATION.pdf : pure ASCII, render directly.
-pandoc experiments/trust_cue_attribution/PHASE2_PREREGISTRATION.md \
-  -o dist/PHASE2_PREREGISTRATION.pdf "${PANDOC_COMMON[@]}"
+pandoc dist/_prereg_body.md -o dist/PHASE2_PREREGISTRATION.pdf "${PANDOC_COMMON[@]}"
 echo "built dist/PHASE2_PREREGISTRATION.pdf"
-
-rm -f dist/_report_body.md
+rm -f dist/_report_body.md dist/_prereg_body.md
