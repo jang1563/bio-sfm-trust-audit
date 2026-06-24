@@ -1,0 +1,18 @@
+{
+  "candidate_pool": 2422,
+  "leakage_clean": 102,
+  "final_nonredundant": 63,
+  "chain_counts": {
+    "6": 1,
+    "5": 1,
+    "4": 3,
+    "3": 6,
+    "2": 52
+  },
+  "size_range": [
+    63,
+    1995
+  ],
+  "status": "Boltz-2 prediction of the 48 new complexes running on Cayuga (15 reused from the n=14 run). DockQ truth + a re-run of the pre-registered confirmatory pilot at N~63 follow, for power.",
+  "note": "2422 recent post-cutoff hetero-complex candidates -> 102 leakage-clean (96% leaky) -> 63 non-redundant. Expands the confirmatory test set from 14 to ~63 for statistical power on H2/H1."
+}

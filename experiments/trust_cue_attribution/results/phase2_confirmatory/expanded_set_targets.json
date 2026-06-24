@@ -1,0 +1,445 @@
+{
+  "targets": [
+    {
+      "target_id": "9h9v",
+      "pdb_id": "9H9V",
+      "regime": "complex",
+      "n_protein_chains": 6,
+      "total_len": 503
+    },
+    {
+      "target_id": "9hqx",
+      "pdb_id": "9HQX",
+      "regime": "complex",
+      "n_protein_chains": 5,
+      "total_len": 1285
+    },
+    {
+      "target_id": "9vhl",
+      "pdb_id": "9VHL",
+      "regime": "complex",
+      "n_protein_chains": 4,
+      "total_len": 1151
+    },
+    {
+      "target_id": "9nyg",
+      "pdb_id": "9NYG",
+      "regime": "complex",
+      "n_protein_chains": 4,
+      "total_len": 1239
+    },
+    {
+      "target_id": "9wwa",
+      "pdb_id": "9WWA",
+      "regime": "complex",
+      "n_protein_chains": 4,
+      "total_len": 1420
+    },
+    {
+      "target_id": "9m3i",
+      "pdb_id": "9M3I",
+      "regime": "complex",
+      "n_protein_chains": 3,
+      "total_len": 546
+    },
+    {
+      "target_id": "9vnd",
+      "pdb_id": "9VND",
+      "regime": "complex",
+      "n_protein_chains": 3,
+      "total_len": 565
+    },
+    {
+      "target_id": "9zll",
+      "pdb_id": "9ZLL",
+      "regime": "complex",
+      "n_protein_chains": 3,
+      "total_len": 858
+    },
+    {
+      "target_id": "9ums",
+      "pdb_id": "9UMS",
+      "regime": "complex",
+      "n_protein_chains": 3,
+      "total_len": 999
+    },
+    {
+      "target_id": "9w9h",
+      "pdb_id": "9W9H",
+      "regime": "complex",
+      "n_protein_chains": 3,
+      "total_len": 1199
+    },
+    {
+      "target_id": "9hiv",
+      "pdb_id": "9HIV",
+      "regime": "complex",
+      "n_protein_chains": 3,
+      "total_len": 1590
+    },
+    {
+      "target_id": "9ibu",
+      "pdb_id": "9IBU",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 63
+    },
+    {
+      "target_id": "9x8z",
+      "pdb_id": "9X8Z",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 134
+    },
+    {
+      "target_id": "9jm7",
+      "pdb_id": "9JM7",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 140
+    },
+    {
+      "target_id": "9jm8",
+      "pdb_id": "9JM8",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 141
+    },
+    {
+      "target_id": "9g7u",
+      "pdb_id": "9G7U",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 144
+    },
+    {
+      "target_id": "9sf2",
+      "pdb_id": "9SF2",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 158
+    },
+    {
+      "target_id": "9vzc",
+      "pdb_id": "9VZC",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 218
+    },
+    {
+      "target_id": "9lp2",
+      "pdb_id": "9LP2",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 218
+    },
+    {
+      "target_id": "9zdm",
+      "pdb_id": "9ZDM",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 230
+    },
+    {
+      "target_id": "9e7a",
+      "pdb_id": "9E7A",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 231
+    },
+    {
+      "target_id": "9vnj",
+      "pdb_id": "9VNJ",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 235
+    },
+    {
+      "target_id": "9k7u",
+      "pdb_id": "9K7U",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 237
+    },
+    {
+      "target_id": "9lgh",
+      "pdb_id": "9LGH",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 249
+    },
+    {
+      "target_id": "9u9h",
+      "pdb_id": "9U9H",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 259
+    },
+    {
+      "target_id": "9mno",
+      "pdb_id": "9MNO",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 283
+    },
+    {
+      "target_id": "9j9w",
+      "pdb_id": "9J9W",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 314
+    },
+    {
+      "target_id": "9k1u",
+      "pdb_id": "9K1U",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 316
+    },
+    {
+      "target_id": "9st8",
+      "pdb_id": "9ST8",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 328
+    },
+    {
+      "target_id": "9z7o",
+      "pdb_id": "9Z7O",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 337
+    },
+    {
+      "target_id": "9jdd",
+      "pdb_id": "9JDD",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 354
+    },
+    {
+      "target_id": "8jsu",
+      "pdb_id": "8JSU",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 357
+    },
+    {
+      "target_id": "9rgl",
+      "pdb_id": "9RGL",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 438
+    },
+    {
+      "target_id": "9wpl",
+      "pdb_id": "9WPL",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 468
+    },
+    {
+      "target_id": "9i25",
+      "pdb_id": "9I25",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 503
+    },
+    {
+      "target_id": "9x2m",
+      "pdb_id": "9X2M",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 506
+    },
+    {
+      "target_id": "9jdi",
+      "pdb_id": "9JDI",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 542
+    },
+    {
+      "target_id": "9erq",
+      "pdb_id": "9ERQ",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 561
+    },
+    {
+      "target_id": "9eae",
+      "pdb_id": "9EAE",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 591
+    },
+    {
+      "target_id": "9e03",
+      "pdb_id": "9E03",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 599
+    },
+    {
+      "target_id": "9st4",
+      "pdb_id": "9ST4",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 626
+    },
+    {
+      "target_id": "9qs0",
+      "pdb_id": "9QS0",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 641
+    },
+    {
+      "target_id": "9s6c",
+      "pdb_id": "9S6C",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 676
+    },
+    {
+      "target_id": "9lfq",
+      "pdb_id": "9LFQ",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 690
+    },
+    {
+      "target_id": "9vll",
+      "pdb_id": "9VLL",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 747
+    },
+    {
+      "target_id": "9g87",
+      "pdb_id": "9G87",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 833
+    },
+    {
+      "target_id": "9wno",
+      "pdb_id": "9WNO",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 847
+    },
+    {
+      "target_id": "9h5r",
+      "pdb_id": "9H5R",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 850
+    },
+    {
+      "target_id": "9kqg",
+      "pdb_id": "9KQG",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 856
+    },
+    {
+      "target_id": "9sxc",
+      "pdb_id": "9SXC",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 899
+    },
+    {
+      "target_id": "30yz",
+      "pdb_id": "30YZ",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 920
+    },
+    {
+      "target_id": "9gjb",
+      "pdb_id": "9GJB",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 957
+    },
+    {
+      "target_id": "9d9u",
+      "pdb_id": "9D9U",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 985
+    },
+    {
+      "target_id": "9vyh",
+      "pdb_id": "9VYH",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 1015
+    },
+    {
+      "target_id": "9bes",
+      "pdb_id": "9BES",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 1028
+    },
+    {
+      "target_id": "8zwc",
+      "pdb_id": "8ZWC",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 1180
+    },
+    {
+      "target_id": "9r8g",
+      "pdb_id": "9R8G",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 1314
+    },
+    {
+      "target_id": "9wh1",
+      "pdb_id": "9WH1",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 1381
+    },
+    {
+      "target_id": "9q8z",
+      "pdb_id": "9Q8Z",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 1463
+    },
+    {
+      "target_id": "9s3q",
+      "pdb_id": "9S3Q",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 1751
+    },
+    {
+      "target_id": "9rvy",
+      "pdb_id": "9RVY",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 1794
+    },
+    {
+      "target_id": "10ft",
+      "pdb_id": "10FT",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 1828
+    },
+    {
+      "target_id": "9rch",
+      "pdb_id": "9RCH",
+      "regime": "complex",
+      "n_protein_chains": 2,
+      "total_len": 1995
+    }
+  ]
+}
