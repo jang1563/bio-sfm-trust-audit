@@ -1,0 +1,252 @@
+{
+  "n_targets": 21,
+  "models": [
+    "claude-sonnet-4-6",
+    "claude-opus-4-8",
+    "gpt-4.1"
+  ],
+  "seeds": 1,
+  "lambda": 0.5,
+  "arms": [
+    "no_signal",
+    "raw_plddt_shown",
+    "calibrated_risk_shown_no_recommendation",
+    "calibrated_interface_shown",
+    "inverted_reliability_interface_control"
+  ],
+  "note": "Demo on the 21 leakage-controlled redo targets, 3 models x 1 seed (105 reqs each). Calibration cue fit in-distribution at correct_lddt=0.9. Scored at monomer lDDT cutoffs 0.7 (saturated) and 0.9 (post-hoc stakes); complex DockQ>=0.23.",
+  "by_cutoff": {
+    "0.7": {
+      "base_rate": 1.0,
+      "per_model": {
+        "claude-sonnet-4-6": {
+          "no_signal": {
+            "net": 0.119,
+            "trust": 0,
+            "verify": 5,
+            "defer": 16,
+            "default": 0
+          },
+          "raw_plddt_shown": {
+            "net": 1.0,
+            "trust": 21,
+            "verify": 0,
+            "defer": 0,
+            "default": 0
+          },
+          "calibrated_risk_shown_no_recommendation": {
+            "net": 0.405,
+            "trust": 1,
+            "verify": 15,
+            "defer": 0,
+            "default": 5
+          },
+          "calibrated_interface_shown": {
+            "net": 0.524,
+            "trust": 1,
+            "verify": 20,
+            "defer": 0,
+            "default": 0
+          },
+          "inverted_reliability_interface_control": {
+            "net": 0.571,
+            "trust": 10,
+            "verify": 4,
+            "defer": 7,
+            "default": 0
+          }
+        },
+        "claude-opus-4-8": {
+          "no_signal": {
+            "net": 0.119,
+            "trust": 0,
+            "verify": 5,
+            "defer": 16,
+            "default": 0
+          },
+          "raw_plddt_shown": {
+            "net": 0.976,
+            "trust": 20,
+            "verify": 1,
+            "defer": 0,
+            "default": 0
+          },
+          "calibrated_risk_shown_no_recommendation": {
+            "net": 0.5,
+            "trust": 0,
+            "verify": 21,
+            "defer": 0,
+            "default": 0
+          },
+          "calibrated_interface_shown": {
+            "net": 0.5,
+            "trust": 0,
+            "verify": 21,
+            "defer": 0,
+            "default": 0
+          },
+          "inverted_reliability_interface_control": {
+            "net": 0.429,
+            "trust": 0,
+            "verify": 18,
+            "defer": 3,
+            "default": 0
+          }
+        },
+        "gpt-4.1": {
+          "no_signal": {
+            "net": 0.881,
+            "trust": 16,
+            "verify": 5,
+            "defer": 0,
+            "default": 0
+          },
+          "raw_plddt_shown": {
+            "net": 1.0,
+            "trust": 21,
+            "verify": 0,
+            "defer": 0,
+            "default": 0
+          },
+          "calibrated_risk_shown_no_recommendation": {
+            "net": 0.524,
+            "trust": 1,
+            "verify": 20,
+            "defer": 0,
+            "default": 0
+          },
+          "calibrated_interface_shown": {
+            "net": 0.524,
+            "trust": 1,
+            "verify": 20,
+            "defer": 0,
+            "default": 0
+          },
+          "inverted_reliability_interface_control": {
+            "net": 0.952,
+            "trust": 19,
+            "verify": 2,
+            "defer": 0,
+            "default": 0
+          }
+        }
+      }
+    },
+    "0.9": {
+      "base_rate": 0.476,
+      "per_model": {
+        "claude-sonnet-4-6": {
+          "no_signal": {
+            "net": 0.119,
+            "trust": 0,
+            "verify": 5,
+            "defer": 16,
+            "default": 0
+          },
+          "raw_plddt_shown": {
+            "net": 0.476,
+            "trust": 21,
+            "verify": 0,
+            "defer": 0,
+            "default": 0
+          },
+          "calibrated_risk_shown_no_recommendation": {
+            "net": 0.405,
+            "trust": 1,
+            "verify": 15,
+            "defer": 0,
+            "default": 5
+          },
+          "calibrated_interface_shown": {
+            "net": 0.524,
+            "trust": 1,
+            "verify": 20,
+            "defer": 0,
+            "default": 0
+          },
+          "inverted_reliability_interface_control": {
+            "net": 0.333,
+            "trust": 10,
+            "verify": 4,
+            "defer": 7,
+            "default": 0
+          }
+        },
+        "claude-opus-4-8": {
+          "no_signal": {
+            "net": 0.119,
+            "trust": 0,
+            "verify": 5,
+            "defer": 16,
+            "default": 0
+          },
+          "raw_plddt_shown": {
+            "net": 0.452,
+            "trust": 20,
+            "verify": 1,
+            "defer": 0,
+            "default": 0
+          },
+          "calibrated_risk_shown_no_recommendation": {
+            "net": 0.5,
+            "trust": 0,
+            "verify": 21,
+            "defer": 0,
+            "default": 0
+          },
+          "calibrated_interface_shown": {
+            "net": 0.5,
+            "trust": 0,
+            "verify": 21,
+            "defer": 0,
+            "default": 0
+          },
+          "inverted_reliability_interface_control": {
+            "net": 0.429,
+            "trust": 0,
+            "verify": 18,
+            "defer": 3,
+            "default": 0
+          }
+        },
+        "gpt-4.1": {
+          "no_signal": {
+            "net": 0.357,
+            "trust": 16,
+            "verify": 5,
+            "defer": 0,
+            "default": 0
+          },
+          "raw_plddt_shown": {
+            "net": 0.476,
+            "trust": 21,
+            "verify": 0,
+            "defer": 0,
+            "default": 0
+          },
+          "calibrated_risk_shown_no_recommendation": {
+            "net": 0.524,
+            "trust": 1,
+            "verify": 20,
+            "defer": 0,
+            "default": 0
+          },
+          "calibrated_interface_shown": {
+            "net": 0.524,
+            "trust": 1,
+            "verify": 20,
+            "defer": 0,
+            "default": 0
+          },
+          "inverted_reliability_interface_control": {
+            "net": 0.476,
+            "trust": 19,
+            "verify": 2,
+            "defer": 0,
+            "default": 0
+          }
+        }
+      }
+    }
+  }
+}

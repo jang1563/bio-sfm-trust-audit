@@ -48,10 +48,29 @@ So **Boltz-2 succeeds on recent novel-fold structures too**: the low-stakes prob
 **intrinsic to recent high-resolution depositions, independent of leakage** (this redo
 empirically separates the two confounds — leakage is real *and* low-stakes is real).
 
-**Decision (by the project's own NO-GO discipline):** running the ≥3-model × ≥3-seed LLM
-routing pilot on a 100%-base-rate substrate would repeat exactly v1's error — "trust-all" is
-already optimal, so there is nothing to route. As with the Phase 1 single-cell NO-GO, the
-pilot is **not run** here. A genuine routing substrate needs cases where the specialist
-*actually fails* (harder modalities — large assemblies, disordered/low-MSA targets, function
-not just fold), which recent crystallisable RCSB structures do not provide. This justifies the
-report's pivot toward enforcement-based routing and a different specialist-failure regime.
+**Decision (by the project's own NO-GO discipline):** a full powered ≥3-model × ≥3-seed
+*confirmatory* pilot on a 100%-base-rate substrate cannot establish routing value — "trust-all"
+is already optimal, so there is nothing to route (cf. the Phase 1 single-cell NO-GO). A genuine
+routing substrate needs cases where the specialist *actually fails* (large assemblies,
+disordered/low-MSA targets, function not just fold), which recent crystallisable RCSB structures
+do not provide — motivating the report's enforcement-layer pivot.
+
+## Bounded 3-model demo (illustrative, not confirmatory)
+
+A small demo (5 arms × 21 targets × **3 models** — Sonnet 4.6, Opus 4.8, GPT-4.1 — 1 seed,
+105 requests/model, run locally) makes the saturation consequence concrete; scores in
+[`redo_demo_scores.json`](redo_demo_scores.json). The `calibrated_interface − raw_plddt`
+net-reward contrast, **identical across all three models**:
+
+| monomer cutoff | base rate | interface − raw |
+|---|---|---|
+| lDDT ≥ 0.7 (pre-registered) | 100% | **−0.476** |
+| lDDT ≥ 0.9 (post-hoc stakes) | 48% | +0.048 |
+
+On the **saturated** substrate the calibrated reliability *interface* is **dramatically worse
+than raw pLDDT** (raw → net ≈ 1.0 by trusting; the interface's risk card triggers blanket
+over-verification → wasted cost). Only when stakes are manufactured (0.9 cutoff) does the
+interface edge ahead. The fresh, leakage-controlled, cross-model evidence thus **reinforces the
+v1 headline** — raw calibrated confidence is the robust lever; the reliability interface is not
+a free win and can actively hurt — and shows the effect is governed by whether the substrate
+has any routing stakes at all.

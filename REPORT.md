@@ -218,10 +218,15 @@ pre-cutoff homolog**; 21 non-redundant low-homology targets survive) and predict
 Boltz-2. It is **100%/100% correct at the pre-registered cutoffs** (monomer lDDT ≥ 0.7,
 complex DockQ ≥ 0.23). So Boltz-2 succeeds on recent novel folds too: the **low-stakes
 problem is intrinsic to recent high-resolution structures, not an artifact of leakage**
-(the redo separates the two confounds). By the project's own NO-GO discipline the routing
-pilot is **not run** on a 100%-base-rate substrate — a real routing substrate needs
-specialist *failure* cases (harder modalities), motivating the enforcement-layer pivot.
-See `results/phase2_redo_curation/`.
+(the redo separates the two confounds). By the project's own NO-GO discipline a full *confirmatory*
+pilot cannot run on a 100%-base-rate substrate — a real routing substrate needs specialist
+*failure* cases (harder modalities), motivating the enforcement-layer pivot. A bounded
+3-model demo (Sonnet 4.6, Opus 4.8, GPT-4.1) makes the consequence concrete and is
+identical across all three: `calibrated_interface − raw_plddt` net = **−0.476** on the
+saturated substrate (the risk card triggers blanket over-verification where trust-all is
+free) vs **+0.05** only once stakes are manufactured (lDDT ≥ 0.9) — fresh, leakage-controlled,
+cross-model evidence that **reinforces the headline** (raw confidence is the robust lever;
+the reliability interface is not a free win). See `results/phase2_redo_curation/`.
 
 ## 8. Reproducibility
 
