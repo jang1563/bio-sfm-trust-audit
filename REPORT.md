@@ -241,6 +241,21 @@ held-out design). It is therefore *suggestive, not confirmatory*: it shows the s
 the question and that the lean is the project's way, while the actual claim awaits the pre-registered
 run (held-out calibration, ≥ 3 seeds, ≥ 6 arms, λ-sweep, larger n). See `results/phase2_failure_substrate/`.
 
+**Pre-registered confirmatory pilot (executed).** That run was then done properly (n = 14, **held-out**
+isotonic calibration fit on the 40 v1 complexes, 6 arms incl. a competing-cue, 3 seeds, λ-sweep,
+Holm-Bonferroni; H2 = interface vs raw as the single primary; `results/phase2_confirmatory/`). It
+**confirms and sharpens the headline**: (1) **H2 is NULL at the primary λ = 0.5** for all three
+models — the calibrated reliability *interface* does not beat raw confidence even under held-out
+calibration (the registered prediction); (2) **A4 is exact** — `calibrated_interface` equals the
+no-recommendation arm (Δ = 0.000, Holm-significant), so the benefit is the *information*, not the
+recommendation; (3) **H1 is significant** — raw − no_signal = **+0.34 (p = .001, Sonnet)** / **+0.35
+(p = .005, GPT)** at λ = 0.8, surviving Holm correction: raw calibrated confidence *genuinely* helps
+when verification is costly (the project's first statistically significant routing result); (4)
+cue-following persists (inverted < calibrated, Holm-sig) and a misleading authority cue does not
+override the numbers (competing-cue ≈ raw). The interface effect is λ-dependent (helps slightly at
+low cost, hurts at high cost via over-verification). Presentation-layer interfaces add nothing over
+the raw calibrated number — **enforcement-based routing remains the motivated next lever.**
+
 ## 8. Reproducibility
 
 All code, tests (163 passing), and compact result artifacts are in the repo under
