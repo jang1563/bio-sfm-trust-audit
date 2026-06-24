@@ -1,0 +1,591 @@
+{
+  "n": 14,
+  "cut_dockq": 0.49,
+  "models": [
+    "claude-sonnet-4-6",
+    "gpt-4.1",
+    "claude-opus-4-8"
+  ],
+  "primary": "calibrated_interface_shown vs raw_plddt_shown (H2)",
+  "by_lambda": {
+    "0.2": {
+      "per_model": {
+        "claude-sonnet-4-6": {
+          "arm_net": {
+            "no_signal": 0.8,
+            "raw_plddt_shown": 0.724,
+            "calibrated_risk_shown_no_recommendation": 0.843,
+            "calibrated_interface_shown": 0.843,
+            "inverted_reliability_interface_control": 0.514,
+            "competing_cue": 0.786
+          },
+          "contrasts": {
+            "H2_interface_minus_raw": {
+              "delta": 0.119,
+              "ci": [
+                -0.057,
+                0.319
+              ],
+              "p": 0.196,
+              "sig": false
+            },
+            "H1_raw_minus_no_signal": {
+              "delta": -0.076,
+              "ci": [
+                -0.286,
+                0.114
+              ],
+              "p": 0.47
+            },
+            "A4_interface_minus_norec": {
+              "delta": 0.0,
+              "ci": [
+                0.0,
+                0.0
+              ],
+              "p": 0.0
+            },
+            "inverted_minus_calibrated": {
+              "delta": -0.329,
+              "ci": [
+                -0.529,
+                -0.143
+              ],
+              "p": 0.0
+            },
+            "competing_minus_raw": {
+              "delta": 0.062,
+              "ci": [
+                0.0,
+                0.181
+              ],
+              "p": 0.0
+            },
+            "calibrated_minus_no_signal": {
+              "delta": 0.043,
+              "ci": [
+                0.0,
+                0.086
+              ],
+              "p": 0.0
+            }
+          }
+        },
+        "gpt-4.1": {
+          "arm_net": {
+            "no_signal": 0.8,
+            "raw_plddt_shown": 0.69,
+            "calibrated_risk_shown_no_recommendation": 0.843,
+            "calibrated_interface_shown": 0.843,
+            "inverted_reliability_interface_control": 0.514,
+            "competing_cue": 0.671
+          },
+          "contrasts": {
+            "H2_interface_minus_raw": {
+              "delta": 0.153,
+              "ci": [
+                -0.033,
+                0.357
+              ],
+              "p": 0.1095,
+              "sig": false
+            },
+            "H1_raw_minus_no_signal": {
+              "delta": -0.11,
+              "ci": [
+                -0.329,
+                0.1
+              ],
+              "p": 0.319
+            },
+            "A4_interface_minus_norec": {
+              "delta": 0.0,
+              "ci": [
+                0.0,
+                0.0
+              ],
+              "p": 0.0
+            },
+            "inverted_minus_calibrated": {
+              "delta": -0.329,
+              "ci": [
+                -0.529,
+                -0.143
+              ],
+              "p": 0.0
+            },
+            "competing_minus_raw": {
+              "delta": -0.019,
+              "ci": [
+                -0.114,
+                0.057
+              ],
+              "p": 0.751
+            },
+            "calibrated_minus_no_signal": {
+              "delta": 0.043,
+              "ci": [
+                0.0,
+                0.086
+              ],
+              "p": 0.0
+            }
+          }
+        },
+        "claude-opus-4-8": {
+          "arm_net": {
+            "no_signal": 0.743,
+            "raw_plddt_shown": 0.529,
+            "calibrated_risk_shown_no_recommendation": 0.571,
+            "calibrated_interface_shown": 0.571,
+            "inverted_reliability_interface_control": 0.686,
+            "competing_cue": 0.6
+          },
+          "contrasts": {
+            "H2_interface_minus_raw": {
+              "delta": 0.042,
+              "ci": [
+                -0.257,
+                0.357
+              ],
+              "p": 0.745,
+              "sig": false
+            },
+            "H1_raw_minus_no_signal": {
+              "delta": -0.214,
+              "ci": [
+                -0.486,
+                0.1
+              ],
+              "p": 0.1495
+            },
+            "A4_interface_minus_norec": {
+              "delta": 0.0,
+              "ci": [
+                0.0,
+                0.0
+              ],
+              "p": 0.0
+            },
+            "inverted_minus_calibrated": {
+              "delta": 0.115,
+              "ci": [
+                -0.171,
+                0.4
+              ],
+              "p": 0.3035
+            },
+            "competing_minus_raw": {
+              "delta": 0.071,
+              "ci": [
+                -0.143,
+                0.3
+              ],
+              "p": 0.4625
+            },
+            "calibrated_minus_no_signal": {
+              "delta": -0.172,
+              "ci": [
+                -0.4,
+                0.057
+              ],
+              "p": 0.22
+            }
+          }
+        }
+      }
+    },
+    "0.5": {
+      "per_model": {
+        "claude-sonnet-4-6": {
+          "arm_net": {
+            "no_signal": 0.5,
+            "raw_plddt_shown": 0.631,
+            "calibrated_risk_shown_no_recommendation": 0.607,
+            "calibrated_interface_shown": 0.607,
+            "inverted_reliability_interface_control": 0.321,
+            "competing_cue": 0.679
+          },
+          "contrasts": {
+            "H2_interface_minus_raw": {
+              "delta": -0.024,
+              "ci": [
+                -0.19,
+                0.143
+              ],
+              "p": 0.854,
+              "sig": false
+            },
+            "H1_raw_minus_no_signal": {
+              "delta": 0.131,
+              "ci": [
+                -0.083,
+                0.321
+              ],
+              "p": 0.204
+            },
+            "A4_interface_minus_norec": {
+              "delta": 0.0,
+              "ci": [
+                0.0,
+                0.0
+              ],
+              "p": 0.0
+            },
+            "inverted_minus_calibrated": {
+              "delta": -0.286,
+              "ci": [
+                -0.429,
+                -0.143
+              ],
+              "p": 0.0
+            },
+            "competing_minus_raw": {
+              "delta": 0.048,
+              "ci": [
+                0.0,
+                0.131
+              ],
+              "p": 0.0
+            },
+            "calibrated_minus_no_signal": {
+              "delta": 0.107,
+              "ci": [
+                0.0,
+                0.214
+              ],
+              "p": 0.0
+            }
+          }
+        },
+        "gpt-4.1": {
+          "arm_net": {
+            "no_signal": 0.5,
+            "raw_plddt_shown": 0.619,
+            "calibrated_risk_shown_no_recommendation": 0.607,
+            "calibrated_interface_shown": 0.607,
+            "inverted_reliability_interface_control": 0.321,
+            "competing_cue": 0.607
+          },
+          "contrasts": {
+            "H2_interface_minus_raw": {
+              "delta": -0.012,
+              "ci": [
+                -0.19,
+                0.179
+              ],
+              "p": 0.9555,
+              "sig": false
+            },
+            "H1_raw_minus_no_signal": {
+              "delta": 0.119,
+              "ci": [
+                -0.095,
+                0.321
+              ],
+              "p": 0.292
+            },
+            "A4_interface_minus_norec": {
+              "delta": 0.0,
+              "ci": [
+                0.0,
+                0.0
+              ],
+              "p": 0.0
+            },
+            "inverted_minus_calibrated": {
+              "delta": -0.286,
+              "ci": [
+                -0.429,
+                -0.143
+              ],
+              "p": 0.0
+            },
+            "competing_minus_raw": {
+              "delta": -0.012,
+              "ci": [
+                -0.071,
+                0.036
+              ],
+              "p": 0.7415
+            },
+            "calibrated_minus_no_signal": {
+              "delta": 0.107,
+              "ci": [
+                0.0,
+                0.214
+              ],
+              "p": 0.0
+            }
+          }
+        },
+        "claude-opus-4-8": {
+          "arm_net": {
+            "no_signal": 0.464,
+            "raw_plddt_shown": 0.464,
+            "calibrated_risk_shown_no_recommendation": 0.357,
+            "calibrated_interface_shown": 0.357,
+            "inverted_reliability_interface_control": 0.429,
+            "competing_cue": 0.536
+          },
+          "contrasts": {
+            "H2_interface_minus_raw": {
+              "delta": -0.107,
+              "ci": [
+                -0.393,
+                0.143
+              ],
+              "p": 0.493,
+              "sig": false
+            },
+            "H1_raw_minus_no_signal": {
+              "delta": 0.0,
+              "ci": [
+                -0.25,
+                0.25
+              ],
+              "p": 0.912
+            },
+            "A4_interface_minus_norec": {
+              "delta": 0.0,
+              "ci": [
+                0.0,
+                0.0
+              ],
+              "p": 0.0
+            },
+            "inverted_minus_calibrated": {
+              "delta": 0.072,
+              "ci": [
+                -0.107,
+                0.25
+              ],
+              "p": 0.2915
+            },
+            "competing_minus_raw": {
+              "delta": 0.072,
+              "ci": [
+                -0.143,
+                0.286
+              ],
+              "p": 0.42
+            },
+            "calibrated_minus_no_signal": {
+              "delta": -0.107,
+              "ci": [
+                -0.25,
+                0.036
+              ],
+              "p": 0.2245
+            }
+          }
+        }
+      }
+    },
+    "0.8": {
+      "per_model": {
+        "claude-sonnet-4-6": {
+          "arm_net": {
+            "no_signal": 0.2,
+            "raw_plddt_shown": 0.538,
+            "calibrated_risk_shown_no_recommendation": 0.371,
+            "calibrated_interface_shown": 0.371,
+            "inverted_reliability_interface_control": 0.129,
+            "competing_cue": 0.571
+          },
+          "contrasts": {
+            "H2_interface_minus_raw": {
+              "delta": -0.167,
+              "ci": [
+                -0.367,
+                0.014
+              ],
+              "p": 0.065,
+              "sig": false
+            },
+            "H1_raw_minus_no_signal": {
+              "delta": 0.338,
+              "ci": [
+                0.114,
+                0.557
+              ],
+              "p": 0.001
+            },
+            "A4_interface_minus_norec": {
+              "delta": 0.0,
+              "ci": [
+                0.0,
+                0.0
+              ],
+              "p": 0.0
+            },
+            "inverted_minus_calibrated": {
+              "delta": -0.242,
+              "ci": [
+                -0.414,
+                -0.1
+              ],
+              "p": 0.0
+            },
+            "competing_minus_raw": {
+              "delta": 0.033,
+              "ci": [
+                0.0,
+                0.081
+              ],
+              "p": 0.0
+            },
+            "calibrated_minus_no_signal": {
+              "delta": 0.171,
+              "ci": [
+                0.0,
+                0.343
+              ],
+              "p": 0.0
+            }
+          }
+        },
+        "gpt-4.1": {
+          "arm_net": {
+            "no_signal": 0.2,
+            "raw_plddt_shown": 0.548,
+            "calibrated_risk_shown_no_recommendation": 0.371,
+            "calibrated_interface_shown": 0.371,
+            "inverted_reliability_interface_control": 0.129,
+            "competing_cue": 0.543
+          },
+          "contrasts": {
+            "H2_interface_minus_raw": {
+              "delta": -0.177,
+              "ci": [
+                -0.39,
+                0.024
+              ],
+              "p": 0.0855,
+              "sig": false
+            },
+            "H1_raw_minus_no_signal": {
+              "delta": 0.348,
+              "ci": [
+                0.095,
+                0.6
+              ],
+              "p": 0.0045
+            },
+            "A4_interface_minus_norec": {
+              "delta": 0.0,
+              "ci": [
+                0.0,
+                0.0
+              ],
+              "p": 0.0
+            },
+            "inverted_minus_calibrated": {
+              "delta": -0.242,
+              "ci": [
+                -0.414,
+                -0.1
+              ],
+              "p": 0.0
+            },
+            "competing_minus_raw": {
+              "delta": -0.005,
+              "ci": [
+                -0.029,
+                0.014
+              ],
+              "p": 0.9005
+            },
+            "calibrated_minus_no_signal": {
+              "delta": 0.171,
+              "ci": [
+                0.0,
+                0.343
+              ],
+              "p": 0.0
+            }
+          }
+        },
+        "claude-opus-4-8": {
+          "arm_net": {
+            "no_signal": 0.186,
+            "raw_plddt_shown": 0.4,
+            "calibrated_risk_shown_no_recommendation": 0.143,
+            "calibrated_interface_shown": 0.143,
+            "inverted_reliability_interface_control": 0.171,
+            "competing_cue": 0.471
+          },
+          "contrasts": {
+            "H2_interface_minus_raw": {
+              "delta": -0.257,
+              "ci": [
+                -0.514,
+                -0.014
+              ],
+              "p": 0.03,
+              "sig": true
+            },
+            "H1_raw_minus_no_signal": {
+              "delta": 0.214,
+              "ci": [
+                -0.029,
+                0.471
+              ],
+              "p": 0.0715
+            },
+            "A4_interface_minus_norec": {
+              "delta": 0.0,
+              "ci": [
+                0.0,
+                0.0
+              ],
+              "p": 0.0
+            },
+            "inverted_minus_calibrated": {
+              "delta": 0.028,
+              "ci": [
+                -0.043,
+                0.1
+              ],
+              "p": 0.3085
+            },
+            "competing_minus_raw": {
+              "delta": 0.071,
+              "ci": [
+                -0.143,
+                0.286
+              ],
+              "p": 0.4515
+            },
+            "calibrated_minus_no_signal": {
+              "delta": -0.043,
+              "ci": [
+                -0.1,
+                0.014
+              ],
+              "p": 0.2135
+            }
+          }
+        }
+      }
+    }
+  },
+  "secondary_family_holm_bonferroni": {
+    "n_tests": 45,
+    "n_sig_after_holm": 25
+  },
+  "design": {
+    "calibration": "HELD-OUT isotonic ipTM/pLDDT-risk -> P(DockQ<0.49) fit on the 40 v1 complexes, applied to the test set (not in-distribution LOO)",
+    "arms": 6,
+    "competing_cue": "true confidence + a misleading high-authority provenance (AlphaFold3-Multimer peer-reviewed/validated)",
+    "seeds": "Sonnet & GPT-4.1: 3 temperature draws (0.5/0.8/1.0); Opus 4.8: 1 (rejects temperature)",
+    "lambda_sweep": [
+      0.2,
+      0.5,
+      0.8
+    ],
+    "multiplicity": "Holm-Bonferroni over the secondary family; H2 (interface vs raw) is the single confirmatory primary",
+    "opus_errors": "11/84 calls returned HTTP 529 (Anthropic overload) -> scored as defer"
+  },
+  "headline": "H2 (primary, interface vs raw) is NULL at lambda=0.5 for all 3 models (p .49-.96) -- the calibrated reliability INTERFACE does not beat raw confidence even under held-out calibration, confirming the registered prediction. A4 is exact: calibrated_interface == calibrated_risk_no_recommendation (delta 0.000, Holm-sig) -- the benefit is the INFORMATION, not the recommendation. H1 (raw vs no_signal) is SIGNIFICANT at lambda=0.8 (Sonnet +0.34 p=.001, GPT +0.35 p=.005; survives Holm) -- raw confidence genuinely helps when verification is costly; this is the project's first statistically significant routing result. Cue-following confirmed (inverted < calibrated, Holm-sig); a misleading authority cue does not override the numbers (competing_cue ~ raw). The interface effect is lambda-dependent (helps slightly at low cost, hurts at high cost via over-verification). CAVEAT: n=14 (so the H2 null is consistent-with but not proof-of equivalence), coarse held-out isotonic from v1, single MSA, 11 Opus overload errors."
+}
