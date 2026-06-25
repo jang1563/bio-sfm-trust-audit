@@ -1,7 +1,7 @@
 # When does an LLM trust a specialist model? A cost-aware trust-routing audit — and why "calibrated reliability interfaces" are not a free win
 
 **Technical report — bio-sfm-trust-audit**
-Date: 2026-06-19 · Status: exploratory report; confirmatory redo pre-registered (see `PHASE2_PREREGISTRATION.md`)
+Date: 2026-06-25 · Status: updated report with powered protein confirmatory run and variant-effect extension
 Repo: `jang1563/bio-sfm-trust-audit`
 
 ## Abstract
@@ -14,7 +14,7 @@ trust-routing decision and ask whether converting a specialist's reliability
 evidence into an explicit *calibrated reliability interface* improves routing
 over simply showing the raw confidence.
 
-Across three substrates (a GEARS/Norman perturbation dry-run, a single-cell
+Across the initial three substrates (a GEARS/Norman perturbation dry-run, a single-cell
 foundation-model cue, and protein-structure prediction with Boltz-2/pLDDT) the
 robust finding is **cautionary, not celebratory**. (1) The LLM reasoning layer is
 strongly **cue-sensitive**: shown any reliability signal it routes far better than
@@ -31,6 +31,16 @@ than with raw confidence (Δnet −0.225, CI [−0.325, −0.113]), replicating 
 **raw calibrated confidence is the robust lever; prompt-visible reliability
 *interfaces* are not a free win and are model-dependent** — presentation alone is
 insufficient, motivating enforcement-based (tool/MCP/post-training) routing.
+
+A follow-up **variant-effect DMS** arm tests the same claim on the first substrate
+that passes the full trust-routing precondition: the specialist confidence signal
+is validated against experimental truth, the decision is non-saturated, and the
+signal adds modest information beyond a cheap conservation baseline. The
+pre-registered primary result remains a null: a calibrated reliability interface
+does **not** robustly improve net utility over raw specialist score across three
+models and three verification costs. This makes the negative result more
+informative, not less: even when the signal is real and decision-relevant,
+prompt-visible presentation is insufficient.
 
 ## 1. Question
 
@@ -55,6 +65,11 @@ Reward: `net = correct − λ·assays` (λ = verification price; primary λ = 0.
 - **Phase 2 (protein structure, Boltz-2 / pLDDT).** A substrate where the
   specialist is excellent *and* emits a validated calibrated confidence — the
   focus of this report.
+- **Follow-up: variant-effect DMS.** The first substrate in this audit to pass
+  the full precondition gate (validated confidence, non-saturated decision, and
+  added value beyond a cheap conservation baseline). It strengthens the same
+  headline: raw confidence is the robust lever; a calibrated reliability
+  interface is not a free win over raw score.
 
 ## 3. Phase 2 methods (brief)
 
@@ -267,7 +282,77 @@ holds with statistical force: **raw calibrated confidence is the robust lever; t
 reliability interface is not a free win and actively hurts at real verification cost** — motivating
 enforcement-based routing. See `results/phase2_confirmatory/`.
 
-## 8. Reproducibility
+## 8. Variant-effect extension: the precondition-passing confirmation
+
+The protein-structure arm established the routing headline, but it also exposed a
+larger methodological issue: calibrated trust-routing has stakes only if the
+specialist confidence signal is validated, the decision is non-saturated, and the
+LLM uses the signal in a calibrated way rather than merely following the prompt
+cue. A follow-up variant-effect arm was therefore run as a precondition-passing
+confirmation rather than as a search for a positive interface result.
+
+### 8.1 Cross-substrate precondition view
+
+| arm | specialist confidence | gate result | honest interpretation |
+|---|---|---|---|
+| Phase 0 GEARS/Norman dry-run | disagreement / reliability cards | LLM use failed: cue-sensitive | Reliability-card presentation can move the model in the wrong direction. |
+| Phase 1 single-cell | edge cue → P(wrong) | failed validation | No validated confidence signal to route on. |
+| Phase 2 protein structure | pLDDT / ipTM | validated, but often low-stakes | Confidence is real, but saturated decisions make presentation-layer gains fragile. |
+| Unpublished docking triage | docking score → P(active) | failed usable-signal test | Score-to-probability signal added little decision-relevant information beyond base-rate structure. |
+| Variant-effect DMS | zero-shot VEP score → P(call correct) | **passed G1-G3** | First substrate where the precondition holds; prompt-interface H2 is still null. |
+
+### 8.2 Gate result
+
+On ProteinGym v1.3 DMS substitution data (96 human assays; gene/assay-level
+resampling), zero-shot variant-effect predictors pass all three gates before any
+LLM routing result is interpreted:
+
+- **G1 validated.** Per-assay AUROC vs DMS: EVE 0.767, TranceptEVE-L 0.770,
+  ESM1v 0.770, ESM1b 0.749, GEMME 0.768; every CI lower bound is > 0.70.
+- **G2 decision-relevant.** DMS base-rate median 0.50, IQR [0.50, 0.55], with
+  99% of assays in [0.10, 0.90].
+- **G3 beyond cheap baseline.** VEPs beat Site_Independent conservation by
+  +0.028 to +0.041 AUROC, with CIs excluding 0.
+
+This gate pass should be stated with its caveat: Site_Independent is already a
+strong baseline (AUROC 0.713), so the headroom is modest. The claim is not that
+variant-effect confidence is overwhelmingly superior; it is that this substrate
+finally makes the trust-routing question meaningful under the project's own
+precondition discipline.
+
+### 8.3 LLM routing result
+
+The pre-registered primary contrast was H2: whether a calibrated reliability
+interface improves net utility over simply showing the raw score. It does not
+robustly do so. All nine model-by-cost confidence intervals cross zero:
+
+| model | λ=0.2 | λ=0.5 | λ=0.8 |
+|---|---:|---:|---:|
+| Haiku 4.5 | +0.075 [−0.025,+0.183] | +0.031 [−0.010,+0.073] | +0.017 [0.000,+0.050] |
+| Sonnet 4.6 | +0.033 [−0.054,+0.133] | −0.010 [−0.104,+0.083] | +0.125 [−0.008,+0.263] |
+| Opus 4.8 | +0.045 [−0.041,+0.141] | +0.031 [−0.115,+0.177] | +0.012 [−0.229,+0.242] |
+
+The secondary contrasts sharpen the interpretation. The benefit is
+informational, not directive: the full calibrated card performs about the same
+as calibrated risk without a recommendation. Cue-sensitivity also persists: an
+inverted reliability card drives over-verification (at λ = 0.5: Sonnet 98%,
+Opus 82%, Haiku 42%, vs 0-21% under the correct calibrated card). The public
+conclusion is therefore the combination, not either piece alone: **the first
+precondition-passing substrate still yields a prompt-interface null, while
+adversarial cue sensitivity remains.**
+
+### 8.4 What this does and does not claim
+
+This extension strengthens the cross-phase thesis: **raw confidence is the
+robust presentation-layer lever; better reliability cards are not enough.**
+It does **not** claim that AlphaMissense clinical-VUS replication has been run
+(AlphaMissense belongs to ProteinGym's clinical benchmark, not the DMS benchmark
+used here). It also does **not** claim that enforcement-layer routing works yet.
+The variant-effect result motivates that next systems test: make calibrated
+routing binding through tools, MCP constraints, or post-training, then evaluate
+against inverted and competing-cue controls at matched assay cost.
+
+## 9. Reproducibility
 
 All code, tests (163 passing), and compact result artifacts are in the repo under
 `experiments/trust_cue_attribution/`. Key artifacts:

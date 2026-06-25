@@ -12,8 +12,8 @@ The action set per item is `trust_sfm | verify_assay | default_baseline | defer`
 
 ## Headline finding (cautionary, not celebratory)
 
-Across three substrates — a GEARS/Norman perturbation dry-run, a single-cell foundation-model
-cue, and protein-structure prediction (Boltz-2 / pLDDT):
+Across the initial perturbation, single-cell, and protein-structure substrates, and now a
+follow-up variant-effect DMS arm:
 
 - The LLM reasoning layer is strongly **cue-sensitive**: shown any reliability signal it routes
   far better than with none — but it also follows misleading signals.
@@ -25,6 +25,10 @@ cue, and protein-structure prediction (Boltz-2 / pLDDT):
 
 Presentation alone is insufficient; enforcement (tools / MCP constraints / post-training) is the
 natural next lever. Full write-up: **[`REPORT.md`](REPORT.md)** (PDF: [`dist/REPORT.pdf`](dist/REPORT.pdf)).
+
+Follow-up variant-effect result: on the first substrate that passes the full precondition gate,
+the pre-registered H2 result is still null — a calibrated reliability interface does not robustly
+beat raw specialist score across 3 models × 3 verification costs.
 
 ## Quickstart
 
@@ -61,6 +65,8 @@ summarize those runs.
   trust where the signal carries no validated information.
 - **Phase 2** — protein structure (Boltz-2 / pLDDT), the focus of the report: a substrate where
   the specialist is excellent *and* emits a validated calibrated confidence.
+- **Follow-up variant-effect DMS** — the first precondition-passing substrate; confirms the same
+  presentation-layer null and motivates enforcement-layer routing.
 
 ## Reproducibility
 
