@@ -364,6 +364,30 @@ Pipeline: `phase2_curate_pdb.py` → Boltz predict → `phase2_truth.py` (CA-lDD
 → `phase2_score_episodes.py` / `phase2_robustness.py`. Large JSONL (requests,
 episodes, structures) stay ignored under `hpc_outputs/`.
 
+## 9. Phase 4 — enforcement (the headline's consequence, tested)
+
+If presentation cannot produce calibrated, manipulation-robust routing (§4–§7b), the decision should
+be **enforced** rather than delegated to free-form LLM judgment. On the N = 57 hard-complex substrate
+(held-out calibration, 3 models, 3 seeds, λ-sweep, bootstrap CIs; `results/phase4_enforcement/`):
+
+- **A deterministic calibrated gate significantly beats the free-form LLM** (gate − LLM = +0.10…+0.19
+  at λ = 0.5, +0.24…+0.37 at λ = 0.8, all CIs exclude 0): delegating the decision costs −0.10…−0.37.
+- **The gate is manipulation-robust; the LLM is not** — under a misleading reliability cue the LLM's
+  net drops +0.06…+0.24 (significant) while the gate (computing from the raw signal) drops 0.
+- **The gate is robust out-of-distribution** — on antibody-antigen (ipTM→DockQ 0.84→0.61) the
+  general-fit gate stays within ~0.03 of the in-regime oracle and ties/beats the LLM.
+- **Even under adversarial miscalibration the LLM does not recover** — shown a *corrupted* reliability
+  card alongside the truthful raw ipTM, the LLM **follows the corrupted card** and loses to the
+  (also-corrupted) blind gate (−0.09…−0.24), i.e. cue-following persists even when disconfirming
+  evidence is in hand — sharpening Turpin et al. (2023).
+
+Across every regime tested, free-form LLM routing never beats enforcement, and no "defer-to-reasoning"
+boundary materialised. **The robust, manipulation-resistant trust layer is a deterministic calibrated
+gate; the routing decision should not live in free-form LLM text.** This positions the work against the
+security-policy enforcement of Progent (arXiv:2504.11703) / AgentSpec (ICSE 2026) — *calibrated-risk*
+enforcement over a fallible *scientific specialist* with manipulation-robustness as the explicit goal,
+a cell those security systems and the cost-aware cascade *Trust or Escalate* (ICLR 2025) leave open.
+
 ## How to cite
 
 See `CITATION.cff`. This report is intended for archival via Zenodo (GitHub

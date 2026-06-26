@@ -1,0 +1,18 @@
+{
+  "regime": "antibody-antigen OOD (n=34)",
+  "iptm_dockq_pearson": 0.61,
+  "general_iptm_dockq": 0.84,
+  "base_rate_ge_0.49": "11/34",
+  "dockq_ge_0.8": "0/34",
+  "lambda_0.5": {
+    "general_fit_gate": 0.544,
+    "in_regime_oracle_gate": 0.574,
+    "trust_all": 0.324
+  },
+  "lambda_0.8": {
+    "general_fit_gate": 0.376,
+    "in_regime_oracle_gate": 0.394,
+    "trust_all": 0.324
+  },
+  "conclusion": "On the antibody-antigen OOD regime, ipTM->DockQ falls 0.84->0.61 (mild miscalibration) but the general-fit gate degrades gracefully (within ~0.03 of the in-regime oracle gate) and still beats trust-all; the LLM ties (lambda=0.5) or loses (lambda=0.8) to the gate. The enforced gate is robust out-of-distribution."
+}

@@ -1,0 +1,213 @@
+{
+  "n": 57,
+  "by_lambda": {
+    "0.5": {
+      "claude-sonnet-4-6": {
+        "net": {
+          "C1_free": 0.579,
+          "C2_gate": 0.684,
+          "C1_inverted": 0.345,
+          "gate_CORRUPTED": 0.447,
+          "LLM_corrupted_plus_raw": 0.36
+        },
+        "H4.1_gate_minus_free": {
+          "d": 0.105,
+          "ci": [
+            0.026,
+            0.184
+          ],
+          "p": 0.0075
+        },
+        "H4.2_manip_drop_free": {
+          "d": 0.234,
+          "ci": [
+            0.158,
+            0.304
+          ],
+          "p": 0.0
+        },
+        "H4.4adv_LLM_minus_corruptedGate": {
+          "d": -0.087,
+          "ci": [
+            -0.175,
+            0.0
+          ],
+          "p": 0.0575,
+          "LLM_recovers": false
+        }
+      },
+      "gpt-4.1": {
+        "net": {
+          "C1_free": 0.579,
+          "C2_gate": 0.684,
+          "C1_inverted": 0.342,
+          "gate_CORRUPTED": 0.447,
+          "LLM_corrupted_plus_raw": 0.342
+        },
+        "H4.1_gate_minus_free": {
+          "d": 0.105,
+          "ci": [
+            0.026,
+            0.184
+          ],
+          "p": 0.0085
+        },
+        "H4.2_manip_drop_free": {
+          "d": 0.237,
+          "ci": [
+            0.158,
+            0.307
+          ],
+          "p": 0.0
+        },
+        "H4.4adv_LLM_minus_corruptedGate": {
+          "d": -0.105,
+          "ci": [
+            -0.184,
+            -0.018
+          ],
+          "p": 0.0225,
+          "LLM_recovers": false
+        }
+      },
+      "claude-opus-4-8": {
+        "net": {
+          "C1_free": 0.491,
+          "C2_gate": 0.684,
+          "C1_inverted": 0.43,
+          "gate_CORRUPTED": 0.447,
+          "LLM_corrupted_plus_raw": 0.509
+        },
+        "H4.1_gate_minus_free": {
+          "d": 0.193,
+          "ci": [
+            0.096,
+            0.289
+          ],
+          "p": 0.0
+        },
+        "H4.2_manip_drop_free": {
+          "d": 0.061,
+          "ci": [
+            0.018,
+            0.114
+          ],
+          "p": 0.006
+        },
+        "H4.4adv_LLM_minus_corruptedGate": {
+          "d": 0.062,
+          "ci": [
+            -0.061,
+            0.167
+          ],
+          "p": 0.2705,
+          "LLM_recovers": false
+        }
+      }
+    },
+    "0.8": {
+      "claude-sonnet-4-6": {
+        "net": {
+          "C1_free": 0.326,
+          "C2_gate": 0.568,
+          "C1_inverted": 0.159,
+          "gate_CORRUPTED": 0.4,
+          "LLM_corrupted_plus_raw": 0.165
+        },
+        "H4.1_gate_minus_free": {
+          "d": 0.242,
+          "ci": [
+            0.137,
+            0.351
+          ],
+          "p": 0.0
+        },
+        "H4.2_manip_drop_free": {
+          "d": 0.167,
+          "ci": [
+            0.083,
+            0.249
+          ],
+          "p": 0.0
+        },
+        "H4.4adv_LLM_minus_corruptedGate": {
+          "d": -0.235,
+          "ci": [
+            -0.34,
+            -0.13
+          ],
+          "p": 0.0,
+          "LLM_recovers": false
+        }
+      },
+      "gpt-4.1": {
+        "net": {
+          "C1_free": 0.326,
+          "C2_gate": 0.568,
+          "C1_inverted": 0.158,
+          "gate_CORRUPTED": 0.4,
+          "LLM_corrupted_plus_raw": 0.158
+        },
+        "H4.1_gate_minus_free": {
+          "d": 0.242,
+          "ci": [
+            0.137,
+            0.351
+          ],
+          "p": 0.0
+        },
+        "H4.2_manip_drop_free": {
+          "d": 0.168,
+          "ci": [
+            0.084,
+            0.26
+          ],
+          "p": 0.0005
+        },
+        "H4.4adv_LLM_minus_corruptedGate": {
+          "d": -0.242,
+          "ci": [
+            -0.347,
+            -0.144
+          ],
+          "p": 0.0,
+          "LLM_recovers": false
+        }
+      },
+      "claude-opus-4-8": {
+        "net": {
+          "C1_free": 0.196,
+          "C2_gate": 0.568,
+          "C1_inverted": 0.172,
+          "gate_CORRUPTED": 0.4,
+          "LLM_corrupted_plus_raw": 0.225
+        },
+        "H4.1_gate_minus_free": {
+          "d": 0.372,
+          "ci": [
+            0.263,
+            0.484
+          ],
+          "p": 0.0
+        },
+        "H4.2_manip_drop_free": {
+          "d": 0.024,
+          "ci": [
+            0.007,
+            0.046
+          ],
+          "p": 0.0035
+        },
+        "H4.4adv_LLM_minus_corruptedGate": {
+          "d": -0.175,
+          "ci": [
+            -0.302,
+            -0.063
+          ],
+          "p": 0.001,
+          "LLM_recovers": false
+        }
+      }
+    }
+  }
+}
