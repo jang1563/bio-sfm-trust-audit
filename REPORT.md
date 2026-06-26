@@ -1,7 +1,7 @@
 # When does an LLM trust a specialist model? A cost-aware trust-routing audit — and why "calibrated reliability interfaces" are not a free win
 
 **Technical report — bio-sfm-trust-audit**
-Date: 2026-06-25 · Status: updated report with powered protein confirmatory run and variant-effect extension
+Date: 2026-06-26 · Status: updated report with powered protein confirmatory, variant-effect extension, and the Phase 4 enforcement confirmatory (fresh strict-leakage substrate)
 Repo: `jang1563/bio-sfm-trust-audit`
 
 ## Abstract
@@ -41,6 +41,24 @@ does **not** robustly improve net utility over raw specialist score across three
 models and three verification costs. This makes the negative result more
 informative, not less: even when the signal is real and decision-relevant,
 prompt-visible presentation is insufficient.
+
+Acting on that conclusion, we then **enforce** the routing decision instead of
+presenting it (Phase 4). A deterministic **calibrated-risk gate** beats free-form
+LLM routing and is **manipulation-robust**, and this **replicates on a fresh,
+strictly leakage-controlled substrate built end-to-end for the test** — even though,
+under strict leakage, the specialist's interface confidence is only moderately
+predictive (ipTM→DockQ Pearson **0.41**, not the exploratory 0.84) and the
+calibration is transferred. Gate − free-form LLM is significantly positive and grows
+with the verification price (≈ +0.07 at λ = 0.5 to ≈ +0.20 at λ = 0.8); the LLM is
+the weak link in every regime (it **over-verifies**, and it follows a *corrupted*
+reliability card even with the raw signal present to contradict it); and a
+**conformal-abstention** gate meets its distribution-free guarantee (realised
+false-accept 0.107 < alpha = 0.20). The one honest boundary the weak signal exposes:
+calibrated verification beats *naive trust-all* only when the signal is sharp enough
+for the price (it does at λ = 0.5, not at λ = 0.8), whereas the gate beats *free-form
+LLM routing* unconditionally. **Enforcement — not presentation — is the robust,
+manipulation-resistant trust layer; the routing decision should not live in
+free-form LLM text.**
 
 ## 1. Question
 
