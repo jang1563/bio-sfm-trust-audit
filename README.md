@@ -52,6 +52,7 @@ summarize those runs.
 | [`experiments/trust_cue_attribution/BENCHMARK_CARD.md`](experiments/trust_cue_attribution/BENCHMARK_CARD.md) | Benchmark card |
 | [`experiments/trust_cue_attribution/SCHEMA.md`](experiments/trust_cue_attribution/SCHEMA.md) | Panel / cue / episode schema |
 | [`experiments/trust_cue_attribution/PHASE2_PREREGISTRATION.md`](experiments/trust_cue_attribution/PHASE2_PREREGISTRATION.md) | Pre-registered confirmatory redo |
+| [`experiments/trust_cue_attribution/PHASE4_PREREGISTRATION.md`](experiments/trust_cue_attribution/PHASE4_PREREGISTRATION.md) | Pre-registered enforcement confirmatory (Phase 4) |
 | [`experiments/trust_cue_attribution/PHASE2_PROTEIN_TRUST_DESIGN.md`](experiments/trust_cue_attribution/PHASE2_PROTEIN_TRUST_DESIGN.md) | Phase 2 protein-substrate design |
 | [`experiments/trust_cue_attribution/results/`](experiments/trust_cue_attribution/results/) | Compact result artifacts (JSON) |
 | [`dist/hf_dataset/`](dist/hf_dataset/) | Public benchmark targets (Hugging Face dataset card + data) |

@@ -387,6 +387,10 @@ gate; the routing decision should not live in free-form LLM text.** This positio
 security-policy enforcement of Progent (arXiv:2504.11703) / AgentSpec (ICSE 2026) — *calibrated-risk*
 enforcement over a fallible *scientific specialist* with manipulation-robustness as the explicit goal,
 a cell those security systems and the cost-aware cascade *Trust or Escalate* (ICLR 2025) leave open.
+This Phase-4a evidence is exploratory; the powered confirmatory — ≥120 complexes, the three enforcement
+mechanisms (calibrated gate / constrained decoding / conformal abstention) compared head-to-head, a real
+`default_baseline`, and a pre-specified adversarial-corruption regime — is fixed in advance in
+`experiments/trust_cue_attribution/PHASE4_PREREGISTRATION.md`.
 
 ## How to cite
 

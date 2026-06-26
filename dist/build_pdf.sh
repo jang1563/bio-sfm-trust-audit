@@ -33,9 +33,13 @@ start=next(i for i,l in enumerate(lines) if l.startswith('## Abstract'))
 open('dist/_report_body.md','w',encoding='utf-8').write(sanitize(''.join(lines[start:])))
 open('dist/_prereg_body.md','w',encoding='utf-8').write(
     sanitize(open('experiments/trust_cue_attribution/PHASE2_PREREGISTRATION.md',encoding='utf-8').read()))
+open('dist/_prereg4_body.md','w',encoding='utf-8').write(
+    sanitize(open('experiments/trust_cue_attribution/PHASE4_PREREGISTRATION.md',encoding='utf-8').read()))
 PY
 pandoc dist/meta.yaml dist/_report_body.md -o dist/REPORT.pdf "${PANDOC_COMMON[@]}"
 echo "built dist/REPORT.pdf"
 pandoc dist/_prereg_body.md -o dist/PHASE2_PREREGISTRATION.pdf "${PANDOC_COMMON[@]}"
 echo "built dist/PHASE2_PREREGISTRATION.pdf"
-rm -f dist/_report_body.md dist/_prereg_body.md
+pandoc dist/_prereg4_body.md -o dist/PHASE4_PREREGISTRATION.pdf "${PANDOC_COMMON[@]}"
+echo "built dist/PHASE4_PREREGISTRATION.pdf"
+rm -f dist/_report_body.md dist/_prereg_body.md dist/_prereg4_body.md
