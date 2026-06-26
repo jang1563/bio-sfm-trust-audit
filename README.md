@@ -55,6 +55,7 @@ summarize those runs.
 | [`experiments/trust_cue_attribution/PHASE4_PREREGISTRATION.md`](experiments/trust_cue_attribution/PHASE4_PREREGISTRATION.md) | Pre-registered enforcement confirmatory (Phase 4) |
 | [`experiments/trust_cue_attribution/PHASE2_PROTEIN_TRUST_DESIGN.md`](experiments/trust_cue_attribution/PHASE2_PROTEIN_TRUST_DESIGN.md) | Phase 2 protein-substrate design |
 | [`experiments/trust_cue_attribution/results/`](experiments/trust_cue_attribution/results/) | Compact result artifacts (JSON) |
+| [`.../results/phase4_confirmatory/`](experiments/trust_cue_attribution/results/phase4_confirmatory/README.md) | Phase 4 confirmatory (fresh strict-leakage substrate, N=75) |
 | [`dist/hf_dataset/`](dist/hf_dataset/) | Public benchmark targets (Hugging Face dataset card + data) |
 
 ## Phases
