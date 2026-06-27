@@ -23,8 +23,11 @@ follow-up variant-effect DMS arm:
   is model-dependent** — neutral for Claude Sonnet 4.6, harmful for the more risk-averse Claude
   Opus 4.8, which over-verifies. The benefit, where present, is **informational, not directive**.
 
-Presentation alone is insufficient; enforcement (tools / MCP constraints / post-training) is the
-natural next lever. Full write-up: **[`REPORT.md`](REPORT.md)** (PDF: [`dist/REPORT.pdf`](dist/REPORT.pdf)).
+Presentation alone is insufficient, so we then **enforce** the decision (Phase 4): a deterministic
+**calibrated-risk gate beats free-form LLM routing and is manipulation-robust**, and this **replicates
+on a fresh strict-leakage substrate (N = 158)** even where the specialist signal is only moderately
+calibrated — though its advantage over a naive trust-all baseline is bounded by calibration sharpness.
+Full write-up: **[`REPORT.md`](REPORT.md)** (PDF: [`dist/REPORT.pdf`](dist/REPORT.pdf)).
 
 Follow-up variant-effect result: on the first substrate that passes the full precondition gate,
 the pre-registered H2 result is still null — a calibrated reliability interface does not robustly
@@ -55,7 +58,7 @@ summarize those runs.
 | [`experiments/trust_cue_attribution/PHASE4_PREREGISTRATION.md`](experiments/trust_cue_attribution/PHASE4_PREREGISTRATION.md) | Pre-registered enforcement confirmatory (Phase 4) |
 | [`experiments/trust_cue_attribution/PHASE2_PROTEIN_TRUST_DESIGN.md`](experiments/trust_cue_attribution/PHASE2_PROTEIN_TRUST_DESIGN.md) | Phase 2 protein-substrate design |
 | [`experiments/trust_cue_attribution/results/`](experiments/trust_cue_attribution/results/) | Compact result artifacts (JSON) |
-| [`.../results/phase4_confirmatory/`](experiments/trust_cue_attribution/results/phase4_confirmatory/README.md) | Phase 4 confirmatory (fresh strict-leakage substrate, N=75) |
+| [`.../results/phase4_confirmatory/`](experiments/trust_cue_attribution/results/phase4_confirmatory/README.md) | Phase 4 confirmatory (fresh strict-leakage substrate, N=158) |
 | [`dist/hf_dataset/`](dist/hf_dataset/) | Public benchmark targets (Hugging Face dataset card + data) |
 
 ## Phases
@@ -69,6 +72,11 @@ summarize those runs.
   the specialist is excellent *and* emits a validated calibrated confidence.
 - **Follow-up variant-effect DMS** — the first precondition-passing substrate; confirms the same
   presentation-layer null and motivates enforcement-layer routing.
+- **Phase 4 — enforcement** — takes the decision out of free-form LLM text: a deterministic calibrated
+  gate / constrained decoding / conformal abstention. Exploratory (N=57) + a **pre-registered confirmatory
+  on a fresh strict-leakage substrate (N=158)**: the gate beats free-form LLM routing (p≈0, growing with λ),
+  is manipulation-robust, and conformal meets its guarantee. See
+  [`results/phase4_confirmatory/`](experiments/trust_cue_attribution/results/phase4_confirmatory/README.md).
 
 ## Reproducibility
 

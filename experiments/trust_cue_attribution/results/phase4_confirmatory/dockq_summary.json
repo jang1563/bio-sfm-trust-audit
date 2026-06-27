@@ -1,9 +1,9 @@
 {
-  "scored": 75,
-  "skipped": 86,
-  "base_rate_ge_0.23": "59/75",
-  "base_rate_ge_0.49": "35/75",
-  "base_rate_ge_0.80": "12/75",
+  "scored": 158,
+  "skipped": 3,
+  "base_rate_ge_0.23": "135/158",
+  "base_rate_ge_0.49": "95/158",
+  "base_rate_ge_0.80": "30/158",
   "template_correct_count": 0,
   "dockq_range": [
     0.005,

@@ -44,16 +44,16 @@ prompt-visible presentation is insufficient.
 
 Acting on that conclusion, we then **enforce** the routing decision instead of
 presenting it (Phase 4). A deterministic **calibrated-risk gate** beats free-form
-LLM routing and is **manipulation-robust**, and this **replicates on a fresh,
-strictly leakage-controlled substrate built end-to-end for the test** — even though,
-under strict leakage, the specialist's interface confidence is only moderately
-predictive (ipTM→DockQ Pearson **0.41**, not the exploratory 0.84) and the
+LLM routing and is **manipulation-robust**, and this **replicates (N = 158) on a
+fresh, strictly leakage-controlled substrate built end-to-end for the test** — even
+though, under strict leakage, the specialist's interface confidence is only moderately
+predictive (ipTM→DockQ Pearson **0.57**, not the exploratory 0.84) and the
 calibration is transferred. Gate − free-form LLM is significantly positive and grows
-with the verification price (≈ +0.07 at λ = 0.5 to ≈ +0.20 at λ = 0.8); the LLM is
+with the verification price (≈ +0.15 at λ = 0.5 to ≈ +0.30 at λ = 0.8, all p ≈ 0); the LLM is
 the weak link in every regime (it **over-verifies**, and it follows a *corrupted*
 reliability card even with the raw signal present to contradict it); and a
 **conformal-abstention** gate meets its distribution-free guarantee (realised
-false-accept 0.107 < alpha = 0.20). The one honest boundary the weak signal exposes:
+false-accept 0.089 < alpha = 0.20). The one honest boundary the weak signal exposes:
 calibrated verification beats *naive trust-all* only when the signal is sharp enough
 for the price (it does at λ = 0.5, not at λ = 0.8), whereas the gate beats *free-form
 LLM routing* unconditionally. **Enforcement — not presentation — is the robust,
@@ -414,26 +414,28 @@ mechanisms (calibrated gate / constrained decoding / conformal abstention) compa
 
 The confirmatory was run on a substrate built end-to-end for the test and **disjoint** from the 57 exploratory
 complexes: 2000 post-cutoff hetero-complexes harvested from RCSB → an MMseqs2-vs-full-PDB + release-date leakage
-filter (no pre-cutoff homolog ≥ 30 % id / 0.8 cov) keeping **161/2000 (8.1 %)** → **75** Boltz-2-predicted
-(`--use_msa_server`) and DockQ-scored before the public ColabFold MSA server stalled (N is MSA-limited from the
-pre-registered ≥ 120; the run is resumable). Base rate is genuine (DockQ ≥ 0.49 in 47 %). Details:
-`results/phase4_confirmatory/`.
+filter (no pre-cutoff homolog ≥ 30 % id / 0.8 cov) keeping **161/2000 (8.1 %)** → **158** Boltz-2-predicted
+(`--use_msa_server`) and DockQ-scored (**N = 158 meets the pre-registered ≥ 120**). Base rate is genuine
+(DockQ ≥ 0.49 in 60 %, range 0.005–0.902). Details: `results/phase4_confirmatory/`.
 
 The exploratory **headline did not fully replicate, and that is the value of the confirmatory**: under *strict*
 leakage control the specialist's interface confidence is only moderately predictive of truth — ipTM→DockQ
-**+0.41**, not the exploratory **+0.84** (not a resolution artifact; the res ≤ 3.0 subset is also +0.41) — and
-the v1-fit calibration transfers to the new set only weakly (Pearson(calibrated risk, wrong) = +0.39). The
-confirmatory thus tests the harder question: does enforcement still help when the signal is *weak*?
+**+0.57**, not the exploratory **+0.84** (and only +0.41 on the first-75 subset; not a resolution artifact, the
+res ≤ 3.0 subset is also +0.41) — and the v1-fit calibration transfers only partially (Pearson(calibrated risk,
+wrong) = +0.49). The confirmatory thus tests the harder question: does enforcement still help when the signal
+is *weak*?
 
-It does. **H4.1** (enforced gate > free-form LLM) replicates: gate − free-form = **+0.07/+0.07/+0.09 at λ=0.5
-(all p < .04)** and **+0.17/+0.17/+0.20 at λ=0.8 (all p ≈ 0)**, growing with λ exactly as in 4a; the LLM remains
-the weak link (it over-verifies). **H4.2** (manipulation-robustness) and **H4.3** (constraint is a net no-op —
-the LLM over-verifies, not over-trusts) replicate; **conformal abstention** beats free-form *and* meets its
-guarantee (realised false-accept **0.107 < alpha = 0.20**); and under inverted/shift/noise corruption with the raw
-signal present the LLM **still** follows the corrupted card (no recovery at λ ≥ 0.5). The one honest new
-boundary the weak signal exposes: at the *highest* price the calibrated gate no longer beats the **naive
-trust-all baseline** (λ=0.8: trust-all +0.467 > gate +0.392 > free-form +0.220), though it still beats the LLM;
-at λ=0.5 the gate (+0.580) beats both baselines. **Enforcement's advantage over free-form LLM routing is robust
+It does, and the effect **strengthens** at the full N. **H4.1** (enforced gate > free-form LLM) replicates:
+gate − free-form = **+0.15/+0.15/+0.17 at λ=0.5** and **+0.30/+0.30/+0.33 at λ=0.8** (all p ≈ 0), growing with
+λ exactly as in 4a; the LLM remains the weak link (it over-verifies — at λ=0.8 it nets +0.20–0.24, below even
+trust-all). **H4.2** (manipulation-robustness, significant at λ=0.5: free-form drops +0.10–0.18, p < .001) and
+**H4.3** (constraint is a net no-op — the LLM over-verifies, not over-trusts) replicate; **conformal abstention**
+beats free-form *and* meets its guarantee (realised false-accept **0.089 < alpha = 0.20**); and under
+inverted/shift/noise corruption with the raw signal present the LLM **still** follows the corrupted card (no
+recovery at λ ≥ 0.5; e.g. opus λ=0.8 invert −0.32). The one honest boundary the weak signal exposes: at the
+*highest* price the calibrated gate no longer beats the **naive trust-all baseline** (λ=0.8: trust-all +0.601 >
+gate +0.532 > free-form +0.20–0.24), though it still beats the LLM; at λ=0.5 the gate (+0.674) beats both
+baselines. **Enforcement's advantage over free-form LLM routing is robust
 to a weak signal; its advantage over naive baselines is conditional on calibration sharpness relative to the
 verification price.**
 

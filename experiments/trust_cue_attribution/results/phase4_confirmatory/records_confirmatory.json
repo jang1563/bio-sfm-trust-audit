@@ -22,6 +22,39 @@
   }
  },
  {
+  "iptm": 0.8648,
+  "mean_plddt": 79.2818,
+  "regime": "complex",
+  "target_id": "9vj3",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.84
+  }
+ },
+ {
+  "iptm": 0.1867,
+  "mean_plddt": 83.9541,
+  "regime": "complex",
+  "target_id": "9ww9",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": false,
+   "quality": 0.005
+  }
+ },
+ {
+  "iptm": 0.7137,
+  "mean_plddt": 67.5246,
+  "regime": "complex",
+  "target_id": "9x2r",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.61
+  }
+ },
+ {
   "iptm": 0.5009,
   "mean_plddt": 79.7754,
   "regime": "complex",
@@ -88,6 +121,83 @@
   }
  },
  {
+  "iptm": 0.7783,
+  "mean_plddt": 76.2312,
+  "regime": "complex",
+  "target_id": "9wpy",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.796
+  }
+ },
+ {
+  "iptm": 0.7693,
+  "mean_plddt": 75.7096,
+  "regime": "complex",
+  "target_id": "9wpz",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.818
+  }
+ },
+ {
+  "iptm": 0.7933,
+  "mean_plddt": 79.1478,
+  "regime": "complex",
+  "target_id": "9wq0",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.833
+  }
+ },
+ {
+  "iptm": 0.7895,
+  "mean_plddt": 79.7446,
+  "regime": "complex",
+  "target_id": "9wqr",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.843
+  }
+ },
+ {
+  "iptm": 0.4932,
+  "mean_plddt": 67.4682,
+  "regime": "complex",
+  "target_id": "9yds",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": false,
+   "quality": 0.033
+  }
+ },
+ {
+  "iptm": 0.5053,
+  "mean_plddt": 80.5072,
+  "regime": "complex",
+  "target_id": "9v6l",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": false,
+   "quality": 0.437
+  }
+ },
+ {
+  "iptm": 0.3833,
+  "mean_plddt": 79.7861,
+  "regime": "complex",
+  "target_id": "9v75",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": false,
+   "quality": 0.411
+  }
+ },
+ {
   "iptm": 0.4163,
   "mean_plddt": 79.5044,
   "regime": "complex",
@@ -121,6 +231,72 @@
   }
  },
  {
+  "iptm": 0.9118,
+  "mean_plddt": 93.8804,
+  "regime": "complex",
+  "target_id": "9o71",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.875
+  }
+ },
+ {
+  "iptm": 0.7169,
+  "mean_plddt": 88.4702,
+  "regime": "complex",
+  "target_id": "9urz",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": false,
+   "quality": 0.333
+  }
+ },
+ {
+  "iptm": 0.8246,
+  "mean_plddt": 87.9375,
+  "regime": "complex",
+  "target_id": "9z6y",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.613
+  }
+ },
+ {
+  "iptm": 0.802,
+  "mean_plddt": 87.6288,
+  "regime": "complex",
+  "target_id": "9z6z",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.62
+  }
+ },
+ {
+  "iptm": 0.9241,
+  "mean_plddt": 88.8923,
+  "regime": "complex",
+  "target_id": "9zee",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.741
+  }
+ },
+ {
+  "iptm": 0.929,
+  "mean_plddt": 88.961,
+  "regime": "complex",
+  "target_id": "9zef",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.749
+  }
+ },
+ {
   "iptm": 0.3637,
   "mean_plddt": 81.8619,
   "regime": "complex",
@@ -132,6 +308,28 @@
   }
  },
  {
+  "iptm": 0.7953,
+  "mean_plddt": 86.14,
+  "regime": "complex",
+  "target_id": "9wf2",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": false,
+   "quality": 0.185
+  }
+ },
+ {
+  "iptm": 0.7608,
+  "mean_plddt": 87.8147,
+  "regime": "complex",
+  "target_id": "9zbi",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.571
+  }
+ },
+ {
   "iptm": 0.8761,
   "mean_plddt": 86.1412,
   "regime": "complex",
@@ -140,6 +338,28 @@
   "truth": {
    "correct": false,
    "quality": 0.032
+  }
+ },
+ {
+  "iptm": 0.8495,
+  "mean_plddt": 90.2373,
+  "regime": "complex",
+  "target_id": "9vap",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.831
+  }
+ },
+ {
+  "iptm": 0.8329,
+  "mean_plddt": 78.3399,
+  "regime": "complex",
+  "target_id": "9w3z",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.716
   }
  },
  {
@@ -165,6 +385,182 @@
   }
  },
  {
+  "iptm": 0.952,
+  "mean_plddt": 94.4403,
+  "regime": "complex",
+  "target_id": "9u8q",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.853
+  }
+ },
+ {
+  "iptm": 0.948,
+  "mean_plddt": 95.0628,
+  "regime": "complex",
+  "target_id": "9u8r",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.831
+  }
+ },
+ {
+  "iptm": 0.9515,
+  "mean_plddt": 95.0597,
+  "regime": "complex",
+  "target_id": "9u8s",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.87
+  }
+ },
+ {
+  "iptm": 0.4904,
+  "mean_plddt": 84.6555,
+  "regime": "complex",
+  "target_id": "9uxh",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": false,
+   "quality": 0.176
+  }
+ },
+ {
+  "iptm": 0.6315,
+  "mean_plddt": 87.621,
+  "regime": "complex",
+  "target_id": "9vvg",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": false,
+   "quality": 0.31
+  }
+ },
+ {
+  "iptm": 0.652,
+  "mean_plddt": 89.2781,
+  "regime": "complex",
+  "target_id": "9vvj",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": false,
+   "quality": 0.317
+  }
+ },
+ {
+  "iptm": 0.7293,
+  "mean_plddt": 69.4166,
+  "regime": "complex",
+  "target_id": "9qkt",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.787
+  }
+ },
+ {
+  "iptm": 0.8006,
+  "mean_plddt": 69.7625,
+  "regime": "complex",
+  "target_id": "9qkz",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.774
+  }
+ },
+ {
+  "iptm": 0.7267,
+  "mean_plddt": 68.6617,
+  "regime": "complex",
+  "target_id": "9ql1",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.805
+  }
+ },
+ {
+  "iptm": 0.8659,
+  "mean_plddt": 88.8639,
+  "regime": "complex",
+  "target_id": "9x94",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.608
+  }
+ },
+ {
+  "iptm": 0.8714,
+  "mean_plddt": 79.6876,
+  "regime": "complex",
+  "target_id": "9qfx",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.63
+  }
+ },
+ {
+  "iptm": 0.8679,
+  "mean_plddt": 77.861,
+  "regime": "complex",
+  "target_id": "9qh1",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.662
+  }
+ },
+ {
+  "iptm": 0.8913,
+  "mean_plddt": 79.8015,
+  "regime": "complex",
+  "target_id": "9qhj",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.688
+  }
+ },
+ {
+  "iptm": 0.8936,
+  "mean_plddt": 80.2598,
+  "regime": "complex",
+  "target_id": "9qhw",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.536
+  }
+ },
+ {
+  "iptm": 0.87,
+  "mean_plddt": 79.2758,
+  "regime": "complex",
+  "target_id": "9qhx",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.51
+  }
+ },
+ {
+  "iptm": 0.8663,
+  "mean_plddt": 78.8554,
+  "regime": "complex",
+  "target_id": "9vj4",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.871
+  }
+ },
+ {
   "iptm": 0.3745,
   "mean_plddt": 81.8613,
   "regime": "complex",
@@ -184,6 +580,17 @@
   "truth": {
    "correct": true,
    "quality": 0.867
+  }
+ },
+ {
+  "iptm": 0.856,
+  "mean_plddt": 87.2599,
+  "regime": "complex",
+  "target_id": "9x9b",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.653
   }
  },
  {
@@ -286,6 +693,72 @@
   }
  },
  {
+  "iptm": 0.67,
+  "mean_plddt": 77.6935,
+  "regime": "complex",
+  "target_id": "9ten",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": false,
+   "quality": 0.294
+  }
+ },
+ {
+  "iptm": 0.6735,
+  "mean_plddt": 77.9946,
+  "regime": "complex",
+  "target_id": "9teo",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": false,
+   "quality": 0.475
+  }
+ },
+ {
+  "iptm": 0.6943,
+  "mean_plddt": 78.9291,
+  "regime": "complex",
+  "target_id": "9teq",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": false,
+   "quality": 0.343
+  }
+ },
+ {
+  "iptm": 0.6417,
+  "mean_plddt": 77.9131,
+  "regime": "complex",
+  "target_id": "9ter",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": false,
+   "quality": 0.344
+  }
+ },
+ {
+  "iptm": 0.9415,
+  "mean_plddt": 94.7868,
+  "regime": "complex",
+  "target_id": "9w3a",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.826
+  }
+ },
+ {
+  "iptm": 0.6892,
+  "mean_plddt": 69.7233,
+  "regime": "complex",
+  "target_id": "9xpe",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.504
+  }
+ },
+ {
   "iptm": 0.9242,
   "mean_plddt": 77.7562,
   "regime": "complex",
@@ -319,6 +792,138 @@
   }
  },
  {
+  "iptm": 0.8439,
+  "mean_plddt": 60.0676,
+  "regime": "complex",
+  "target_id": "9oox",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": false,
+   "quality": 0.005
+  }
+ },
+ {
+  "iptm": 0.8579,
+  "mean_plddt": 77.487,
+  "regime": "complex",
+  "target_id": "9ve3",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.579
+  }
+ },
+ {
+  "iptm": 0.9374,
+  "mean_plddt": 82.9897,
+  "regime": "complex",
+  "target_id": "9ve4",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.593
+  }
+ },
+ {
+  "iptm": 0.9244,
+  "mean_plddt": 80.5328,
+  "regime": "complex",
+  "target_id": "9ve5",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.625
+  }
+ },
+ {
+  "iptm": 0.9192,
+  "mean_plddt": 80.6629,
+  "regime": "complex",
+  "target_id": "9ve6",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.568
+  }
+ },
+ {
+  "iptm": 0.9248,
+  "mean_plddt": 80.5377,
+  "regime": "complex",
+  "target_id": "9ve7",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.572
+  }
+ },
+ {
+  "iptm": 0.8519,
+  "mean_plddt": 80.786,
+  "regime": "complex",
+  "target_id": "9ve8",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.603
+  }
+ },
+ {
+  "iptm": 0.8931,
+  "mean_plddt": 81.439,
+  "regime": "complex",
+  "target_id": "9veh",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.55
+  }
+ },
+ {
+  "iptm": 0.7684,
+  "mean_plddt": 88.8055,
+  "regime": "complex",
+  "target_id": "9syj",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": false,
+   "quality": 0.472
+  }
+ },
+ {
+  "iptm": 0.7393,
+  "mean_plddt": 88.7301,
+  "regime": "complex",
+  "target_id": "9syt",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": false,
+   "quality": 0.43
+  }
+ },
+ {
+  "iptm": 0.7641,
+  "mean_plddt": 88.7096,
+  "regime": "complex",
+  "target_id": "9syv",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": false,
+   "quality": 0.474
+  }
+ },
+ {
+  "iptm": 0.7209,
+  "mean_plddt": 85.0818,
+  "regime": "complex",
+  "target_id": "9vne",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.878
+  }
+ },
+ {
   "iptm": 0.6853,
   "mean_plddt": 82.231,
   "regime": "complex",
@@ -327,6 +932,39 @@
   "truth": {
    "correct": false,
    "quality": 0.267
+  }
+ },
+ {
+  "iptm": 0.7583,
+  "mean_plddt": 84.2999,
+  "regime": "complex",
+  "target_id": "9vx1",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.735
+  }
+ },
+ {
+  "iptm": 0.7628,
+  "mean_plddt": 84.3227,
+  "regime": "complex",
+  "target_id": "9vx6",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.686
+  }
+ },
+ {
+  "iptm": 0.6021,
+  "mean_plddt": 88.6327,
+  "regime": "complex",
+  "target_id": "9vhl",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.688
   }
  },
  {
@@ -363,6 +1001,28 @@
   }
  },
  {
+  "iptm": 0.5732,
+  "mean_plddt": 88.133,
+  "regime": "complex",
+  "target_id": "9vhe",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.664
+  }
+ },
+ {
+  "iptm": 0.8805,
+  "mean_plddt": 80.0729,
+  "regime": "complex",
+  "target_id": "9wlp",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.703
+  }
+ },
+ {
   "iptm": 0.8774,
   "mean_plddt": 85.0816,
   "regime": "complex",
@@ -371,6 +1031,39 @@
   "truth": {
    "correct": false,
    "quality": 0.333
+  }
+ },
+ {
+  "iptm": 0.7796,
+  "mean_plddt": 79.3445,
+  "regime": "complex",
+  "target_id": "9qtr",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.556
+  }
+ },
+ {
+  "iptm": 0.9386,
+  "mean_plddt": 89.2786,
+  "regime": "complex",
+  "target_id": "9v8i",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.819
+  }
+ },
+ {
+  "iptm": 0.2871,
+  "mean_plddt": 72.6977,
+  "regime": "complex",
+  "target_id": "9y9c",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": false,
+   "quality": 0.036
   }
  },
  {
@@ -396,6 +1089,17 @@
   }
  },
  {
+  "iptm": 0.465,
+  "mean_plddt": 84.3797,
+  "regime": "complex",
+  "target_id": "9nyg",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": false,
+   "quality": 0.115
+  }
+ },
+ {
   "iptm": 0.7922,
   "mean_plddt": 63.5152,
   "regime": "complex",
@@ -404,6 +1108,50 @@
   "truth": {
    "correct": true,
    "quality": 0.815
+  }
+ },
+ {
+  "iptm": 0.8508,
+  "mean_plddt": 80.224,
+  "regime": "complex",
+  "target_id": "9qbl",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.761
+  }
+ },
+ {
+  "iptm": 0.8165,
+  "mean_plddt": 82.9431,
+  "regime": "complex",
+  "target_id": "9qbp",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.538
+  }
+ },
+ {
+  "iptm": 0.8009,
+  "mean_plddt": 84.1165,
+  "regime": "complex",
+  "target_id": "9qbq",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": false,
+   "quality": 0.437
+  }
+ },
+ {
+  "iptm": 0.807,
+  "mean_plddt": 84.0774,
+  "regime": "complex",
+  "target_id": "9qcc",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.696
   }
  },
  {
@@ -440,6 +1188,50 @@
   }
  },
  {
+  "iptm": 0.7479,
+  "mean_plddt": 87.4446,
+  "regime": "complex",
+  "target_id": "9u9y",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.754
+  }
+ },
+ {
+  "iptm": 0.7746,
+  "mean_plddt": 79.769,
+  "regime": "complex",
+  "target_id": "9unv",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.846
+  }
+ },
+ {
+  "iptm": 0.7638,
+  "mean_plddt": 79.3065,
+  "regime": "complex",
+  "target_id": "9uo1",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.841
+  }
+ },
+ {
+  "iptm": 0.7382,
+  "mean_plddt": 74.6969,
+  "regime": "complex",
+  "target_id": "9uo2",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.718
+  }
+ },
+ {
   "iptm": 0.7931,
   "mean_plddt": 76.2769,
   "regime": "complex",
@@ -459,6 +1251,17 @@
   "truth": {
    "correct": true,
    "quality": 0.802
+  }
+ },
+ {
+  "iptm": 0.8246,
+  "mean_plddt": 89.0836,
+  "regime": "complex",
+  "target_id": "9vh1",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.793
   }
  },
  {
@@ -616,6 +1419,28 @@
   }
  },
  {
+  "iptm": 0.8632,
+  "mean_plddt": 88.7173,
+  "regime": "complex",
+  "target_id": "9p4j",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.578
+  }
+ },
+ {
+  "iptm": 0.8582,
+  "mean_plddt": 88.6107,
+  "regime": "complex",
+  "target_id": "9p4k",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.621
+  }
+ },
+ {
   "iptm": 0.844,
   "mean_plddt": 83.812,
   "regime": "complex",
@@ -649,6 +1474,50 @@
   }
  },
  {
+  "iptm": 0.617,
+  "mean_plddt": 66.4068,
+  "regime": "complex",
+  "target_id": "9u5s",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": false,
+   "quality": 0.487
+  }
+ },
+ {
+  "iptm": 0.8655,
+  "mean_plddt": 86.6491,
+  "regime": "complex",
+  "target_id": "9uu3",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.888
+  }
+ },
+ {
+  "iptm": 0.8538,
+  "mean_plddt": 86.1021,
+  "regime": "complex",
+  "target_id": "9uu4",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.783
+  }
+ },
+ {
+  "iptm": 0.8549,
+  "mean_plddt": 86.1586,
+  "regime": "complex",
+  "target_id": "9uu5",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.829
+  }
+ },
+ {
   "iptm": 0.6876,
   "mean_plddt": 89.1145,
   "regime": "complex",
@@ -679,6 +1548,39 @@
   "truth": {
    "correct": false,
    "quality": 0.348
+  }
+ },
+ {
+  "iptm": 0.6129,
+  "mean_plddt": 81.2344,
+  "regime": "complex",
+  "target_id": "9o9z",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": false,
+   "quality": 0.352
+  }
+ },
+ {
+  "iptm": 0.6371,
+  "mean_plddt": 82.1193,
+  "regime": "complex",
+  "target_id": "9oa0",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": false,
+   "quality": 0.375
+  }
+ },
+ {
+  "iptm": 0.8533,
+  "mean_plddt": 89.3958,
+  "regime": "complex",
+  "target_id": "9om4",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.787
   }
  },
  {
@@ -745,6 +1647,17 @@
   "truth": {
    "correct": false,
    "quality": 0.382
+  }
+ },
+ {
+  "iptm": 0.762,
+  "mean_plddt": 87.813,
+  "regime": "complex",
+  "target_id": "9nnk",
+  "template_baseline_correct": false,
+  "truth": {
+   "correct": true,
+   "quality": 0.777
   }
  },
  {
