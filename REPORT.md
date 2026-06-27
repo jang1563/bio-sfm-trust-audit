@@ -52,8 +52,9 @@ calibration is transferred. Gate − free-form LLM is significantly positive and
 with the verification price (≈ +0.15 at λ = 0.5 to ≈ +0.30 at λ = 0.8, all p ≈ 0); the LLM is
 the weak link in every regime (it **over-verifies**, and it follows a *corrupted*
 reliability card even with the raw signal present to contradict it); and a
-**conformal-abstention** gate meets its distribution-free guarantee (realised
-false-accept 0.089 < alpha = 0.20). The one honest boundary the weak signal exposes:
+**conformal-abstention** gate keeps its realised false-accept (0.089) under the
+alpha = 0.20 target (approximately — its calibration set is not exchangeable with the
+test set). The one honest boundary the weak signal exposes:
 calibrated verification beats *naive trust-all* only when the signal is sharp enough
 for the price (it does at λ = 0.5, not at λ = 0.8), whereas the gate beats *free-form
 LLM routing* unconditionally. **Enforcement — not presentation — is the robust,
@@ -430,7 +431,9 @@ gate − free-form = **+0.15/+0.15/+0.17 at λ=0.5** and **+0.30/+0.30/+0.33 at 
 λ exactly as in 4a; the LLM remains the weak link (it over-verifies — at λ=0.8 it nets +0.20–0.24, below even
 trust-all). **H4.2** (manipulation-robustness, significant at λ=0.5: free-form drops +0.10–0.18, p < .001) and
 **H4.3** (constraint is a net no-op — the LLM over-verifies, not over-trusts) replicate; **conformal abstention**
-beats free-form *and* meets its guarantee (realised false-accept **0.089 < alpha = 0.20**); and under
+beats free-form with realised false-accept **0.089 < alpha = 0.20** (caveat: the transferred isotonic risk is
+near-binary here, so the conformal threshold induces the *same* trust/verify partition as the gate, and the CRC
+calibration set is not exchangeable with the test set — the bound held empirically but is approximate); and under
 inverted/shift/noise corruption with the raw signal present the LLM **still** follows the corrupted card (no
 recovery at λ ≥ 0.5; e.g. opus λ=0.8 invert −0.32). The one honest boundary the weak signal exposes: at the
 *highest* price the calibrated gate no longer beats the **naive trust-all baseline** (λ=0.8: trust-all +0.601 >

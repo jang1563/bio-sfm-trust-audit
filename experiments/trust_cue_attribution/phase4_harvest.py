@@ -16,8 +16,7 @@ Outputs under --out-dir:
 from __future__ import annotations
 import argparse, json, os, sys, time, urllib.parse, urllib.request
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..",
-    "LLM_SFM_interpretability", "experiments", "trust_cue_attribution"))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))  # same dir: phase2_curate_pdb
 from phase2_curate_pdb import (  # noqa: E402
     build_search_query, protein_chains, select_for_regime, _get, SEARCH_URL, FASTA_URL)
 

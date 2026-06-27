@@ -42,7 +42,7 @@ Holm–Bonferroni on the secondary family. Scores: [`confirmatory_scores.json`](
 | **H4.1 — enforced gate > free-form LLM** | **replicates, strongly.** gate − free-form **+0.15 / +0.15 / +0.17 (λ=0.5)** and **+0.30 / +0.30 / +0.33 (λ=0.8)**, all p ≈ 0, growing with λ as in 4a. The free-form LLM is the weak link (it over-verifies: at λ=0.8 it nets +0.20–0.24, far below even trust-all). |
 | **H4.2 — manipulation-robust** | **replicates at moderate price.** under the inverted reliability cue the free-form LLM drops **+0.10 / +0.10 / +0.18 (λ=0.5, all p<.001)**; the gate computes from the raw signal and does not move. (At λ=0.8 the effect washes out — the LLM already over-verifies under any cue.) |
 | **H4.3 — constraint is a no-op on net** | **replicates.** constrained − free-form = **+0.000** everywhere: the LLM over-verifies, it does not over-trust. |
-| **conformal abstention** | beats free-form (matches the gate) **and meets its guarantee**: realized false-accept **0.089 < α = 0.20**. |
+| **conformal abstention** | beats free-form; realized false-accept **0.089 < α = 0.20**. *Caveat:* the transferred isotonic risk is **near-binary** (83 targets ≤ 0.5, 75 > 0.8, **none in between**), so the conformal threshold (τ̂ = 0.5) induces the **same trust/verify partition as the gate** — conformal is not an independent mechanism win here. And the CRC calibration set (the 57) is **not exchangeable** with the test set (wrong-rate 0.47 vs 0.40), so the distribution-free guarantee is approximate; the empirical bound nonetheless held. |
 | **H4.4 — does the LLM recover under corruption?** | **no** (replicates). Under inverted / shift / noise corruption with the truthful raw signal present, the LLM follows the corrupted card and loses to the blind corrupted gate at λ ≥ 0.5 (opus λ=0.8: invert −0.32, shift −0.37, noise −0.22). Lone exception: opus, invert, λ=0.2 (+0.12) — a low-stakes corner. |
 
 ### The honest boundary the weak signal exposes
@@ -53,6 +53,21 @@ calibrated gate no longer beats the **naive trust-all baseline**: at λ=0.8, tru
 verification is not worth its cost when the signal is this dull. At λ=0.5 the gate (**+0.674**) beats both
 trust-all (+0.601) and verify-all (+0.500). **Enforcement's advantage over free-form LLM routing is robust to a
 weak signal; its advantage over naive baselines is conditional on calibration sharpness relative to the price.**
+
+## Caveats
+
+- **Coarse transferred calibration.** The v1-fit isotonic maps the new set's confidences to a **near-binary**
+  risk (bimodal at ≈ 0 and ≈ 1, nothing in (0.5, 0.8]). So the "calibrated gate" is here effectively a **hard
+  ipTM/pLDDT threshold**, and the λ value does not change which targets are verified (only the cost charged).
+  This does not weaken H4.1 — the LLM fails to match even this crude threshold — but "calibrated" should be read
+  as "leakage-honest and validated-direction," not "finely graded," on the transferred calibration.
+- **Conformal coincides with the gate** (above) and its CRC guarantee is approximate (non-exchangeable cal set).
+- **Multi-interface DockQ:** 22/158 targets have > 1 native interface; the score is the tool's "Total DockQ over
+  N interfaces" (all values stay ≤ 1, max 0.902), the same convention as the exploratory set.
+- **opus uses 1 seed** (sonnet/gpt use 3); its per-target nets are single-sample.
+- **Reproducibility:** the committed `records_confirmatory.json` + risk files + `run_phase4_confirmatory.py`
+  regenerate `confirmatory_scores.json`, but the raw LLM episodes (≈ 5 MB jsonl) are kept out of the repo
+  (gitignored, durable in the author's planning dir) — the scores are the tracked artifact, as in prior phases.
 
 ## Conclusion
 

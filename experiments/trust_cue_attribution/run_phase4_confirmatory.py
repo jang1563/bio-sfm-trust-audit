@@ -22,12 +22,13 @@ PRIMARY_LAMBDA = 0.5
 
 
 def load_records(path: str) -> dict:
-    recs = {}
-    for line in open(path):
-        if line.strip():
-            r = json.loads(line)
-            recs[r["target_id"]] = r
-    return recs
+    """Accept either a JSON array (committed records_confirmatory.json) or JSONL."""
+    text = open(path).read().strip()
+    if text.startswith("["):
+        rows = json.loads(text)
+    else:
+        rows = [json.loads(line) for line in text.splitlines() if line.strip()]
+    return {r["target_id"]: r for r in rows}
 
 
 def main():
