@@ -24,10 +24,12 @@ follow-up variant-effect DMS arm:
   Opus 4.8, which over-verifies. The benefit, where present, is **informational, not directive**.
 
 Presentation alone is insufficient, so we then **enforce** the decision (Phase 4): a deterministic
-**calibrated-risk gate beats free-form LLM routing and is manipulation-robust**, and this **replicates
-on a fresh strict-leakage substrate (N = 158)** even where the specialist signal is only moderately
-calibrated — though its advantage over a naive trust-all baseline is bounded by calibration sharpness.
-Full write-up: **[`REPORT.md`](REPORT.md)** (PDF: [`dist/REPORT.pdf`](dist/REPORT.pdf)).
+**calibrated-risk gate beats free-form LLM routing and is manipulation-robust**, replicating on a fresh
+strict-leakage substrate (N = 158). A robustness arm tempers the headline honestly: re-fitting the calibration
+**in-distribution** (graded, not near-binary) shows the gate's edge is **not unconditional** — given a graded
+card, capable LLMs stop over-verifying (95 % → 36 %) and nearly match the gate, so enforcement reads as
+**insurance against the LLM's fragility** to calibration quality / risk-aversion / cost rather than an
+unconditional win. Full write-up: **[`REPORT.md`](REPORT.md)** (PDF: [`dist/REPORT.pdf`](dist/REPORT.pdf)).
 
 Follow-up variant-effect result: on the first substrate that passes the full precondition gate,
 the pre-registered H2 result is still null — a calibrated reliability interface does not robustly

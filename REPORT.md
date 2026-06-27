@@ -54,12 +54,18 @@ the weak link in every regime (it **over-verifies**, and it follows a *corrupted
 reliability card even with the raw signal present to contradict it); and a
 **conformal-abstention** gate keeps its realised false-accept (0.089) under the
 alpha = 0.20 target (approximately — its calibration set is not exchangeable with the
-test set). The one honest boundary the weak signal exposes:
-calibrated verification beats *naive trust-all* only when the signal is sharp enough
-for the price (it does at λ = 0.5, not at λ = 0.8), whereas the gate beats *free-form
-LLM routing* unconditionally. **Enforcement — not presentation — is the robust,
-manipulation-resistant trust layer; the routing decision should not live in
-free-form LLM text.**
+test set). Two honest boundaries: (i) calibrated verification beats *naive trust-all*
+only when the signal is sharp enough for the price (at λ = 0.5, not λ = 0.8); and
+(ii) a robustness arm that re-fits the calibration **in-distribution** (a graded,
+non-degenerate risk) shows the gate's advantage over free-form LLM is **not
+unconditional** — given a *graded* card, capable models (Sonnet 4.6, GPT-4.1) stop
+over-verifying (verify-rate 95 % → 36 % on the same targets) and nearly match the
+gate at λ = 0.5; the gate's edge persists for the risk-averse over-verifier (Opus
+4.8) and at high price. The deterministic gate is **robust** to calibration
+granularity; the free-form LLM is **fragile** to it. **Enforcement is therefore best
+read as insurance against that fragility — most valuable under imperfect/transferred
+calibration, risk-averse models, and high verification cost; not presentation, but
+also not an unconditional win.**
 
 ## 1. Question
 
@@ -438,9 +444,23 @@ inverted/shift/noise corruption with the raw signal present the LLM **still** fo
 recovery at λ ≥ 0.5; e.g. opus λ=0.8 invert −0.32). The one honest boundary the weak signal exposes: at the
 *highest* price the calibrated gate no longer beats the **naive trust-all baseline** (λ=0.8: trust-all +0.601 >
 gate +0.532 > free-form +0.20–0.24), though it still beats the LLM; at λ=0.5 the gate (+0.674) beats both
-baselines. **Enforcement's advantage over free-form LLM routing is robust
-to a weak signal; its advantage over naive baselines is conditional on calibration sharpness relative to the
-verification price.**
+baselines.
+
+**Robustness — in-distribution graded calibration tempers the gate-vs-LLM headline.** Because the transferred
+calibration is near-binary, we re-fit it *in-distribution* (split the 158 into cal = 52 / test = 106, isotonic on
+cal → a graded 7-level risk on test; CRC then calibrated on an exchangeable cal set), re-ran the free-form LLM on
+the 106 with the graded cards, and re-analysed (`results/phase4_confirmatory/in_distribution/`). Two things
+change. (1) **Conformal becomes a genuinely independent mechanism** (tau-hat = 0.333 ≠ 0.5; conformal net ≠ gate net),
+with realised false-accept 0.208 ≈ alpha (honest finite-sample slack). (2) **H4.1 shrinks sharply for capable
+models.** On the *same* 106 targets, the free-form LLM shown the near-binary card over-verifies at a **95 %**
+rate (net +0.524); shown the graded card it verifies only **36 %** (net +0.627). So gate − free-form at λ=0.5
+collapses to **+0.008 / +0.002 (Sonnet/GPT, n.s.)** and stays significant only for the risk-averse over-verifier
+**Opus (+0.141)** and at λ=0.8 (+0.05 / +0.02 / +0.38). The **gate net is ~unchanged across both calibrations** —
+the deterministic gate is *robust* to calibration granularity, while the free-form LLM is *fragile* to it. The
+honest revised reading: **enforcement is insurance against the LLM's fragility** (it pays off most under
+imperfect/transferred calibration, risk-averse models, and high cost), **not an unconditional win** over a
+capable model given a well-graded signal. The manipulation-robustness and over-verification findings are
+unaffected.
 
 ## How to cite
 

@@ -57,17 +57,24 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--records", required=True)
     ap.add_argument("--out-dir", required=True)
+    ap.add_argument("--risk-json", default="", help="precomputed {target_id: P(wrong)}; if set, used instead of "
+                    "the v1-transfer isotonic (e.g. an in-distribution held-out-split calibration)")
     ap.add_argument("--workers", type=int, default=6)
     args = ap.parse_args()
     os.makedirs(args.out_dir, exist_ok=True)
 
-    v1 = [o for o in json.load(open(os.path.join(HERE,
-          "results/phase2_dockq_validation/dockq_validation.json"))) if "dockq" in o]
-    cal = isotonic_calibrator(
-        [confidence_to_risk({"regime": "complex", "mean_plddt": o["mean_plddt"], "iptm": o["iptm"]}) for o in v1],
-        [1 if o["dockq"] < CUT else 0 for o in v1])
-    test = [json.loads(l) for l in open(args.records) if l.strip()]
-    risk = {r["target_id"]: cal(confidence_to_risk(r)) for r in test}
+    _txt = open(args.records).read().strip()
+    test = json.loads(_txt) if _txt.startswith("[") else [json.loads(l) for l in _txt.splitlines() if l.strip()]
+    if args.risk_json:
+        risk = json.load(open(args.risk_json))
+        test = [r for r in test if r["target_id"] in risk]
+    else:
+        v1 = [o for o in json.load(open(os.path.join(HERE,
+              "results/phase2_dockq_validation/dockq_validation.json"))) if "dockq" in o]
+        cal = isotonic_calibrator(
+            [confidence_to_risk({"regime": "complex", "mean_plddt": o["mean_plddt"], "iptm": o["iptm"]}) for o in v1],
+            [1 if o["dockq"] < CUT else 0 for o in v1])
+        risk = {r["target_id"]: cal(confidence_to_risk(r)) for r in test}
     json.dump(risk, open(os.path.join(args.out_dir, "heldout_risk.json"), "w"))
 
     rng = random.Random(13)

@@ -78,3 +78,11 @@ moderately calibrated (ipTM→DockQ +0.57, not the exploratory +0.84), the core 
 fails to recover from a corrupted reliability channel even with cross-checkable evidence. Conformal abstention
 delivers its distribution-free guarantee. The boundary — that calibrated verification beats naive baselines only
 when the signal is sharp enough for the price — is an honest limit, not a failure of the enforcement thesis.
+
+**Important robustness caveat** ([`in_distribution/`](in_distribution/README.md)): because the transferred
+calibration is near-binary, we re-fit it in-distribution (graded risk) and re-ran the LLM. The gate − free-form
+advantage is then **not unconditional** — given a *graded* card, capable models (Sonnet/GPT) stop over-verifying
+(95 % → 36 %) and nearly match the gate at λ=0.5; the gate's edge persists only for the risk-averse over-verifier
+(Opus) and at high price. The gate is *robust* to calibration granularity; the free-form LLM is *fragile* to it.
+Read enforcement as **insurance against that fragility**, not an unconditional win. (Conformal also becomes a
+genuinely independent mechanism under the graded calibration, τ̂ = 0.333 ≠ the price gate.)
