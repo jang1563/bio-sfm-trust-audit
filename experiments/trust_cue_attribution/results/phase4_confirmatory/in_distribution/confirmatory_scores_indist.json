@@ -30,7 +30,7 @@
             -0.0233,
             0.1679
           ],
-          "p": 0.14
+          "p": 0.1395
         },
         "H4.3_constrained_minus_free": {
           "d": 0.088,
@@ -88,8 +88,8 @@
           "conformal_vs_free": 0.0,
           "H4.4_adv_shift": 0.0,
           "H4.3_constrained": 0.002,
-          "H4.2_manip": 0.42,
-          "H4.4_adv_noise": 0.42,
+          "H4.2_manip": 0.4185,
+          "H4.4_adv_noise": 0.4185,
           "H4.4_adv_invert": 0.746
         }
       },
@@ -118,7 +118,7 @@
             -0.0786,
             0.1088
           ],
-          "p": 0.7715
+          "p": 0.771
         },
         "H4.3_constrained_minus_free": {
           "d": 0.1062,
@@ -178,7 +178,7 @@
           "H4.4_adv_shift": 0.0,
           "H4.4_adv_noise": 0.2085,
           "conformal_vs_free": 0.296,
-          "H4.2_manip": 0.7715
+          "H4.2_manip": 0.771
         }
       },
       "claude-opus-4-8": {
@@ -198,7 +198,7 @@
             -0.0264,
             0.0717
           ],
-          "p": 0.351
+          "p": 0.3485
         },
         "H4.2_manip_drop": {
           "d": -0.0019,
@@ -222,7 +222,7 @@
             -0.1396,
             0.0038
           ],
-          "p": 0.059,
+          "p": 0.0605,
           "realized_false_accept": 0.2075
         },
         "H4.4_adversarial_by_shape": {
@@ -245,7 +245,7 @@
               -0.0283,
               0.0811
             ],
-            "p": 0.336,
+            "p": 0.3415,
             "LLM_recovers": false
           },
           "noise": {
@@ -263,7 +263,7 @@
         "holm_secondary": {
           "H4.3_constrained": 0.0,
           "H4.4_adv_invert": 0.0,
-          "conformal_vs_free": 0.236,
+          "conformal_vs_free": 0.242,
           "H4.4_adv_shift": 1.0,
           "H4.4_adv_noise": 1.0,
           "H4.2_manip": 1.0
@@ -288,7 +288,7 @@
             -0.0252,
             0.0425
           ],
-          "p": 0.6175
+          "p": 0.6185
         },
         "H4.2_manip_drop": {
           "d": 0.228,
@@ -346,7 +346,7 @@
               -0.066,
               0.011
             ],
-            "p": 0.1895,
+            "p": 0.192,
             "LLM_recovers": false
           }
         },
@@ -354,7 +354,7 @@
           "H4.2_manip": 0.0,
           "H4.3_constrained": 0.0,
           "H4.4_adv_shift": 0.0,
-          "H4.4_adv_noise": 0.5685,
+          "H4.4_adv_noise": 0.576,
           "H4.4_adv_invert": 1.0,
           "conformal_vs_free": 1.0
         }
@@ -376,7 +376,7 @@
             -0.0142,
             0.0173
           ],
-          "p": 0.814
+          "p": 0.807
         },
         "H4.2_manip_drop": {
           "d": 0.1966,
@@ -400,7 +400,7 @@
             -0.0314,
             0.0142
           ],
-          "p": 0.556,
+          "p": 0.5555,
           "realized_false_accept": 0.2075
         },
         "H4.4_adversarial_by_shape": {
@@ -444,7 +444,7 @@
           "H4.4_adv_invert": 0.0,
           "H4.4_adv_shift": 0.0,
           "H4.4_adv_noise": 0.0,
-          "conformal_vs_free": 0.556
+          "conformal_vs_free": 0.5555
         }
       },
       "claude-opus-4-8": {
