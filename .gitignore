@@ -59,8 +59,13 @@ dist/*.txt
 dist/REPORT_page*.png
 dist/zenodo_deposit/
 dist/zenodo_deposit.zip
-# but DO track the small public HF benchmark data file (overrides *.jsonl above)
+# but DO track the small public HF benchmark data files (overrides *.jsonl above)
 !dist/hf_dataset/data/phase2_targets.jsonl
+!dist/hf_dataset/data/phase4_confirmatory.jsonl
 
 # Other in-tree drafts/projects that must NEVER be published from this repo
 experiments/vs_triage/
+experiments/variant_effect/
+CROSS_PHASE_SYNTHESIS.md
+HANDOFF.md
+NEXT_SUBSTRATE.md

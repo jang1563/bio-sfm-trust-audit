@@ -42,8 +42,9 @@ pip install -r requirements.txt
 pytest experiments/trust_cue_attribution/tests/   # 163 passing, runs in seconds
 ```
 
-The test suite needs **no external data**. The **Phase 2 protein benchmark is
-bundled** ([`dist/hf_dataset/`](dist/hf_dataset/)); the Phase 0/1 perturbation
+The test suite needs **no external data**. The **protein trust-routing benchmark is
+bundled** ([`dist/hf_dataset/`](dist/hf_dataset/)) — two leakage-controlled configs, incl. the
+strict 158-complex set with gold-standard **DockQ** truth; the Phase 0/1 perturbation
 inputs come from the author's other repositories and are not redistributed here —
 the tracked [`results/`](experiments/trust_cue_attribution/results/) JSON artifacts
 summarize those runs.
@@ -61,7 +62,7 @@ summarize those runs.
 | [`experiments/trust_cue_attribution/PHASE2_PROTEIN_TRUST_DESIGN.md`](experiments/trust_cue_attribution/PHASE2_PROTEIN_TRUST_DESIGN.md) | Phase 2 protein-substrate design |
 | [`experiments/trust_cue_attribution/results/`](experiments/trust_cue_attribution/results/) | Compact result artifacts (JSON) |
 | [`.../results/phase4_confirmatory/`](experiments/trust_cue_attribution/results/phase4_confirmatory/README.md) | Phase 4 confirmatory (fresh strict-leakage substrate, N=158) |
-| [`dist/hf_dataset/`](dist/hf_dataset/) | Public benchmark targets (Hugging Face dataset card + data) |
+| [`dist/hf_dataset/`](dist/hf_dataset/) | Public benchmark — 2 configs (strict 158-complex DockQ; 80-target lDDT) + HF card |
 
 ## Phases
 
