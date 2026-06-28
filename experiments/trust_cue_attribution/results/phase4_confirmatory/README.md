@@ -40,7 +40,7 @@ Holm–Bonferroni on the secondary family. Scores: [`confirmatory_scores.json`](
 | hypothesis | result |
 |---|---|
 | **H4.1 — enforced gate > free-form LLM** | **replicates, strongly.** gate − free-form **+0.15 / +0.15 / +0.17 (λ=0.5)** and **+0.30 / +0.30 / +0.33 (λ=0.8)**, all p ≈ 0, growing with λ as in 4a. The free-form LLM is the weak link (it over-verifies: at λ=0.8 it nets +0.20–0.24, far below even trust-all). |
-| **H4.2 — manipulation-robust** | **replicates at moderate price.** under the inverted reliability cue the free-form LLM drops **+0.10 / +0.10 / +0.18 (λ=0.5, all p<.001)**; the gate computes from the raw signal and does not move. (At λ=0.8 the effect washes out — the LLM already over-verifies under any cue.) |
+| **H4.2 — manipulation-robust** | **replicates at moderate price.** under the inverted reliability cue the free-form LLM drops **+0.12 / +0.10 / +0.18 (λ=0.5, all p<.001)**; the gate computes from the raw signal and does not move. (At λ=0.8 the effect washes out — the LLM already over-verifies under any cue.) |
 | **H4.3 — constraint is a no-op on net** | **replicates.** constrained − free-form = **+0.000** everywhere: the LLM over-verifies, it does not over-trust. |
 | **conformal abstention** | beats free-form; realized false-accept **0.089 < α = 0.20**. *Caveat:* the transferred isotonic risk is **near-binary** (83 targets ≤ 0.5, 75 > 0.8, **none in between**), so the conformal threshold (τ̂ = 0.5) induces the **same trust/verify partition as the gate** — conformal is not an independent mechanism win here. And the CRC calibration set (the 57) is **not exchangeable** with the test set (wrong-rate 0.47 vs 0.40), so the distribution-free guarantee is approximate; the empirical bound nonetheless held. |
 | **H4.4 — does the LLM recover under corruption?** | **no** (replicates). Under inverted / shift / noise corruption with the truthful raw signal present, the LLM follows the corrupted card and loses to the blind corrupted gate at λ ≥ 0.5 (opus λ=0.8: invert −0.32, shift −0.37, noise −0.22). Lone exception: opus, invert, λ=0.2 (+0.12) — a low-stakes corner. |
@@ -75,9 +75,11 @@ On a fresh, strictly leakage-controlled substrate (N = 158) where the specialist
 moderately calibrated (ipTM→DockQ +0.57, not the exploratory +0.84), the core enforcement findings
 **replicate and strengthen**: a deterministic calibrated gate beats free-form LLM routing (highly significant at
 λ ≥ 0.5, +0.15 → +0.33 growing with λ), is manipulation-robust at moderate price, and the LLM over-verifies and
-fails to recover from a corrupted reliability channel even with cross-checkable evidence. Conformal abstention
-delivers its distribution-free guarantee. The boundary — that calibrated verification beats naive baselines only
-when the signal is sharp enough for the price — is an honest limit, not a failure of the enforcement thesis.
+fails to recover from a corrupted reliability channel even with cross-checkable evidence. Conformal abstention's
+realised false-accept stays under α = 0.20 (0.089; approximately — the cal set is not exchangeable, and on the
+near-binary transferred risk it coincides with the gate; see Caveats and `in_distribution/`). The boundary — that
+calibrated verification beats naive baselines only when the signal is sharp enough for the price — is an honest
+limit, not a failure of the enforcement thesis.
 
 **Important robustness caveat** ([`in_distribution/`](in_distribution/README.md)): because the transferred
 calibration is near-binary, we re-fit it in-distribution (graded risk) and re-ran the LLM. The gate − free-form
